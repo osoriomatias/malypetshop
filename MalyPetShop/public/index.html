@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Tienda Online | Alimentos Balanceados & Accesorios</title>
+  <script>
+    (function() {
+      try {
+        var n = localStorage.getItem('petshop_name') || 'Maly Petshop';
+        document.title = n + ' | Alimentos Balanceados & Accesorios';
+      } catch(e) {}
+    })();
+  </script>
+  <meta name="description" content="Tu Pet Shop de confianza. Alimentos balanceados Super Premium, Premium y Económicos, snacks, higiene y accesorios con entrega a domicilio.">
+  
+  <!-- Google Fonts: Fredoka (Aesthetic Petshop), Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="images/maly_mascot_avatar.svg">
+  <link rel="alternate icon" href="images/maly_mascot_avatar.png">
+
+  <link rel="stylesheet" href="css/styles.css?v=5.0_mobile_compact">
+</head>
+<body>
+
+  <!-- TOP ANNOUNCEMENT BAR AESTHETIC -->
+  <div class="top-bar">
+    <div class="info-item">
+      <span>🐾</span> <strong>Maly Petshop</strong> • Tienda Oficial de Alimentos Balanceados & Accesorios
+    </div>
+    <div class="info-item">
+      <span class="highlight-badge">PRECIOS DIRECTOS</span> El catálogo más completo de primeras marcas
+    </div>
+    <div class="info-item" style="display: none; @media(min-width: 768px){display: flex;}">
+      <span>⭐</span> Calificación 4.9 en Google Reviews
+    </div>
+  </div>
+
+  <!-- HEADER PRINCIPAL (Sin botón de ajustes público) -->
+  <header class="main-header">
+    <div class="header-container">
+      <a href="#" class="brand-logo" id="brandHeaderTitle" onclick="resetFilters(); return false;">
+<div class="brand-mascot-badge" aria-label="Logo Maly Petshop">
+          <svg viewBox="115 75 270 270" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="250" cy="210" r="130" fill="#5A3626"/>
+            <!-- Curled Tail -->
+            <path d="M 305 270 C 330 270, 355 255, 350 230 C 345 205, 315 210, 315 225 C 315 235, 325 240, 325 235 C 325 225, 305 235, 300 255 Z" fill="#94552F" stroke="#784121" stroke-width="2"/>
+            <!-- Hind Legs -->
+            <ellipse cx="215" cy="270" rx="55" ry="60" fill="#884C27"/>
+            <ellipse cx="280" cy="275" rx="35" ry="40" fill="#884C27"/>
+            <!-- Body -->
+            <ellipse cx="245" cy="265" rx="50" ry="58" fill="#9C5A32"/>
+            <!-- White Chest Fluff -->
+            <path d="M 235 240 C 235 240, 245 285, 245 295 C 248 290, 252 285, 256 295 C 260 275, 262 250, 258 240 Z" fill="#FFFFFF"/>
+            <!-- Front Legs & White Paws -->
+            <path d="M 218 245 L 214 310 C 214 316, 222 322, 230 322 C 238 322, 244 316, 244 310 L 244 245 Z" fill="#9C5A32"/>
+            <path d="M 205 315 C 205 305, 242 305, 242 315 C 242 326, 205 326, 205 315 Z" fill="#FFFFFF"/>
+            <path d="M 216 312 L 216 324 M 228 312 L 228 324" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+            <path d="M 256 245 L 256 310 C 256 316, 264 322, 272 322 C 280 322, 286 316, 286 310 L 282 245 Z" fill="#9C5A32"/>
+            <path d="M 248 315 C 248 305, 285 305, 285 315 C 285 326, 248 326, 248 315 Z" fill="#FFFFFF"/>
+            <path d="M 260 312 L 260 324 M 272 312 L 272 324" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+            <!-- Back Paws -->
+            <ellipse cx="295" cy="318" rx="16" ry="9" fill="#FFFFFF"/>
+            <ellipse cx="198" cy="315" rx="16" ry="9" fill="#FFFFFF"/>
+            <!-- Ears -->
+            <path d="M 195 135 C 160 110, 130 150, 140 185 C 148 215, 175 220, 190 195 Z" fill="#834623" stroke="#6F391B" stroke-width="2"/>
+            <path d="M 305 135 C 340 110, 370 150, 360 185 C 352 215, 325 220, 310 195 Z" fill="#834623" stroke="#6F391B" stroke-width="2"/>
+            <!-- Head Base -->
+            <ellipse cx="250" cy="165" rx="68" ry="62" fill="#9C5A32"/>
+            <!-- Eyes -->
+            <circle cx="218" cy="158" r="14" fill="#1C1009"/>
+            <circle cx="214" cy="153" r="5.5" fill="#FFFFFF"/>
+            <circle cx="223" cy="162" r="2.5" fill="#FFFFFF"/>
+            <circle cx="278" cy="158" r="14" fill="#1C1009"/>
+            <circle cx="274" cy="153" r="5.5" fill="#FFFFFF"/>
+            <circle cx="283" cy="162" r="2.5" fill="#FFFFFF"/>
+            <!-- Eyebrows -->
+            <ellipse cx="216" cy="138" rx="5" ry="3" fill="#B76F43"/>
+            <ellipse cx="280" cy="138" rx="5" ry="3" fill="#B76F43"/>
+            <!-- Snout & Nose -->
+            <ellipse cx="248" cy="180" rx="28" ry="20" fill="#925028"/>
+            <path d="M 241 170 C 241 166, 255 166, 255 170 C 255 177, 248 181, 248 181 C 248 181, 241 177, 241 170 Z" fill="#1E130D"/>
+            <circle cx="245" cy="169" r="1.5" fill="#FFFFFF" opacity="0.8"/>
+            <path d="M 248 181 L 248 186 M 241 187 C 245 192, 248 191, 248 186 C 248 191, 252 192, 256 187" stroke="#1E130D" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <!-- Cheeks -->
+            <circle cx="196" cy="178" r="9" fill="#E8829C" opacity="0.45"/>
+            <circle cx="300" cy="178" r="9" fill="#E8829C" opacity="0.45"/>
+            <!-- Collar & Charm -->
+            <path d="M 205 216 C 220 226, 276 226, 291 216 C 295 224, 287 232, 248 232 C 209 232, 201 224, 205 216 Z" fill="#F06292"/>
+            <circle cx="248" cy="233" r="4.5" fill="#CBD5E1"/>
+            <circle cx="248" cy="233" r="2.5" fill="#5A3626"/>
+            <path d="M 244 237 C 241 243, 244 252, 248 255 C 252 252, 255 243, 252 237 Z" fill="#FFFFFF"/>
+          </svg>
+        </div>
+        <div class="brand-text-group">
+          <span class="brand-title" id="brandLogoText">Maly Petshop</span>
+          <span class="brand-tagline">TIENDA DE MASCOTAS</span>
+        </div>
+      </a>
+      <script>
+        (function() {
+          try {
+            var n = localStorage.getItem('petshop_name') || 'Maly Petshop';
+            var el = document.getElementById('brandLogoText');
+            if (el) el.textContent = n;
+          } catch(e) {}
+        })();
+      </script>
+
+      <!-- Buscador en tiempo real -->
+      <div class="header-search">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Buscá por marca (Royal Canin, Pro Plan, Dog Chow...), producto o tamaño..." autocomplete="off">
+      </div>
+
+      <!-- Acciones de cabecera -->
+      <div class="header-actions">
+        <a href="https://instagram.com/maly.petshop" target="_blank" rel="noopener noreferrer" class="btn-ig-header" id="headerIgBtn" onclick="goToInstagram(event)" title="Seguinos en Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          <span class="ig-text">Instagram</span>
+        </a>
+
+        <a href="https://wa.me/5491100000000" target="_blank" rel="noopener noreferrer" class="btn-wa-header" id="headerWaBtn">
+          <span>💬</span> <span class="wa-text">WhatsApp</span>
+        </a>
+
+        <button type="button" class="btn-cart-header" onclick="openCartDrawer()" title="Ver Bolsa de Consulta">
+          <span>🛒</span> Bolsa <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVBAR CON MENÚ DESPLEGABLE ESTILO PELLEGRINI PETSHOP -->
+  <nav class="category-navbar">
+    <div class="nav-container">
+      <!-- PERROS -->
+      <div class="nav-item">
+        <div class="nav-link" onclick="filterCategory('perros')">
+          <span>🐶</span> Perros <span class="arrow-down">▼</span>
+        </div>
+        <div class="dropdown-menu">
+          <div class="dropdown-item" onclick="filterCategory('perros', 'adulto')">🦴 Alimento Seco Adultos</div>
+          <div class="dropdown-item" onclick="filterCategory('perros', 'cachorro')">🍼 Alimento Cachorros (Puppy)</div>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-item" onclick="filterCategory('perros', 'pequeña')">🐕 Razas Pequeñas (Mini)</div>
+          <div class="dropdown-item" onclick="filterCategory('perros', 'grande')">🐕‍🦺 Razas Medianas y Grandes</div>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-item" onclick="filterCategory('snacks', 'snacks')">🥓 Snacks, Bocaditos y Huesos</div>
+        </div>
+      </div>
+
+      <!-- GATOS -->
+      <div class="nav-item">
+        <div class="nav-link" onclick="filterCategory('gatos')">
+          <span>🐱</span> Gatos <span class="arrow-down">▼</span>
+        </div>
+        <div class="dropdown-menu">
+          <div class="dropdown-item" onclick="filterCategory('gatos', 'adulto')">🐟 Alimento Seco Adultos</div>
+          <div class="dropdown-item" onclick="filterCategory('gatos', 'gatito')">🍼 Gatitos (Kitten)</div>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-item" onclick="filterCategory('higiene', 'higiene')">✨ Piedras Sanitarias & Bentonita</div>
+        </div>
+      </div>
+
+      <!-- GRANJA & AVES -->
+      <div class="nav-item">
+        <div class="nav-link" onclick="filterCategory('granja')">
+          <span>🌾</span> Granja & Aves <span class="arrow-down">▼</span>
+        </div>
+        <div class="dropdown-menu">
+          <div class="dropdown-item" onclick="filterCategory('granja', 'semillas')">🌾 Semillas, Alpiste, Mijo y Girasol</div>
+          <div class="dropdown-item" onclick="filterCategory('granja', 'aves')">🐓 Prenut Parrillero, Postura y Aves</div>
+          <div class="dropdown-item" onclick="filterCategory('granja', 'roedores')">🐇 Conejo Doméstico & Roedores</div>
+          <div class="dropdown-item" onclick="filterCategory('granja', 'semillas')">🌽 Maíz Entero, Partido y Avena</div>
+        </div>
+      </div>
+
+      <!-- PECES -->
+      <div class="nav-item">
+        <div class="nav-link" onclick="filterCategory('peces')">
+          <span>🐠</span> Peces <span class="arrow-down">▼</span>
+        </div>
+        <div class="dropdown-menu">
+          <div class="dropdown-item" onclick="filterCategory('peces', 'alimento')">🐟 Shulet Escamas (10g, 20g, 40g)</div>
+          <div class="dropdown-item" onclick="filterCategory('peces', 'alimento')">📦 Shulet Caja Criador x 2.2 kg</div>
+        </div>
+      </div>
+
+      <!-- SANIDAD & PLAGAS -->
+      <div class="nav-item">
+        <div class="nav-link" onclick="filterCategory('plagas')">
+          <span>🛡️</span> Sanidad & Plagas <span class="arrow-down">▼</span>
+        </div>
+        <div class="dropdown-menu">
+          <div class="dropdown-item" onclick="filterCategory('plagas', 'plagas')">🐜 Hormiguicidas Hor-Tal (Líquido, Polvo, Mirex)</div>
+          <div class="dropdown-item" onclick="filterCategory('plagas', 'plagas')">🪳 Cucarachicidas Geltex (Cebo y Jeringa)</div>
+          <div class="dropdown-item" onclick="filterCategory('plagas', 'plagas')">🐀 Raticidas Ultra & Geltex Bloques</div>
+          <div class="dropdown-item" onclick="filterCategory('plagas', 'desinfeccion')">🧪 Fluidos Desinfectantes Manchester & Triunfo</div>
+        </div>
+      </div>
+
+      <!-- FARMACIA -->
+      <div class="nav-item">
+        <div class="nav-link" onclick="filterCategory('farmacia')">
+          <span>🧴</span> Farmacia <span class="arrow-down">▼</span>
+        </div>
+        <div class="dropdown-menu">
+          <div class="dropdown-item" onclick="filterCategory('farmacia', 'higiene')">🚿 Shampoos Osspret & Belleza</div>
+          <div class="dropdown-item" onclick="filterCategory('farmacia', 'higiene')">🛡️ Ecthol 5 & Antiparasitarios</div>
+          <div class="dropdown-item" onclick="filterCategory('farmacia', 'veterinaria')">🩺 Royal Canin Línea Veterinaria</div>
+        </div>
+      </div>
+
+      <!-- PIEDRAS SANITARIAS -->
+      <div class="nav-item">
+        <div class="nav-link" onclick="filterCategory('higiene')">
+          <span>✨</span> Piedras Sanitarias
+        </div>
+      </div>
+
+      <!-- OFERTAS -->
+      <div class="nav-item">
+        <div class="nav-link highlight" onclick="filterCategory('promociones')">
+          <span>🔥</span> Ofertas
+        </div>
+      </div>
+
+      <!-- CATÁLOGO COMPLETO -->
+      <div class="nav-item">
+        <div class="nav-link" onclick="filterCategory('todos'); resetFilters();">
+          <span>📦</span> Catálogo (144)
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CARRUSEL AUTOMÁTICO DE MASCOTAS GRACIOSAS -->
+  <section class="carousel-section">
+    <div class="carousel-wrapper">
+      <div class="carousel-track" id="carouselTrack">
+        <!-- Slide 1 -->
+        <div class="carousel-slide active">
+          <img class="carousel-img" src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=1200&auto=format&fit=crop&q=80" alt="Perro divertido">
+          <div class="carousel-overlay"></div>
+          <div class="carousel-content">
+            <span class="carousel-badge">🐱🐶 ¡Tu mascota manda!</span>
+            <h2 class="carousel-title">¿Cómo que todavía no pediste mis snacks?</h2>
+            <p class="carousel-subtitle">Dentastix, Biscrok, Temptations, huesos de cuero vacuno y alimentos balanceados con entrega rápida.</p>
+            <div class="carousel-buttons">
+              <button class="btn-carousel-main" onclick="filterCategory('snacks')">Ver Snacks y Premios</button>
+              <button class="btn-carousel-secondary" onclick="filterCategory('promociones')">Promociones del Mes</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-slide">
+          <img class="carousel-img" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1200&auto=format&fit=crop&q=80" alt="Gato exigente">
+          <div class="carousel-overlay"></div>
+          <div class="carousel-content">
+            <span class="carousel-badge">⭐ Nutrición Exigente</span>
+            <h2 class="carousel-title">Mi cara cuando escucho abrir la bolsa de alimento</h2>
+            <p class="carousel-subtitle">Royal Canin, Pro Plan, Eukanuba, Sieger, Dog Chow y Cat Chow directo a tu puerta.</p>
+            <div class="carousel-buttons">
+              <button class="btn-carousel-main" onclick="filterCategory('gatos')">Alimentos Felinos</button>
+              <button class="btn-carousel-secondary" onclick="filterCategory('perros')">Alimentos Caninos</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-slide">
+          <img class="carousel-img" src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=1200&auto=format&fit=crop&q=80" alt="Perro feliz">
+          <div class="carousel-overlay"></div>
+          <div class="carousel-content">
+            <span class="carousel-badge">🔥 Edición Limitada</span>
+            <h2 class="carousel-title">No cargues bolsas de 20 kg: ¡Te lo llevamos a la puerta!</h2>
+            <p class="carousel-subtitle">Presentaciones gigantes de 20 kg, 21 kg y 22 kg para que ahorres al máximo en cada compra.</p>
+            <div class="carousel-buttons">
+              <button class="btn-carousel-main" onclick="filterCategory('promociones')">Ver Kilos de Regalo</button>
+              <button class="btn-carousel-secondary" onclick="openCartDrawer()">Abrir Bolsa de Pedido</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-arrow prev" id="prevSlideBtn" aria-label="Slide anterior">❮</button>
+      <button class="carousel-arrow next" id="nextSlideBtn" aria-label="Siguiente slide">❯</button>
+
+      <div class="carousel-dots" id="carouselDots">
+        <button class="carousel-dot active" aria-label="Slide 1"></button>
+        <button class="carousel-dot" aria-label="Slide 2"></button>
+        <button class="carousel-dot" aria-label="Slide 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS CLAVE -->
+  <section class="benefits-bar">
+    <div class="benefit-card">
+      <div class="benefit-icon">🚚</div>
+      <div class="benefit-text">
+        <h4>Envíos Personalizados</h4>
+        <p>Coordinamos la entrega a domicilio con cada cliente.</p>
+      </div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">🏷️</div>
+      <div class="benefit-text">
+        <h4>Precios Transparentes</h4>
+        <p>Precios justos sin letras chicas ni sorpresas.</p>
+      </div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">📦</div>
+      <div class="benefit-text">
+        <h4>Bolsas 100% Originales</h4>
+        <p>Envasadas de fábrica con vencimientos largos.</p>
+      </div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">💬</div>
+      <div class="benefit-text">
+        <h4>Atención por WhatsApp</h4>
+        <p>Asesoramiento y pedidos rápidos por mensaje.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 1: LOS MÁS ELEGIDOS (DESTACADOS) -->
+  <section class="section-wrapper">
+    <div class="section-header">
+      <h2 class="section-title"><span class="section-emoji">⭐</span> Los Más Elegidos</h2>
+      <div class="section-view-all" onclick="filterCategory('todos'); resetFilters();">Ver todo el catálogo ➔</div>
+    </div>
+    <div class="products-grid" id="featuredGrid">
+      <div class="grid-loader">Cargando destacados...</div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 2: OFERTAS & KILOS DE REGALO -->
+  <section class="section-wrapper">
+    <div class="section-header">
+      <h2 class="section-title"><span class="section-emoji">🔥</span> Ofertas & Kilos de Regalo</h2>
+      <div class="section-view-all" onclick="filterCategory('promociones')">Ver todas las ofertas ➔</div>
+    </div>
+    <div class="products-grid" id="promosGrid">
+      <div class="grid-loader">Cargando promociones...</div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: SNACKS & SALUD DENTAL -->
+  <section class="section-wrapper">
+    <div class="section-header">
+      <h2 class="section-title"><span class="section-emoji">🦴</span> Snacks & Salud Dental</h2>
+      <div class="section-view-all" onclick="filterCategory('snacks')">Ver todos los snacks ➔</div>
+    </div>
+    <div class="products-grid" id="snacksGrid">
+      <div class="grid-loader">Cargando snacks...</div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 4: TESTIMONIOS Y GOOGLE REVIEWS -->
+  <section class="section-wrapper">
+    <div class="reviews-section">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <h3 style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: var(--gray-900);">Opiniones de Nuestros Clientes</h3>
+          <p style="font-size: 0.85rem; color: #64748b;">La confianza de cientos de familias que nos eligen mes a mes.</p>
+        </div>
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 6px 14px; border-radius: 9999px; display: flex; align-items: center; gap: 8px;">
+          <span style="color: #f59e0b; font-weight: 800;">★ 4.9 / 5.0</span>
+          <span style="font-size: 0.8rem; color: #475569;">en Google Reviews</span>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-box">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-comment">"Excelente atención y rapidez. Me asesoraron enseguida por WhatsApp y coordinamos la entrega sin ningún problema."</p>
+          <div class="review-author">— Valeria R.</div>
+        </div>
+        <div class="review-box">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-comment">"Tienen todas las marcas y bolsas grandes que no se consiguen en cualquier lado. Súper recomendado."</p>
+          <div class="review-author">— Martín G.</div>
+        </div>
+        <div class="review-box">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-comment">"Los snacks de Dentastix y los huesos prensados son excelentes. Siempre atentos y muy cumplidores."</p>
+          <div class="review-author">— Camila F.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 5: EXPLORADOR DE CATÁLOGO COMPLETO -->
+  <section class="section-wrapper" id="catalogSection">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title"><span class="section-emoji">📦</span> Catálogo Completo</h2>
+        <span style="font-size: 0.85rem; color: #64748b;" id="catalogCountBadge">144 artículos disponibles</span>
+      </div>
+      <button onclick="resetFilters()" style="background: none; border: 1px solid #cbd5e1; padding: 6px 14px; border-radius: 9999px; font-size: 0.82rem; font-weight: 600; color: #475569; cursor: pointer;">
+        Limpiar Filtros ↺
+      </button>
+    </div>
+
+    <!-- BARRA DE ACCESO RÁPIDO A CATEGORÍAS (CON NOVEDADES) -->
+    <div class="catalog-category-chips" id="catalogCategoryChips">
+      <button type="button" class="cat-chip active" onclick="filterCategory('todos')">📦 Todo el Catálogo (144)</button>
+      <button type="button" class="cat-chip" onclick="filterCategory('perros')">🐶 Perros</button>
+      <button type="button" class="cat-chip" onclick="filterCategory('gatos')">🐱 Gatos</button>
+      <button type="button" class="cat-chip" onclick="filterCategory('granja')">🌾 Aves, Semillas & Granja (Prenut)</button>
+      <button type="button" class="cat-chip" onclick="filterCategory('peces')">🐠 Peces (Shulet)</button>
+      <button type="button" class="cat-chip" onclick="filterCategory('plagas')">🛡️ Plagas & Sanidad (Hor-Tal, Geltex)</button>
+      <button type="button" class="cat-chip" onclick="filterCategory('snacks')">🦴 Snacks & Huesos</button>
+      <button type="button" class="cat-chip" onclick="filterCategory('higiene')">✨ Piedras Sanitarias</button>
+      <button type="button" class="cat-chip" onclick="filterCategory('farmacia')">🧴 Farmacia & Cuidado</button>
+      <button type="button" class="cat-chip" onclick="filterCategory('promociones')">🔥 Precios Especiales</button>
+    </div>
+
+    <div class="products-grid" id="catalogGrid">
+      <div class="grid-loader">Cargando productos de la base de datos...</div>
+    </div>
+  </section>
+
+  <!-- CART SLIDE-OVER DRAWER -->
+  <div class="cart-drawer-overlay" id="cartOverlay" onclick="closeCartDrawer()"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Bolsa de compras">
+    <div class="drawer-header">
+      <div class="drawer-title">
+        <span>🛒</span> Mi Bolsa de Consulta
+      </div>
+      <button class="btn-close-drawer" onclick="closeCartDrawer()" title="Cerrar bolsa">✕</button>
+    </div>
+
+    <div class="drawer-body" id="cartItemsList"></div>
+
+    <div class="drawer-footer">
+      <div class="summary-line total" style="border-top: none; margin-top: 0; padding-top: 0;">
+        <span>Total Estimado:</span>
+        <strong id="cartTotal" style="color: #0284c7;">$0</strong>
+      </div>
+
+      <button class="btn-checkout-wa" id="btnCheckoutWa" onclick="checkoutWhatsApp()">
+        <span>💬</span> Enviar Pedido por WhatsApp
+      </button>
+      <p style="text-align: center; font-size: 0.76rem; color: #64748b; margin-top: 8px;">
+        Te responderemos por WhatsApp para coordinar la entrega y el pago.
+      </p>
+    </div>
+  </aside>
+
+  <!-- MODAL DE PIN DE SEGURIDAD PARA ADMINISTRACIÓN -->
+  <div class="modal-overlay" id="adminPinModal" style="display: none; z-index: 3500;" onclick="closeAdminPinModalOnBackdrop(event)">
+    <div class="modal-box" style="max-width: 440px; text-align: center; border-radius: 16px;">
+      <div style="font-size: 2.5rem; margin-bottom: 6px;">🔒</div>
+      <h3 style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; color: #1e293b; margin-bottom: 6px;">
+        Acceso de Administrador
+      </h3>
+      <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 20px; line-height: 1.5;">
+        Ingresá el PIN de seguridad para acceder al panel de control de <strong id="pinModalStoreName" style="color: var(--primary);"></strong>.
+      </p>
+      <form onsubmit="event.preventDefault(); verifyAdminPin();">
+        <input type="password" id="inputSecurityPin" placeholder="••••" maxlength="10" autocomplete="off"
+               style="text-align: center; font-size: 1.6rem; letter-spacing: 6px; padding: 10px 14px; width: 190px; margin: 0 auto 12px auto; display: block; border: 2px solid #cbd5e1; border-radius: 10px; outline: none;">
+        <div id="pinErrorMsg" style="color: #dc2626; font-size: 0.82rem; font-weight: 700; margin-bottom: 14px; min-height: 20px;"></div>
+        <div style="display: flex; justify-content: center; gap: 12px;">
+          <button type="button" onclick="closeAdminPinModal()" style="padding: 10px 20px; border-radius: 8px; border: 1px solid #cbd5e1; background: white; cursor: pointer; font-weight: 600;">Cancelar</button>
+          <button type="submit" style="padding: 10px 24px; border-radius: 8px; border: none; background: #0284c7; color: white; cursor: pointer; font-weight: 700;">Ingresar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+      <!-- MODAL DE CONFIGURACIÓN Y ESTADO DE BASE DE DATOS (PROTEGIDO) -->
+  <div class="modal-overlay" id="settingsModal">
+    <div class="modal-box" style="max-width: 720px;">
+      <div class="modal-header">
+        <h3>🔒 Panel de Control & Administración</h3>
+        <button style="background: none; border: none; font-size: 1.3rem; cursor: pointer;" onclick="closeSettingsModal()">✕</button>
+      </div>
+
+      <!-- Pestañas de navegación interna -->
+      <div class="admin-tabs">
+        <button type="button" class="admin-tab-btn active" id="btnTabGeneral" onclick="switchAdminTab('general')">
+          ⚙️ Ajustes Generales
+        </button>
+        <button type="button" class="admin-tab-btn" id="btnTabImages" onclick="switchAdminTab('images')">
+          ✏️ Gestión & Edición de Productos
+        </button>
+        <button type="button" class="admin-tab-btn" id="btnTabCreateProduct" onclick="switchAdminTab('createProduct')">
+          ➕ Cargar Nuevo Producto
+        </button>
+      </div>
+
+      <!-- PESTAÑA 1: AJUSTES GENERALES -->
+      <div id="adminTabGeneral">
+        <!-- MONITOR DE VISITAS Y TRÁFICO WEB -->
+        <div class="analytics-monitor-card" style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 18px; margin-bottom: 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="font-size: 1.4rem;">📊</span>
+              <div>
+                <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #1e293b; margin: 0;">Monitor de Visitas y Tráfico Web</h4>
+                <span style="font-size: 0.78rem; color: #64748b;">Métricas de personas que ingresaron a MalyPetShop</span>
+              </div>
+            </div>
+            <span id="dbStatusIndicator" class="db-status-badge local" style="font-size: 0.75rem; padding: 3px 10px;">🟡 Verificando conexión...</span>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 12px;">
+            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px; text-align: center;">
+              <div style="font-size: 0.76rem; color: #64748b; font-weight: 700; text-transform: uppercase;">Visitantes Únicos</div>
+              <div style="font-size: 1.6rem; font-weight: 900; color: #0284c7; margin-top: 2px;" id="statUniqueVisitors">0</div>
+            </div>
+            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px; text-align: center;">
+              <div style="font-size: 0.76rem; color: #64748b; font-weight: 700; text-transform: uppercase;">Páginas Vistas</div>
+              <div style="font-size: 1.6rem; font-weight: 900; color: #10b981; margin-top: 2px;" id="statTotalViews">0</div>
+            </div>
+            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px; text-align: center;">
+              <div style="font-size: 0.76rem; color: #64748b; font-weight: 700; text-transform: uppercase;">Visitas Hoy</div>
+              <div style="font-size: 1.6rem; font-weight: 900; color: #f59e0b; margin-top: 2px;" id="statTodayViews">0</div>
+            </div>
+            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px; text-align: center;">
+              <div style="font-size: 0.76rem; color: #64748b; font-weight: 700; text-transform: uppercase;">Último Ingreso</div>
+              <div style="font-size: 0.85rem; font-weight: 800; color: #475569; margin-top: 8px;" id="statLastVisit">Reciente</div>
+            </div>
+          </div>
+
+          <div id="dbStatsDisplay" style="margin-top: 10px;"></div>
+        </div>
+
+        <div class="form-group">
+          <label>Nombre de la Tienda:</label>
+          <input type="text" id="inputStoreName" placeholder="Escribí el nombre exacto de la tienda">
+        </div>
+
+        <div class="form-group">
+          <label>Número de WhatsApp para Pedidos (con código de país, ej: 54911...):</label>
+          <input type="text" id="inputWaNumber" value="5491100000000">
+        </div>
+
+        <div class="form-group">
+          <label>Usuario de Instagram:</label>
+          <input type="text" id="inputInstagram" value="maly.petshop" placeholder="Ej: maly.petshop">
+        </div>
+
+        <div class="form-group">
+          <label>PIN de Acceso Administrador:</label>
+          <input type="password" id="inputAdminPin" value="1234">
+        </div>
+
+        <div class="form-group">
+          <label>Política de Margen Comercial (% sobre costo mayorista):</label>
+          <select id="selectMarginPolicy">
+            <option value="recommended">Margen Recomendado de Mercado (20% bolsas grandes, 25-35% chicas/snacks)</option>
+            <option value="10">Margen Fijo 10% (Muy bajo / Mínimo)</option>
+            <option value="15">Margen Fijo 15% (Económico)</option>
+            <option value="20">Margen Fijo 20% (Estándar competitivo)</option>
+            <option value="25">Margen Fijo 25% (Equilibrado)</option>
+            <option value="30">Margen Fijo 30% (Comercio tradicional)</option>
+          </select>
+          <small style="color: #64748b; font-size: 0.78rem; display: block; margin-top: 4px;">
+            Al modificar el margen, los precios de venta de todo el catálogo se recalculan en tiempo real.
+          </small>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 24px;">
+          <button onclick="closeSettingsModal()" style="padding: 10px 18px; border-radius: 8px; border: 1px solid #cbd5e1; background: white; cursor: pointer; font-weight: 600;">Cerrar</button>
+          <button onclick="saveSettings()" style="padding: 10px 18px; border-radius: 8px; border: none; background: #0284c7; color: white; cursor: pointer; font-weight: 700;">Guardar Ajustes</button>
+        </div>
+      </div>
+
+      <!-- PESTAÑA 2: GESTIÓN Y EDICIÓN DE PRODUCTOS Y FOTOS -->
+      <div id="adminTabImages" style="display: none;">
+        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 12px;">
+          Buscá cualquier producto para modificar sus fotos, datos nutricionales, presentaciones y precios de costo/venta en tiempo real.
+        </p>
+
+        <div style="margin-bottom: 10px;">
+          <input type="text" id="adminImageSearchInput" placeholder="🔍 Buscar producto por nombre, marca o categoría..." 
+                 style="width: 100%; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.88rem;">
+        </div>
+
+        <div class="admin-filter-chips" style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px;">
+          <button type="button" class="cat-chip active" onclick="filterAdminProductCategory('todos', this)" style="padding: 5px 12px; font-size: 0.78rem;">Todos</button>
+          <button type="button" class="cat-chip" onclick="filterAdminProductCategory('perros', this)" style="padding: 5px 12px; font-size: 0.78rem;">🐶 Perros</button>
+          <button type="button" class="cat-chip" onclick="filterAdminProductCategory('gatos', this)" style="padding: 5px 12px; font-size: 0.78rem;">🐱 Gatos</button>
+          <button type="button" class="cat-chip" onclick="filterAdminProductCategory('granja', this)" style="padding: 5px 12px; font-size: 0.78rem;">🌾 Granja</button>
+          <button type="button" class="cat-chip" onclick="filterAdminProductCategory('peces', this)" style="padding: 5px 12px; font-size: 0.78rem;">🐠 Peces</button>
+          <button type="button" class="cat-chip" onclick="filterAdminProductCategory('plagas', this)" style="padding: 5px 12px; font-size: 0.78rem;">🛡️ Plagas</button>
+          <button type="button" class="cat-chip" onclick="filterAdminProductCategory('higiene', this)" style="padding: 5px 12px; font-size: 0.78rem;">✨ Piedras</button>
+          <button type="button" class="cat-chip" onclick="filterAdminProductCategory('farmacia', this)" style="padding: 5px 12px; font-size: 0.78rem;">🧴 Farmacia</button>
+          <button type="button" class="cat-chip" onclick="filterAdminProductCategory('ofertas', this)" style="padding: 5px 12px; font-size: 0.78rem;">🔥 Ofertas</button>
+        </div>
+
+        <div class="admin-prod-list" id="adminProductImageRows">
+          <!-- Se inyecta dinámicamente con JavaScript -->
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; margin-top: 18px;">
+          <button onclick="closeSettingsModal()" style="padding: 10px 18px; border-radius: 8px; border: 1px solid #cbd5e1; background: white; cursor: pointer; font-weight: 600;">Cerrar</button>
+        </div>
+      </div>
+
+      <!-- PESTAÑA 3: CARGA MANUAL DE PRODUCTOS -->
+      <div id="adminTabCreateProduct" style="display: none;">
+        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 16px;">
+          Cargá un nuevo artículo al catálogo con sus presentaciones y costos. El precio de venta al público se ajustará de forma automática según el margen comercial activo.
+        </p>
+
+        <form id="formCreateProduct" class="admin-create-form" onsubmit="event.preventDefault(); handleCreateProductSubmit();">
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Nombre del Producto *:</label>
+              <input type="text" id="createProdName" required placeholder="Ej: Royal Canin Maxi Puppy / Avena 30kg">
+            </div>
+
+            <div class="form-group">
+              <label>Marca:</label>
+              <input type="text" id="createProdBrand" list="brandDatalist" placeholder="Escribí o seleccioná la marca" required>
+              <datalist id="brandDatalist"></datalist>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Categoría Principal:</label>
+              <select id="createProdCategory">
+                <option value="perros">🐶 Perros</option>
+                <option value="gatos">🐱 Gatos</option>
+                <option value="granja">🌾 Aves, Semillas & Granja</option>
+                <option value="peces">🐠 Peces & Acuarios</option>
+                <option value="plagas">🛡️ Sanidad Ambiental & Plagas</option>
+                <option value="snacks">🦴 Snacks & Masticables</option>
+                <option value="higiene">✨ Piedras Sanitarias & Limpieza</option>
+                <option value="farmacia">🧴 Farmacia & Cuidado</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Tipo de Mascota / Destino:</label>
+              <select id="createProdPetType">
+                <option value="perros">Perros</option>
+                <option value="gatos">Gatos</option>
+                <option value="granja">Granja y Campo</option>
+                <option value="aves_granja">Aves y Pájaros</option>
+                <option value="peces">Peces</option>
+                <option value="roedores">Conejos y Roedores</option>
+                <option value="sanidad">Sanidad y Plagas</option>
+                <option value="ambos">General / Ambos</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Subcategoría:</label>
+              <input type="text" id="createProdSubcat" value="adulto" placeholder="adulto, cachorro, semillas, plagas, higiene...">
+            </div>
+
+            <div class="form-group">
+              <label>Tamaño de Raza / Variedad:</label>
+              <select id="createProdBreedSize">
+                <option value="todas">Todas las razas / General</option>
+                <option value="pequeña">Raza Pequeña (Mini)</option>
+                <option value="mediana">Raza Mediana</option>
+                <option value="grande">Raza Grande</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label>Insignia / Badge (opcional):</label>
+              <input type="text" id="createProdBadge" placeholder="Ej: Super Premium, Nuevo, Más Vendido, 100% Pura...">
+            </div>
+
+            <div class="form-group" style="display: flex; flex-direction: column; justify-content: center; gap: 8px;">
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 0.85rem; font-weight: 600;">
+                <input type="checkbox" id="createProdIsFeatured"> ⭐ Mostrar como Producto Destacado en Inicio
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 0.85rem; font-weight: 600;">
+                <input type="checkbox" id="createProdIsPromo"> 🔥 Activar como Precio Especial (con precio anterior tachado)
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Descripción del Producto:</label>
+            <textarea id="createProdDesc" rows="2" placeholder="Detalles de nutrición, ingredientes, modo de uso, beneficios..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Foto del Producto:</label>
+            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+              <input type="url" id="createProdImgUrl" placeholder="Pegá una URL de imagen web (ej: https://...)" style="flex: 1; min-width: 220px;" oninput="previewCreateProductImage()">
+              <input type="file" id="createProdImgFile" accept="image/*" style="display: none;" onchange="handleCreateProductFileUpload(event)">
+              <button type="button" class="btn-upload-file" onclick="document.getElementById('createProdImgFile').click()">
+                📁 Subir Archivo Local
+              </button>
+            </div>
+            <div id="createProdImgPreviewBox" style="margin-top: 10px; display: none; align-items: center; gap: 12px; background: #f8fafc; padding: 8px 12px; border-radius: 8px; border: 1px solid #e2e8f0;">
+              <img id="createProdImgPreview" src="" style="width: 60px; height: 60px; object-fit: contain; border-radius: 6px; background: white; border: 1px solid #cbd5e1;">
+              <span style="font-size: 0.8rem; color: #166534; font-weight: 600;">✓ Imagen lista para guardar</span>
+              <button type="button" onclick="clearCreateProductImage()" style="margin-left: auto; background: none; border: none; color: #dc2626; cursor: pointer; font-size: 0.8rem; font-weight: 600;">Quitar ✕</button>
+            </div>
+          </div>
+
+          <!-- SECCIÓN DE PRESENTACIONES Y PRECIOS PROVEEDOR -->
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-top: 8px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+              <div>
+                <h4 style="font-size: 0.95rem; font-weight: 700; color: #1e293b; margin: 0;">Presentaciones y Precio Proveedor</h4>
+                <p style="font-size: 0.78rem; color: #64748b; margin: 2px 0 0 0;">
+                  El precio de venta se actualiza automáticamente con el margen comercial activo (<strong id="createProdMarginLabel">25%</strong>).
+                </p>
+              </div>
+              <button type="button" onclick="addPresentationRow()" style="background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; padding: 6px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 700; cursor: pointer;">
+                + Agregar Presentación
+              </button>
+            </div>
+
+            <div style="overflow-x: auto;">
+              <table class="pres-calc-table">
+                <thead>
+                  <tr>
+                    <th style="min-width: 140px;">Nombre Presentación</th>
+                    <th style="width: 90px;">Peso/Cap. (kg)</th>
+                    <th style="width: 130px;">Costo Proveedor ($) *</th>
+                    <th style="width: 130px;">Precio Venta ($)</th>
+                    <th style="width: 40px; text-align: center;"></th>
+                  </tr>
+                </thead>
+                <tbody id="createProdPresRows">
+                  <!-- Filas dinámicas -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div style="margin-top: 20px; display: flex; align-items: center; justify-content: flex-end; gap: 12px;">
+            <button type="button" onclick="closeSettingsModal()" style="padding: 10px 18px; border-radius: 8px; border: 1px solid #cbd5e1; background: white; cursor: pointer; font-weight: 600;">Cancelar</button>
+            <button type="submit" style="padding: 11px 24px; border-radius: 8px; border: none; background: #0284c7; color: white; cursor: pointer; font-weight: 700; font-size: 0.95rem;">💾 Guardar Producto en Catálogo</button>
+          </div>
+          <div id="createProdStatusMsg" style="margin-top: 10px; font-size: 0.85rem; font-weight: 700; text-align: center;"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER (Sin horarios fijos, con enlace discreto a administración) -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div class="brand-logo" style="margin-bottom: 16px;" id="footerBrandTitle">
+<div class="brand-mascot-badge" style="width: 54px; height: 54px; border-color: #ffd8bf;" aria-label="Logo Maly Petshop">
+            <svg viewBox="115 75 270 270" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="250" cy="210" r="130" fill="#5A3626"/>
+              <path d="M 305 270 C 330 270, 355 255, 350 230 C 345 205, 315 210, 315 225 C 315 235, 325 240, 325 235 C 325 225, 305 235, 300 255 Z" fill="#94552F" stroke="#784121" stroke-width="2"/>
+              <ellipse cx="215" cy="270" rx="55" ry="60" fill="#884C27"/>
+              <ellipse cx="280" cy="275" rx="35" ry="40" fill="#884C27"/>
+              <ellipse cx="245" cy="265" rx="50" ry="58" fill="#9C5A32"/>
+              <path d="M 235 240 C 235 240, 245 285, 245 295 C 248 290, 252 285, 256 295 C 260 275, 262 250, 258 240 Z" fill="#FFFFFF"/>
+              <path d="M 218 245 L 214 310 C 214 316, 222 322, 230 322 C 238 322, 244 316, 244 310 L 244 245 Z" fill="#9C5A32"/>
+              <path d="M 205 315 C 205 305, 242 305, 242 315 C 242 326, 205 326, 205 315 Z" fill="#FFFFFF"/>
+              <path d="M 216 312 L 216 324 M 228 312 L 228 324" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 256 245 L 256 310 C 256 316, 264 322, 272 322 C 280 322, 286 316, 286 310 L 282 245 Z" fill="#9C5A32"/>
+              <path d="M 248 315 C 248 305, 285 305, 285 315 C 285 326, 248 326, 248 315 Z" fill="#FFFFFF"/>
+              <path d="M 260 312 L 260 324 M 272 312 L 272 324" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+              <ellipse cx="295" cy="318" rx="16" ry="9" fill="#FFFFFF"/>
+              <ellipse cx="198" cy="315" rx="16" ry="9" fill="#FFFFFF"/>
+              <path d="M 195 135 C 160 110, 130 150, 140 185 C 148 215, 175 220, 190 195 Z" fill="#834623" stroke="#6F391B" stroke-width="2"/>
+              <path d="M 305 135 C 340 110, 370 150, 360 185 C 352 215, 325 220, 310 195 Z" fill="#834623" stroke="#6F391B" stroke-width="2"/>
+              <ellipse cx="250" cy="165" rx="68" ry="62" fill="#9C5A32"/>
+              <circle cx="218" cy="158" r="14" fill="#1C1009"/>
+              <circle cx="214" cy="153" r="5.5" fill="#FFFFFF"/>
+              <circle cx="223" cy="162" r="2.5" fill="#FFFFFF"/>
+              <circle cx="278" cy="158" r="14" fill="#1C1009"/>
+              <circle cx="274" cy="153" r="5.5" fill="#FFFFFF"/>
+              <circle cx="283" cy="162" r="2.5" fill="#FFFFFF"/>
+              <ellipse cx="216" cy="138" rx="5" ry="3" fill="#B76F43"/>
+              <ellipse cx="280" cy="138" rx="5" ry="3" fill="#B76F43"/>
+              <ellipse cx="248" cy="180" rx="28" ry="20" fill="#925028"/>
+              <path d="M 241 170 C 241 166, 255 166, 255 170 C 255 177, 248 181, 248 181 C 248 181, 241 177, 241 170 Z" fill="#1E130D"/>
+              <circle cx="245" cy="169" r="1.5" fill="#FFFFFF" opacity="0.8"/>
+              <path d="M 248 181 L 248 186 M 241 187 C 245 192, 248 191, 248 186 C 248 191, 252 192, 256 187" stroke="#1E130D" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <circle cx="196" cy="178" r="9" fill="#E8829C" opacity="0.45"/>
+              <circle cx="300" cy="178" r="9" fill="#E8829C" opacity="0.45"/>
+              <path d="M 205 216 C 220 226, 276 226, 291 216 C 295 224, 287 232, 248 232 C 209 232, 201 224, 205 216 Z" fill="#F06292"/>
+              <circle cx="248" cy="233" r="4.5" fill="#CBD5E1"/>
+              <circle cx="248" cy="233" r="2.5" fill="#5A3626"/>
+              <path d="M 244 237 C 241 243, 244 252, 248 255 C 252 252, 255 243, 252 237 Z" fill="#FFFFFF"/>
+            </svg>
+          </div>
+          <div class="brand-text-group">
+            <span class="brand-title" id="footerBrandLogoText" style="background: none; -webkit-text-fill-color: #ffffff; color: #ffffff; font-size: 1.6rem;">Maly Petshop</span>
+            <span class="brand-tagline" style="color: #ffd8bf;">TIENDA DE MASCOTAS</span>
+          </div>
+        </div>
+        <p>Especialistas en nutrición animal. Trabajamos directo con distribuidores oficiales de Royal Canin, Purina Pro Plan, Eukanuba, Sieger, Dog Chow, Pedigree y más para garantizar frescura y calidad.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Categorías</h4>
+        <ul>
+          <li><a href="javascript:void(0)" onclick="filterCategory('perros')">Alimentos para Perros</a></li>
+          <li><a href="javascript:void(0)" onclick="filterCategory('gatos')">Alimentos para Gatos</a></li>
+          <li><a href="javascript:void(0)" onclick="filterCategory('snacks')">Snacks & Masticables</a></li>
+          <li><a href="javascript:void(0)" onclick="filterCategory('higiene')">Piedras Sanitarias</a></li>
+          <li><a href="javascript:void(0)" onclick="filterCategory('farmacia')">Farmacia & Belleza</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Envíos & Pagos</h4>
+        <p>• Envíos coordinados de forma personalizada por WhatsApp.<br>• Múltiples medios de pago a convenir (Efectivo, Transferencia, Tarjetas).<br>• Entrega de bolsas cerradas originales.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Atención & Redes</h4>
+        <p>Consultas y pedidos directamente a través de nuestro WhatsApp oficial.<br>Atención rápida y asesoramiento nutricional para tu mascota.</p>
+        <div style="margin-top: 14px; display: flex; flex-direction: column; gap: 8px;">
+          <a href="https://instagram.com/maly.petshop" target="_blank" rel="noopener noreferrer" class="footer-social-link ig" id="footerIgLink" onclick="goToInstagram(event)" title="Seguinos en Instagram">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span id="footerIgUser">@maly.petshop</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        © 2026 <span id="footerCopyrightStoreName"></span>. Todos los derechos reservados.
+        <a href="javascript:void(0)" onclick="openSettingsModal()" style="color: #64748b; font-size: 0.76rem; margin-left: 16px; text-decoration: none;" title="Panel Exclusivo">Acceso Administración 🔒</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- MODAL DE EDICIÓN COMPLETA DE PRODUCTO -->
+  <div class="product-detail-modal-overlay" id="editProductModal" style="display: none; z-index: 5000 !important;" onclick="closeEditProductModalOnBackdrop(event)">
+    <div class="product-detail-modal-card" style="max-width: 800px;">
+      <button class="modal-close-btn" onclick="closeEditProductModal()" aria-label="Cerrar">✕</button>
+      <h3 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; color: #1e293b; margin-bottom: 4px;">
+        ✏️ Editar Características y Precios
+      </h3>
+      <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 16px;" id="editModalSubtitle">
+        Actualizá los datos del producto. Los cambios impactan al instante en toda la tienda.
+      </p>
+
+      <form id="formEditProduct" class="admin-create-form" onsubmit="event.preventDefault(); handleEditProductSubmit();">
+        <input type="hidden" id="editProdId">
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label>Nombre del Producto *:</label>
+            <input type="text" id="editProdName" required>
+          </div>
+          <div class="form-group">
+            <label>Marca:</label>
+            <input type="text" id="editProdBrand" list="brandDatalist" required>
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label>Categoría Principal:</label>
+            <select id="editProdCategory">
+              <option value="perros">🐶 Perros</option>
+              <option value="gatos">🐱 Gatos</option>
+              <option value="granja">🌾 Aves, Semillas & Granja</option>
+              <option value="peces">🐠 Peces & Acuarios</option>
+              <option value="plagas">🛡️ Sanidad Ambiental & Plagas</option>
+              <option value="snacks">🦴 Snacks & Masticables</option>
+              <option value="higiene">✨ Piedras Sanitarias & Limpieza</option>
+              <option value="farmacia">🧴 Farmacia & Cuidado</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Tipo de Mascota / Destino:</label>
+            <select id="editProdPetType">
+              <option value="perros">Perros</option>
+              <option value="gatos">Gatos</option>
+              <option value="granja">Granja y Campo</option>
+              <option value="aves_granja">Aves y Pájaros</option>
+              <option value="peces">Peces</option>
+              <option value="roedores">Conejos y Roedores</option>
+              <option value="sanidad">Sanidad y Plagas</option>
+              <option value="ambos">General / Ambos</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label>Subcategoría:</label>
+            <input type="text" id="editProdSubcat">
+          </div>
+          <div class="form-group">
+            <label>Tamaño de Raza / Variedad:</label>
+            <select id="editProdBreedSize">
+              <option value="todas">Todas las razas / General</option>
+              <option value="pequeña">Raza Pequeña (Mini)</option>
+              <option value="mediana">Raza Mediana</option>
+              <option value="grande">Raza Grande</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label>Insignia / Badge:</label>
+            <input type="text" id="editProdBadge" placeholder="Ej: Más Vendido, Super Premium, Nuevo...">
+          </div>
+          <div class="form-group" style="display: flex; flex-direction: column; justify-content: center; gap: 8px;">
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 0.85rem; font-weight: 600;">
+              <input type="checkbox" id="editProdIsFeatured"> ⭐ Mostrar como Producto Destacado en Inicio
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 0.85rem; font-weight: 600;">
+              <input type="checkbox" id="editProdIsPromo"> 🔥 Activar como Precio Especial (con precio anterior tachado)
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Descripción:</label>
+          <textarea id="editProdDesc" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Foto del Producto:</label>
+          <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+            <input type="url" id="editProdImgUrl" placeholder="Pegá URL de imagen..." style="flex: 1; min-width: 220px;" oninput="previewEditProductImage()">
+            <input type="file" id="editProdImgFile" accept="image/*" style="display: none;" onchange="handleEditProductFileUpload(event)">
+            <button type="button" class="btn-upload-file" onclick="document.getElementById('editProdImgFile').click()">
+              📁 Subir Archivo Local
+            </button>
+          </div>
+          <div id="editProdImgPreviewBox" style="margin-top: 10px; display: flex; align-items: center; gap: 12px; background: #f8fafc; padding: 8px 12px; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <img id="editProdImgPreview" src="" style="width: 60px; height: 60px; object-fit: contain; border-radius: 6px; background: white; border: 1px solid #cbd5e1;">
+            <span style="font-size: 0.8rem; color: #166534; font-weight: 600;">✓ Foto del producto</span>
+          </div>
+        </div>
+
+        <!-- Presentaciones y Costos -->
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+            <div>
+              <h4 style="font-size: 0.95rem; font-weight: 700; color: #1e293b; margin: 0;">Presentaciones, Costo y Precio de Venta</h4>
+              <p style="font-size: 0.78rem; color: #64748b; margin: 2px 0 0 0;">
+                Modificá el costo del proveedor para actualizar el precio de venta automáticamente con el margen activo (<strong id="editProdMarginLabel">25%</strong>).
+              </p>
+            </div>
+            <button type="button" onclick="addEditPresentationRow()" style="background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; padding: 6px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 700; cursor: pointer;">
+              + Agregar Presentación
+            </button>
+          </div>
+
+          <div style="overflow-x: auto;">
+            <table class="pres-calc-table">
+              <thead>
+                <tr>
+                  <th style="min-width: 140px;">Nombre Presentación</th>
+                  <th style="width: 90px;">Peso (kg)</th>
+                  <th style="width: 130px;">Costo Proveedor ($) *</th>
+                  <th style="width: 130px;">Precio Venta ($)</th>
+                  <th style="width: 40px; text-align: center;"></th>
+                </tr>
+              </thead>
+              <tbody id="editProdPresRows">
+                <!-- Filas dinámicas -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div style="margin-top: 20px; display: flex; align-items: center; justify-content: flex-end; gap: 12px;">
+          <button type="button" onclick="closeEditProductModal()" style="padding: 10px 18px; border-radius: 8px; border: 1px solid #cbd5e1; background: white; cursor: pointer; font-weight: 600;">Cancelar</button>
+          <button type="submit" style="padding: 11px 24px; border-radius: 8px; border: none; background: #0284c7; color: white; cursor: pointer; font-weight: 700; font-size: 0.95rem;">💾 Guardar Cambios</button>
+        </div>
+        <div id="editProdStatusMsg" style="margin-top: 10px; font-size: 0.85rem; font-weight: 700; text-align: center;"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL DE DETALLE DE PRODUCTO Y ZOOM (UBICADO EN EL DOM ANTES DE SCRIPTS) -->
+  <div class="product-detail-modal-overlay" id="productDetailModal" style="display: none;" onclick="closeProductDetailModalOnBackdrop(event)">
+    <div class="product-detail-modal-card">
+      <button class="modal-close-btn" onclick="closeProductDetailModal()" aria-label="Cerrar">✕</button>
+      <div class="product-detail-grid" id="productDetailContent">
+        <!-- Inyectado dinámicamente -->
+      </div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX PARA ZOOM PANTALLA COMPLETA -->
+  <div class="lightbox-overlay" id="imageLightboxModal" style="display: none;" onclick="closeImageLightbox(event)">
+    <div class="lightbox-content">
+      <button class="lightbox-close-btn" onclick="closeImageLightbox()" aria-label="Cerrar">✕</button>
+      <img id="lightboxImg" src="" alt="Zoom Alta Resolución">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS CON VERSIÓN ANTI-CACHE -->
+  <script src="js/catalog-data.js?v=5.0_mobile_compact"></script>
+  <script src="js/api.js?v=5.0_mobile_compact"></script>
+  <script src="js/app.js?v=5.0_mobile_compact"></script>
+</body>
+</html>
