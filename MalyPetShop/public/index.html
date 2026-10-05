@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="referrer" content="no-referrer">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
@@ -25,7 +26,7 @@
   <link rel="icon" type="image/svg+xml" href="images/maly_mascot_avatar.svg">
   <link rel="alternate icon" href="images/maly_mascot_avatar.png">
 
-  <link rel="stylesheet" href="css/styles.css?v=5.0_mobile_compact">
+  <link rel="stylesheet" href="css/styles.css?v=5.1_noreferrer">
 </head>
 <body>
 
@@ -130,7 +131,7 @@
           <span class="ig-text">Instagram</span>
         </a>
 
-        <a href="https://wa.me/5491100000000" target="_blank" rel="noopener noreferrer" class="btn-wa-header" id="headerWaBtn">
+        <a href="https://wa.me/5491158549783" target="_blank" rel="noopener noreferrer" class="btn-wa-header" id="headerWaBtn">
           <span>💬</span> <span class="wa-text">WhatsApp</span>
         </a>
 
@@ -543,6 +544,23 @@
           <div id="dbStatsDisplay" style="margin-top: 10px;"></div>
         </div>
 
+        
+        <!-- CAJA DE SINCRONIZACIÓN CON VERCEL -->
+        <div style="background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 12px; padding: 16px; margin: 20px 0;">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <h4 style="margin: 0; color: #166534; font-size: 1rem; font-weight: 800;">🚀 Sincronización Automática para Vercel</h4>
+              <p style="margin: 4px 0 0 0; color: #15803d; font-size: 0.8rem;">
+                Guarda todas tus fotos, nuevos productos y precios directamente en <code>public/js/catalog-data.js</code> para que Vercel se vea exactamente igual a tu PC.
+              </p>
+            </div>
+            <button type="button" onclick="exportCatalogForVercel()" style="background: #16a34a; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-size: 0.88rem; box-shadow: 0 2px 6px rgba(22, 163, 74, 0.3);">
+              <span>💾</span> Guardar para Vercel
+            </button>
+          </div>
+          <div id="exportVercelStatusMsg" style="margin-top: 10px; font-size: 0.82rem; font-weight: 700;"></div>
+        </div>
+
         <div class="form-group">
           <label>Nombre de la Tienda:</label>
           <input type="text" id="inputStoreName" placeholder="Escribí el nombre exacto de la tienda">
@@ -550,7 +568,7 @@
 
         <div class="form-group">
           <label>Número de WhatsApp para Pedidos (con código de país, ej: 54911...):</label>
-          <input type="text" id="inputWaNumber" value="5491100000000">
+          <input type="text" id="inputWaNumber" value="5491158549783">
         </div>
 
         <div class="form-group">
@@ -1016,8 +1034,8 @@
   </div>
 
   <!-- SCRIPTS CON VERSIÓN ANTI-CACHE -->
-  <script src="js/catalog-data.js?v=5.0_mobile_compact"></script>
-  <script src="js/api.js?v=5.0_mobile_compact"></script>
-  <script src="js/app.js?v=5.0_mobile_compact"></script>
+  <script src="js/catalog-data.js?v=5.1_noreferrer"></script>
+  <script src="js/api.js?v=5.1_noreferrer"></script>
+  <script src="js/app.js?v=5.1_noreferrer"></script>
 </body>
 </html>

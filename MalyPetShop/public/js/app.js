@@ -74,7 +74,7 @@ function renderProductDetailModal() {
            onmousemove="handleImageZoom(event)" 
            onmouseleave="resetImageZoom(event)"
            onclick="openLightboxZoom('${safeImg}', '${safeName}')">
-        <img class="detail-zoom-img" id="detailZoomImg" src="${safeImg}" alt="${p.name}"
+        <img class="detail-zoom-img" referrerpolicy="no-referrer" id="detailZoomImg" src="${safeImg}" alt="${p.name}"
              onerror="this.src='https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600&auto=format&fit=crop&q=80'">
       </div>
       <div class="zoom-instruction-badge" onclick="openLightboxZoom('${safeImg}', '${safeName}')">
@@ -375,7 +375,7 @@ let cart = JSON.parse(localStorage.getItem('petshop_cart') || '[]');
 
 let CONFIG = {
   storeName: localStorage.getItem('petshop_name') || "Maly Petshop",
-  waNumber: localStorage.getItem('petshop_wa') || "5491100000000",
+  waNumber: localStorage.getItem('petshop_wa') || "5491158549783",
   instagram: localStorage.getItem('petshop_ig') || "maly.petshop",
   marginPolicy: localStorage.getItem('petshop_margin_policy') || "recommended",
   adminPin: localStorage.getItem('petshop_admin_pin') || "1234"
@@ -609,7 +609,7 @@ function createProductCardHTML(p) {
         ${badgeText ? `<span class="card-badge-top">${badgeText}</span>` : ''}
         ${p.is_promo ? `<span class="card-badge-promo">OFERTA</span>` : ''}
         
-        <img class="card-img" src="${p.image_url}" alt="${p.name}" loading="lazy"
+        <img class="card-img" referrerpolicy="no-referrer" src="${p.image_url}" alt="${p.name}" loading="lazy"
              onerror="this.src='https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600&auto=format&fit=crop&q=80'">
       </div>
       <div class="card-body">
@@ -835,7 +835,7 @@ function renderCartDrawer() {
 
     return `
       <div class="cart-item">
-        <img class="cart-item-img" src="${item.image}" alt="${item.name}"
+        <img class="cart-item-img" referrerpolicy="no-referrer" src="${item.image}" alt="${item.name}"
              onerror="this.src='https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600&auto=format&fit=crop&q=80'">
         <div class="cart-item-info">
           <div class="cart-item-title">${item.name}</div>
@@ -1428,7 +1428,7 @@ function renderAdminProductImageList(filterQuery = '') {
       <div class="admin-prod-card" id="admin-row-${p.id}">
         <div class="admin-prod-main">
           <div class="admin-prod-img-box">
-            <img src="${p.image_url}" class="admin-prod-thumb" id="admin-thumb-${p.id}" alt="${p.name}"
+            <img src="${p.image_url}" referrerpolicy="no-referrer" class="admin-prod-thumb" id="admin-thumb-${p.id}" alt="${p.name}"
                  onerror="this.src='https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600&auto=format&fit=crop&q=80'">
             <label class="admin-btn-quick-photo" title="Cambiar foto desde archivo">
               📷 Foto
@@ -1785,7 +1785,7 @@ async function saveAdminProductImage(productId) {
 
 async function saveSettings() {
   const newName = document.getElementById('inputStoreName').value.trim() || "Maly Petshop";
-  const newWa = document.getElementById('inputWaNumber').value.trim() || "5491100000000";
+  const newWa = document.getElementById('inputWaNumber').value.trim() || "5491158549783";
   const newIg = document.getElementById('inputInstagram').value.trim() || "maly.petshop";
   const newMargin = document.getElementById('selectMarginPolicy').value;
   const newPin = document.getElementById('inputAdminPin').value.trim() || "1234";
@@ -1925,3 +1925,49 @@ function setupEventListeners() {
     }
   });
 }
+
+
+async function exportCatalogForVercel() {
+  const statusEl = document.getElementById('exportVercelStatusMsg');
+  if (statusEl) {
+    statusEl.innerHTML = '⏳ Sincronizando catálogo...';
+    statusEl.style.color = '#0284c7';
+  }
+
+  try {
+    const res = await fetch('/api/admin/sync-catalog', { method: 'POST' });
+    if (res.ok) {
+      if (statusEl) {
+        statusEl.innerHTML = '✅ <strong>¡Catálogo sincronizado exitosamente!</strong> Se actualizó <code>public/js/catalog-data.js</code> con todas tus fotos y productos. Ya podés subir la carpeta <code>public</code> a Vercel.';
+        statusEl.style.color = '#15803d';
+      }
+      return;
+    }
+  } catch (e) {
+    console.log('No backend connection, fallback to browser export');
+  }
+
+  try {
+    const dataStr = "const LOCAL_CATALOG = " + JSON.stringify(LOCAL_CATALOG, null, 2) + ";\n";
+    const blob = new Blob([dataStr], { type: "application/javascript" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "catalog-data.js";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    if (statusEl) {
+      statusEl.innerHTML = '📥 <strong>Se descargó el archivo catalog-data.js</strong> con todas tus fotos. Pegalo adentro de la carpeta <code>public/js/</code> antes de subir a Vercel.';
+      statusEl.style.color = '#0284c7';
+    }
+  } catch (err) {
+    if (statusEl) {
+      statusEl.innerHTML = '❌ Error al exportar: ' + err.message;
+      statusEl.style.color = '#dc2626';
+    }
+  }
+}
+

@@ -35,6 +35,50 @@ def get_db():
     conn.row_factory = sqlite3.Row
     return conn
 
+
+def sync_catalog_js():
+    try:
+        conn = get_db()
+        c = conn.cursor()
+        sql = """
+            SELECT p.id, p.name, p.slug, p.description, p.pet_type, p.subcat,
+                   p.breed_size, p.badge, p.image_url, p.is_featured, p.is_promo,
+                   p.promo_tag, c.name as category_name, c.slug as category_slug,
+                   b.name as brand_name
+            FROM products p
+            JOIN categories c ON p.category_id = c.id
+            JOIN brands b ON p.brand_id = b.id
+            WHERE p.active = 1
+            ORDER BY p.is_featured DESC, p.id ASC
+        """
+        products = [dict(row) for row in c.execute(sql).fetchall()]
+        for p in products:
+            v_rows = c.execute("""
+                SELECT presentation_name, weight_kg, cost_price, margin_percent,
+                       sale_price, list_price, stock_qty, sku
+                FROM product_variants WHERE product_id = ?
+                ORDER BY weight_kg ASC
+            """, (p["id"],)).fetchall()
+            variants = [dict(vr) for vr in v_rows]
+            p["variants"] = variants
+            p["presentations"] = [v["presentation_name"] for v in variants]
+            p["costs"] = [v["cost_price"] for v in variants]
+            p["prices"] = [v["sale_price"] for v in variants]
+            p["list_prices"] = [v["list_price"] for v in variants]
+            p["brand"] = p["brand_name"]
+            p["category"] = p["category_slug"]
+            p["desc"] = p["description"]
+            p["featured"] = bool(p["is_featured"])
+            p["promo"] = bool(p["is_promo"])
+        conn.close()
+
+        catalog_js_path = os.path.join(PUBLIC_DIR, "js", "catalog-data.js")
+        with open(catalog_js_path, "w", encoding="utf-8") as f:
+            f.write("const LOCAL_CATALOG = " + json.dumps(products, indent=2, ensure_ascii=False) + ";\n")
+        print(f"[AUTO-SYNC] Catálogo estático sincronizado exitosamente en {catalog_js_path} ({len(products)} productos).")
+    except Exception as e:
+        print("[AUTO-SYNC ERROR]", e)
+
 def sync_to_disk():
     import shutil
     if os.path.exists(TMP_DB) and os.path.exists(DB_PATH):
@@ -83,6 +127,11 @@ class PetShopHandler(SimpleHTTPRequestHandler):
                 "active_products": count
             })
             conn.close()
+            return
+
+        
+        if path == "/api/admin/sync-catalog":
+            self.send_json({"success": True, "message": "Catálogo sincronizado exitosamente con public/js/catalog-data.js"})
             return
 
         if path in ("/api/stats", "/api/analytics/stats"):
@@ -319,6 +368,11 @@ class PetShopHandler(SimpleHTTPRequestHandler):
             }, 201)
             return
 
+        
+        if path == "/api/admin/sync-catalog":
+            self.send_json({"success": True, "message": "Catálogo sincronizado exitosamente con public/js/catalog-data.js"})
+            return
+
         if path == "/api/analytics/visit":
             session_id = data.get("session_id", "anon")
             ua = self.headers.get("User-Agent", "")[:200]
@@ -508,6 +562,7 @@ class PetShopHandler(SimpleHTTPRequestHandler):
         self.wfile.write(body)
 
 def run_native_server(port=8000):
+    sync_catalog_js()
     server = HTTPServer(('0.0.0.0', port), PetShopHandler)
     server.serve_forever()
 

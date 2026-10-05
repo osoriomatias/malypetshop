@@ -11,7 +11,7 @@ import webbrowser
 
 def main():
     print("=" * 65)
-    print(" 🐾 PELLEGRINI PETSHOP - INICIANDO SISTEMA CON BASE DE DATOS")
+    print(" 🐾 MALYPETSHOP - INICIANDO SISTEMA CON BASE DE DATOS")
     print("=" * 65)
     
     current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -61,7 +61,8 @@ def main():
         uvicorn.run("main:app", host="0.0.0.0", port=port, reload=True, app_dir=backend_dir)
     else:
         sys.path.append(backend_dir)
-        from server_builtin import PetShopHandler
+        from server_builtin import PetShopHandler, sync_catalog_js
+        sync_catalog_js()
         from http.server import HTTPServer
         server = HTTPServer(("0.0.0.0", port), PetShopHandler)
         try:
