@@ -114,7 +114,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "mediana",
     "badge": "Premium",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_839215-MLA99350079654_112025-O.webp",
+    "image_url": "https://catycanar.vtexassets.com/arquivos/ids/170910/PREMIUM-DOG-SELECTION-ADULTOS-RAZAS-MEDIANAS-Y-GRANDES-21k.png?v=638567461499300000",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
