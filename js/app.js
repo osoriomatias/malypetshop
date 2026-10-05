@@ -378,7 +378,7 @@ let CONFIG = {
   waNumber: localStorage.getItem('petshop_wa') || "5491158549783",
   instagram: localStorage.getItem('petshop_ig') || "maly.petshop",
   marginPolicy: localStorage.getItem('petshop_margin_policy') || "recommended",
-  adminPin: localStorage.getItem('petshop_admin_pin') || "1234"
+  adminPin: localStorage.getItem('petshop_admin_pin') || "3223"
 };
 
 let currentSlide = 0;
@@ -1788,7 +1788,7 @@ async function saveSettings() {
   const newWa = document.getElementById('inputWaNumber').value.trim() || "5491158549783";
   const newIg = document.getElementById('inputInstagram').value.trim() || "maly.petshop";
   const newMargin = document.getElementById('selectMarginPolicy').value;
-  const newPin = document.getElementById('inputAdminPin').value.trim() || "1234";
+  const newPin = document.getElementById('inputAdminPin').value.trim() || "3223";
 
   CONFIG.storeName = newName;
   CONFIG.waNumber = newWa;
