@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="pupilShine" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#1e130c"/>
+      <stop offset="100%" stop-color="#0f0a06"/>
+    </radialGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#2a170e" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background Warm Chocolate -->
+  <rect width="500" height="500" rx="36" fill="#5A3626"/>
+
+  <g transform="translate(0, 10)">
+    <!-- Curled Tail -->
+    <path d="M 305 270 C 330 270, 355 255, 350 230 C 345 205, 315 210, 315 225 C 315 235, 325 240, 325 235 C 325 225, 305 235, 300 255 Z" 
+          fill="#94552F" stroke="#784121" stroke-width="3" filter="url(#softShadow)"/>
+
+    <!-- Hind Legs / Body Back -->
+    <ellipse cx="215" cy="270" rx="55" ry="60" fill="#884C27"/>
+    <ellipse cx="280" cy="275" rx="35" ry="40" fill="#884C27"/>
+
+    <!-- Body Main -->
+    <ellipse cx="245" cy="265" rx="50" ry="58" fill="#9C5A32"/>
+
+    <!-- White Chest Fluff -->
+    <path d="M 235 240 C 235 240, 245 285, 245 295 C 248 290, 252 285, 256 295 C 260 275, 262 250, 258 240 Z" fill="#FFFFFF"/>
+
+    <!-- Left Front Leg -->
+    <path d="M 218 245 L 214 310 C 214 316, 222 322, 230 322 C 238 322, 244 316, 244 310 L 244 245 Z" fill="#9C5A32"/>
+    <!-- Left Paw White with Toes -->
+    <path d="M 205 315 C 205 305, 242 305, 242 315 C 242 326, 205 326, 205 315 Z" fill="#FFFFFF"/>
+    <path d="M 216 312 L 216 324 M 228 312 L 228 324" stroke="#E2E8F0" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Right Front Leg -->
+    <path d="M 256 245 L 256 310 C 256 316, 264 322, 272 322 C 280 322, 286 316, 286 310 L 282 245 Z" fill="#9C5A32"/>
+    <!-- Right Paw White with Toes -->
+    <path d="M 248 315 C 248 305, 285 305, 285 315 C 285 326, 248 326, 248 315 Z" fill="#FFFFFF"/>
+    <path d="M 260 312 L 260 324 M 272 312 L 272 324" stroke="#E2E8F0" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Back Paw White Right -->
+    <ellipse cx="295" cy="318" rx="16" ry="9" fill="#FFFFFF"/>
+    <path d="M 295 312 L 295 322" stroke="#E2E8F0" stroke-width="2"/>
+
+    <!-- Back Paw White Left -->
+    <ellipse cx="198" cy="315" rx="16" ry="9" fill="#FFFFFF"/>
+    <path d="M 198 310 L 198 320" stroke="#E2E8F0" stroke-width="2"/>
+
+    <!-- Head Group -->
+    <g id="puppyHead">
+      <!-- Left Ear (Floppy) -->
+      <path d="M 195 135 C 160 110, 130 150, 140 185 C 148 215, 175 220, 190 195 Z" 
+            fill="#834623" stroke="#6F391B" stroke-width="2"/>
+      
+      <!-- Right Ear (Floppy) -->
+      <path d="M 305 135 C 340 110, 370 150, 360 185 C 352 215, 325 220, 310 195 Z" 
+            fill="#834623" stroke="#6F391B" stroke-width="2"/>
+
+      <!-- Head Base -->
+      <ellipse cx="250" cy="165" rx="68" ry="62" fill="#9C5A32"/>
+      <!-- Crown Fur Tuft -->
+      <path d="M 242 105 C 244 95, 256 95, 258 105 Z" fill="#9C5A32"/>
+
+      <!-- Big Glossy Eyes -->
+      <!-- Left Eye -->
+      <circle cx="218" cy="158" r="14" fill="#1C1009"/>
+      <circle cx="214" cy="153" r="5.5" fill="#FFFFFF"/>
+      <circle cx="223" cy="162" r="2.5" fill="#FFFFFF"/>
+
+      <!-- Right Eye -->
+      <circle cx="278" cy="158" r="14" fill="#1C1009"/>
+      <circle cx="274" cy="153" r="5.5" fill="#FFFFFF"/>
+      <circle cx="283" cy="162" r="2.5" fill="#FFFFFF"/>
+
+      <!-- Cute Eyebrow Hints -->
+      <ellipse cx="216" cy="138" rx="5" ry="3" fill="#B76F43"/>
+      <ellipse cx="280" cy="138" rx="5" ry="3" fill="#B76F43"/>
+
+      <!-- Muzzle / Snout -->
+      <ellipse cx="248" cy="180" rx="28" ry="20" fill="#925028"/>
+
+      <!-- Black Button Nose -->
+      <path d="M 241 170 C 241 166, 255 166, 255 170 C 255 177, 248 181, 248 181 C 248 181, 241 177, 241 170 Z" fill="#1E130D"/>
+      <circle cx="245" cy="169" r="1.5" fill="#FFFFFF" opacity="0.8"/>
+
+      <!-- Smiling Mouth -->
+      <path d="M 248 181 L 248 186 M 241 187 C 245 192, 248 191, 248 186 C 248 191, 252 192, 256 187" 
+            stroke="#1E130D" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+      <!-- Soft Pink Cheeks -->
+      <circle cx="196" cy="178" r="9" fill="#E8829C" opacity="0.35"/>
+      <circle cx="300" cy="178" r="9" fill="#E8829C" opacity="0.35"/>
+
+      <!-- Pink Collar -->
+      <path d="M 205 216 C 220 226, 276 226, 291 216 C 295 224, 287 232, 248 232 C 209 232, 201 224, 205 216 Z" fill="#F06292"/>
+      
+      <!-- Collar Tag Ring & White Charm -->
+      <circle cx="248" cy="233" r="4.5" fill="#CBD5E1"/>
+      <circle cx="248" cy="233" r="2.5" fill="#5A3626"/>
+      <path d="M 244 237 C 241 243, 244 252, 248 255 C 252 252, 255 243, 252 237 Z" fill="#FFFFFF" filter="url(#softShadow)"/>
+    </g>
+  </g>
+
+  <!-- Typography: MALY PETSHOP -->
+  <text x="250" y="398" text-anchor="middle"
+        font-family="'Fredoka', 'Outfit', 'Nunito', system-ui, -apple-system, sans-serif"
+        font-size="46" font-weight="900" fill="#FFFFFF" letter-spacing="1">
+    MALY PETSHOP
+  </text>
+
+  <!-- Typography: TIENDA DE MASCOTAS -->
+  <text x="250" y="432" text-anchor="middle"
+        font-family="'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif"
+        font-size="17" font-weight="800" fill="#FFFFFF" letter-spacing="4.5" opacity="0.95">
+    TIENDA DE MASCOTAS
+  </text>
+</svg>
