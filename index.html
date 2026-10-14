@@ -26,7 +26,7 @@
   <link rel="icon" type="image/svg+xml" href="images/maly_mascot_avatar.svg">
   <link rel="alternate icon" href="images/maly_mascot_avatar.png">
 
-  <link rel="stylesheet" href="css/styles.css?v=7.1_fix">
+  <link rel="stylesheet" href="css/styles.css?v=5.1_noreferrer">
 </head>
 <body>
 
@@ -131,7 +131,7 @@
           <span class="ig-text">Instagram</span>
         </a>
 
-        <a href="https://wa.me/5491100000000" target="_blank" rel="noopener noreferrer" class="btn-wa-header" id="headerWaBtn">
+        <a href="https://wa.me/5491158549783" target="_blank" rel="noopener noreferrer" class="btn-wa-header" id="headerWaBtn">
           <span>💬</span> <span class="wa-text">WhatsApp</span>
         </a>
 
@@ -566,20 +566,9 @@
           <input type="text" id="inputStoreName" placeholder="Escribí el nombre exacto de la tienda">
         </div>
 
-                <div class="form-group" style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 10px; padding: 14px; margin-bottom: 16px;">
-          <label style="font-weight: 800; color: #1e293b; font-size: 0.92rem; display: flex; align-items: center; gap: 6px;">
-            <span>💬</span> Número de WhatsApp Oficial para Pedidos:
-          </label>
-          <p style="margin: 4px 0 8px 0; font-size: 0.8rem; color: #64748b;">
-            Podés escribirlo como quieras (ej: <code>11 2345 6789</code>, <code>+54 9 11...</code> o <code>15...</code>). El sistema lo convierte automáticamente al formato internacional correcto para que los clientes te manden mensaje a vos.
-          </p>
-          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-            <input type="text" id="inputWaNumber" placeholder="Ej: 11 2345 6789" style="flex: 1; min-width: 200px; padding: 10px 14px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.95rem; font-weight: 700;">
-            <button type="button" id="btnTestWa" onclick="testWhatsAppNumber()" style="background: #25d366; color: white; border: none; padding: 10px 16px; border-radius: 8px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; box-shadow: 0 2px 6px rgba(37, 211, 102, 0.3);">
-              <span>📲</span> Probar WhatsApp Ahora
-            </button>
-          </div>
-          <div id="waPreviewText" style="margin-top: 8px; font-size: 0.82rem; font-weight: 700; color: #15803d;"></div>
+        <div class="form-group">
+          <label>Número de WhatsApp para Pedidos (con código de país, ej: 54911...):</label>
+          <input type="text" id="inputWaNumber" value="5491158549783">
         </div>
 
         <div class="form-group">
@@ -1045,10 +1034,8 @@
   </div>
 
   <!-- SCRIPTS CON VERSIÓN ANTI-CACHE -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/config.js?v=7.1_fix"></script>
-  <script src="js/catalog-data.js?v=7.1_fix"></script>
-  <script src="js/api.js?v=7.1_fix"></script>
-  <script src="js/app.js?v=7.1_fix"></script>
+  <script src="js/catalog-data.js?v=5.1_noreferrer"></script>
+  <script src="js/api.js?v=5.1_noreferrer"></script>
+  <script src="js/app.js?v=5.1_noreferrer"></script>
 </body>
 </html>

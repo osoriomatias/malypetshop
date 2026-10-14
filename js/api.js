@@ -1,55 +1,11 @@
 /**
- * MalyPetShop - Capa de Servicio API con Conexión a Supabase Cloud
- * Proyecto: MalyPetShop (https://vbhkqmshoouguhopyxli.supabase.co)
+ * MalyPetShop - Capa de Servicio API
  */
-
-window.SUPABASE_CONFIG = {
-  url: "https://vbhkqmshoouguhopyxli.supabase.co",
-  anonKey: "sb_publishable_yeRE6YC5IteDHTIrip6Teg_vrwQyO3M"
-};
-
-window.API = {
-  baseUrl: (typeof window !== 'undefined' && window.location && window.location.origin && window.location.origin.includes('http')) 
-           ? window.location.origin : 'http://localhost:8000',
+const API = {
+  baseUrl: window.location.origin.includes('http') ? window.location.origin : 'http://localhost:8000',
   isBackendConnected: false,
-  isSupabaseConnected: false,
-  supabaseClient: null,
-  cachedCategories: null,
-  cachedBrands: null,
-
-  init() {
-    try {
-      if (typeof window !== 'undefined' && window.supabase && typeof window.supabase.createClient === 'function') {
-        this.supabaseClient = window.supabase.createClient(window.SUPABASE_CONFIG.url, window.SUPABASE_CONFIG.anonKey);
-        this.isSupabaseConnected = true;
-        console.log('✅ [Supabase] Cliente inicializado con MalyPetShop Cloud.');
-      } else {
-        console.log('ℹ️ [Supabase] Modo híbrido activo.');
-      }
-    } catch (e) {
-      console.warn('⚠️ [Supabase] Error en init:', e);
-    }
-  },
 
   async checkHealth() {
-    if (!this.supabaseClient) this.init();
-
-    // 1. Probar Supabase Cloud
-    if (this.supabaseClient) {
-      try {
-        const { data, error } = await this.supabaseClient.from('store_settings').select('key').limit(1);
-        if (!error && data) {
-          this.isSupabaseConnected = true;
-          return {
-            status: "healthy",
-            service: "Supabase Cloud Database (PostgreSQL)",
-            connected: true
-          };
-        }
-      } catch (e) {}
-    }
-
-    // 2. Probar Backend local Python si está activo
     try {
       const res = await fetch(`${this.baseUrl}/api/health`, { method: 'GET', headers: { 'Accept': 'application/json' } });
       if (res.ok) {
@@ -63,216 +19,96 @@ window.API = {
     return null;
   },
 
-  formatSupabaseProduct(p) {
-    // Variantes
-    const rawVariants = Array.isArray(p.product_variants) ? p.product_variants : [];
-    const variants = rawVariants.sort((a, b) => (Number(a.weight_kg) || 0) - (Number(b.weight_kg) || 0));
-    const presentations = variants.map(v => v.presentation_name);
-    const prices = variants.map(v => Number(v.sale_price));
-    const list_prices = variants.map(v => Number(v.list_price || Math.round(v.sale_price * 1.15)));
-    const costs = variants.map(v => Number(v.cost_price || 0));
-
-    // Categoría
-    let catName = 'General';
-    let catSlug = 'perros';
-    if (p.categories) {
-      if (Array.isArray(p.categories) && p.categories.length > 0) {
-        catName = p.categories[0].name || catName;
-        catSlug = p.categories[0].slug || catSlug;
-      } else if (typeof p.categories === 'object') {
-        catName = p.categories.name || catName;
-        catSlug = p.categories.slug || catSlug;
-      }
-    }
-
-    // Marca
-    let brandName = 'Maly Petshop';
-    if (p.brands) {
-      if (Array.isArray(p.brands) && p.brands.length > 0) {
-        brandName = p.brands[0].name || brandName;
-      } else if (typeof p.brands === 'object') {
-        brandName = p.brands.name || brandName;
-      }
-    }
-
-    return {
-      id: p.id,
-      name: p.name,
-      slug: p.slug,
-      description: p.description || '',
-      desc: p.description || '',
-      pet_type: p.pet_type || 'ambos',
-      subcat: p.subcat || 'general',
-      breed_size: p.breed_size || 'todas',
-      badge: p.badge || '',
-      image_url: p.image_url || '',
-      is_featured: p.is_featured ? 1 : 0,
-      featured: Boolean(p.is_featured),
-      is_promo: p.is_promo ? 1 : 0,
-      promo: Boolean(p.is_promo),
-      promo_tag: p.promo_tag || '',
-      category_name: catName,
-      category_slug: catSlug,
-      category: catSlug,
-      brand_name: brandName,
-      brand: brandName,
-      variants: variants,
-      presentations: presentations.length ? presentations : ['Única'],
-      prices: prices.length ? prices : [0],
-      list_prices: list_prices.length ? list_prices : [0],
-      costs: costs.length ? costs : [0]
-    };
-  },
-
   async getProducts(params = {}) {
-    if (!this.supabaseClient) this.init();
-
-    // RUTA 1: Consultar a Supabase Cloud
-    if (this.supabaseClient) {
+    if (this.isBackendConnected) {
       try {
-        let query = this.supabaseClient
-          .from('products')
-          .select('*, categories(name, slug), brands(name), product_variants(*)')
-          .eq('active', true)
-          .order('is_featured', { ascending: false })
-          .order('id', { ascending: true });
+        const query = new URLSearchParams();
+        if (params.category && params.category !== 'todos') query.append('category', params.category);
+        if (params.pet_type && params.pet_type !== 'todos') query.append('pet_type', params.pet_type);
+        if (params.subcat && params.subcat !== 'todas') query.append('subcat', params.subcat);
+        if (params.breed_size && params.breed_size !== 'todas') query.append('breed_size', params.breed_size);
+        if (params.brand && params.brand !== 'todas') query.append('brand', params.brand);
+        if (params.promoOnly) query.append('is_promo', 'true');
+        if (params.search) query.append('search', params.search);
+        if (params.margin_policy) query.append('margin_policy', params.margin_policy);
 
-        if (params.category && params.category !== 'todos') {
-          if (params.category === 'promociones') {
-            query = query.eq('is_promo', true);
-          }
-        }
-
-        if (params.pet_type && params.pet_type !== 'todos') {
-          query = query.or(`pet_type.eq.${params.pet_type},pet_type.eq.ambos`);
-        }
-
-        if (params.subcat && params.subcat !== 'todas') {
-          query = query.eq('subcat', params.subcat);
-        }
-
-        if (params.breed_size && params.breed_size !== 'todas') {
-          query = query.or(`breed_size.eq.${params.breed_size},breed_size.eq.todas`);
-        }
-
-        if (params.promoOnly) {
-          query = query.eq('is_promo', true);
-        }
-
-        if (params.search) {
-          const term = `%${params.search.trim().toLowerCase()}%`;
-          query = query.ilike('name', term);
-        }
-
-        const { data, error } = await query;
-        if (!error && Array.isArray(data) && data.length > 0) {
-          let formatted = data.map(p => this.formatSupabaseProduct(p));
-          if (params.category && params.category !== 'todos' && params.category !== 'promociones') {
-            formatted = formatted.filter(p => p.category_slug === params.category);
-          }
-          if (params.brand && params.brand !== 'todas') {
-            formatted = formatted.filter(p => p.brand_name.toLowerCase() === params.brand.toLowerCase());
-          }
-          console.log(`✅ [Supabase] ${formatted.length} productos cargados desde la nube.`);
-          return formatted;
-        } else if (error) {
-          console.warn('[Supabase] Aviso en consulta:', error.message);
-        }
+        const res = await fetch(`${this.baseUrl}/api/products?${query.toString()}`);
+        if (res.ok) return await res.json();
       } catch (err) {
-        console.warn('[Supabase] Error en getProducts:', err);
+        console.error("Error al consultar API de productos, usando fallback local:", err);
       }
     }
-
-    // RUTA 2: Servidor local Python (cuando corrés python run.py)
-    try {
-      const q = new URLSearchParams();
-      if (params.category && params.category !== 'todos') q.append('category', params.category);
-      if (params.pet_type && params.pet_type !== 'todos') q.append('pet_type', params.pet_type);
-      if (params.subcat && params.subcat !== 'todas') q.append('subcat', params.subcat);
-      if (params.breed_size && params.breed_size !== 'todas') q.append('breed_size', params.breed_size);
-      if (params.brand && params.brand !== 'todas') q.append('brand', params.brand);
-      if (params.promoOnly) q.append('is_promo', 'true');
-      if (params.search) q.append('search', params.search);
-
-      const res = await fetch(`${this.baseUrl}/api/products?${q.toString()}`);
-      if (res.ok) {
-        const localData = await res.json();
-        if (Array.isArray(localData) && localData.length > 0) {
-          this.isBackendConnected = true;
-          console.log(`✅ [Local Server] ${localData.length} productos cargados desde el servidor local.`);
-          return localData;
-        }
-      }
-    } catch (e) {}
-
-    // RUTA 3: Catálogo estático empaquetado (reserva segura)
-    console.log('ℹ️ [Catálogo] Usando catálogo base local.');
     return this.filterLocalProducts(params);
   },
 
-  async updateProductImage(productId, imageUrl) {
-    if (!this.supabaseClient) this.init();
-
-    if (this.supabaseClient) {
-      try {
-        await this.supabaseClient.from('products').update({ image_url: imageUrl }).eq('id', productId);
-      } catch (e) {}
-    }
-
+  async createProduct(productData) {
+    let createdItem = null;
     if (this.isBackendConnected) {
       try {
-        await fetch(`${this.baseUrl}/api/products/${productId}/image`, {
-          method: 'PUT',
+        const res = await fetch(`${this.baseUrl}/api/products`, {
+          method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ image_url: imageUrl })
+          body: JSON.stringify(productData)
         });
-      } catch (e) {}
+        if (res.ok) {
+          createdItem = await res.json();
+        }
+      } catch (e) {
+        console.warn('Fallo guardando en backend, se guardará en almacenamiento local:', e);
+      }
     }
 
-    const custom = JSON.parse(localStorage.getItem('petshop_custom_images') || '{}');
-    custom[productId] = imageUrl;
-    localStorage.setItem('petshop_custom_images', JSON.stringify(custom));
-    return true;
+    // Adaptación a formato de catálogo en memoria y localStorage
+    const newId = (createdItem && createdItem.id) ? createdItem.id : (Date.now() % 1000000 + 500);
+    const variants = productData.variants || [];
+    const presentations = variants.map(v => v.presentation_name);
+    const costs = variants.map(v => Number(v.cost_price));
+    const prices = variants.map(v => Number(v.sale_price || Math.round(v.cost_price * (1 + (v.margin_percent || 25) / 100))));
+    const list_prices = variants.map(v => Number(v.list_price || Math.round(prices[0] * 1.15)));
+
+    const localItem = {
+      id: newId,
+      name: productData.name,
+      slug: productData.slug || productData.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
+      description: productData.description || '',
+      desc: productData.description || '',
+      pet_type: productData.pet_type || 'ambos',
+      subcat: productData.subcat || 'general',
+      breed_size: productData.breed_size || 'todas',
+      badge: productData.badge || (productData.is_promo ? 'OFERTA' : ''),
+      image_url: productData.image_url || 'https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600&auto=format&fit=crop&q=80',
+      is_featured: !!productData.is_featured,
+      featured: !!productData.is_featured,
+      is_promo: !!productData.is_promo,
+      promo: !!productData.is_promo,
+      promo_tag: productData.promo_tag || '',
+      category_name: productData.category || 'General',
+      category_slug: productData.category || 'perros',
+      category: productData.category || 'perros',
+      brand_name: productData.brand || 'General',
+      brand: productData.brand || 'General',
+      variants: variants,
+      presentations: presentations,
+      costs: costs,
+      prices: prices,
+      list_prices: list_prices
+    };
+
+    // Añadir a LOCAL_CATALOG si no está
+    const exists = LOCAL_CATALOG.find(p => p.id === localItem.id || p.slug === localItem.slug);
+    if (!exists) {
+      LOCAL_CATALOG.unshift(localItem);
+    }
+
+    // Persistir en localStorage
+    const manualProds = JSON.parse(localStorage.getItem('petshop_manual_products') || '[]');
+    manualProds.unshift(localItem);
+    localStorage.setItem('petshop_manual_products', JSON.stringify(manualProds));
+
+    return localItem;
   },
 
   async updateProduct(productId, productData) {
-    if (!this.supabaseClient) this.init();
-
-    if (this.supabaseClient) {
-      try {
-        const fields = {};
-        if (productData.name) fields.name = productData.name;
-        if (productData.description !== undefined) fields.description = productData.description;
-        if (productData.pet_type) fields.pet_type = productData.pet_type;
-        if (productData.subcat) fields.subcat = productData.subcat;
-        if (productData.breed_size) fields.breed_size = productData.breed_size;
-        if (productData.badge !== undefined) fields.badge = productData.badge;
-        if (productData.image_url) fields.image_url = productData.image_url;
-        if (productData.is_featured !== undefined) fields.is_featured = Boolean(productData.is_featured);
-        if (productData.is_promo !== undefined) fields.is_promo = Boolean(productData.is_promo);
-        if (productData.promo_tag !== undefined) fields.promo_tag = productData.promo_tag;
-
-        if (Object.keys(fields).length > 0) {
-          await this.supabaseClient.from('products').update(fields).eq('id', productId);
-        }
-
-        if (productData.variants && productData.variants.length > 0) {
-          for (const v of productData.variants) {
-            if (v.id) {
-              await this.supabaseClient.from('product_variants').update({
-                presentation_name: v.presentation_name,
-                cost_price: Number(v.cost_price),
-                margin_percent: Number(v.margin_percent || 25),
-                sale_price: Number(v.sale_price),
-                list_price: Number(v.list_price || Math.round(v.sale_price * 1.15)),
-                weight_kg: Number(v.weight_kg || 0)
-              }).eq('id', v.id);
-            }
-          }
-        }
-      } catch (e) {}
-    }
-
     if (this.isBackendConnected) {
       try {
         await fetch(`${this.baseUrl}/api/products/${productId}`, {
@@ -280,186 +116,200 @@ window.API = {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(productData)
         });
-      } catch (e) {}
+      } catch (e) {
+        console.warn("Fallo actualizando producto en backend:", e);
+      }
+    }
+
+    // Actualizar en LOCAL_CATALOG
+    const pIndex = LOCAL_CATALOG.findIndex(p => p.id === productId);
+    if (pIndex > -1) {
+      const p = LOCAL_CATALOG[pIndex];
+      if (productData.name) p.name = productData.name;
+      if (productData.description !== undefined) {
+        p.description = productData.description;
+        p.desc = productData.description;
+      }
+      if (productData.brand) {
+        p.brand = productData.brand;
+        p.brand_name = productData.brand;
+      }
+      if (productData.category) {
+        p.category = productData.category;
+        p.category_slug = productData.category;
+      }
+      if (productData.pet_type) p.pet_type = productData.pet_type;
+      if (productData.subcat) p.subcat = productData.subcat;
+      if (productData.breed_size) p.breed_size = productData.breed_size;
+      if (productData.badge !== undefined) p.badge = productData.badge;
+      if (productData.image_url) p.image_url = productData.image_url;
+      if (productData.is_featured !== undefined) {
+        p.is_featured = productData.is_featured ? 1 : 0;
+        p.featured = Boolean(productData.is_featured);
+      }
+      if (productData.is_promo !== undefined) {
+        p.is_promo = productData.is_promo ? 1 : 0;
+        p.promo = Boolean(productData.is_promo);
+      }
+      if (productData.promo_tag !== undefined) p.promo_tag = productData.promo_tag;
+
+      if (productData.variants && productData.variants.length > 0) {
+        p.variants = productData.variants;
+        p.presentations = productData.variants.map(v => v.presentation_name);
+        p.costs = productData.variants.map(v => Number(v.cost_price));
+        p.prices = productData.variants.map(v => Number(v.sale_price));
+        p.list_prices = productData.variants.map(v => Number(v.list_price));
+      }
+    }
+
+    // Actualizar en localStorage si existe en manual products
+    const manualProds = JSON.parse(localStorage.getItem('petshop_manual_products') || '[]');
+    const mIdx = manualProds.findIndex(p => p.id === productId);
+    if (mIdx > -1) {
+      manualProds[mIdx] = { ...manualProds[mIdx], ...productData };
+      localStorage.setItem('petshop_manual_products', JSON.stringify(manualProds));
+    }
+
+    // Guardar si cambió la imagen en custom images
+    if (productData.image_url) {
+      const custom = JSON.parse(localStorage.getItem('petshop_custom_images') || '{}');
+      custom[productId] = productData.image_url;
+      localStorage.setItem('petshop_custom_images', JSON.stringify(custom));
     }
 
     return true;
   },
 
-  async createProduct(productData) {
-    if (!this.supabaseClient) this.init();
-    let createdId = Date.now() % 1000000 + 500;
-
-    if (this.supabaseClient) {
+  async updateProductImage(productId, imageUrl) {
+    // 1. Guardar en SQLite vía API si está conectado
+    if (this.isBackendConnected) {
       try {
-        const slug = productData.slug || productData.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-        const { data: maxP } = await this.supabaseClient.from('products').select('id').order('id', { ascending: false }).limit(1);
-        const nextId = (maxP && maxP[0] && maxP[0].id) ? maxP[0].id + 1 : createdId;
-
-        const prodInsert = {
-          id: nextId,
-          name: productData.name,
-          slug: slug,
-          description: productData.description || '',
-          pet_type: productData.pet_type || 'ambos',
-          subcat: productData.subcat || 'general',
-          breed_size: productData.breed_size || 'todas',
-          badge: productData.badge || (productData.is_promo ? 'OFERTA' : ''),
-          image_url: productData.image_url || '',
-          is_featured: Boolean(productData.is_featured),
-          is_promo: Boolean(productData.is_promo),
-          promo_tag: productData.promo_tag || '',
-          active: true
-        };
-
-        const { data: newP } = await this.supabaseClient.from('products').insert(prodInsert).select();
-        if (newP && newP[0]) {
-          createdId = newP[0].id;
-          if (productData.variants && productData.variants.length > 0) {
-            const varInserts = productData.variants.map(v => ({
-              product_id: createdId,
-              presentation_name: v.presentation_name,
-              weight_kg: Number(v.weight_kg || 1),
-              cost_price: Number(v.cost_price || 1000),
-              margin_percent: Number(v.margin_percent || 25),
-              sale_price: Number(v.sale_price || 1250),
-              list_price: Number(v.list_price || 1438),
-              stock_qty: Number(v.stock_qty || 100),
-              sku: v.sku || `MALY-${createdId}`
-            }));
-            await this.supabaseClient.from('product_variants').insert(varInserts);
-          }
-        }
-      } catch (e) {}
+        await fetch(`${this.baseUrl}/api/products/${productId}/image`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ image_url: imageUrl })
+        });
+      } catch (e) {
+        console.warn("No se pudo persistir en backend, guardando localmente:", e);
+      }
     }
-
-    return productData;
+    // 2. Guardar en localStorage para respaldo permanente en cualquier entorno
+    const custom = JSON.parse(localStorage.getItem('petshop_custom_images') || '{}');
+    custom[productId] = imageUrl;
+    localStorage.setItem('petshop_custom_images', JSON.stringify(custom));
+    return true;
   },
 
   async getSettings() {
-    if (!this.supabaseClient) this.init();
-
-    if (this.supabaseClient) {
-      try {
-        const { data, error } = await this.supabaseClient.from('store_settings').select('key, value');
-        if (!error && Array.isArray(data) && data.length > 0) {
-          const settings = {};
-          data.forEach(item => { settings[item.key] = item.value; });
-          this.isSupabaseConnected = true;
-          return settings;
-        }
-      } catch (e) {}
-    }
-
     try {
       const res = await fetch(`${this.baseUrl}/api/settings`);
       if (res.ok) {
         this.isBackendConnected = true;
         return await res.json();
       }
-    } catch (e) {}
-
+    } catch (e) {
+      // Backend local desconectado
+    }
     return null;
   },
 
   async updateSetting(key, value) {
-    if (!this.supabaseClient) this.init();
-
-    if (this.supabaseClient) {
-      try {
-        await this.supabaseClient.from('store_settings').upsert({ key: key, value: String(value) }, { onConflict: 'key' });
-      } catch (e) {}
-    }
-
     try {
       await fetch(`${this.baseUrl}/api/settings/${key}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ value: String(value) })
       });
-    } catch (e) {}
+      this.isBackendConnected = true;
+    } catch (e) {
+      console.warn("Fallo guardando setting en backend:", e);
+    }
   },
 
   async recordVisit(sessionId) {
-    if (!this.supabaseClient) this.init();
-
-    if (this.supabaseClient) {
-      try {
-        await this.supabaseClient.from('site_visits').insert({
-          session_id: sessionId,
-          user_agent: (typeof navigator !== 'undefined' && navigator.userAgent) ? navigator.userAgent.substring(0, 200) : ''
-        });
-      } catch (e) {}
+    try {
+      await fetch(`${this.baseUrl}/api/analytics/visit`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ session_id: sessionId })
+      });
+    } catch (e) {
+      // Offline local mode
     }
   },
 
   async getStats() {
-    if (!this.supabaseClient) this.init();
-
-    if (this.supabaseClient) {
+    if (this.isBackendConnected) {
       try {
-        const { count: prodCount } = await this.supabaseClient.from('products').select('*', { count: 'exact', head: true }).eq('active', true);
-        const { count: visitCount } = await this.supabaseClient.from('site_visits').select('*', { count: 'exact', head: true });
-        const { data: visits } = await this.supabaseClient.from('site_visits').select('session_id, visit_date, visit_time').order('visit_time', { ascending: false }).limit(100);
-
-        const uniqueSessions = new Set((visits || []).map(v => v.session_id)).size;
-        const todayStr = new Date().toISOString().split('T')[0];
-        const todayVisits = (visits || []).filter(v => v.visit_date === todayStr).length;
-        const lastVisit = (visits && visits[0]) ? new Date(visits[0].visit_time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'Reciente';
-
-        return {
-          total_products: prodCount || 144,
-          total_views: visitCount || 1,
-          unique_visitors: uniqueSessions || 1,
-          today_views: todayVisits || 1,
-          last_visit: lastVisit
-        };
+        const res = await fetch(`${this.baseUrl}/api/stats`);
+        if (res.ok) return await res.json();
       } catch (e) {}
     }
-
     return {
-      total_products: 144,
-      total_views: 1,
-      unique_visitors: 1,
-      today_views: 1,
-      last_visit: 'Reciente'
+      total_products: LOCAL_CATALOG.length,
+      total_variants: LOCAL_CATALOG.reduce((acc, p) => acc + (p.variants ? p.variants.length : p.presentations.length), 0),
+      total_brands: 30,
+      total_categories: 6,
+      total_orders: JSON.parse(localStorage.getItem('petshop_orders') || '[]').length
     };
   },
 
-  async submitOrder(orderPayload) {
-    if (!this.supabaseClient) this.init();
-    const orderCode = `ORD-${Date.now().toString(36).toUpperCase()}`;
-
-    if (this.supabaseClient) {
+  async submitOrder(orderData) {
+    if (this.isBackendConnected) {
       try {
-        await this.supabaseClient.from('orders').insert({
-          order_code: orderCode,
-          customer_name: orderPayload.customer_name || 'Cliente Web WhatsApp',
-          customer_phone: orderPayload.customer_phone || '',
-          customer_address: orderPayload.customer_address || '',
-          payment_method: orderPayload.payment_method || 'A convenir',
-          subtotal: orderPayload.subtotal || 0,
-          total: orderPayload.total || 0,
-          notes: orderPayload.notes || 'Pedido desde tienda web',
-          status: 'pendiente'
+        const res = await fetch(`${this.baseUrl}/api/orders`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(orderData)
         });
+        if (res.ok) return await res.json();
       } catch (e) {}
     }
-
-    return { order_code: orderCode, status: 'pendiente' };
+    const orders = JSON.parse(localStorage.getItem('petshop_orders') || '[]');
+    const localOrder = {
+      order_id: Date.now(),
+      order_code: `ORD-${Math.random().toString(36).substring(2, 8).toUpperCase()}`,
+      created_at: new Date().toISOString(),
+      ...orderData
+    };
+    orders.push(localOrder);
+    localStorage.setItem('petshop_orders', JSON.stringify(orders));
+    return localOrder;
   },
 
   filterLocalProducts(params = {}) {
-    const catalogSource = (typeof LOCAL_CATALOG !== 'undefined' && Array.isArray(LOCAL_CATALOG) && LOCAL_CATALOG.length) 
-                          ? LOCAL_CATALOG 
-                          : (typeof window !== 'undefined' && Array.isArray(window.LOCAL_CATALOG) ? window.LOCAL_CATALOG : []);
-    
-    if (!catalogSource || !catalogSource.length) return [];
-    let list = [...catalogSource];
-    
+    // Cargar productos creados manualmente en localStorage si no están en LOCAL_CATALOG
+    const manualProds = JSON.parse(localStorage.getItem('petshop_manual_products') || '[]');
+    manualProds.forEach(mp => {
+      if (!LOCAL_CATALOG.some(p => p.id === mp.id || p.slug === mp.slug)) {
+        LOCAL_CATALOG.unshift(mp);
+      }
+    });
+
+    let list = [...LOCAL_CATALOG];
+    const margin = params.margin_policy || localStorage.getItem('petshop_margin_policy') || 'recommended';
+    const customImages = JSON.parse(localStorage.getItem('petshop_custom_images') || '{}');
+
+    // Aplicar imágenes personalizadas si existen
+    list = list.map(p => {
+      const copy = { ...p };
+      if (customImages[p.id]) {
+        copy.image_url = customImages[p.id];
+      }
+      if (margin !== 'recommended') {
+        const pct = parseFloat(margin) / 100.0;
+        copy.prices = copy.costs.map(c => Math.round(c * (1.0 + pct)));
+        copy.list_prices = copy.prices.map(pr => Math.round(pr * 1.15));
+      }
+      return copy;
+    });
+
     if (params.category && params.category !== 'todos') {
-      if (params.category === 'promociones') list = list.filter(p => p.is_promo || p.promo);
-      else list = list.filter(p => p.category === params.category || p.category_slug === params.category);
+      if (params.category === 'promociones') {
+        list = list.filter(p => p.is_promo || p.promo);
+      } else {
+        list = list.filter(p => p.category_slug === params.category || p.category === params.category);
+      }
     }
     if (params.pet_type && params.pet_type !== 'todos') {
       list = list.filter(p => p.pet_type === params.pet_type || p.pet_type === 'ambos');
@@ -471,23 +321,19 @@ window.API = {
       list = list.filter(p => p.breed_size === params.breed_size || p.breed_size === 'todas');
     }
     if (params.brand && params.brand !== 'todas') {
-      list = list.filter(p => (p.brand || '').toLowerCase() === params.brand.toLowerCase());
+      list = list.filter(p => (p.brand_name || p.brand) === params.brand);
     }
     if (params.promoOnly) {
       list = list.filter(p => p.is_promo || p.promo);
     }
     if (params.search) {
-      const term = params.search.toLowerCase().trim();
-      list = list.filter(p => p.name.toLowerCase().includes(term) || (p.brand || '').toLowerCase().includes(term));
+      const q = params.search.toLowerCase().trim();
+      list = list.filter(p => 
+        p.name.toLowerCase().includes(q) || 
+        (p.brand_name || p.brand || '').toLowerCase().includes(q) || 
+        (p.description || p.desc || '').toLowerCase().includes(q)
+      );
     }
     return list;
   }
 };
-
-var API = window.API;
-
-if (typeof document !== 'undefined') {
-  document.addEventListener('DOMContentLoaded', () => {
-    if (window.API) window.API.init();
-  });
-}

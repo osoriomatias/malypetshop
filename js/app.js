@@ -1,74 +1,4 @@
 
-function cleanWhatsAppNumber(raw) {
-  if (!raw) return "5491100000000";
-  let digits = String(raw).replace(/\D/g, '');
-  if (!digits) return "5491100000000";
-  if (digits.startsWith('0')) digits = digits.substring(1);
-  let national = digits;
-  if (digits.startsWith('549')) {
-    national = digits.substring(3);
-  } else if (digits.startsWith('54')) {
-    national = digits.substring(2);
-    if (national.startsWith('9')) national = national.substring(1);
-  } else {
-    national = digits;
-  }
-  if (national.startsWith('1115') && national.length === 12) {
-    national = '11' + national.substring(4);
-  } else if (national.startsWith('15') && national.length === 10) {
-    national = '11' + national.substring(2);
-  } else if (national.length === 12 && national.substring(3, 5) === '15') {
-    national = national.substring(0, 3) + national.substring(5);
-  }
-  if (!national.startsWith('549')) {
-    return '549' + national;
-  }
-  return national;
-}
-
-function formatPhoneForDisplay(cleanNum) {
-  if (!cleanNum) return "";
-  const num = cleanWhatsAppNumber(cleanNum);
-  if (num.startsWith('54911') && num.length === 13) {
-    return `+54 9 11 ${num.slice(5, 9)}-${num.slice(9)}`;
-  } else if (num.startsWith('549') && num.length >= 12) {
-    return `+54 9 ${num.slice(3, 6)} ${num.slice(6)}`;
-  }
-  return '+' + num;
-}
-
-function updateWaPreview() {
-  const inputWa = document.getElementById('inputWaNumber');
-  const previewEl = document.getElementById('waPreviewText');
-  const testBtn = document.getElementById('btnTestWa');
-  if (!inputWa) return;
-  const rawVal = inputWa.value.trim();
-  const cleanVal = cleanWhatsAppNumber(rawVal);
-  if (previewEl) {
-    if (cleanVal && cleanVal !== '5491100000000') {
-      previewEl.innerHTML = `✅ Destino WhatsApp: <strong>${formatPhoneForDisplay(cleanVal)}</strong> (enlace internacional: <code>wa.me/${cleanVal}</code>)`;
-      previewEl.style.color = '#15803d';
-    } else {
-      previewEl.innerHTML = `⚠️ Número actual no configurado o de prueba (<code>${cleanVal}</code>). Escribí tu número para activarlo.`;
-      previewEl.style.color = '#b45309';
-    }
-  }
-  if (testBtn) {
-    testBtn.onclick = function() {
-      testWhatsAppNumber();
-    };
-  }
-}
-
-function testWhatsAppNumber() {
-  const inputWa = document.getElementById('inputWaNumber');
-  const raw = (inputWa && inputWa.value.trim()) || CONFIG.waNumber;
-  const clean = cleanWhatsAppNumber(raw);
-  const msg = `Hola! Este es un mensaje de prueba para verificar que el WhatsApp de ${CONFIG.storeName} funciona correctamente.`;
-  window.open(`https://wa.me/${clean}?text=${encodeURIComponent(msg)}`, '_blank');
-}
-
-
 // -------------------------------------------------------------
 // MODAL DE DETALLE DE PRODUCTO Y ZOOM INTERACTIVO
 // -------------------------------------------------------------
@@ -443,14 +373,12 @@ let PRODUCTS_DB = [];
 let selectedPresIndices = {};
 let cart = JSON.parse(localStorage.getItem('petshop_cart') || '[]');
 
-const initialStoreConfig = (typeof STORE_CONFIG !== 'undefined' && STORE_CONFIG) ? STORE_CONFIG : {};
-
 let CONFIG = {
-  storeName: localStorage.getItem('petshop_name') || initialStoreConfig.storeName || "Maly Petshop",
-  waNumber: cleanWhatsAppNumber(localStorage.getItem('petshop_wa') || initialStoreConfig.waNumber || "5491100000000"),
-  instagram: localStorage.getItem('petshop_ig') || initialStoreConfig.instagram || "maly.petshop",
-  marginPolicy: localStorage.getItem('petshop_margin_policy') || initialStoreConfig.marginPolicy || "recommended",
-  adminPin: localStorage.getItem('petshop_admin_pin') || initialStoreConfig.adminPin || "1234"
+  storeName: localStorage.getItem('petshop_name') || "Maly Petshop",
+  waNumber: localStorage.getItem('petshop_wa') || "5491158549783",
+  instagram: localStorage.getItem('petshop_ig') || "maly.petshop",
+  marginPolicy: localStorage.getItem('petshop_margin_policy') || "recommended",
+  adminPin: localStorage.getItem('petshop_admin_pin') || "3223"
 };
 
 let currentSlide = 0;
@@ -544,18 +472,12 @@ async function checkDbStatus() {
   const health = await API.checkHealth();
   const badge = document.getElementById('dbStatusIndicator');
   if (!badge) return;
-  if (health && health.service && health.service.includes('Supabase')) {
+  if (health) {
     badge.className = 'db-status-badge online';
-    badge.innerHTML = `🟢 Conectado a Supabase Cloud (Base de datos en la nube activa)`;
-  } else if (health && health.connected) {
-    badge.className = 'db-status-badge online';
-    badge.innerHTML = `🟢 Conectado a Base de Datos en la Nube`;
-  } else if (health) {
-    badge.className = 'db-status-badge online';
-    badge.innerHTML = `🟢 Conectado a Servidor Local (${health.active_products || 144} productos cargados)`;
+    badge.innerHTML = `🟢 Conectado a SQLite REST API (${health.active_products} productos cargados)`;
   } else {
     badge.className = 'db-status-badge local';
-    badge.innerHTML = `🟡 Modo Autónomo Local (Catálogo offline)`;
+    badge.innerHTML = `🟡 Modo Autónomo Local (Catálogo completo de 89 productos)`;
   }
 }
 
@@ -1863,11 +1785,10 @@ async function saveAdminProductImage(productId) {
 
 async function saveSettings() {
   const newName = document.getElementById('inputStoreName').value.trim() || "Maly Petshop";
-  const rawWa = document.getElementById('inputWaNumber').value.trim();
-  const newWa = cleanWhatsAppNumber(rawWa);
+  const newWa = document.getElementById('inputWaNumber').value.trim() || "5491158549783";
   const newIg = document.getElementById('inputInstagram').value.trim() || "maly.petshop";
   const newMargin = document.getElementById('selectMarginPolicy').value;
-  const newPin = document.getElementById('inputAdminPin').value.trim() || "1234";
+  const newPin = document.getElementById('inputAdminPin').value.trim() || "3223";
 
   CONFIG.storeName = newName;
   CONFIG.waNumber = newWa;
@@ -1962,21 +1883,12 @@ function applyConfigToDOM() {
   // Actualizar enlace de WhatsApp de la cabecera
   const headerWa = document.getElementById('headerWaBtn');
   if (headerWa) {
-    const cleanNum = cleanWhatsAppNumber(CONFIG.waNumber);
-    headerWa.href = `https://wa.me/${cleanNum}`;
-    headerWa.title = `WhatsApp: ${formatPhoneForDisplay(cleanNum)}`;
+    headerWa.href = `https://wa.me/${CONFIG.waNumber}`;
   }
 }
 
 function setupEventListeners() {
   // Sincronización en tiempo real del usuario de Instagram al tipear
-  const inputWa = document.getElementById('inputWaNumber');
-  if (inputWa) {
-    inputWa.addEventListener('input', () => {
-      updateWaPreview();
-    });
-  }
-
   const inputIg = document.getElementById('inputInstagram');
   if (inputIg) {
     inputIg.addEventListener('input', (e) => {
@@ -2018,44 +1930,25 @@ function setupEventListeners() {
 async function exportCatalogForVercel() {
   const statusEl = document.getElementById('exportVercelStatusMsg');
   if (statusEl) {
-    statusEl.innerHTML = '⏳ Guardando tus fotos personalizadas y sincronizando catálogo...';
+    statusEl.innerHTML = '⏳ Sincronizando catálogo...';
     statusEl.style.color = '#0284c7';
   }
 
-  const customImages = JSON.parse(localStorage.getItem('petshop_custom_images') || '{}');
-  const manualProducts = JSON.parse(localStorage.getItem('petshop_manual_products') || '[]');
-
-  // 1. Intentar guardar en backend para escribir directamente a public/js/catalog-data.js
-  let savedOnBackend = false;
   try {
-    const res = await fetch('/api/admin/save-custom-images', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(customImages)
-    });
+    const res = await fetch('/api/admin/sync-catalog', { method: 'POST' });
     if (res.ok) {
-      savedOnBackend = true;
+      if (statusEl) {
+        statusEl.innerHTML = '✅ <strong>¡Catálogo sincronizado exitosamente!</strong> Se actualizó <code>public/js/catalog-data.js</code> con todas tus fotos y productos. Ya podés subir la carpeta <code>public</code> a Vercel.';
+        statusEl.style.color = '#15803d';
+      }
+      return;
     }
   } catch (e) {
-    console.log('Backend no disponible para sync directa:', e);
+    console.log('No backend connection, fallback to browser export');
   }
 
-  // 2. Generar catalog-data.js fusionando las fotos personalizadas
   try {
-    const catalogCopy = JSON.parse(JSON.stringify(LOCAL_CATALOG));
-    catalogCopy.forEach(p => {
-      if (customImages[p.id]) {
-        p.image_url = customImages[p.id];
-      }
-    });
-
-    manualProducts.forEach(mp => {
-      if (!catalogCopy.find(p => p.id === mp.id)) {
-        catalogCopy.unshift(mp);
-      }
-    });
-
-    const dataStr = `var LOCAL_CATALOG = ${JSON.stringify(catalogCopy, null, 2)};\nif (typeof window !== "undefined") window.LOCAL_CATALOG = LOCAL_CATALOG;\n`;
+    const dataStr = "const LOCAL_CATALOG = " + JSON.stringify(LOCAL_CATALOG, null, 2) + ";\n";
     const blob = new Blob([dataStr], { type: "application/javascript" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -2067,13 +1960,8 @@ async function exportCatalogForVercel() {
     URL.revokeObjectURL(url);
 
     if (statusEl) {
-      if (savedOnBackend) {
-        statusEl.innerHTML = '✅ <strong>¡Catálogo sincronizado exitosamente en tu PC!</strong> Se actualizó <code>public/js/catalog-data.js</code> y además se descargó una copia. Ya podés subir la carpeta <code>public</code> a Vercel y se verá idéntica a tu PC.';
-        statusEl.style.color = '#15803d';
-      } else {
-        statusEl.innerHTML = '📥 <strong>Se descargó el archivo catalog-data.js con todas tus fotos.</strong> Reemplazalo adentro de <code>public/js/catalog-data.js</code> y subí a Vercel.';
-        statusEl.style.color = '#0284c7';
-      }
+      statusEl.innerHTML = '📥 <strong>Se descargó el archivo catalog-data.js</strong> con todas tus fotos. Pegalo adentro de la carpeta <code>public/js/</code> antes de subir a Vercel.';
+      statusEl.style.color = '#0284c7';
     }
   } catch (err) {
     if (statusEl) {
