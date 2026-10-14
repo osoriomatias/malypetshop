@@ -5,7 +5,7 @@
 
 window.SUPABASE_CONFIG = {
   url: "https://vbhkqmshoouguhopyxli.supabase.co",
-  anonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZiaGtxbXNob291Z3Vob3B5eGxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE5MjE2MDcsImV4cCI6MjEwNzQ5NzYwN30._D4LDXf1mbDxhYnKEKHGtxlxIOk19GO7JKjZ-DKSmK4"
+  anonKey: "sb_publishable_yeRE6YC5IteDHTIrip6Teg_vrwQyO3M"
 };
 
 window.API = {
@@ -232,6 +232,27 @@ window.API = {
     const custom = JSON.parse(localStorage.getItem('petshop_custom_images') || '{}');
     custom[productId] = imageUrl;
     localStorage.setItem('petshop_custom_images', JSON.stringify(custom));
+    
+    // 3. Actualizar inmediatamente en el catálogo en memoria
+    const source = (typeof window !== 'undefined' && window.LOCAL_CATALOG) || (typeof LOCAL_CATALOG !== 'undefined' && LOCAL_CATALOG);
+    if (source && Array.isArray(source)) {
+      const p = source.find(item => item.id === productId);
+      if (p) {
+        if (productData.name) p.name = productData.name;
+        if (productData.description !== undefined) p.description = productData.description;
+        if (productData.image_url) p.image_url = productData.image_url;
+        if (productData.badge !== undefined) p.badge = productData.badge;
+        if (productData.is_promo !== undefined) p.is_promo = productData.is_promo ? 1 : 0;
+        if (productData.is_featured !== undefined) p.is_featured = productData.is_featured ? 1 : 0;
+        if (productData.variants && productData.variants.length > 0) {
+          p.variants = productData.variants;
+          p.presentations = productData.variants.map(v => v.presentation_name);
+          p.costs = productData.variants.map(v => Number(v.cost_price));
+          p.prices = productData.variants.map(v => Number(v.sale_price));
+          p.list_prices = productData.variants.map(v => Number(v.list_price));
+        }
+      }
+    }
     return true;
   },
 
@@ -256,18 +277,29 @@ window.API = {
           await this.supabaseClient.from('products').update(fields).eq('id', productId);
         }
 
-        if (productData.variants && productData.variants.length > 0) {
-          for (const v of productData.variants) {
-            if (v.id) {
-              await this.supabaseClient.from('product_variants').update({
-                presentation_name: v.presentation_name,
-                cost_price: Number(v.cost_price),
-                margin_percent: Number(v.margin_percent || 25),
-                sale_price: Number(v.sale_price),
-                list_price: Number(v.list_price || Math.round(v.sale_price * 1.15)),
-                weight_kg: Number(v.weight_kg || 0)
-              }).eq('id', v.id);
-            }
+        if (productData.variants && Array.isArray(productData.variants) && productData.variants.length > 0) {
+          // 1. Eliminar variantes previas de este producto en Supabase
+          await this.supabaseClient.from('product_variants').delete().eq('product_id', productId);
+
+          // 2. Insertar las variantes con los nuevos costos y precios calculados
+          const newVariants = productData.variants.map((v, idx) => ({
+            product_id: productId,
+            presentation_name: v.presentation_name || 'Unidad',
+            weight_kg: Number(v.weight_kg || 1.0),
+            cost_price: Number(v.cost_price || 1000.0),
+            margin_percent: Number(v.margin_percent || 25.0),
+            sale_price: Number(v.sale_price || Math.round(Number(v.cost_price || 1000) * (1 + (v.margin_percent || 25) / 100))),
+            list_price: Number(v.list_price || (Boolean(productData.is_promo) ? Math.round(Number(v.sale_price) * 1.15) : Number(v.sale_price))),
+            stock_qty: 100,
+            sku: `MALY-${productId}-${idx + 1}`,
+            is_default: idx === 0
+          }));
+
+          const { error: insErr } = await this.supabaseClient.from('product_variants').insert(newVariants);
+          if (insErr) {
+            console.error('[Supabase Error] al insertar variantes actualizadas:', insErr);
+          } else {
+            console.log(`✅ [Supabase] ${newVariants.length} variantes (costos y precios) guardadas en la nube para producto ${productId}`);
           }
         }
       } catch (e) {}
@@ -283,6 +315,27 @@ window.API = {
       } catch (e) {}
     }
 
+    
+    // 3. Actualizar inmediatamente en el catálogo en memoria
+    const source = (typeof window !== 'undefined' && window.LOCAL_CATALOG) || (typeof LOCAL_CATALOG !== 'undefined' && LOCAL_CATALOG);
+    if (source && Array.isArray(source)) {
+      const p = source.find(item => item.id === productId);
+      if (p) {
+        if (productData.name) p.name = productData.name;
+        if (productData.description !== undefined) p.description = productData.description;
+        if (productData.image_url) p.image_url = productData.image_url;
+        if (productData.badge !== undefined) p.badge = productData.badge;
+        if (productData.is_promo !== undefined) p.is_promo = productData.is_promo ? 1 : 0;
+        if (productData.is_featured !== undefined) p.is_featured = productData.is_featured ? 1 : 0;
+        if (productData.variants && productData.variants.length > 0) {
+          p.variants = productData.variants;
+          p.presentations = productData.variants.map(v => v.presentation_name);
+          p.costs = productData.variants.map(v => Number(v.cost_price));
+          p.prices = productData.variants.map(v => Number(v.sale_price));
+          p.list_prices = productData.variants.map(v => Number(v.list_price));
+        }
+      }
+    }
     return true;
   },
 
