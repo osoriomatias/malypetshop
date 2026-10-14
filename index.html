@@ -26,7 +26,7 @@
   <link rel="icon" type="image/svg+xml" href="images/maly_mascot_avatar.svg">
   <link rel="alternate icon" href="images/maly_mascot_avatar.png">
 
-  <link rel="stylesheet" href="css/styles.css?v=7.1_fix">
+  <link rel="stylesheet" href="css/styles.css?v=7.2_prices">
 </head>
 <body>
 
@@ -755,7 +755,7 @@
               <div>
                 <h4 style="font-size: 0.95rem; font-weight: 700; color: #1e293b; margin: 0;">Presentaciones y Precio Proveedor</h4>
                 <p style="font-size: 0.78rem; color: #64748b; margin: 2px 0 0 0;">
-                  El precio de venta se actualiza automáticamente con el margen comercial activo (<strong id="createProdMarginLabel">25%</strong>).
+                  Podés personalizar el <strong>Margen %</strong> de ganancia o el <strong>Precio Venta</strong> directamente para cada presentación.
                 </p>
               </div>
               <button type="button" onclick="addPresentationRow()" style="background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; padding: 6px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 700; cursor: pointer;">
@@ -767,11 +767,12 @@
               <table class="pres-calc-table">
                 <thead>
                   <tr>
-                    <th style="min-width: 140px;">Nombre Presentación</th>
-                    <th style="width: 90px;">Peso/Cap. (kg)</th>
-                    <th style="width: 130px;">Costo Proveedor ($) *</th>
+                    <th style="min-width: 130px;">Nombre Presentación</th>
+                    <th style="width: 75px;">Peso (kg)</th>
+                    <th style="width: 110px;">Costo ($) *</th>
+                    <th style="width: 95px; text-align: center;">Margen %</th>
                     <th style="width: 130px;">Precio Venta ($)</th>
-                    <th style="width: 40px; text-align: center;"></th>
+                    <th style="width: 35px; text-align: center;"></th>
                   </tr>
                 </thead>
                 <tbody id="createProdPresRows">
@@ -990,7 +991,7 @@
             <div>
               <h4 style="font-size: 0.95rem; font-weight: 700; color: #1e293b; margin: 0;">Presentaciones, Costo y Precio de Venta</h4>
               <p style="font-size: 0.78rem; color: #64748b; margin: 2px 0 0 0;">
-                Modificá el costo del proveedor para actualizar el precio de venta automáticamente con el margen activo (<strong id="editProdMarginLabel">25%</strong>).
+                Modificá el costo, el <strong>Margen %</strong> o el <strong>Precio Venta</strong> directamente según la competencia.
               </p>
             </div>
             <button type="button" onclick="addEditPresentationRow()" style="background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; padding: 6px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 700; cursor: pointer;">
@@ -1002,12 +1003,13 @@
             <table class="pres-calc-table">
               <thead>
                 <tr>
-                  <th style="min-width: 140px;">Nombre Presentación</th>
-                  <th style="width: 90px;">Peso (kg)</th>
-                  <th style="width: 130px;">Costo Proveedor ($) *</th>
-                  <th style="width: 130px;">Precio Venta ($)</th>
-                  <th style="width: 40px; text-align: center;"></th>
-                </tr>
+                    <th style="min-width: 130px;">Nombre Presentación</th>
+                    <th style="width: 75px;">Peso (kg)</th>
+                    <th style="width: 110px;">Costo ($) *</th>
+                    <th style="width: 95px; text-align: center;">Margen %</th>
+                    <th style="width: 130px;">Precio Venta ($)</th>
+                    <th style="width: 35px; text-align: center;"></th>
+                  </tr>
               </thead>
               <tbody id="editProdPresRows">
                 <!-- Filas dinámicas -->
@@ -1046,9 +1048,9 @@
 
   <!-- SCRIPTS CON VERSIÓN ANTI-CACHE -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/config.js?v=7.1_fix"></script>
-  <script src="js/catalog-data.js?v=7.1_fix"></script>
-  <script src="js/api.js?v=7.1_fix"></script>
-  <script src="js/app.js?v=7.1_fix"></script>
+  <script src="js/config.js?v=7.2_prices"></script>
+  <script src="js/catalog-data.js?v=7.2_prices"></script>
+  <script src="js/api.js?v=7.2_prices"></script>
+  <script src="js/app.js?v=7.2_prices"></script>
 </body>
 </html>
