@@ -1,4 +1,4 @@
-const LOCAL_CATALOG = [
+var LOCAL_CATALOG = [
   {
     "id": 2,
     "name": "Dog Chow Adulto Mini / Raza Pequeña",
@@ -8,7 +8,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "pequeña",
     "badge": "Raza Pequeña",
-    "image_url": "https://acdn-us.mitiendanube.com/stores/884/444/products/dog-chow-adulto-small1-4fef35e95ee91af56d15797296320748-480-0.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_911237-MLA99443772110_112025-O.webp",
     "is_featured": 1,
     "is_promo": 1,
     "promo_tag": "OFERTA DESTACADA",
@@ -18,11 +18,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "20 kg",
-        "weight_kg": 20,
-        "cost_price": 53100,
-        "margin_percent": 20,
-        "sale_price": 63720,
-        "list_price": 73278,
+        "weight_kg": 20.0,
+        "cost_price": 53100.0,
+        "margin_percent": 20.0,
+        "sale_price": 63720.0,
+        "list_price": 73278.0,
         "stock_qty": 50,
         "sku": "DC-AD-MINI-20"
       }
@@ -31,13 +31,13 @@ const LOCAL_CATALOG = [
       "20 kg"
     ],
     "costs": [
-      53100
+      53100.0
     ],
     "prices": [
-      63720
+      63720.0
     ],
     "list_prices": [
-      73278
+      73278.0
     ],
     "brand": "Dog Chow",
     "category": "perros",
@@ -54,7 +54,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Clásico Felino",
-    "image_url": "https://naricitas.pet/wp-content/uploads/2023/07/naricitas-cat-chow-adulto-delicias-de-carne-1kg.jpg",
+    "image_url": "https://http2.mlstatic.com/D_Q_NP_2X_825218-MLA99449569190_112025-T.webp",
     "is_featured": 1,
     "is_promo": 1,
     "promo_tag": "OFERTA DESTACADA",
@@ -64,21 +64,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "8 kg",
-        "weight_kg": 8,
-        "cost_price": 41700,
-        "margin_percent": 22,
-        "sale_price": 50874,
-        "list_price": 58505,
+        "weight_kg": 8.0,
+        "cost_price": 41700.0,
+        "margin_percent": 22.0,
+        "sale_price": 50874.0,
+        "list_price": 58505.0,
         "stock_qty": 50,
         "sku": "CC-FISH-8"
       },
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 71700,
-        "margin_percent": 20,
-        "sale_price": 86040,
-        "list_price": 98946,
+        "weight_kg": 15.0,
+        "cost_price": 71700.0,
+        "margin_percent": 20.0,
+        "sale_price": 86040.0,
+        "list_price": 98946.0,
         "stock_qty": 50,
         "sku": "CC-FISH-15"
       }
@@ -88,16 +88,16 @@ const LOCAL_CATALOG = [
       "15 kg"
     ],
     "costs": [
-      41700,
-      71700
+      41700.0,
+      71700.0
     ],
     "prices": [
-      50874,
-      86040
+      50874.0,
+      86040.0
     ],
     "list_prices": [
-      58505,
-      98946
+      58505.0,
+      98946.0
     ],
     "brand": "Cat Chow",
     "category": "gatos",
@@ -114,7 +114,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "mediana",
     "badge": "Premium",
-    "image_url": "https://catycanar.vtexassets.com/arquivos/ids/170910/PREMIUM-DOG-SELECTION-ADULTOS-RAZAS-MEDIANAS-Y-GRANDES-21k.png?v=638567461499300000",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_839215-MLA99350079654_112025-O.webp",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -124,31 +124,31 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "2 kg",
-        "weight_kg": 2,
-        "cost_price": 6600,
-        "margin_percent": 30,
-        "sale_price": 8580,
-        "list_price": 9867,
+        "weight_kg": 2.0,
+        "cost_price": 6600.0,
+        "margin_percent": 30.0,
+        "sale_price": 8580.0,
+        "list_price": 9867.0,
         "stock_qty": 50,
         "sku": "DS-PREM-AD-2"
       },
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 37200,
-        "margin_percent": 20,
-        "sale_price": 44640,
-        "list_price": 51336,
+        "weight_kg": 15.0,
+        "cost_price": 37200.0,
+        "margin_percent": 20.0,
+        "sale_price": 44640.0,
+        "list_price": 51336.0,
         "stock_qty": 50,
         "sku": "DS-PREM-AD-15"
       },
       {
         "presentation_name": "21 kg Gigante",
-        "weight_kg": 21,
-        "cost_price": 49000,
-        "margin_percent": 20,
-        "sale_price": 58800,
-        "list_price": 67620,
+        "weight_kg": 21.0,
+        "cost_price": 49000.0,
+        "margin_percent": 20.0,
+        "sale_price": 58800.0,
+        "list_price": 67620.0,
         "stock_qty": 50,
         "sku": "DS-PREM-AD-21"
       }
@@ -159,19 +159,19 @@ const LOCAL_CATALOG = [
       "21 kg Gigante"
     ],
     "costs": [
-      6600,
-      37200,
-      49000
+      6600.0,
+      37200.0,
+      49000.0
     ],
     "prices": [
-      8580,
-      44640,
-      58800
+      8580.0,
+      44640.0,
+      58800.0
     ],
     "list_prices": [
-      9867,
-      51336,
-      67620
+      9867.0,
+      51336.0,
+      67620.0
     ],
     "brand": "Dog Selection",
     "category": "perros",
@@ -188,7 +188,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Promo 10+1 kg",
-    "image_url": "https://masonlineprod.vtexassets.com/arquivos/ids/359923/Alimento-Para-Gatos-Cat-Selection-Premium-500-G-0779815672098-1.jpg?v=638913798306300000",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_633625-MLA75145123100_032024-O.webp",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -198,21 +198,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "2 kg",
-        "weight_kg": 2,
-        "cost_price": 12800,
-        "margin_percent": 25,
-        "sale_price": 16000,
-        "list_price": 18400,
+        "weight_kg": 2.0,
+        "cost_price": 12800.0,
+        "margin_percent": 25.0,
+        "sale_price": 16000.0,
+        "list_price": 18400.0,
         "stock_qty": 50,
         "sku": "CAT-SEL-2"
       },
       {
         "presentation_name": "10+1 kg Promo",
-        "weight_kg": 11,
-        "cost_price": 40700,
-        "margin_percent": 20,
-        "sale_price": 48840,
-        "list_price": 56166,
+        "weight_kg": 11.0,
+        "cost_price": 40700.0,
+        "margin_percent": 20.0,
+        "sale_price": 48840.0,
+        "list_price": 56166.0,
         "stock_qty": 50,
         "sku": "CAT-SEL-11"
       }
@@ -222,16 +222,16 @@ const LOCAL_CATALOG = [
       "10+1 kg Promo"
     ],
     "costs": [
-      12800,
-      40700
+      12800.0,
+      40700.0
     ],
     "prices": [
-      16000,
-      48840
+      16000.0,
+      48840.0
     ],
     "list_prices": [
-      18400,
-      56166
+      18400.0,
+      56166.0
     ],
     "brand": "Dog Selection",
     "category": "gatos",
@@ -248,7 +248,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Criadores",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_954270-MLA98805569621_112025-O.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_953311-MLA99349040992_112025-O.webp",
     "is_featured": 1,
     "is_promo": 1,
     "promo_tag": "OFERTA DESTACADA",
@@ -259,50 +259,50 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "1.5 kg",
         "weight_kg": 1.5,
-        "cost_price": 4400,
-        "margin_percent": 30,
-        "sale_price": 5720,
-        "list_price": 6578,
+        "cost_price": 4400.0,
+        "margin_percent": 30.0,
+        "sale_price": 5720.0,
+        "list_price": 6578.0,
         "stock_qty": 50,
         "sku": "DS-CRIAD-1.5"
       },
       {
         "presentation_name": "3 kg",
-        "weight_kg": 3,
-        "cost_price": 8300,
-        "margin_percent": 25,
-        "sale_price": 10375,
-        "list_price": 11931,
+        "weight_kg": 3.0,
+        "cost_price": 8300.0,
+        "margin_percent": 25.0,
+        "sale_price": 10375.0,
+        "list_price": 11931.0,
         "stock_qty": 50,
         "sku": "DS-CRIAD-3"
       },
       {
         "presentation_name": "8 kg",
-        "weight_kg": 8,
-        "cost_price": 18000,
-        "margin_percent": 22,
-        "sale_price": 21960,
-        "list_price": 25254,
+        "weight_kg": 8.0,
+        "cost_price": 18000.0,
+        "margin_percent": 22.0,
+        "sale_price": 21960.0,
+        "list_price": 25254.0,
         "stock_qty": 50,
         "sku": "DS-CRIAD-8"
       },
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 31700,
-        "margin_percent": 20,
-        "sale_price": 38040,
-        "list_price": 43746,
+        "weight_kg": 15.0,
+        "cost_price": 31700.0,
+        "margin_percent": 20.0,
+        "sale_price": 38040.0,
+        "list_price": 43746.0,
         "stock_qty": 50,
         "sku": "DS-CRIAD-15"
       },
       {
         "presentation_name": "21 kg",
-        "weight_kg": 21,
-        "cost_price": 41500,
-        "margin_percent": 20,
-        "sale_price": 49800,
-        "list_price": 57270,
+        "weight_kg": 21.0,
+        "cost_price": 41500.0,
+        "margin_percent": 20.0,
+        "sale_price": 49800.0,
+        "list_price": 57270.0,
         "stock_qty": 50,
         "sku": "DS-CRIAD-21"
       }
@@ -315,25 +315,25 @@ const LOCAL_CATALOG = [
       "21 kg"
     ],
     "costs": [
-      4400,
-      8300,
-      18000,
-      31700,
-      41500
+      4400.0,
+      8300.0,
+      18000.0,
+      31700.0,
+      41500.0
     ],
     "prices": [
-      5720,
-      10375,
-      21960,
-      38040,
-      49800
+      5720.0,
+      10375.0,
+      21960.0,
+      38040.0,
+      49800.0
     ],
     "list_prices": [
-      6578,
-      11931,
-      25254,
-      43746,
-      57270
+      6578.0,
+      11931.0,
+      25254.0,
+      43746.0,
+      57270.0
     ],
     "brand": "Dog Selection",
     "category": "perros",
@@ -350,7 +350,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "21+3 kg Gratis",
-    "image_url": "https://mascoweb.com.ar/tienda/wp-content/uploads/2025/07/cordero-png.png",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_746140-MLA99934028853_112025-O.webp",
     "is_featured": 1,
     "is_promo": 1,
     "promo_tag": "OFERTA DESTACADA",
@@ -360,11 +360,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "21+3 kg (24 kg)",
-        "weight_kg": 24,
-        "cost_price": 46600,
-        "margin_percent": 20,
-        "sale_price": 55920,
-        "list_price": 64308,
+        "weight_kg": 24.0,
+        "cost_price": 46600.0,
+        "margin_percent": 20.0,
+        "sale_price": 55920.0,
+        "list_price": 64308.0,
         "stock_qty": 50,
         "sku": "DS-CORD-24"
       }
@@ -373,13 +373,13 @@ const LOCAL_CATALOG = [
       "21+3 kg (24 kg)"
     ],
     "costs": [
-      46600
+      46600.0
     ],
     "prices": [
-      55920
+      55920.0
     ],
     "list_prices": [
-      64308
+      64308.0
     ],
     "brand": "Dog Selection",
     "category": "perros",
@@ -396,7 +396,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Super Premium",
-    "image_url": "https://catycanar.vtexassets.com/arquivos/ids/173423/ORIGINAL-ETIQUETA-NEGRA-DOG-SELECTION-DERMAPROTECT-15kg.png?v=638972560708930000",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_877337-MLA81007028209_112024-O.webp",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -406,21 +406,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "2 kg",
-        "weight_kg": 2,
-        "cost_price": 8400,
-        "margin_percent": 25,
-        "sale_price": 10500,
-        "list_price": 12075,
+        "weight_kg": 2.0,
+        "cost_price": 8400.0,
+        "margin_percent": 25.0,
+        "sale_price": 10500.0,
+        "list_price": 12075.0,
         "stock_qty": 50,
         "sku": "DSET-DERMA-2"
       },
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 47000,
-        "margin_percent": 20,
-        "sale_price": 56400,
-        "list_price": 64860,
+        "weight_kg": 15.0,
+        "cost_price": 47000.0,
+        "margin_percent": 20.0,
+        "sale_price": 56400.0,
+        "list_price": 64860.0,
         "stock_qty": 50,
         "sku": "DSET-DERMA-15"
       }
@@ -430,16 +430,16 @@ const LOCAL_CATALOG = [
       "15 kg"
     ],
     "costs": [
-      8400,
-      47000
+      8400.0,
+      47000.0
     ],
     "prices": [
-      10500,
-      56400
+      10500.0,
+      56400.0
     ],
     "list_prices": [
-      12075,
-      64860
+      12075.0,
+      64860.0
     ],
     "brand": "DS Etiqueta Negra",
     "category": "perros",
@@ -456,7 +456,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "grande",
     "badge": "Super Premium",
-    "image_url": "https://catycanar.vtexassets.com/arquivos/ids/171206/Mockup-DS-adultos-2k.png?v=638645226097470000",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_953311-MLA99349040992_112025-O.webp",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -466,31 +466,31 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "2 kg",
-        "weight_kg": 2,
-        "cost_price": 8400,
-        "margin_percent": 25,
-        "sale_price": 10500,
-        "list_price": 12075,
+        "weight_kg": 2.0,
+        "cost_price": 8400.0,
+        "margin_percent": 25.0,
+        "sale_price": 10500.0,
+        "list_price": 12075.0,
         "stock_qty": 50,
         "sku": "DSET-ML-2"
       },
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 47000,
-        "margin_percent": 20,
-        "sale_price": 56400,
-        "list_price": 64860,
+        "weight_kg": 15.0,
+        "cost_price": 47000.0,
+        "margin_percent": 20.0,
+        "sale_price": 56400.0,
+        "list_price": 64860.0,
         "stock_qty": 50,
         "sku": "DSET-ML-15"
       },
       {
         "presentation_name": "21 kg",
-        "weight_kg": 21,
-        "cost_price": 62400,
-        "margin_percent": 20,
-        "sale_price": 74880,
-        "list_price": 86112,
+        "weight_kg": 21.0,
+        "cost_price": 62400.0,
+        "margin_percent": 20.0,
+        "sale_price": 74880.0,
+        "list_price": 86112.0,
         "stock_qty": 50,
         "sku": "DSET-ML-21"
       }
@@ -501,19 +501,19 @@ const LOCAL_CATALOG = [
       "21 kg"
     ],
     "costs": [
-      8400,
-      47000,
-      62400
+      8400.0,
+      47000.0,
+      62400.0
     ],
     "prices": [
-      10500,
-      56400,
-      74880
+      10500.0,
+      56400.0,
+      74880.0
     ],
     "list_prices": [
-      12075,
-      64860,
-      86112
+      12075.0,
+      64860.0,
+      86112.0
     ],
     "brand": "DS Etiqueta Negra",
     "category": "perros",
@@ -530,7 +530,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Super Premium Gatos",
-    "image_url": "https://catycanar.vtexassets.com/arquivos/ids/173429/ORIGINAL-ETIQUETA-NEGRA-CAT-SELECTION-GATOS-10kg.png?v=638972560985900000",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_633625-MLA75145123100_032024-O.webp",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -540,31 +540,31 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "2 kg",
-        "weight_kg": 2,
-        "cost_price": 12800,
-        "margin_percent": 25,
-        "sale_price": 16000,
-        "list_price": 18400,
+        "weight_kg": 2.0,
+        "cost_price": 12800.0,
+        "margin_percent": 25.0,
+        "sale_price": 16000.0,
+        "list_price": 18400.0,
         "stock_qty": 50,
         "sku": "CAT-ET-2"
       },
       {
         "presentation_name": "10 kg Adults / Indoor",
-        "weight_kg": 10,
-        "cost_price": 47500,
-        "margin_percent": 20,
-        "sale_price": 57000,
-        "list_price": 65550,
+        "weight_kg": 10.0,
+        "cost_price": 47500.0,
+        "margin_percent": 20.0,
+        "sale_price": 57000.0,
+        "list_price": 65550.0,
         "stock_qty": 50,
         "sku": "CAT-ET-10"
       },
       {
         "presentation_name": "10 kg Kitten",
-        "weight_kg": 10,
-        "cost_price": 48000,
-        "margin_percent": 20,
-        "sale_price": 57600,
-        "list_price": 66240,
+        "weight_kg": 10.0,
+        "cost_price": 48000.0,
+        "margin_percent": 20.0,
+        "sale_price": 57600.0,
+        "list_price": 66240.0,
         "stock_qty": 50,
         "sku": "CAT-ET-KIT-10"
       }
@@ -575,19 +575,19 @@ const LOCAL_CATALOG = [
       "10 kg Kitten"
     ],
     "costs": [
-      12800,
-      47500,
-      48000
+      12800.0,
+      47500.0,
+      48000.0
     ],
     "prices": [
-      16000,
-      57000,
-      57600
+      16000.0,
+      57000.0,
+      57600.0
     ],
     "list_prices": [
-      18400,
-      65550,
-      66240
+      18400.0,
+      65550.0,
+      66240.0
     ],
     "brand": "DS Etiqueta Negra",
     "category": "gatos",
@@ -604,7 +604,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Clásico Familiar",
-    "image_url": "https://acdn-us.mitiendanube.com/stores/884/444/products/7797453000666-product-image-11-ef7b86ad446993ff0c16745842742110-640-0.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_795475-MLA99878002573_112025-O.webp",
     "is_featured": 1,
     "is_promo": 1,
     "promo_tag": "OFERTA DESTACADA",
@@ -614,21 +614,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "8 kg",
-        "weight_kg": 8,
-        "cost_price": 23370,
-        "margin_percent": 22,
-        "sale_price": 28511,
-        "list_price": 32788,
+        "weight_kg": 8.0,
+        "cost_price": 23370.0,
+        "margin_percent": 22.0,
+        "sale_price": 28511.0,
+        "list_price": 32788.0,
         "stock_qty": 50,
         "sku": "PED-8"
       },
       {
         "presentation_name": "21 kg Gigante",
-        "weight_kg": 21,
-        "cost_price": 52390,
-        "margin_percent": 20,
-        "sale_price": 62868,
-        "list_price": 72298,
+        "weight_kg": 21.0,
+        "cost_price": 52390.0,
+        "margin_percent": 20.0,
+        "sale_price": 62868.0,
+        "list_price": 72298.0,
         "stock_qty": 50,
         "sku": "PED-21"
       }
@@ -638,16 +638,16 @@ const LOCAL_CATALOG = [
       "21 kg Gigante"
     ],
     "costs": [
-      23370,
-      52390
+      23370.0,
+      52390.0
     ],
     "prices": [
-      28511,
-      62868
+      28511.0,
+      62868.0
     ],
     "list_prices": [
-      32788,
-      72298
+      32788.0,
+      72298.0
     ],
     "brand": "Pedigree",
     "category": "perros",
@@ -664,7 +664,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Más Elegido",
-    "image_url": "https://www.whiskas.com.ar/cdn-cgi/image/format=auto,q=90/sites/g/files/fnmzdf4921/files/2022-12/7797453972390-product-image-1.png",
+    "image_url": "https://http2.mlstatic.com/D_Q_NP_2X_851344-MLA110627789901_042026-T.webp",
     "is_featured": 1,
     "is_promo": 1,
     "promo_tag": "OFERTA DESTACADA",
@@ -674,21 +674,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "10 kg",
-        "weight_kg": 10,
-        "cost_price": 40900,
-        "margin_percent": 20,
-        "sale_price": 49080,
-        "list_price": 56442,
+        "weight_kg": 10.0,
+        "cost_price": 40900.0,
+        "margin_percent": 20.0,
+        "sale_price": 49080.0,
+        "list_price": 56442.0,
         "stock_qty": 50,
         "sku": "WHISK-10"
       },
       {
         "presentation_name": "20 kg Gigante",
-        "weight_kg": 20,
-        "cost_price": 71450,
-        "margin_percent": 20,
-        "sale_price": 85740,
-        "list_price": 98601,
+        "weight_kg": 20.0,
+        "cost_price": 71450.0,
+        "margin_percent": 20.0,
+        "sale_price": 85740.0,
+        "list_price": 98601.0,
         "stock_qty": 50,
         "sku": "WHISK-20"
       }
@@ -698,16 +698,16 @@ const LOCAL_CATALOG = [
       "20 kg Gigante"
     ],
     "costs": [
-      40900,
-      71450
+      40900.0,
+      71450.0
     ],
     "prices": [
-      49080,
-      85740
+      49080.0,
+      85740.0
     ],
     "list_prices": [
-      56442,
-      98601
+      56442.0,
+      98601.0
     ],
     "brand": "Whiskas",
     "category": "gatos",
@@ -724,7 +724,7 @@ const LOCAL_CATALOG = [
     "subcat": "humedo",
     "breed_size": "todas",
     "badge": "10+2 Regalo",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgFXyE7O6LTKn6niE12cWFPIdibOL8Tnrt0drCCTfV7_tVJxjkzSRBcWg&s=10",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_876741-MLU79111404727_092024-O.webp",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -734,11 +734,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Caja 12 sobres",
-        "weight_kg": 1,
-        "cost_price": 11200,
-        "margin_percent": 25,
-        "sale_price": 14000,
-        "list_price": 16100,
+        "weight_kg": 1.0,
+        "cost_price": 11200.0,
+        "margin_percent": 25.0,
+        "sale_price": 14000.0,
+        "list_price": 16100.0,
         "stock_qty": 50,
         "sku": "POUCH-CAJA-12"
       }
@@ -747,13 +747,13 @@ const LOCAL_CATALOG = [
       "Caja 12 sobres"
     ],
     "costs": [
-      11200
+      11200.0
     ],
     "prices": [
-      14000
+      14000.0
     ],
     "list_prices": [
-      16100
+      16100.0
     ],
     "brand": "Pedigree",
     "category": "perros",
@@ -770,7 +770,7 @@ const LOCAL_CATALOG = [
     "subcat": "snacks",
     "breed_size": "todas",
     "badge": "Golosina Gatos",
-    "image_url": "https://www.whiskas.com.ar/cdn-cgi/image/format=auto,q=90/sites/g/files/fnmzdf4921/files/2024-02/69b3de71-00bc-4146-9c41-5780008bf1d4_0_0.png",
+    "image_url": "https://http2.mlstatic.com/D_Q_NP_2X_851344-MLA110627789901_042026-T.webp",
     "is_featured": 1,
     "is_promo": 1,
     "promo_tag": "OFERTA DESTACADA",
@@ -781,20 +781,20 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Sobre 40 g",
         "weight_kg": 0.04,
-        "cost_price": 1320,
-        "margin_percent": 35,
-        "sale_price": 1782,
-        "list_price": 2049,
+        "cost_price": 1320.0,
+        "margin_percent": 35.0,
+        "sale_price": 1782.0,
+        "list_price": 2049.0,
         "stock_qty": 50,
         "sku": "WHISK-SNACK-40"
       },
       {
         "presentation_name": "Sobre 80 g",
         "weight_kg": 0.08,
-        "cost_price": 2220,
-        "margin_percent": 35,
-        "sale_price": 2997,
-        "list_price": 3447,
+        "cost_price": 2220.0,
+        "margin_percent": 35.0,
+        "sale_price": 2997.0,
+        "list_price": 3447.0,
         "stock_qty": 50,
         "sku": "WHISK-SNACK-80"
       }
@@ -804,16 +804,16 @@ const LOCAL_CATALOG = [
       "Sobre 80 g"
     ],
     "costs": [
-      1320,
-      2220
+      1320.0,
+      2220.0
     ],
     "prices": [
-      1782,
-      2997
+      1782.0,
+      2997.0
     ],
     "list_prices": [
-      2049,
-      3447
+      2049.0,
+      3447.0
     ],
     "brand": "Whiskas",
     "category": "snacks",
@@ -830,7 +830,7 @@ const LOCAL_CATALOG = [
     "subcat": "snacks",
     "breed_size": "todas",
     "badge": "Snack Felino #1",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_722023-MLM48055456581_102021-O.webp",
+    "image_url": "https://http2.mlstatic.com/D_Q_NP_2X_851344-MLA110627789901_042026-T.webp",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -841,10 +841,10 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Pack 48 g",
         "weight_kg": 0.048,
-        "cost_price": 2770,
-        "margin_percent": 35,
-        "sale_price": 3740,
-        "list_price": 4301,
+        "cost_price": 2770.0,
+        "margin_percent": 35.0,
+        "sale_price": 3740.0,
+        "list_price": 4301.0,
         "stock_qty": 50,
         "sku": "TEMPT-48"
       }
@@ -853,13 +853,13 @@ const LOCAL_CATALOG = [
       "Pack 48 g"
     ],
     "costs": [
-      2770
+      2770.0
     ],
     "prices": [
-      3740
+      3740.0
     ],
     "list_prices": [
-      4301
+      4301.0
     ],
     "brand": "Temptations",
     "category": "snacks",
@@ -876,7 +876,7 @@ const LOCAL_CATALOG = [
     "subcat": "snacks",
     "breed_size": "pequeña",
     "badge": "Salud Dental",
-    "image_url": "https://tiendademascotasar.vtexassets.com/arquivos/ids/159005-800-auto?v=637903162316500000&width=800&height=auto&aspect=true",
+    "image_url": "https://resources.claroshop.com/medios-plazavip/mkt/646d0036c12bf_6jpg.jpg",
     "is_featured": 1,
     "is_promo": 1,
     "promo_tag": "OFERTA DESTACADA",
@@ -887,30 +887,30 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "1 Unidad",
         "weight_kg": 0.03,
-        "cost_price": 430,
-        "margin_percent": 35,
-        "sale_price": 580,
-        "list_price": 667,
+        "cost_price": 430.0,
+        "margin_percent": 35.0,
+        "sale_price": 580.0,
+        "list_price": 667.0,
         "stock_qty": 50,
         "sku": "DENT-MINI-1"
       },
       {
         "presentation_name": "Pack x 3 Unidades",
         "weight_kg": 0.09,
-        "cost_price": 1250,
-        "margin_percent": 35,
-        "sale_price": 1688,
-        "list_price": 1941,
+        "cost_price": 1250.0,
+        "margin_percent": 35.0,
+        "sale_price": 1688.0,
+        "list_price": 1941.0,
         "stock_qty": 50,
         "sku": "DENT-MINI-3"
       },
       {
         "presentation_name": "Pack Semanal x 7 Unid.",
         "weight_kg": 0.21,
-        "cost_price": 2420,
-        "margin_percent": 30,
-        "sale_price": 3146,
-        "list_price": 3618,
+        "cost_price": 2420.0,
+        "margin_percent": 30.0,
+        "sale_price": 3146.0,
+        "list_price": 3618.0,
         "stock_qty": 50,
         "sku": "DENT-MINI-7"
       }
@@ -921,19 +921,19 @@ const LOCAL_CATALOG = [
       "Pack Semanal x 7 Unid."
     ],
     "costs": [
-      430,
-      1250,
-      2420
+      430.0,
+      1250.0,
+      2420.0
     ],
     "prices": [
-      580,
-      1688,
-      3146
+      580.0,
+      1688.0,
+      3146.0
     ],
     "list_prices": [
-      667,
-      1941,
-      3618
+      667.0,
+      1941.0,
+      3618.0
     ],
     "brand": "Dentastix",
     "category": "snacks",
@@ -950,7 +950,7 @@ const LOCAL_CATALOG = [
     "subcat": "snacks",
     "breed_size": "grande",
     "badge": "Salud Dental",
-    "image_url": "https://www.centroveterinariosm.com.ar/wp-content/uploads/producto-cvsm-dentastix-razas-medianas-y-grandes.webp",
+    "image_url": "https://resources.claroshop.com/medios-plazavip/mkt/646d0036c12bf_6jpg.jpg",
     "is_featured": 1,
     "is_promo": 1,
     "promo_tag": "OFERTA DESTACADA",
@@ -961,30 +961,30 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "1 Unidad",
         "weight_kg": 0.05,
-        "cost_price": 510,
-        "margin_percent": 35,
-        "sale_price": 688,
-        "list_price": 791,
+        "cost_price": 510.0,
+        "margin_percent": 35.0,
+        "sale_price": 688.0,
+        "list_price": 791.0,
         "stock_qty": 50,
         "sku": "DENT-MED-1"
       },
       {
         "presentation_name": "Pack x 3 Unidades",
         "weight_kg": 0.15,
-        "cost_price": 1450,
-        "margin_percent": 35,
-        "sale_price": 1958,
-        "list_price": 2252,
+        "cost_price": 1450.0,
+        "margin_percent": 35.0,
+        "sale_price": 1958.0,
+        "list_price": 2252.0,
         "stock_qty": 50,
         "sku": "DENT-MED-3"
       },
       {
         "presentation_name": "Pack Semanal x 7 Unid.",
         "weight_kg": 0.35,
-        "cost_price": 2850,
-        "margin_percent": 30,
-        "sale_price": 3705,
-        "list_price": 4261,
+        "cost_price": 2850.0,
+        "margin_percent": 30.0,
+        "sale_price": 3705.0,
+        "list_price": 4261.0,
         "stock_qty": 50,
         "sku": "DENT-MED-7"
       }
@@ -995,19 +995,19 @@ const LOCAL_CATALOG = [
       "Pack Semanal x 7 Unid."
     ],
     "costs": [
-      510,
-      1450,
-      2850
+      510.0,
+      1450.0,
+      2850.0
     ],
     "prices": [
-      688,
-      1958,
-      3705
+      688.0,
+      1958.0,
+      3705.0
     ],
     "list_prices": [
-      791,
-      2252,
-      4261
+      791.0,
+      2252.0,
+      4261.0
     ],
     "brand": "Dentastix",
     "category": "snacks",
@@ -1024,7 +1024,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "pequeña",
     "badge": "Super Premium",
-    "image_url": "https://vetdirect.purina.com.ar/cdn/shop/products/7613287029195_2_1200x1200.png?v=1634245663",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_913729-MLA99843470895_112025-O.webp",
     "is_featured": 1,
     "is_promo": 1,
     "promo_tag": "OFERTA DESTACADA",
@@ -1034,21 +1034,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "3 kg",
-        "weight_kg": 3,
-        "cost_price": 31150,
-        "margin_percent": 22,
-        "sale_price": 38003,
-        "list_price": 43703,
+        "weight_kg": 3.0,
+        "cost_price": 31150.0,
+        "margin_percent": 22.0,
+        "sale_price": 38003.0,
+        "list_price": 43703.0,
         "stock_qty": 50,
         "sku": "PP-AD-MINI-3"
       },
       {
         "presentation_name": "7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 63780,
-        "margin_percent": 20,
-        "sale_price": 76536,
-        "list_price": 88016,
+        "cost_price": 63780.0,
+        "margin_percent": 20.0,
+        "sale_price": 76536.0,
+        "list_price": 88016.0,
         "stock_qty": 50,
         "sku": "PP-AD-MINI-7.5"
       }
@@ -1058,16 +1058,16 @@ const LOCAL_CATALOG = [
       "7.5 kg"
     ],
     "costs": [
-      31150,
-      63780
+      31150.0,
+      63780.0
     ],
     "prices": [
-      38003,
-      76536
+      38003.0,
+      76536.0
     ],
     "list_prices": [
-      43703,
-      88016
+      43703.0,
+      88016.0
     ],
     "brand": "Pro Plan",
     "category": "perros",
@@ -1084,7 +1084,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "grande",
     "badge": "Super Premium",
-    "image_url": "https://www.purina.com.ar/sites/default/files/styles/webp/public/2022-10/razas-medianas-1-proplan.png.webp?itok=M7p4g4jF",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_913729-MLA99843470895_112025-O.webp",
     "is_featured": 1,
     "is_promo": 1,
     "promo_tag": "OFERTA DESTACADA",
@@ -1094,21 +1094,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "3 kg",
-        "weight_kg": 3,
-        "cost_price": 30090,
-        "margin_percent": 22,
-        "sale_price": 36710,
-        "list_price": 42216,
+        "weight_kg": 3.0,
+        "cost_price": 30090.0,
+        "margin_percent": 22.0,
+        "sale_price": 36710.0,
+        "list_price": 42216.0,
         "stock_qty": 50,
         "sku": "PP-AD-MED-3"
       },
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 100690,
-        "margin_percent": 20,
-        "sale_price": 120828,
-        "list_price": 138952,
+        "weight_kg": 15.0,
+        "cost_price": 100690.0,
+        "margin_percent": 20.0,
+        "sale_price": 120828.0,
+        "list_price": 138952.0,
         "stock_qty": 50,
         "sku": "PP-AD-MED-15"
       }
@@ -1118,16 +1118,16 @@ const LOCAL_CATALOG = [
       "15 kg"
     ],
     "costs": [
-      30090,
-      100690
+      30090.0,
+      100690.0
     ],
     "prices": [
-      36710,
-      120828
+      36710.0,
+      120828.0
     ],
     "list_prices": [
-      42216,
-      138952
+      42216.0,
+      138952.0
     ],
     "brand": "Pro Plan",
     "category": "perros",
@@ -1144,7 +1144,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Salud Renal",
-    "image_url": "https://naricitas.pet/wp-content/uploads/2023/07/naricitas-pro-plan-cat-adulto-sterilized-salmon-y-arroz.jpg",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_913729-MLA99843470895_112025-O.webp",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -1154,31 +1154,31 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "1 kg",
-        "weight_kg": 1,
-        "cost_price": 15550,
-        "margin_percent": 25,
-        "sale_price": 19438,
-        "list_price": 22354,
+        "weight_kg": 1.0,
+        "cost_price": 15550.0,
+        "margin_percent": 25.0,
+        "sale_price": 19438.0,
+        "list_price": 22354.0,
         "stock_qty": 50,
         "sku": "PP-CAT-1"
       },
       {
         "presentation_name": "7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 85460,
-        "margin_percent": 20,
-        "sale_price": 102552,
-        "list_price": 117935,
+        "cost_price": 85460.0,
+        "margin_percent": 20.0,
+        "sale_price": 102552.0,
+        "list_price": 117935.0,
         "stock_qty": 50,
         "sku": "PP-CAT-7.5"
       },
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 150030,
-        "margin_percent": 20,
-        "sale_price": 180036,
-        "list_price": 207041,
+        "weight_kg": 15.0,
+        "cost_price": 150030.0,
+        "margin_percent": 20.0,
+        "sale_price": 180036.0,
+        "list_price": 207041.0,
         "stock_qty": 50,
         "sku": "PP-CAT-15"
       }
@@ -1189,19 +1189,19 @@ const LOCAL_CATALOG = [
       "15 kg"
     ],
     "costs": [
-      15550,
-      85460,
-      150030
+      15550.0,
+      85460.0,
+      150030.0
     ],
     "prices": [
-      19438,
-      102552,
-      180036
+      19438.0,
+      102552.0,
+      180036.0
     ],
     "list_prices": [
-      22354,
-      117935,
-      207041
+      22354.0,
+      117935.0,
+      207041.0
     ],
     "brand": "Pro Plan",
     "category": "gatos",
@@ -1218,7 +1218,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "pequeña",
     "badge": "Super Premium",
-    "image_url": "https://catycanar.vtexassets.com/arquivos/ids/173648/ChatGPT-Image-21-ago-2025-14_51_26.png?v=639211157811370000",
+    "image_url": "https://catycanar.vtexassets.com/arquivos/ids/177185-800-auto?v=639214509443130000&width=800&height=auto&aspect=true",
     "is_featured": 1,
     "is_promo": 1,
     "promo_tag": "OFERTA DESTACADA",
@@ -1228,31 +1228,31 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "3 kg",
-        "weight_kg": 3,
-        "cost_price": 35400,
-        "margin_percent": 22,
-        "sale_price": 43188,
-        "list_price": 49666,
+        "weight_kg": 3.0,
+        "cost_price": 35400.0,
+        "margin_percent": 22.0,
+        "sale_price": 43188.0,
+        "list_price": 49666.0,
         "stock_qty": 50,
         "sku": "RC-MINI-3"
       },
       {
         "presentation_name": "7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 81170,
-        "margin_percent": 20,
-        "sale_price": 97404,
-        "list_price": 112015,
+        "cost_price": 81170.0,
+        "margin_percent": 20.0,
+        "sale_price": 97404.0,
+        "list_price": 112015.0,
         "stock_qty": 50,
         "sku": "RC-MINI-7.5"
       },
       {
         "presentation_name": "15 kg Nuevo",
-        "weight_kg": 15,
-        "cost_price": 133460,
-        "margin_percent": 20,
-        "sale_price": 160152,
-        "list_price": 184175,
+        "weight_kg": 15.0,
+        "cost_price": 133460.0,
+        "margin_percent": 20.0,
+        "sale_price": 160152.0,
+        "list_price": 184175.0,
         "stock_qty": 50,
         "sku": "RC-MINI-15"
       }
@@ -1263,19 +1263,19 @@ const LOCAL_CATALOG = [
       "15 kg Nuevo"
     ],
     "costs": [
-      35400,
-      81170,
-      133460
+      35400.0,
+      81170.0,
+      133460.0
     ],
     "prices": [
-      43188,
-      97404,
-      160152
+      43188.0,
+      97404.0,
+      160152.0
     ],
     "list_prices": [
-      49666,
-      112015,
-      184175
+      49666.0,
+      112015.0,
+      184175.0
     ],
     "brand": "Royal Canin",
     "category": "perros",
@@ -1292,7 +1292,7 @@ const LOCAL_CATALOG = [
     "subcat": "cachorro",
     "breed_size": "pequeña",
     "badge": "Cachorros",
-    "image_url": "https://catycanar.vtexassets.com/arquivos/ids/176522/7790187342255_01.jpg?v=639161115129430000",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_877136-MLA99395424832_112025-O.webp",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -1302,31 +1302,31 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "3 kg",
-        "weight_kg": 3,
-        "cost_price": 36900,
-        "margin_percent": 22,
-        "sale_price": 45018,
-        "list_price": 51771,
+        "weight_kg": 3.0,
+        "cost_price": 36900.0,
+        "margin_percent": 22.0,
+        "sale_price": 45018.0,
+        "list_price": 51771.0,
         "stock_qty": 50,
         "sku": "RC-PUP-3"
       },
       {
         "presentation_name": "7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 74340,
-        "margin_percent": 20,
-        "sale_price": 89208,
-        "list_price": 102589,
+        "cost_price": 74340.0,
+        "margin_percent": 20.0,
+        "sale_price": 89208.0,
+        "list_price": 102589.0,
         "stock_qty": 50,
         "sku": "RC-PUP-7.5"
       },
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 138290,
-        "margin_percent": 20,
-        "sale_price": 165948,
-        "list_price": 190840,
+        "weight_kg": 15.0,
+        "cost_price": 138290.0,
+        "margin_percent": 20.0,
+        "sale_price": 165948.0,
+        "list_price": 190840.0,
         "stock_qty": 50,
         "sku": "RC-PUP-15"
       }
@@ -1337,19 +1337,19 @@ const LOCAL_CATALOG = [
       "15 kg"
     ],
     "costs": [
-      36900,
-      74340,
-      138290
+      36900.0,
+      74340.0,
+      138290.0
     ],
     "prices": [
-      45018,
-      89208,
-      165948
+      45018.0,
+      89208.0,
+      165948.0
     ],
     "list_prices": [
-      51771,
-      102589,
-      190840
+      51771.0,
+      102589.0,
+      190840.0
     ],
     "brand": "Royal Canin",
     "category": "perros",
@@ -1366,7 +1366,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "pequeña",
     "badge": "Especial Razas",
-    "image_url": "https://cdn.royalcanin-weshare-online.io/xj8N6XoBRYZmsWpcn7bO/v5/ar-l-rc-img-web-packs-raza",
+    "image_url": "https://catycanar.vtexassets.com/arquivos/ids/177185-800-auto?v=639214509443130000&width=800&height=auto&aspect=true",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -1376,31 +1376,31 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Caniche Adulto 3 kg",
-        "weight_kg": 3,
-        "cost_price": 38600,
-        "margin_percent": 22,
-        "sale_price": 47092,
-        "list_price": 54156,
+        "weight_kg": 3.0,
+        "cost_price": 38600.0,
+        "margin_percent": 22.0,
+        "sale_price": 47092.0,
+        "list_price": 54156.0,
         "stock_qty": 50,
         "sku": "RC-CANICHE-3"
       },
       {
         "presentation_name": "Bulldog Francés 3 kg",
-        "weight_kg": 3,
-        "cost_price": 38600,
-        "margin_percent": 22,
-        "sale_price": 47092,
-        "list_price": 54156,
+        "weight_kg": 3.0,
+        "cost_price": 38600.0,
+        "margin_percent": 22.0,
+        "sale_price": 47092.0,
+        "list_price": 54156.0,
         "stock_qty": 50,
         "sku": "RC-BULLDOG-3"
       },
       {
         "presentation_name": "Yorkshire Terrier 3 kg",
-        "weight_kg": 3,
-        "cost_price": 38600,
-        "margin_percent": 22,
-        "sale_price": 47092,
-        "list_price": 54156,
+        "weight_kg": 3.0,
+        "cost_price": 38600.0,
+        "margin_percent": 22.0,
+        "sale_price": 47092.0,
+        "list_price": 54156.0,
         "stock_qty": 50,
         "sku": "RC-YORK-3"
       }
@@ -1411,19 +1411,19 @@ const LOCAL_CATALOG = [
       "Yorkshire Terrier 3 kg"
     ],
     "costs": [
-      38600,
-      38600,
-      38600
+      38600.0,
+      38600.0,
+      38600.0
     ],
     "prices": [
-      47092,
-      47092,
-      47092
+      47092.0,
+      47092.0,
+      47092.0
     ],
     "list_prices": [
-      54156,
-      54156,
-      54156
+      54156.0,
+      54156.0,
+      54156.0
     ],
     "brand": "Royal Canin",
     "category": "perros",
@@ -1440,7 +1440,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Más Vendido Gatos",
-    "image_url": "https://catycanar.vtexassets.com/arquivos/ids/174985/14542.jpg?v=639004587349730000",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_615731-MLA100085791445_122025-O.webp",
     "is_featured": 1,
     "is_promo": 1,
     "promo_tag": "OFERTA DESTACADA",
@@ -1451,30 +1451,30 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "1.5 kg",
         "weight_kg": 1.5,
-        "cost_price": 26350,
-        "margin_percent": 25,
-        "sale_price": 32938,
-        "list_price": 37879,
+        "cost_price": 26350.0,
+        "margin_percent": 25.0,
+        "sale_price": 32938.0,
+        "list_price": 37879.0,
         "stock_qty": 50,
         "sku": "RC-FIT-1.5"
       },
       {
         "presentation_name": "7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 110750,
-        "margin_percent": 20,
-        "sale_price": 132900,
-        "list_price": 152835,
+        "cost_price": 110750.0,
+        "margin_percent": 20.0,
+        "sale_price": 132900.0,
+        "list_price": 152835.0,
         "stock_qty": 50,
         "sku": "RC-FIT-7.5"
       },
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 186750,
-        "margin_percent": 20,
-        "sale_price": 224100,
-        "list_price": 257715,
+        "weight_kg": 15.0,
+        "cost_price": 186750.0,
+        "margin_percent": 20.0,
+        "sale_price": 224100.0,
+        "list_price": 257715.0,
         "stock_qty": 50,
         "sku": "RC-FIT-15"
       }
@@ -1485,19 +1485,19 @@ const LOCAL_CATALOG = [
       "15 kg"
     ],
     "costs": [
-      26350,
-      110750,
-      186750
+      26350.0,
+      110750.0,
+      186750.0
     ],
     "prices": [
-      32938,
-      132900,
-      224100
+      32938.0,
+      132900.0,
+      224100.0
     ],
     "list_prices": [
-      37879,
-      152835,
-      257715
+      37879.0,
+      152835.0,
+      257715.0
     ],
     "brand": "Royal Canin",
     "category": "gatos",
@@ -1514,7 +1514,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Castrados",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_723176-MLC44160348442_112020-O.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_615731-MLA100085791445_122025-O.webp",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -1525,10 +1525,10 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 110420,
-        "margin_percent": 20,
-        "sale_price": 132504,
-        "list_price": 152380,
+        "cost_price": 110420.0,
+        "margin_percent": 20.0,
+        "sale_price": 132504.0,
+        "list_price": 152380.0,
         "stock_qty": 50,
         "sku": "RC-CASTR-7.5"
       }
@@ -1537,13 +1537,13 @@ const LOCAL_CATALOG = [
       "7.5 kg"
     ],
     "costs": [
-      110420
+      110420.0
     ],
     "prices": [
-      132504
+      132504.0
     ],
     "list_prices": [
-      152380
+      152380.0
     ],
     "brand": "Royal Canin",
     "category": "gatos",
@@ -1560,7 +1560,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "grande",
     "badge": "Super Premium",
-    "image_url": "https://tiendademascotasar.vtexassets.com/arquivos/ids/163230-800-auto?v=638572525021570000&width=800&height=auto&aspect=true",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_816176-MLA99341181006_112025-F.jpg",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -1570,21 +1570,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 60300,
-        "margin_percent": 20,
-        "sale_price": 72360,
-        "list_price": 83214,
+        "weight_kg": 15.0,
+        "cost_price": 60300.0,
+        "margin_percent": 20.0,
+        "sale_price": 72360.0,
+        "list_price": 83214.0,
         "stock_qty": 50,
         "sku": "EXC-MED-15"
       },
       {
         "presentation_name": "20 kg Gigante",
-        "weight_kg": 20,
-        "cost_price": 71600,
-        "margin_percent": 20,
-        "sale_price": 85920,
-        "list_price": 98808,
+        "weight_kg": 20.0,
+        "cost_price": 71600.0,
+        "margin_percent": 20.0,
+        "sale_price": 85920.0,
+        "list_price": 98808.0,
         "stock_qty": 50,
         "sku": "EXC-MED-20"
       }
@@ -1594,16 +1594,16 @@ const LOCAL_CATALOG = [
       "20 kg Gigante"
     ],
     "costs": [
-      60300,
-      71600
+      60300.0,
+      71600.0
     ],
     "prices": [
-      72360,
-      85920
+      72360.0,
+      85920.0
     ],
     "list_prices": [
-      83214,
-      98808
+      83214.0,
+      98808.0
     ],
     "brand": "Excellent",
     "category": "perros",
@@ -1620,7 +1620,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Calidad Purina",
-    "image_url": "https://puppis.vtexassets.com/arquivos/ids/196207/150019.jpg?v=638482805741230000",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_816176-MLA99341181006_112025-F.jpg",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -1630,31 +1630,31 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "3 kg",
-        "weight_kg": 3,
-        "cost_price": 26500,
-        "margin_percent": 22,
-        "sale_price": 32330,
-        "list_price": 37180,
+        "weight_kg": 3.0,
+        "cost_price": 26500.0,
+        "margin_percent": 22.0,
+        "sale_price": 32330.0,
+        "list_price": 37180.0,
         "stock_qty": 50,
         "sku": "EXC-CAT-3"
       },
       {
         "presentation_name": "7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 54200,
-        "margin_percent": 20,
-        "sale_price": 65040,
-        "list_price": 74796,
+        "cost_price": 54200.0,
+        "margin_percent": 20.0,
+        "sale_price": 65040.0,
+        "list_price": 74796.0,
         "stock_qty": 50,
         "sku": "EXC-CAT-7.5"
       },
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 104500,
-        "margin_percent": 20,
-        "sale_price": 125400,
-        "list_price": 144210,
+        "weight_kg": 15.0,
+        "cost_price": 104500.0,
+        "margin_percent": 20.0,
+        "sale_price": 125400.0,
+        "list_price": 144210.0,
         "stock_qty": 50,
         "sku": "EXC-CAT-15"
       }
@@ -1665,19 +1665,19 @@ const LOCAL_CATALOG = [
       "15 kg"
     ],
     "costs": [
-      26500,
-      54200,
-      104500
+      26500.0,
+      54200.0,
+      104500.0
     ],
     "prices": [
-      32330,
-      65040,
-      125400
+      32330.0,
+      65040.0,
+      125400.0
     ],
     "list_prices": [
-      37180,
-      74796,
-      144210
+      37180.0,
+      74796.0,
+      144210.0
     ],
     "brand": "Excellent",
     "category": "gatos",
@@ -1694,7 +1694,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Industria Nacional",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZS7RhSLUz5VWAk2P37mJKnzfzLIW2szu9XVLAYpXu1A&s=10",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_678554-MLA99451664162_112025-F.jpg",
     "is_featured": 1,
     "is_promo": 1,
     "promo_tag": "OFERTA DESTACADA",
@@ -1704,21 +1704,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Raza Pequeña 15 kg",
-        "weight_kg": 15,
-        "cost_price": 51400,
-        "margin_percent": 20,
-        "sale_price": 61680,
-        "list_price": 70932,
+        "weight_kg": 15.0,
+        "cost_price": 51400.0,
+        "margin_percent": 20.0,
+        "sale_price": 61680.0,
+        "list_price": 70932.0,
         "stock_qty": 50,
         "sku": "VC-BAL-MINI-15"
       },
       {
         "presentation_name": "Raza Med/Grande 20 kg",
-        "weight_kg": 20,
-        "cost_price": 63900,
-        "margin_percent": 20,
-        "sale_price": 76680,
-        "list_price": 88182,
+        "weight_kg": 20.0,
+        "cost_price": 63900.0,
+        "margin_percent": 20.0,
+        "sale_price": 76680.0,
+        "list_price": 88182.0,
         "stock_qty": 50,
         "sku": "VC-BAL-MED-20"
       }
@@ -1728,16 +1728,16 @@ const LOCAL_CATALOG = [
       "Raza Med/Grande 20 kg"
     ],
     "costs": [
-      51400,
-      63900
+      51400.0,
+      63900.0
     ],
     "prices": [
-      61680,
-      76680
+      61680.0,
+      76680.0
     ],
     "list_prices": [
-      70932,
-      88182
+      70932.0,
+      88182.0
     ],
     "brand": "Vital Can",
     "category": "perros",
@@ -1754,7 +1754,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Super Premium",
-    "image_url": "https://www.eukanuba.com/arg/sites/g/files/fnmzdf6531/files/2025-04/ar-l-eukanuba-packshot-adult-small-breed.jpeg",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_832243-MLA99340263690_112025-F.jpg",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -1764,41 +1764,41 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Small Breed 3 kg",
-        "weight_kg": 3,
-        "cost_price": 21500,
-        "margin_percent": 22,
-        "sale_price": 26230,
-        "list_price": 30164,
+        "weight_kg": 3.0,
+        "cost_price": 21500.0,
+        "margin_percent": 22.0,
+        "sale_price": 26230.0,
+        "list_price": 30164.0,
         "stock_qty": 50,
         "sku": "EUK-SMALL-3"
       },
       {
         "presentation_name": "Small Breed 15 kg",
-        "weight_kg": 15,
-        "cost_price": 83100,
-        "margin_percent": 20,
-        "sale_price": 99720,
-        "list_price": 114678,
+        "weight_kg": 15.0,
+        "cost_price": 83100.0,
+        "margin_percent": 20.0,
+        "sale_price": 99720.0,
+        "list_price": 114678.0,
         "stock_qty": 50,
         "sku": "EUK-SMALL-15"
       },
       {
         "presentation_name": "Medium Breed 15 kg",
-        "weight_kg": 15,
-        "cost_price": 80600,
-        "margin_percent": 20,
-        "sale_price": 96720,
-        "list_price": 111228,
+        "weight_kg": 15.0,
+        "cost_price": 80600.0,
+        "margin_percent": 20.0,
+        "sale_price": 96720.0,
+        "list_price": 111228.0,
         "stock_qty": 50,
         "sku": "EUK-MED-15"
       },
       {
         "presentation_name": "Large Breed 15 kg",
-        "weight_kg": 15,
-        "cost_price": 80300,
-        "margin_percent": 20,
-        "sale_price": 96360,
-        "list_price": 110814,
+        "weight_kg": 15.0,
+        "cost_price": 80300.0,
+        "margin_percent": 20.0,
+        "sale_price": 96360.0,
+        "list_price": 110814.0,
         "stock_qty": 50,
         "sku": "EUK-LRG-15"
       }
@@ -1810,22 +1810,22 @@ const LOCAL_CATALOG = [
       "Large Breed 15 kg"
     ],
     "costs": [
-      21500,
-      83100,
-      80600,
-      80300
+      21500.0,
+      83100.0,
+      80600.0,
+      80300.0
     ],
     "prices": [
-      26230,
-      99720,
-      96720,
-      96360
+      26230.0,
+      99720.0,
+      96720.0,
+      96360.0
     ],
     "list_prices": [
-      30164,
-      114678,
-      111228,
-      110814
+      30164.0,
+      114678.0,
+      111228.0,
+      110814.0
     ],
     "brand": "Eukanuba",
     "category": "perros",
@@ -1842,7 +1842,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Más Recomendado",
-    "image_url": "https://puppis.vtexassets.com/arquivos/ids/210842/132151.png?v=639243882824530000",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_615731-MLA100085791445_122025-O.webp",
     "is_featured": 1,
     "is_promo": 1,
     "promo_tag": "OFERTA DESTACADA",
@@ -1852,21 +1852,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Mini Adulto 12 kg",
-        "weight_kg": 12,
-        "cost_price": 63400,
-        "margin_percent": 20,
-        "sale_price": 76080,
-        "list_price": 87492,
+        "weight_kg": 12.0,
+        "cost_price": 63400.0,
+        "margin_percent": 20.0,
+        "sale_price": 76080.0,
+        "list_price": 87492.0,
         "stock_qty": 50,
         "sku": "SG-MINI-12"
       },
       {
         "presentation_name": "Med & Large 15 kg",
-        "weight_kg": 15,
-        "cost_price": 72800,
-        "margin_percent": 20,
-        "sale_price": 87360,
-        "list_price": 100464,
+        "weight_kg": 15.0,
+        "cost_price": 72800.0,
+        "margin_percent": 20.0,
+        "sale_price": 87360.0,
+        "list_price": 100464.0,
         "stock_qty": 50,
         "sku": "SG-MED-15"
       }
@@ -1876,16 +1876,16 @@ const LOCAL_CATALOG = [
       "Med & Large 15 kg"
     ],
     "costs": [
-      63400,
-      72800
+      63400.0,
+      72800.0
     ],
     "prices": [
-      76080,
-      87360
+      76080.0,
+      87360.0
     ],
     "list_prices": [
-      87492,
-      100464
+      87492.0,
+      100464.0
     ],
     "brand": "Sieger",
     "category": "perros",
@@ -1902,7 +1902,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Línea Sieger",
-    "image_url": "https://bacanes.com.ar/wp-content/uploads/2024/11/AGILITY-ADULTOS.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_615731-MLA100085791445_122025-O.webp",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -1912,31 +1912,31 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Talla Pequeña 15 kg",
-        "weight_kg": 15,
-        "cost_price": 50900,
-        "margin_percent": 20,
-        "sale_price": 61080,
-        "list_price": 70242,
+        "weight_kg": 15.0,
+        "cost_price": 50900.0,
+        "margin_percent": 20.0,
+        "sale_price": 61080.0,
+        "list_price": 70242.0,
         "stock_qty": 50,
         "sku": "AGIL-MINI-15"
       },
       {
         "presentation_name": "Adulto 20 kg",
-        "weight_kg": 20,
-        "cost_price": 55400,
-        "margin_percent": 20,
-        "sale_price": 66480,
-        "list_price": 76452,
+        "weight_kg": 20.0,
+        "cost_price": 55400.0,
+        "margin_percent": 20.0,
+        "sale_price": 66480.0,
+        "list_price": 76452.0,
         "stock_qty": 50,
         "sku": "AGIL-AD-20"
       },
       {
         "presentation_name": "Cachorro 20 kg",
-        "weight_kg": 20,
-        "cost_price": 63700,
-        "margin_percent": 20,
-        "sale_price": 76440,
-        "list_price": 87906,
+        "weight_kg": 20.0,
+        "cost_price": 63700.0,
+        "margin_percent": 20.0,
+        "sale_price": 76440.0,
+        "list_price": 87906.0,
         "stock_qty": 50,
         "sku": "AGIL-CACH-20"
       }
@@ -1947,19 +1947,19 @@ const LOCAL_CATALOG = [
       "Cachorro 20 kg"
     ],
     "costs": [
-      50900,
-      55400,
-      63700
+      50900.0,
+      55400.0,
+      63700.0
     ],
     "prices": [
-      61080,
-      66480,
-      76440
+      61080.0,
+      66480.0,
+      76440.0
     ],
     "list_prices": [
-      70242,
-      76452,
-      87906
+      70242.0,
+      76452.0,
+      87906.0
     ],
     "brand": "Agility",
     "category": "perros",
@@ -1976,7 +1976,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Bolsa 10 kg",
-    "image_url": "https://bacanes.com.ar/wp-content/uploads/2025/07/AGILITY-GATO-URINARY.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_615731-MLA100085791445_122025-O.webp",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -1986,31 +1986,31 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Cat Adulto 10 kg",
-        "weight_kg": 10,
-        "cost_price": 55900,
-        "margin_percent": 20,
-        "sale_price": 67080,
-        "list_price": 77142,
+        "weight_kg": 10.0,
+        "cost_price": 55900.0,
+        "margin_percent": 20.0,
+        "sale_price": 67080.0,
+        "list_price": 77142.0,
         "stock_qty": 50,
         "sku": "AGIL-CAT-AD-10"
       },
       {
         "presentation_name": "Cat Kitten 10 kg",
-        "weight_kg": 10,
-        "cost_price": 60500,
-        "margin_percent": 20,
-        "sale_price": 72600,
-        "list_price": 83490,
+        "weight_kg": 10.0,
+        "cost_price": 60500.0,
+        "margin_percent": 20.0,
+        "sale_price": 72600.0,
+        "list_price": 83490.0,
         "stock_qty": 50,
         "sku": "AGIL-CAT-KIT-10"
       },
       {
         "presentation_name": "Cat Urinary 10 kg",
-        "weight_kg": 10,
-        "cost_price": 60500,
-        "margin_percent": 20,
-        "sale_price": 72600,
-        "list_price": 83490,
+        "weight_kg": 10.0,
+        "cost_price": 60500.0,
+        "margin_percent": 20.0,
+        "sale_price": 72600.0,
+        "list_price": 83490.0,
         "stock_qty": 50,
         "sku": "AGIL-CAT-URIN-10"
       }
@@ -2021,19 +2021,19 @@ const LOCAL_CATALOG = [
       "Cat Urinary 10 kg"
     ],
     "costs": [
-      55900,
-      60500,
-      60500
+      55900.0,
+      60500.0,
+      60500.0
     ],
     "prices": [
-      67080,
-      72600,
-      72600
+      67080.0,
+      72600.0,
+      72600.0
     ],
     "list_prices": [
-      77142,
-      83490,
-      83490
+      77142.0,
+      83490.0,
+      83490.0
     ],
     "brand": "Agility",
     "category": "gatos",
@@ -2050,7 +2050,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Bolsa 22 kg",
-    "image_url": "https://static.wixstatic.com/media/46477f_1be6017f66a3408688002d3144372f9a~mv2.png/v1/fill/w_720,h_1080,al_c,q_90,enc_avif,quality_auto/46477f_1be6017f66a3408688002d3144372f9a~mv2.png",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_795475-MLA99878002573_112025-O.webp",
     "is_featured": 1,
     "is_promo": 1,
     "promo_tag": "OFERTA DESTACADA",
@@ -2060,11 +2060,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "22 kg",
-        "weight_kg": 22,
-        "cost_price": 32400,
-        "margin_percent": 20,
-        "sale_price": 38880,
-        "list_price": 44712,
+        "weight_kg": 22.0,
+        "cost_price": 32400.0,
+        "margin_percent": 20.0,
+        "sale_price": 38880.0,
+        "list_price": 44712.0,
         "stock_qty": 50,
         "sku": "TIERN-22"
       }
@@ -2073,13 +2073,13 @@ const LOCAL_CATALOG = [
       "22 kg"
     ],
     "costs": [
-      32400
+      32400.0
     ],
     "prices": [
-      38880
+      38880.0
     ],
     "list_prices": [
-      44712
+      44712.0
     ],
     "brand": "Tiernitos",
     "category": "perros",
@@ -2096,7 +2096,7 @@ const LOCAL_CATALOG = [
     "subcat": "snacks",
     "breed_size": "todas",
     "badge": "100% Natural",
-    "image_url": "https://acdn-us.mitiendanube.com/stores/068/331/products/hueso-de-cuero-grande-2151ee7ec21b59696817106008109176-1024-1024.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_876741-MLU79111404727_092024-O.webp",
     "is_featured": 1,
     "is_promo": 1,
     "promo_tag": "OFERTA DESTACADA",
@@ -2107,50 +2107,50 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Hueso N°1 Chico (3-4 pulgadas)",
         "weight_kg": 0.05,
-        "cost_price": 800,
-        "margin_percent": 35,
-        "sale_price": 1080,
-        "list_price": 1242,
+        "cost_price": 800.0,
+        "margin_percent": 35.0,
+        "sale_price": 1080.0,
+        "list_price": 1242.0,
         "stock_qty": 50,
         "sku": "HUESO-1"
       },
       {
         "presentation_name": "Hueso N°2 Mediano (7-8 pulgadas)",
         "weight_kg": 0.12,
-        "cost_price": 1300,
-        "margin_percent": 35,
-        "sale_price": 1755,
-        "list_price": 2018,
+        "cost_price": 1300.0,
+        "margin_percent": 35.0,
+        "sale_price": 1755.0,
+        "list_price": 2018.0,
         "stock_qty": 50,
         "sku": "HUESO-2"
       },
       {
         "presentation_name": "Hueso N°3 Grande (8-9 pulgadas)",
         "weight_kg": 0.22,
-        "cost_price": 3100,
-        "margin_percent": 35,
-        "sale_price": 4185,
-        "list_price": 4813,
+        "cost_price": 3100.0,
+        "margin_percent": 35.0,
+        "sale_price": 4185.0,
+        "list_price": 4813.0,
         "stock_qty": 50,
         "sku": "HUESO-3"
       },
       {
         "presentation_name": "Hueso N°4 Extra Grande (9-10 pulgadas)",
         "weight_kg": 0.35,
-        "cost_price": 4440,
-        "margin_percent": 35,
-        "sale_price": 5994,
-        "list_price": 6893,
+        "cost_price": 4440.0,
+        "margin_percent": 35.0,
+        "sale_price": 5994.0,
+        "list_price": 6893.0,
         "stock_qty": 50,
         "sku": "HUESO-4"
       },
       {
         "presentation_name": "Hueso N°5 Gigante (10-11 pulgadas)",
         "weight_kg": 0.5,
-        "cost_price": 4700,
-        "margin_percent": 35,
-        "sale_price": 6345,
-        "list_price": 7297,
+        "cost_price": 4700.0,
+        "margin_percent": 35.0,
+        "sale_price": 6345.0,
+        "list_price": 7297.0,
         "stock_qty": 50,
         "sku": "HUESO-5"
       }
@@ -2163,25 +2163,25 @@ const LOCAL_CATALOG = [
       "Hueso N°5 Gigante (10-11 pulgadas)"
     ],
     "costs": [
-      800,
-      1300,
-      3100,
-      4440,
-      4700
+      800.0,
+      1300.0,
+      3100.0,
+      4440.0,
+      4700.0
     ],
     "prices": [
-      1080,
-      1755,
-      4185,
-      5994,
-      6345
+      1080.0,
+      1755.0,
+      4185.0,
+      5994.0,
+      6345.0
     ],
     "list_prices": [
-      1242,
-      2018,
-      4813,
-      6893,
-      7297
+      1242.0,
+      2018.0,
+      4813.0,
+      6893.0,
+      7297.0
     ],
     "brand": "Huesos & Premios",
     "category": "snacks",
@@ -2198,7 +2198,7 @@ const LOCAL_CATALOG = [
     "subcat": "snacks",
     "breed_size": "todas",
     "badge": "Masticable Premium",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSMMpftIfcBTM697TRJT4U0xQyhpu_ATknL4K1W1pukQ&s=10",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_876741-MLU79111404727_092024-O.webp",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -2209,10 +2209,10 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Unidad Especial",
         "weight_kg": 0.08,
-        "cost_price": 800,
-        "margin_percent": 35,
-        "sale_price": 1080,
-        "list_price": 1242,
+        "cost_price": 800.0,
+        "margin_percent": 35.0,
+        "sale_price": 1080.0,
+        "list_price": 1242.0,
         "stock_qty": 50,
         "sku": "OREJA-1"
       }
@@ -2221,13 +2221,13 @@ const LOCAL_CATALOG = [
       "Unidad Especial"
     ],
     "costs": [
-      800
+      800.0
     ],
     "prices": [
-      1080
+      1080.0
     ],
     "list_prices": [
-      1242
+      1242.0
     ],
     "brand": "Huesos & Premios",
     "category": "snacks",
@@ -2244,7 +2244,7 @@ const LOCAL_CATALOG = [
     "subcat": "higiene",
     "breed_size": "todas",
     "badge": "Bolsa Ahorro",
-    "image_url": "https://www.profesionalvet.com.ar/3656-large_default/absorsol-x-36-kgs.jpg",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_767034-MLU73676996172_012024-O.webp",
     "is_featured": 1,
     "is_promo": 1,
     "promo_tag": "OFERTA DESTACADA",
@@ -2254,31 +2254,31 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 8 kg",
-        "weight_kg": 8,
-        "cost_price": 6100,
-        "margin_percent": 30,
-        "sale_price": 7930,
-        "list_price": 9120,
+        "weight_kg": 8.0,
+        "cost_price": 6100.0,
+        "margin_percent": 30.0,
+        "sale_price": 7930.0,
+        "list_price": 9120.0,
         "stock_qty": 50,
         "sku": "ABSOR-8"
       },
       {
         "presentation_name": "Bulto 12 kg (6x2kg)",
-        "weight_kg": 12,
-        "cost_price": 10100,
-        "margin_percent": 25,
-        "sale_price": 12625,
-        "list_price": 14519,
+        "weight_kg": 12.0,
+        "cost_price": 10100.0,
+        "margin_percent": 25.0,
+        "sale_price": 12625.0,
+        "list_price": 14519.0,
         "stock_qty": 50,
         "sku": "ABSOR-12"
       },
       {
         "presentation_name": "Bulto 21.6 kg (6x3.6kg)",
         "weight_kg": 21.6,
-        "cost_price": 16850,
-        "margin_percent": 20,
-        "sale_price": 20220,
-        "list_price": 23253,
+        "cost_price": 16850.0,
+        "margin_percent": 20.0,
+        "sale_price": 20220.0,
+        "list_price": 23253.0,
         "stock_qty": 50,
         "sku": "ABSOR-21.6"
       }
@@ -2289,19 +2289,19 @@ const LOCAL_CATALOG = [
       "Bulto 21.6 kg (6x3.6kg)"
     ],
     "costs": [
-      6100,
-      10100,
-      16850
+      6100.0,
+      10100.0,
+      16850.0
     ],
     "prices": [
-      7930,
-      12625,
-      20220
+      7930.0,
+      12625.0,
+      20220.0
     ],
     "list_prices": [
-      9120,
-      14519,
-      23253
+      9120.0,
+      14519.0,
+      23253.0
     ],
     "brand": "Absorsol / Piedras",
     "category": "higiene",
@@ -2318,7 +2318,7 @@ const LOCAL_CATALOG = [
     "subcat": "higiene",
     "breed_size": "todas",
     "badge": "Aroma Lavanda",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdNdgU9PIWVRC_lfB6UxzhgN7DpxJyFlYt8MRAbGF_jw&s=10",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_768895-MLA99563539018_122025-O.webp",
     "is_featured": 1,
     "is_promo": 1,
     "promo_tag": "OFERTA DESTACADA",
@@ -2328,21 +2328,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bulto 12 kg (6x2kg)",
-        "weight_kg": 12,
-        "cost_price": 14700,
-        "margin_percent": 25,
-        "sale_price": 18375,
-        "list_price": 21131,
+        "weight_kg": 12.0,
+        "cost_price": 14700.0,
+        "margin_percent": 25.0,
+        "sale_price": 18375.0,
+        "list_price": 21131.0,
         "stock_qty": 50,
         "sku": "ALTGAMA-12"
       },
       {
         "presentation_name": "Bulto 21.6 kg (6x3.6kg)",
         "weight_kg": 21.6,
-        "cost_price": 25500,
-        "margin_percent": 20,
-        "sale_price": 30600,
-        "list_price": 35190,
+        "cost_price": 25500.0,
+        "margin_percent": 20.0,
+        "sale_price": 30600.0,
+        "list_price": 35190.0,
         "stock_qty": 50,
         "sku": "ALTGAMA-21.6"
       }
@@ -2352,16 +2352,16 @@ const LOCAL_CATALOG = [
       "Bulto 21.6 kg (6x3.6kg)"
     ],
     "costs": [
-      14700,
-      25500
+      14700.0,
+      25500.0
     ],
     "prices": [
-      18375,
-      30600
+      18375.0,
+      30600.0
     ],
     "list_prices": [
-      21131,
-      35190
+      21131.0,
+      35190.0
     ],
     "brand": "Absorsol / Piedras",
     "category": "higiene",
@@ -2378,7 +2378,7 @@ const LOCAL_CATALOG = [
     "subcat": "higiene",
     "breed_size": "todas",
     "badge": "Aglutinante Pro",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_877778-MLA80027306579_102024-O.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_752804-MLA100008869329_122025-O.webp",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -2388,11 +2388,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bulto 24 kg (6x4kg)",
-        "weight_kg": 24,
-        "cost_price": 17800,
-        "margin_percent": 20,
-        "sale_price": 21360,
-        "list_price": 24564,
+        "weight_kg": 24.0,
+        "cost_price": 17800.0,
+        "margin_percent": 20.0,
+        "sale_price": 21360.0,
+        "list_price": 24564.0,
         "stock_qty": 50,
         "sku": "PIPICAT-24"
       }
@@ -2401,13 +2401,13 @@ const LOCAL_CATALOG = [
       "Bulto 24 kg (6x4kg)"
     ],
     "costs": [
-      17800
+      17800.0
     ],
     "prices": [
-      21360
+      21360.0
     ],
     "list_prices": [
-      24564
+      24564.0
     ],
     "brand": "Absorsol / Piedras",
     "category": "higiene",
@@ -2424,7 +2424,7 @@ const LOCAL_CATALOG = [
     "subcat": "higiene",
     "breed_size": "todas",
     "badge": "Veterinaria",
-    "image_url": "https://bacanes.com.ar/wp-content/uploads/2023/09/Osspret-Shampoo-Tradicional.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_706344-MLA111706358457_052026-O.webp",
     "is_featured": 1,
     "is_promo": 1,
     "promo_tag": "OFERTA DESTACADA",
@@ -2435,10 +2435,10 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Botella 250 ml",
         "weight_kg": 0.3,
-        "cost_price": 6800,
-        "margin_percent": 35,
-        "sale_price": 9180,
-        "list_price": 10557,
+        "cost_price": 6800.0,
+        "margin_percent": 35.0,
+        "sale_price": 9180.0,
+        "list_price": 10557.0,
         "stock_qty": 50,
         "sku": "OSSP-TRAD-250"
       }
@@ -2447,13 +2447,13 @@ const LOCAL_CATALOG = [
       "Botella 250 ml"
     ],
     "costs": [
-      6800
+      6800.0
     ],
     "prices": [
-      9180
+      9180.0
     ],
     "list_prices": [
-      10557
+      10557.0
     ],
     "brand": "Osspret / Ecthol",
     "category": "farmacia",
@@ -2470,7 +2470,7 @@ const LOCAL_CATALOG = [
     "subcat": "higiene",
     "breed_size": "todas",
     "badge": "Línea Veterinaria",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvLSh-PK9i6SeemUj6-2MqcQDn_eDzug3BYkeXg-l0hGv2Y7EpSrNXOiA&s=10",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_679728-MLA84083537587_042025-O.webp",
     "is_featured": 1,
     "is_promo": 1,
     "promo_tag": "OFERTA DESTACADA",
@@ -2481,20 +2481,20 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Frasco 70 cc",
         "weight_kg": 0.1,
-        "cost_price": 4700,
-        "margin_percent": 35,
-        "sale_price": 6345,
-        "list_price": 7297,
+        "cost_price": 4700.0,
+        "margin_percent": 35.0,
+        "sale_price": 6345.0,
+        "list_price": 7297.0,
         "stock_qty": 50,
         "sku": "ECTHOL-70"
       },
       {
         "presentation_name": "Frasco 120 cc",
         "weight_kg": 0.15,
-        "cost_price": 6600,
-        "margin_percent": 35,
-        "sale_price": 8910,
-        "list_price": 10246,
+        "cost_price": 6600.0,
+        "margin_percent": 35.0,
+        "sale_price": 8910.0,
+        "list_price": 10246.0,
         "stock_qty": 50,
         "sku": "ECTHOL-120"
       }
@@ -2504,16 +2504,16 @@ const LOCAL_CATALOG = [
       "Frasco 120 cc"
     ],
     "costs": [
-      4700,
-      6600
+      4700.0,
+      6600.0
     ],
     "prices": [
-      6345,
-      8910
+      6345.0,
+      8910.0
     ],
     "list_prices": [
-      7297,
-      10246
+      7297.0,
+      10246.0
     ],
     "brand": "Osspret / Ecthol",
     "category": "farmacia",
@@ -2530,7 +2530,7 @@ const LOCAL_CATALOG = [
     "subcat": "alimento",
     "breed_size": "todas",
     "badge": "Acuarismo",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_648015-MLA110238797027_042026-O.webp",
+    "image_url": "https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=600&auto=format&fit=crop&q=80",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -2541,40 +2541,40 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "10 grs Nro. 1",
         "weight_kg": 0.01,
-        "cost_price": 2100,
-        "margin_percent": 30,
-        "sale_price": 2730,
-        "list_price": 2730,
+        "cost_price": 2100.0,
+        "margin_percent": 30.0,
+        "sale_price": 2730.0,
+        "list_price": 2730.0,
         "stock_qty": 50,
         "sku": "SHU-PEC-10"
       },
       {
         "presentation_name": "20 grs Nro. 2",
         "weight_kg": 0.02,
-        "cost_price": 3600,
-        "margin_percent": 30,
-        "sale_price": 4680,
-        "list_price": 4680,
+        "cost_price": 3600.0,
+        "margin_percent": 30.0,
+        "sale_price": 4680.0,
+        "list_price": 4680.0,
         "stock_qty": 50,
         "sku": "SHU-PEC-20"
       },
       {
         "presentation_name": "40 grs Nro. 3",
         "weight_kg": 0.04,
-        "cost_price": 6700,
-        "margin_percent": 25,
-        "sale_price": 8375,
-        "list_price": 8375,
+        "cost_price": 6700.0,
+        "margin_percent": 25.0,
+        "sale_price": 8375.0,
+        "list_price": 8375.0,
         "stock_qty": 50,
         "sku": "SHU-PEC-40"
       },
       {
         "presentation_name": "Caja Criador x 2.2 kg",
         "weight_kg": 2.2,
-        "cost_price": 124400,
-        "margin_percent": 20,
-        "sale_price": 149280,
-        "list_price": 149280,
+        "cost_price": 124400.0,
+        "margin_percent": 20.0,
+        "sale_price": 149280.0,
+        "list_price": 149280.0,
         "stock_qty": 50,
         "sku": "SHU-PEC-2200"
       }
@@ -2586,22 +2586,22 @@ const LOCAL_CATALOG = [
       "Caja Criador x 2.2 kg"
     ],
     "costs": [
-      2100,
-      3600,
-      6700,
-      124400
+      2100.0,
+      3600.0,
+      6700.0,
+      124400.0
     ],
     "prices": [
-      2730,
-      4680,
-      8375,
-      149280
+      2730.0,
+      4680.0,
+      8375.0,
+      149280.0
     ],
     "list_prices": [
-      2730,
-      4680,
-      8375,
-      149280
+      2730.0,
+      4680.0,
+      8375.0,
+      149280.0
     ],
     "brand": "Shulet",
     "category": "peces",
@@ -2618,7 +2618,7 @@ const LOCAL_CATALOG = [
     "subcat": "plagas",
     "breed_size": "todas",
     "badge": "Control de Plagas",
-    "image_url": "https://http2.mlstatic.com/D_Q_NP_748217-MLA107370046877_022026-O.webp",
+    "image_url": "https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=600&auto=format&fit=crop&q=80",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -2629,30 +2629,30 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Frasco 60 cc",
         "weight_kg": 0.06,
-        "cost_price": 2750,
-        "margin_percent": 30,
-        "sale_price": 3575,
-        "list_price": 3575,
+        "cost_price": 2750.0,
+        "margin_percent": 30.0,
+        "sale_price": 3575.0,
+        "list_price": 3575.0,
         "stock_qty": 50,
         "sku": "HT-LIQ-60"
       },
       {
         "presentation_name": "Frasco 120 cc",
         "weight_kg": 0.12,
-        "cost_price": 3950,
-        "margin_percent": 30,
-        "sale_price": 5135,
-        "list_price": 5135,
+        "cost_price": 3950.0,
+        "margin_percent": 30.0,
+        "sale_price": 5135.0,
+        "list_price": 5135.0,
         "stock_qty": 50,
         "sku": "HT-LIQ-120"
       },
       {
         "presentation_name": "Frasco 250 cc",
         "weight_kg": 0.25,
-        "cost_price": 6500,
-        "margin_percent": 25,
-        "sale_price": 8125,
-        "list_price": 8125,
+        "cost_price": 6500.0,
+        "margin_percent": 25.0,
+        "sale_price": 8125.0,
+        "list_price": 8125.0,
         "stock_qty": 50,
         "sku": "HT-LIQ-250"
       }
@@ -2663,19 +2663,19 @@ const LOCAL_CATALOG = [
       "Frasco 250 cc"
     ],
     "costs": [
-      2750,
-      3950,
-      6500
+      2750.0,
+      3950.0,
+      6500.0
     ],
     "prices": [
-      3575,
-      5135,
-      8125
+      3575.0,
+      5135.0,
+      8125.0
     ],
     "list_prices": [
-      3575,
-      5135,
-      8125
+      3575.0,
+      5135.0,
+      8125.0
     ],
     "brand": "Hor-Tal",
     "category": "plagas",
@@ -2692,7 +2692,7 @@ const LOCAL_CATALOG = [
     "subcat": "desinfeccion",
     "breed_size": "todas",
     "badge": "Desinfección Total",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQogfp-4d4a5XBxTFG0ye3xsc4AlIKli_zzTQecfWiUY1vTI9ygmdScTSEi&s=10",
+    "image_url": "https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?w=600&auto=format&fit=crop&q=80",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -2703,20 +2703,20 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Envase 350 cc",
         "weight_kg": 0.35,
-        "cost_price": 5300,
-        "margin_percent": 28,
-        "sale_price": 6784,
-        "list_price": 6784,
+        "cost_price": 5300.0,
+        "margin_percent": 28.0,
+        "sale_price": 6784.0,
+        "list_price": 6784.0,
         "stock_qty": 50,
         "sku": "FL-MAN-350"
       },
       {
         "presentation_name": "Envase 700 cc",
         "weight_kg": 0.7,
-        "cost_price": 11400,
-        "margin_percent": 25,
-        "sale_price": 14250,
-        "list_price": 14250,
+        "cost_price": 11400.0,
+        "margin_percent": 25.0,
+        "sale_price": 14250.0,
+        "list_price": 14250.0,
         "stock_qty": 50,
         "sku": "FL-MAN-700"
       }
@@ -2726,16 +2726,16 @@ const LOCAL_CATALOG = [
       "Envase 700 cc"
     ],
     "costs": [
-      5300,
-      11400
+      5300.0,
+      11400.0
     ],
     "prices": [
-      6784,
-      14250
+      6784.0,
+      14250.0
     ],
     "list_prices": [
-      6784,
-      14250
+      6784.0,
+      14250.0
     ],
     "brand": "Feit y Olivari",
     "category": "plagas",
@@ -2752,7 +2752,7 @@ const LOCAL_CATALOG = [
     "subcat": "aves",
     "breed_size": "todas",
     "badge": "Línea Granja",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_760393-MLA80846611642_122024-O.webp",
+    "image_url": "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&auto=format&fit=crop&q=80",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -2762,11 +2762,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 25 kg",
-        "weight_kg": 25,
-        "cost_price": 17600,
-        "margin_percent": 20,
-        "sale_price": 21120,
-        "list_price": 21120,
+        "weight_kg": 25.0,
+        "cost_price": 17600.0,
+        "margin_percent": 20.0,
+        "sale_price": 21120.0,
+        "list_price": 21120.0,
         "stock_qty": 50,
         "sku": "PREN-PARR-BEB-25"
       }
@@ -2775,13 +2775,13 @@ const LOCAL_CATALOG = [
       "Bolsa 25 kg"
     ],
     "costs": [
-      17600
+      17600.0
     ],
     "prices": [
-      21120
+      21120.0
     ],
     "list_prices": [
-      21120
+      21120.0
     ],
     "brand": "Prenut",
     "category": "granja",
@@ -2798,7 +2798,7 @@ const LOCAL_CATALOG = [
     "subcat": "semillas",
     "breed_size": "todas",
     "badge": "Calidad Superior",
-    "image_url": "https://www.lanacion.com.ar/resizer/v2/girasol-EMGUGQVME5BYNHYUATJNBGBKCE.jpg?auth=3aa0026b6b0212f6f47bf08ed87fb630dc64d43f4ea7161f9cd7223905192741&width=1200&height=800&quality=70&smart=true",
+    "image_url": "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&auto=format&fit=crop&q=80",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -2808,21 +2808,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 10 kg",
-        "weight_kg": 10,
-        "cost_price": 7500,
-        "margin_percent": 25,
-        "sale_price": 9375,
-        "list_price": 9375,
+        "weight_kg": 10.0,
+        "cost_price": 7500.0,
+        "margin_percent": 25.0,
+        "sale_price": 9375.0,
+        "list_price": 9375.0,
         "stock_qty": 50,
         "sku": "SEM-GIR-10"
       },
       {
         "presentation_name": "Bolsa 20 kg",
-        "weight_kg": 20,
-        "cost_price": 12800,
-        "margin_percent": 22,
-        "sale_price": 15616,
-        "list_price": 15616,
+        "weight_kg": 20.0,
+        "cost_price": 12800.0,
+        "margin_percent": 22.0,
+        "sale_price": 15616.0,
+        "list_price": 15616.0,
         "stock_qty": 50,
         "sku": "SEM-GIR-20"
       }
@@ -2832,16 +2832,16 @@ const LOCAL_CATALOG = [
       "Bolsa 20 kg"
     ],
     "costs": [
-      7500,
-      12800
+      7500.0,
+      12800.0
     ],
     "prices": [
-      9375,
-      15616
+      9375.0,
+      15616.0
     ],
     "list_prices": [
-      9375,
-      15616
+      9375.0,
+      15616.0
     ],
     "brand": "Semillas & Granos",
     "category": "granja",
@@ -2858,7 +2858,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "mediana",
     "badge": "Calidad Saladillo",
-    "image_url": "https://acdn-us.mitiendanube.com/stores/884/444/products/protemix-perro-adulto-610dbaae035641933517172759859123-640-0.webp",
+    "image_url": "https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?w=600&auto=format&fit=crop&q=80",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -2868,21 +2868,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 15 kg",
-        "weight_kg": 15,
-        "cost_price": 29100,
-        "margin_percent": 25,
-        "sale_price": 36375,
-        "list_price": 36375,
+        "weight_kg": 15.0,
+        "cost_price": 29100.0,
+        "margin_percent": 25.0,
+        "sale_price": 36375.0,
+        "list_price": 36375.0,
         "stock_qty": 50,
         "sku": "PROT-AD-15"
       },
       {
         "presentation_name": "Bolsa 21 kg",
-        "weight_kg": 21,
-        "cost_price": 38300,
-        "margin_percent": 22,
-        "sale_price": 46726,
-        "list_price": 46726,
+        "weight_kg": 21.0,
+        "cost_price": 38300.0,
+        "margin_percent": 22.0,
+        "sale_price": 46726.0,
+        "list_price": 46726.0,
         "stock_qty": 50,
         "sku": "PROT-AD-21"
       }
@@ -2892,16 +2892,16 @@ const LOCAL_CATALOG = [
       "Bolsa 21 kg"
     ],
     "costs": [
-      29100,
-      38300
+      29100.0,
+      38300.0
     ],
     "prices": [
-      36375,
-      46726
+      36375.0,
+      46726.0
     ],
     "list_prices": [
-      36375,
-      46726
+      36375.0,
+      46726.0
     ],
     "brand": "Protemix",
     "category": "perros",
@@ -2918,7 +2918,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Económico",
-    "image_url": "https://www.etra.com.ar/746-medium_default/gran-campeon-tradicional-carne-y-vegetal-x-21-kg.jpg",
+    "image_url": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&auto=format&fit=crop&q=80",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -2928,31 +2928,31 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Perro Carne 21 kg",
-        "weight_kg": 21,
-        "cost_price": 27650,
-        "margin_percent": 22,
-        "sale_price": 33733,
-        "list_price": 33733,
+        "weight_kg": 21.0,
+        "cost_price": 27650.0,
+        "margin_percent": 22.0,
+        "sale_price": 33733.0,
+        "list_price": 33733.0,
         "stock_qty": 50,
         "sku": "GC-CARN-21"
       },
       {
         "presentation_name": "Perro Tradicional 21 kg",
-        "weight_kg": 21,
-        "cost_price": 27650,
-        "margin_percent": 22,
-        "sale_price": 33733,
-        "list_price": 33733,
+        "weight_kg": 21.0,
+        "cost_price": 27650.0,
+        "margin_percent": 22.0,
+        "sale_price": 33733.0,
+        "list_price": 33733.0,
         "stock_qty": 50,
         "sku": "GC-TRAD-21"
       },
       {
         "presentation_name": "Mantenimiento 21 kg",
-        "weight_kg": 21,
-        "cost_price": 24700,
-        "margin_percent": 22,
-        "sale_price": 30134,
-        "list_price": 30134,
+        "weight_kg": 21.0,
+        "cost_price": 24700.0,
+        "margin_percent": 22.0,
+        "sale_price": 30134.0,
+        "list_price": 30134.0,
         "stock_qty": 50,
         "sku": "GC-MANT-21"
       }
@@ -2963,19 +2963,19 @@ const LOCAL_CATALOG = [
       "Mantenimiento 21 kg"
     ],
     "costs": [
-      27650,
-      27650,
-      24700
+      27650.0,
+      27650.0,
+      24700.0
     ],
     "prices": [
-      33733,
-      33733,
-      30134
+      33733.0,
+      33733.0,
+      30134.0
     ],
     "list_prices": [
-      33733,
-      33733,
-      30134
+      33733.0,
+      33733.0,
+      30134.0
     ],
     "brand": "Gran Campeón",
     "category": "perros",
@@ -2992,7 +2992,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "grande",
     "badge": "Super Premium",
-    "image_url": "https://d2eebw31vcx88p.cloudfront.net/nordenpet1/uploads/ebef4518f421acd57268904d40a141d269d0f29f.jpg.webp",
+    "image_url": "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&auto=format&fit=crop&q=80",
     "is_featured": 1,
     "is_promo": 0,
     "promo_tag": null,
@@ -3002,21 +3002,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 15 kg",
-        "weight_kg": 15,
-        "cost_price": 77000,
-        "margin_percent": 22,
-        "sale_price": 93940,
-        "list_price": 93940,
+        "weight_kg": 15.0,
+        "cost_price": 77000.0,
+        "margin_percent": 22.0,
+        "sale_price": 93940.0,
+        "list_price": 93940.0,
         "stock_qty": 50,
         "sku": "PERF-AD-15"
       },
       {
         "presentation_name": "Bolsa 20 kg",
-        "weight_kg": 20,
-        "cost_price": 98600,
-        "margin_percent": 20,
-        "sale_price": 118320,
-        "list_price": 118320,
+        "weight_kg": 20.0,
+        "cost_price": 98600.0,
+        "margin_percent": 20.0,
+        "sale_price": 118320.0,
+        "list_price": 118320.0,
         "stock_qty": 50,
         "sku": "PERF-AD-20"
       }
@@ -3026,16 +3026,16 @@ const LOCAL_CATALOG = [
       "Bolsa 20 kg"
     ],
     "costs": [
-      77000,
-      98600
+      77000.0,
+      98600.0
     ],
     "prices": [
-      93940,
-      118320
+      93940.0,
+      118320.0
     ],
     "list_prices": [
-      93940,
-      118320
+      93940.0,
+      118320.0
     ],
     "brand": "Performance",
     "category": "perros",
@@ -3052,7 +3052,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "grande",
     "badge": "Más Vendido",
-    "image_url": "https://catycanar.vtexassets.com/arquivos/ids/174646/DOG-CHOW-TRIPLE-PROTEINA.jpg?v=639129955621700000",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_953311-MLA99349040992_112025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": "",
@@ -3062,11 +3062,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "20 kg",
-        "weight_kg": 20,
-        "cost_price": 50200,
-        "margin_percent": 20,
-        "sale_price": 60240,
-        "list_price": 69276,
+        "weight_kg": 20.0,
+        "cost_price": 50200.0,
+        "margin_percent": 20.0,
+        "sale_price": 60240.0,
+        "list_price": 69276.0,
         "stock_qty": 50,
         "sku": "PROD-1-0"
       }
@@ -3075,13 +3075,13 @@ const LOCAL_CATALOG = [
       "20 kg"
     ],
     "costs": [
-      50200
+      50200.0
     ],
     "prices": [
-      60240
+      60240.0
     ],
     "list_prices": [
-      69276
+      69276.0
     ],
     "brand": "Dog Chow",
     "category": "perros",
@@ -3098,7 +3098,7 @@ const LOCAL_CATALOG = [
     "subcat": "cachorro",
     "breed_size": "grande",
     "badge": "Cachorros",
-    "image_url": "https://catycanar.vtexassets.com/arquivos/ids/171002/1200x1200_DC_Gran_Comienzo_cachorros_M-G.png--1-.jpg?v=638612431495000000",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_660096-MLA99920919539_112025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -3108,11 +3108,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "21 kg",
-        "weight_kg": 21,
-        "cost_price": 57500,
-        "margin_percent": 20,
-        "sale_price": 69000,
-        "list_price": 79350,
+        "weight_kg": 21.0,
+        "cost_price": 57500.0,
+        "margin_percent": 20.0,
+        "sale_price": 69000.0,
+        "list_price": 79350.0,
         "stock_qty": 50,
         "sku": "DC-CACH-MED-21"
       }
@@ -3121,13 +3121,13 @@ const LOCAL_CATALOG = [
       "21 kg"
     ],
     "costs": [
-      57500
+      57500.0
     ],
     "prices": [
-      69000
+      69000.0
     ],
     "list_prices": [
-      79350
+      79350.0
     ],
     "brand": "Dog Chow",
     "category": "perros",
@@ -3144,7 +3144,7 @@ const LOCAL_CATALOG = [
     "subcat": "cachorro",
     "breed_size": "pequeña",
     "badge": "Cachorros Mini",
-    "image_url": "https://acdn-us.mitiendanube.com/stores/002/862/040/products/dog-chow-perro-cachorro-mini-y-pequeno-x-21kg-a8e49a45c3415d00a617648628147508-1024-1024.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_660096-MLA99920919539_112025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -3154,11 +3154,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "21 kg",
-        "weight_kg": 21,
-        "cost_price": 60100,
-        "margin_percent": 20,
-        "sale_price": 72120,
-        "list_price": 82938,
+        "weight_kg": 21.0,
+        "cost_price": 60100.0,
+        "margin_percent": 20.0,
+        "sale_price": 72120.0,
+        "list_price": 82938.0,
         "stock_qty": 50,
         "sku": "DC-CACH-MINI-21"
       }
@@ -3167,13 +3167,13 @@ const LOCAL_CATALOG = [
       "21 kg"
     ],
     "costs": [
-      60100
+      60100.0
     ],
     "prices": [
-      72120
+      72120.0
     ],
     "list_prices": [
-      82938
+      82938.0
     ],
     "brand": "Dog Chow",
     "category": "perros",
@@ -3190,7 +3190,7 @@ const LOCAL_CATALOG = [
     "subcat": "senior",
     "breed_size": "todas",
     "badge": "Senior 7+",
-    "image_url": "https://http2.mlstatic.com/D_Q_NP_2X_926482-MLA99920336703_112025-P.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_691585-MLA80803318038_112024-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -3200,11 +3200,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "21 kg",
-        "weight_kg": 21,
-        "cost_price": 58000,
-        "margin_percent": 20,
-        "sale_price": 69600,
-        "list_price": 80040,
+        "weight_kg": 21.0,
+        "cost_price": 58000.0,
+        "margin_percent": 20.0,
+        "sale_price": 69600.0,
+        "list_price": 80040.0,
         "stock_qty": 50,
         "sku": "DC-SENIOR-21"
       }
@@ -3213,13 +3213,13 @@ const LOCAL_CATALOG = [
       "21 kg"
     ],
     "costs": [
-      58000
+      58000.0
     ],
     "prices": [
-      69600
+      69600.0
     ],
     "list_prices": [
-      80040
+      80040.0
     ],
     "brand": "Dog Chow",
     "category": "perros",
@@ -3236,7 +3236,7 @@ const LOCAL_CATALOG = [
     "subcat": "gatito",
     "breed_size": "todas",
     "badge": "Gatitos",
-    "image_url": "https://www.purina.com.ar/sites/default/files/styles/webp/public/2023-04/GATITOS%20HASTA%2012%20MESES-cat-chow-frente.png.webp?itok=zYFdKS2O",
+    "image_url": "https://http2.mlstatic.com/D_Q_NP_2X_825218-MLA99449569190_112025-T.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -3246,11 +3246,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 78400,
-        "margin_percent": 20,
-        "sale_price": 94080,
-        "list_price": 108192,
+        "weight_kg": 15.0,
+        "cost_price": 78400.0,
+        "margin_percent": 20.0,
+        "sale_price": 94080.0,
+        "list_price": 108192.0,
         "stock_qty": 50,
         "sku": "CC-KITTEN-15"
       }
@@ -3259,13 +3259,13 @@ const LOCAL_CATALOG = [
       "15 kg"
     ],
     "costs": [
-      78400
+      78400.0
     ],
     "prices": [
-      94080
+      94080.0
     ],
     "list_prices": [
-      108192
+      108192.0
     ],
     "brand": "Cat Chow",
     "category": "gatos",
@@ -3282,7 +3282,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Económico 21 kg",
-    "image_url": "https://catycanar.vtexassets.com/arquivos/ids/163227/11602.jpg?v=637786408145600000",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_944835-MLA99926587971_112025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -3292,11 +3292,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "21 kg",
-        "weight_kg": 21,
-        "cost_price": 36900,
-        "margin_percent": 20,
-        "sale_price": 44280,
-        "list_price": 50922,
+        "weight_kg": 21.0,
+        "cost_price": 36900.0,
+        "margin_percent": 20.0,
+        "sale_price": 44280.0,
+        "list_price": 50922.0,
         "stock_qty": 50,
         "sku": "DOGUI-AD-21"
       }
@@ -3305,13 +3305,13 @@ const LOCAL_CATALOG = [
       "21 kg"
     ],
     "costs": [
-      36900
+      36900.0
     ],
     "prices": [
-      44280
+      44280.0
     ],
     "list_prices": [
-      50922
+      50922.0
     ],
     "brand": "Dogui / Gati",
     "category": "perros",
@@ -3328,7 +3328,7 @@ const LOCAL_CATALOG = [
     "subcat": "cachorro",
     "breed_size": "todas",
     "badge": "Cachorros 21 kg",
-    "image_url": "https://www.purina.com.ar/sites/default/files/styles/webp/public/2022-11/dogui-cachorros-con-carne-pollo-cereales-vegetalles-y-leche.jpg.webp?itok=Xq2JHjx2",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_944835-MLA99926587971_112025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -3338,11 +3338,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "21 kg",
-        "weight_kg": 21,
-        "cost_price": 40530,
-        "margin_percent": 20,
-        "sale_price": 48636,
-        "list_price": 55931,
+        "weight_kg": 21.0,
+        "cost_price": 40530.0,
+        "margin_percent": 20.0,
+        "sale_price": 48636.0,
+        "list_price": 55931.0,
         "stock_qty": 50,
         "sku": "DOGUI-CACH-21"
       }
@@ -3351,13 +3351,13 @@ const LOCAL_CATALOG = [
       "21 kg"
     ],
     "costs": [
-      40530
+      40530.0
     ],
     "prices": [
-      48636
+      48636.0
     ],
     "list_prices": [
-      55931
+      55931.0
     ],
     "brand": "Dogui / Gati",
     "category": "perros",
@@ -3374,7 +3374,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Bolsa 15 kg",
-    "image_url": "https://www.purina.com.ar/sites/default/files/2023-01/gati_pescado_salmon_a_la_primavera.png",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_660923-MLA99437954454_112025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -3384,11 +3384,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 41390,
-        "margin_percent": 20,
-        "sale_price": 49668,
-        "list_price": 57118,
+        "weight_kg": 15.0,
+        "cost_price": 41390.0,
+        "margin_percent": 20.0,
+        "sale_price": 49668.0,
+        "list_price": 57118.0,
         "stock_qty": 50,
         "sku": "GATI-15"
       }
@@ -3397,13 +3397,13 @@ const LOCAL_CATALOG = [
       "15 kg"
     ],
     "costs": [
-      41390
+      41390.0
     ],
     "prices": [
-      49668
+      49668.0
     ],
     "list_prices": [
-      57118
+      57118.0
     ],
     "brand": "Dogui / Gati",
     "category": "gatos",
@@ -3420,7 +3420,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "pequeña",
     "badge": "Mordida Chica",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_837344-MLA99384566510_112025-O.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_877337-MLA81007028209_112024-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -3430,11 +3430,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 37200,
-        "margin_percent": 20,
-        "sale_price": 44640,
-        "list_price": 51336,
+        "weight_kg": 15.0,
+        "cost_price": 37200.0,
+        "margin_percent": 20.0,
+        "sale_price": 44640.0,
+        "list_price": 51336.0,
         "stock_qty": 50,
         "sku": "DS-PREM-MINI-15"
       }
@@ -3443,13 +3443,13 @@ const LOCAL_CATALOG = [
       "15 kg"
     ],
     "costs": [
-      37200
+      37200.0
     ],
     "prices": [
-      44640
+      44640.0
     ],
     "list_prices": [
-      51336
+      51336.0
     ],
     "brand": "Dog Selection",
     "category": "perros",
@@ -3466,7 +3466,7 @@ const LOCAL_CATALOG = [
     "subcat": "cachorro",
     "breed_size": "todas",
     "badge": "Cachorros",
-    "image_url": "https://catycanar.vtexassets.com/arquivos/ids/164573/20143.jpg?v=637786426367770000",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_660096-MLA99920919539_112025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -3476,21 +3476,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "2 kg",
-        "weight_kg": 2,
-        "cost_price": 7800,
-        "margin_percent": 30,
-        "sale_price": 10140,
-        "list_price": 11661,
+        "weight_kg": 2.0,
+        "cost_price": 7800.0,
+        "margin_percent": 30.0,
+        "sale_price": 10140.0,
+        "list_price": 11661.0,
         "stock_qty": 50,
         "sku": "DS-PREM-CACH-2"
       },
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 42000,
-        "margin_percent": 20,
-        "sale_price": 50400,
-        "list_price": 57960,
+        "weight_kg": 15.0,
+        "cost_price": 42000.0,
+        "margin_percent": 20.0,
+        "sale_price": 50400.0,
+        "list_price": 57960.0,
         "stock_qty": 50,
         "sku": "DS-PREM-CACH-15"
       }
@@ -3500,16 +3500,16 @@ const LOCAL_CATALOG = [
       "15 kg"
     ],
     "costs": [
-      7800,
-      42000
+      7800.0,
+      42000.0
     ],
     "prices": [
-      10140,
-      50400
+      10140.0,
+      50400.0
     ],
     "list_prices": [
-      11661,
-      57960
+      11661.0,
+      57960.0
     ],
     "brand": "Dog Selection",
     "category": "perros",
@@ -3526,7 +3526,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "pequeña",
     "badge": "Criadores Mini",
-    "image_url": "https://images.fravega.com/f1000/45c25bba32225ee4ded10638aa8ee8ab.jpg",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_911237-MLA99443772110_112025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -3536,11 +3536,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 31700,
-        "margin_percent": 20,
-        "sale_price": 38040,
-        "list_price": 43746,
+        "weight_kg": 15.0,
+        "cost_price": 31700.0,
+        "margin_percent": 20.0,
+        "sale_price": 38040.0,
+        "list_price": 43746.0,
         "stock_qty": 50,
         "sku": "DS-CRIAD-MINI-15"
       }
@@ -3549,13 +3549,13 @@ const LOCAL_CATALOG = [
       "15 kg"
     ],
     "costs": [
-      31700
+      31700.0
     ],
     "prices": [
-      38040
+      38040.0
     ],
     "list_prices": [
-      43746
+      43746.0
     ],
     "brand": "Dog Selection",
     "category": "perros",
@@ -3572,7 +3572,7 @@ const LOCAL_CATALOG = [
     "subcat": "cachorro",
     "breed_size": "todas",
     "badge": "Cachorros",
-    "image_url": "https://catycanar.vtexassets.com/arquivos/ids/170897-800-auto?v=638555365191300000&width=800&height=auto&aspect=true",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_660096-MLA99920919539_112025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -3583,40 +3583,40 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "1.5 kg",
         "weight_kg": 1.5,
-        "cost_price": 4900,
-        "margin_percent": 30,
-        "sale_price": 6370,
-        "list_price": 7325,
+        "cost_price": 4900.0,
+        "margin_percent": 30.0,
+        "sale_price": 6370.0,
+        "list_price": 7325.0,
         "stock_qty": 50,
         "sku": "DS-CR-CACH-1.5"
       },
       {
         "presentation_name": "3 kg",
-        "weight_kg": 3,
-        "cost_price": 9300,
-        "margin_percent": 25,
-        "sale_price": 11625,
-        "list_price": 13369,
+        "weight_kg": 3.0,
+        "cost_price": 9300.0,
+        "margin_percent": 25.0,
+        "sale_price": 11625.0,
+        "list_price": 13369.0,
         "stock_qty": 50,
         "sku": "DS-CR-CACH-3"
       },
       {
         "presentation_name": "8 kg",
-        "weight_kg": 8,
-        "cost_price": 19700,
-        "margin_percent": 22,
-        "sale_price": 24034,
-        "list_price": 27639,
+        "weight_kg": 8.0,
+        "cost_price": 19700.0,
+        "margin_percent": 22.0,
+        "sale_price": 24034.0,
+        "list_price": 27639.0,
         "stock_qty": 50,
         "sku": "DS-CR-CACH-8"
       },
       {
         "presentation_name": "21 kg",
-        "weight_kg": 21,
-        "cost_price": 46600,
-        "margin_percent": 20,
-        "sale_price": 55920,
-        "list_price": 64308,
+        "weight_kg": 21.0,
+        "cost_price": 46600.0,
+        "margin_percent": 20.0,
+        "sale_price": 55920.0,
+        "list_price": 64308.0,
         "stock_qty": 50,
         "sku": "DS-CR-CACH-21"
       }
@@ -3628,22 +3628,22 @@ const LOCAL_CATALOG = [
       "21 kg"
     ],
     "costs": [
-      4900,
-      9300,
-      19700,
-      46600
+      4900.0,
+      9300.0,
+      19700.0,
+      46600.0
     ],
     "prices": [
-      6370,
-      11625,
-      24034,
-      55920
+      6370.0,
+      11625.0,
+      24034.0,
+      55920.0
     ],
     "list_prices": [
-      7325,
-      13369,
-      27639,
-      64308
+      7325.0,
+      13369.0,
+      27639.0,
+      64308.0
     ],
     "brand": "Dog Selection",
     "category": "perros",
@@ -3660,7 +3660,7 @@ const LOCAL_CATALOG = [
     "subcat": "senior",
     "breed_size": "todas",
     "badge": "Senior Light",
-    "image_url": "https://www.etra.com.ar/1485-thickbox_default/dog-selection-senior-light-x-15-kg.jpg",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_691585-MLA80803318038_112024-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -3670,11 +3670,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 35300,
-        "margin_percent": 20,
-        "sale_price": 42360,
-        "list_price": 48714,
+        "weight_kg": 15.0,
+        "cost_price": 35300.0,
+        "margin_percent": 20.0,
+        "sale_price": 42360.0,
+        "list_price": 48714.0,
         "stock_qty": 50,
         "sku": "DS-CR-SENIOR-15"
       }
@@ -3683,13 +3683,13 @@ const LOCAL_CATALOG = [
       "15 kg"
     ],
     "costs": [
-      35300
+      35300.0
     ],
     "prices": [
-      42360
+      42360.0
     ],
     "list_prices": [
-      48714
+      48714.0
     ],
     "brand": "Dog Selection",
     "category": "perros",
@@ -3706,7 +3706,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Hipoalergénico",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_700309-MLA99901273639_112025-O.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_877337-MLA81007028209_112024-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -3717,20 +3717,20 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "1.5 kg",
         "weight_kg": 1.5,
-        "cost_price": 5300,
-        "margin_percent": 30,
-        "sale_price": 6890,
-        "list_price": 7923,
+        "cost_price": 5300.0,
+        "margin_percent": 30.0,
+        "sale_price": 6890.0,
+        "list_price": 7923.0,
         "stock_qty": 50,
         "sku": "DS-HIPO-1.5"
       },
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 37500,
-        "margin_percent": 20,
-        "sale_price": 45000,
-        "list_price": 51750,
+        "weight_kg": 15.0,
+        "cost_price": 37500.0,
+        "margin_percent": 20.0,
+        "sale_price": 45000.0,
+        "list_price": 51750.0,
         "stock_qty": 50,
         "sku": "DS-HIPO-15"
       }
@@ -3740,16 +3740,16 @@ const LOCAL_CATALOG = [
       "15 kg"
     ],
     "costs": [
-      5300,
-      37500
+      5300.0,
+      37500.0
     ],
     "prices": [
-      6890,
-      45000
+      6890.0,
+      45000.0
     ],
     "list_prices": [
-      7923,
-      51750
+      7923.0,
+      51750.0
     ],
     "brand": "Dog Selection",
     "category": "perros",
@@ -3766,7 +3766,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "10+1 kg Promo",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_888700-MLA81092932923_122024-O.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_633625-MLA75145123100_032024-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -3776,21 +3776,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "1 kg",
-        "weight_kg": 1,
-        "cost_price": 1800,
-        "margin_percent": 35,
-        "sale_price": 2430,
-        "list_price": 2794,
+        "weight_kg": 1.0,
+        "cost_price": 1800.0,
+        "margin_percent": 35.0,
+        "sale_price": 2430.0,
+        "list_price": 2794.0,
         "stock_qty": 50,
         "sku": "LOYAL-1"
       },
       {
         "presentation_name": "10+1 kg Promo",
-        "weight_kg": 11,
-        "cost_price": 26800,
-        "margin_percent": 20,
-        "sale_price": 32160,
-        "list_price": 36984,
+        "weight_kg": 11.0,
+        "cost_price": 26800.0,
+        "margin_percent": 20.0,
+        "sale_price": 32160.0,
+        "list_price": 36984.0,
         "stock_qty": 50,
         "sku": "LOYAL-11"
       }
@@ -3800,16 +3800,16 @@ const LOCAL_CATALOG = [
       "10+1 kg Promo"
     ],
     "costs": [
-      1800,
-      26800
+      1800.0,
+      26800.0
     ],
     "prices": [
-      2430,
-      32160
+      2430.0,
+      32160.0
     ],
     "list_prices": [
-      2794,
-      36984
+      2794.0,
+      36984.0
     ],
     "brand": "Dog Selection",
     "category": "gatos",
@@ -3826,7 +3826,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "pequeña",
     "badge": "Super Premium",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_972278-MLA80803069548_112024-O.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_911237-MLA99443772110_112025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -3836,21 +3836,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "2 kg",
-        "weight_kg": 2,
-        "cost_price": 8400,
-        "margin_percent": 25,
-        "sale_price": 10500,
-        "list_price": 12075,
+        "weight_kg": 2.0,
+        "cost_price": 8400.0,
+        "margin_percent": 25.0,
+        "sale_price": 10500.0,
+        "list_price": 12075.0,
         "stock_qty": 50,
         "sku": "DSET-SMALL-2"
       },
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 47000,
-        "margin_percent": 20,
-        "sale_price": 56400,
-        "list_price": 64860,
+        "weight_kg": 15.0,
+        "cost_price": 47000.0,
+        "margin_percent": 20.0,
+        "sale_price": 56400.0,
+        "list_price": 64860.0,
         "stock_qty": 50,
         "sku": "DSET-SMALL-15"
       }
@@ -3860,16 +3860,16 @@ const LOCAL_CATALOG = [
       "15 kg"
     ],
     "costs": [
-      8400,
-      47000
+      8400.0,
+      47000.0
     ],
     "prices": [
-      10500,
-      56400
+      10500.0,
+      56400.0
     ],
     "list_prices": [
-      12075,
-      64860
+      12075.0,
+      64860.0
     ],
     "brand": "DS Etiqueta Negra",
     "category": "perros",
@@ -3886,7 +3886,7 @@ const LOCAL_CATALOG = [
     "subcat": "cachorro",
     "breed_size": "todas",
     "badge": "Cachorros Super Premium",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXJcimVLyg2y3F7jaAL9PnDYFJBXXwKkfaehsB2v4hww&s=10",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_660096-MLA99920919539_112025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -3896,21 +3896,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "2 kg",
-        "weight_kg": 2,
-        "cost_price": 9100,
-        "margin_percent": 25,
-        "sale_price": 11375,
-        "list_price": 13081,
+        "weight_kg": 2.0,
+        "cost_price": 9100.0,
+        "margin_percent": 25.0,
+        "sale_price": 11375.0,
+        "list_price": 13081.0,
         "stock_qty": 50,
         "sku": "DSET-PUP-2"
       },
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 51300,
-        "margin_percent": 20,
-        "sale_price": 61560,
-        "list_price": 70794,
+        "weight_kg": 15.0,
+        "cost_price": 51300.0,
+        "margin_percent": 20.0,
+        "sale_price": 61560.0,
+        "list_price": 70794.0,
         "stock_qty": 50,
         "sku": "DSET-PUP-15"
       }
@@ -3920,16 +3920,16 @@ const LOCAL_CATALOG = [
       "15 kg"
     ],
     "costs": [
-      9100,
-      51300
+      9100.0,
+      51300.0
     ],
     "prices": [
-      11375,
-      61560
+      11375.0,
+      61560.0
     ],
     "list_prices": [
-      13081,
-      70794
+      13081.0,
+      70794.0
     ],
     "brand": "DS Etiqueta Negra",
     "category": "perros",
@@ -3946,7 +3946,7 @@ const LOCAL_CATALOG = [
     "subcat": "senior",
     "breed_size": "todas",
     "badge": "Senior Super Premium",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_873671-MLA80803076758_112024-O.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_691585-MLA80803318038_112024-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -3956,21 +3956,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "2 kg",
-        "weight_kg": 2,
-        "cost_price": 8400,
-        "margin_percent": 25,
-        "sale_price": 10500,
-        "list_price": 12075,
+        "weight_kg": 2.0,
+        "cost_price": 8400.0,
+        "margin_percent": 25.0,
+        "sale_price": 10500.0,
+        "list_price": 12075.0,
         "stock_qty": 50,
         "sku": "DSET-SENIOR-2"
       },
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 47000,
-        "margin_percent": 20,
-        "sale_price": 56400,
-        "list_price": 64860,
+        "weight_kg": 15.0,
+        "cost_price": 47000.0,
+        "margin_percent": 20.0,
+        "sale_price": 56400.0,
+        "list_price": 64860.0,
         "stock_qty": 50,
         "sku": "DSET-SENIOR-15"
       }
@@ -3980,16 +3980,16 @@ const LOCAL_CATALOG = [
       "15 kg"
     ],
     "costs": [
-      8400,
-      47000
+      8400.0,
+      47000.0
     ],
     "prices": [
-      10500,
-      56400
+      10500.0,
+      56400.0
     ],
     "list_prices": [
-      12075,
-      64860
+      12075.0,
+      64860.0
     ],
     "brand": "DS Etiqueta Negra",
     "category": "perros",
@@ -4006,7 +4006,7 @@ const LOCAL_CATALOG = [
     "subcat": "cachorro",
     "breed_size": "todas",
     "badge": "Cachorros 21 kg",
-    "image_url": "https://catycanar.vtexassets.com/arquivos/ids/177229/9530.jpg?v=639244838051400000",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_704334-MLA99335499802_112025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -4016,11 +4016,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "21 kg",
-        "weight_kg": 21,
-        "cost_price": 55490,
-        "margin_percent": 20,
-        "sale_price": 66588,
-        "list_price": 76576,
+        "weight_kg": 21.0,
+        "cost_price": 55490.0,
+        "margin_percent": 20.0,
+        "sale_price": 66588.0,
+        "list_price": 76576.0,
         "stock_qty": 50,
         "sku": "PED-CACH-21"
       }
@@ -4029,13 +4029,13 @@ const LOCAL_CATALOG = [
       "21 kg"
     ],
     "costs": [
-      55490
+      55490.0
     ],
     "prices": [
-      66588
+      66588.0
     ],
     "list_prices": [
-      76576
+      76576.0
     ],
     "brand": "Pedigree",
     "category": "perros",
@@ -4052,7 +4052,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Bolsa 21 kg",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT16qnGl1dCv9affVK5u_k6ivSN9Sgp9mL80ykDsebuhDYIijyKxwPDOuQ4&s=10",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_795475-MLA99878002573_112025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -4062,11 +4062,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "21 kg",
-        "weight_kg": 21,
-        "cost_price": 52390,
-        "margin_percent": 20,
-        "sale_price": 62868,
-        "list_price": 72298,
+        "weight_kg": 21.0,
+        "cost_price": 52390.0,
+        "margin_percent": 20.0,
+        "sale_price": 62868.0,
+        "list_price": 72298.0,
         "stock_qty": 50,
         "sku": "PED-SALM-21"
       }
@@ -4075,13 +4075,13 @@ const LOCAL_CATALOG = [
       "21 kg"
     ],
     "costs": [
-      52390
+      52390.0
     ],
     "prices": [
-      62868
+      62868.0
     ],
     "list_prices": [
-      72298
+      72298.0
     ],
     "brand": "Pedigree",
     "category": "perros",
@@ -4098,7 +4098,7 @@ const LOCAL_CATALOG = [
     "subcat": "senior",
     "breed_size": "todas",
     "badge": "Senior 9 kg",
-    "image_url": "https://masonlineprod.vtexassets.com/arquivos/ids/289924-800-auto?v=638242762720170000&width=800&height=auto&aspect=true",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_691585-MLA80803318038_112024-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -4108,11 +4108,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "9 kg",
-        "weight_kg": 9,
-        "cost_price": 21120,
-        "margin_percent": 22,
-        "sale_price": 25766,
-        "list_price": 29631,
+        "weight_kg": 9.0,
+        "cost_price": 21120.0,
+        "margin_percent": 22.0,
+        "sale_price": 25766.0,
+        "list_price": 29631.0,
         "stock_qty": 50,
         "sku": "PED-SENIOR-9"
       }
@@ -4121,13 +4121,13 @@ const LOCAL_CATALOG = [
       "9 kg"
     ],
     "costs": [
-      21120
+      21120.0
     ],
     "prices": [
-      25766
+      25766.0
     ],
     "list_prices": [
-      29631
+      29631.0
     ],
     "brand": "Pedigree",
     "category": "perros",
@@ -4144,7 +4144,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Castrados 10 kg",
-    "image_url": "https://www.whiskas.com.ar/cdn-cgi/image/format=auto,q=90/sites/g/files/fnmzdf4921/files/2022-12/7797453973137_1Hero.png",
+    "image_url": "https://http2.mlstatic.com/D_Q_NP_2X_851344-MLA110627789901_042026-T.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -4154,11 +4154,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "10 kg",
-        "weight_kg": 10,
-        "cost_price": 45770,
-        "margin_percent": 20,
-        "sale_price": 54924,
-        "list_price": 63163,
+        "weight_kg": 10.0,
+        "cost_price": 45770.0,
+        "margin_percent": 20.0,
+        "sale_price": 54924.0,
+        "list_price": 63163.0,
         "stock_qty": 50,
         "sku": "WHISK-CAST-10"
       }
@@ -4167,13 +4167,13 @@ const LOCAL_CATALOG = [
       "10 kg"
     ],
     "costs": [
-      45770
+      45770.0
     ],
     "prices": [
-      54924
+      54924.0
     ],
     "list_prices": [
-      63163
+      63163.0
     ],
     "brand": "Whiskas",
     "category": "gatos",
@@ -4190,7 +4190,7 @@ const LOCAL_CATALOG = [
     "subcat": "humedo",
     "breed_size": "todas",
     "badge": "Lata Individual",
-    "image_url": "https://herspet.com/wp-content/uploads/2020/10/LATAS-WHISKAS.jpg",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_876741-MLU79111404727_092024-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -4201,10 +4201,10 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Lata 290g / 340g",
         "weight_kg": 0.34,
-        "cost_price": 3220,
-        "margin_percent": 30,
-        "sale_price": 4186,
-        "list_price": 4814,
+        "cost_price": 3220.0,
+        "margin_percent": 30.0,
+        "sale_price": 4186.0,
+        "list_price": 4814.0,
         "stock_qty": 50,
         "sku": "LATA-PW-1"
       }
@@ -4213,13 +4213,13 @@ const LOCAL_CATALOG = [
       "Lata 290g / 340g"
     ],
     "costs": [
-      3220
+      3220.0
     ],
     "prices": [
-      4186
+      4186.0
     ],
     "list_prices": [
-      4814
+      4814.0
     ],
     "brand": "Pedigree",
     "category": "perros",
@@ -4236,7 +4236,7 @@ const LOCAL_CATALOG = [
     "subcat": "snacks",
     "breed_size": "todas",
     "badge": "Premios Tiernos",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_650791-MLA111086291909_042026-O.webp",
+    "image_url": "https://resources.claroshop.com/medios-plazavip/mkt/646d0036c12bf_6jpg.jpg",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -4247,20 +4247,20 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Pack 40 g",
         "weight_kg": 0.04,
-        "cost_price": 1050,
-        "margin_percent": 35,
-        "sale_price": 1418,
-        "list_price": 1631,
+        "cost_price": 1050.0,
+        "margin_percent": 35.0,
+        "sale_price": 1418.0,
+        "list_price": 1631.0,
         "stock_qty": 50,
         "sku": "TASTY-40"
       },
       {
         "presentation_name": "Pack 80 g",
         "weight_kg": 0.08,
-        "cost_price": 1780,
-        "margin_percent": 35,
-        "sale_price": 2403,
-        "list_price": 2763,
+        "cost_price": 1780.0,
+        "margin_percent": 35.0,
+        "sale_price": 2403.0,
+        "list_price": 2763.0,
         "stock_qty": 50,
         "sku": "TASTY-80"
       }
@@ -4270,16 +4270,16 @@ const LOCAL_CATALOG = [
       "Pack 80 g"
     ],
     "costs": [
-      1050,
-      1780
+      1050.0,
+      1780.0
     ],
     "prices": [
-      1418,
-      2403
+      1418.0,
+      2403.0
     ],
     "list_prices": [
-      1631,
-      2763
+      1631.0,
+      2763.0
     ],
     "brand": "Pedigree",
     "category": "snacks",
@@ -4296,7 +4296,7 @@ const LOCAL_CATALOG = [
     "subcat": "snacks",
     "breed_size": "todas",
     "badge": "Galletitas",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_934722-MLA86715156681_062025-O.webp",
+    "image_url": "https://resources.claroshop.com/medios-plazavip/mkt/646d0036c12bf_6jpg.jpg",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -4307,20 +4307,20 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Caja 100 g",
         "weight_kg": 0.1,
-        "cost_price": 1430,
-        "margin_percent": 35,
-        "sale_price": 1931,
-        "list_price": 2221,
+        "cost_price": 1430.0,
+        "margin_percent": 35.0,
+        "sale_price": 1931.0,
+        "list_price": 2221.0,
         "stock_qty": 50,
         "sku": "BISC-100"
       },
       {
         "presentation_name": "Caja Familiar 500 g",
         "weight_kg": 0.5,
-        "cost_price": 4590,
-        "margin_percent": 30,
-        "sale_price": 5967,
-        "list_price": 6862,
+        "cost_price": 4590.0,
+        "margin_percent": 30.0,
+        "sale_price": 5967.0,
+        "list_price": 6862.0,
         "stock_qty": 50,
         "sku": "BISC-500"
       }
@@ -4330,16 +4330,16 @@ const LOCAL_CATALOG = [
       "Caja Familiar 500 g"
     ],
     "costs": [
-      1430,
-      4590
+      1430.0,
+      4590.0
     ],
     "prices": [
-      1931,
-      5967
+      1931.0,
+      5967.0
     ],
     "list_prices": [
-      2221,
-      6862
+      2221.0,
+      6862.0
     ],
     "brand": "Biscrok",
     "category": "snacks",
@@ -4356,7 +4356,7 @@ const LOCAL_CATALOG = [
     "subcat": "cachorro",
     "breed_size": "pequeña",
     "badge": "Cachorros",
-    "image_url": "https://puppis.vtexassets.com/arquivos/ids/179748/7613287022257_1.png?v=638820759118630000",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_913729-MLA99843470895_112025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -4366,21 +4366,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "3 kg",
-        "weight_kg": 3,
-        "cost_price": 34200,
-        "margin_percent": 22,
-        "sale_price": 41724,
-        "list_price": 47983,
+        "weight_kg": 3.0,
+        "cost_price": 34200.0,
+        "margin_percent": 22.0,
+        "sale_price": 41724.0,
+        "list_price": 47983.0,
         "stock_qty": 50,
         "sku": "PP-PUP-MINI-3"
       },
       {
         "presentation_name": "7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 70650,
-        "margin_percent": 20,
-        "sale_price": 84780,
-        "list_price": 97497,
+        "cost_price": 70650.0,
+        "margin_percent": 20.0,
+        "sale_price": 84780.0,
+        "list_price": 97497.0,
         "stock_qty": 50,
         "sku": "PP-PUP-MINI-7.5"
       }
@@ -4390,16 +4390,16 @@ const LOCAL_CATALOG = [
       "7.5 kg"
     ],
     "costs": [
-      34200,
-      70650
+      34200.0,
+      70650.0
     ],
     "prices": [
-      41724,
-      84780
+      41724.0,
+      84780.0
     ],
     "list_prices": [
-      47983,
-      97497
+      47983.0,
+      97497.0
     ],
     "brand": "Pro Plan",
     "category": "perros",
@@ -4416,7 +4416,7 @@ const LOCAL_CATALOG = [
     "subcat": "cachorro",
     "breed_size": "grande",
     "badge": "Cachorros",
-    "image_url": "https://www.purina.com.ar/sites/default/files/styles/webp/public/2022-10/ProPlan-Puppy-Razas-Medianas-01.png.webp?itok=6UggafXK",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_913729-MLA99843470895_112025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -4426,21 +4426,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "3 kg",
-        "weight_kg": 3,
-        "cost_price": 32850,
-        "margin_percent": 22,
-        "sale_price": 40077,
-        "list_price": 46089,
+        "weight_kg": 3.0,
+        "cost_price": 32850.0,
+        "margin_percent": 22.0,
+        "sale_price": 40077.0,
+        "list_price": 46089.0,
         "stock_qty": 50,
         "sku": "PP-PUP-MED-3"
       },
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 110790,
-        "margin_percent": 20,
-        "sale_price": 132948,
-        "list_price": 152890,
+        "weight_kg": 15.0,
+        "cost_price": 110790.0,
+        "margin_percent": 20.0,
+        "sale_price": 132948.0,
+        "list_price": 152890.0,
         "stock_qty": 50,
         "sku": "PP-PUP-MED-15"
       }
@@ -4450,16 +4450,16 @@ const LOCAL_CATALOG = [
       "15 kg"
     ],
     "costs": [
-      32850,
-      110790
+      32850.0,
+      110790.0
     ],
     "prices": [
-      40077,
-      132948
+      40077.0,
+      132948.0
     ],
     "list_prices": [
-      46089,
-      152890
+      46089.0,
+      152890.0
     ],
     "brand": "Pro Plan",
     "category": "perros",
@@ -4476,7 +4476,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "grande",
     "badge": "Control de Peso",
-    "image_url": "https://catycanar.vtexassets.com/arquivos/ids/177330/155615-800-auto.jpg?v=639198837577100000",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_913729-MLA99843470895_112025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -4486,11 +4486,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "12 kg",
-        "weight_kg": 12,
-        "cost_price": 96370,
-        "margin_percent": 20,
-        "sale_price": 115644,
-        "list_price": 132991,
+        "weight_kg": 12.0,
+        "cost_price": 96370.0,
+        "margin_percent": 20.0,
+        "sale_price": 115644.0,
+        "list_price": 132991.0,
         "stock_qty": 50,
         "sku": "PP-LIGHT-12"
       }
@@ -4499,13 +4499,13 @@ const LOCAL_CATALOG = [
       "12 kg"
     ],
     "costs": [
-      96370
+      96370.0
     ],
     "prices": [
-      115644
+      115644.0
     ],
     "list_prices": [
-      132991
+      132991.0
     ],
     "brand": "Pro Plan",
     "category": "perros",
@@ -4522,7 +4522,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Veterinaria Felina",
-    "image_url": "https://catycanar.vtexassets.com/arquivos/ids/156736/11233.jpg?v=637732971744970000",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_913729-MLA99843470895_112025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -4533,20 +4533,20 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 93820,
-        "margin_percent": 20,
-        "sale_price": 112584,
-        "list_price": 129472,
+        "cost_price": 93820.0,
+        "margin_percent": 20.0,
+        "sale_price": 112584.0,
+        "list_price": 129472.0,
         "stock_qty": 50,
         "sku": "PP-CAT-URIN-7.5"
       },
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 160480,
-        "margin_percent": 20,
-        "sale_price": 192576,
-        "list_price": 221462,
+        "weight_kg": 15.0,
+        "cost_price": 160480.0,
+        "margin_percent": 20.0,
+        "sale_price": 192576.0,
+        "list_price": 221462.0,
         "stock_qty": 50,
         "sku": "PP-CAT-URIN-15"
       }
@@ -4556,16 +4556,16 @@ const LOCAL_CATALOG = [
       "15 kg"
     ],
     "costs": [
-      93820,
-      160480
+      93820.0,
+      160480.0
     ],
     "prices": [
-      112584,
-      192576
+      112584.0,
+      192576.0
     ],
     "list_prices": [
-      129472,
-      221462
+      129472.0,
+      221462.0
     ],
     "brand": "Pro Plan",
     "category": "gatos",
@@ -4582,7 +4582,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "mediana",
     "badge": "Super Premium",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZpWNv9rnYIHHMXGFZefo_bAR4OSIHQ8vpu0Sl_mdRw5-L8DHvEUkzh8d7&s=10",
+    "image_url": "https://catycanar.vtexassets.com/arquivos/ids/177185-800-auto?v=639214509443130000&width=800&height=auto&aspect=true",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -4592,21 +4592,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Medium Adulto 15 kg",
-        "weight_kg": 15,
-        "cost_price": 126000,
-        "margin_percent": 20,
-        "sale_price": 151200,
-        "list_price": 173880,
+        "weight_kg": 15.0,
+        "cost_price": 126000.0,
+        "margin_percent": 20.0,
+        "sale_price": 151200.0,
+        "list_price": 173880.0,
         "stock_qty": 50,
         "sku": "RC-MED-AD-15"
       },
       {
         "presentation_name": "Medium Junior 15 kg",
-        "weight_kg": 15,
-        "cost_price": 134700,
-        "margin_percent": 20,
-        "sale_price": 161640,
-        "list_price": 185886,
+        "weight_kg": 15.0,
+        "cost_price": 134700.0,
+        "margin_percent": 20.0,
+        "sale_price": 161640.0,
+        "list_price": 185886.0,
         "stock_qty": 50,
         "sku": "RC-MED-JR-15"
       }
@@ -4616,16 +4616,16 @@ const LOCAL_CATALOG = [
       "Medium Junior 15 kg"
     ],
     "costs": [
-      126000,
-      134700
+      126000.0,
+      134700.0
     ],
     "prices": [
-      151200,
-      161640
+      151200.0,
+      161640.0
     ],
     "list_prices": [
-      173880,
-      185886
+      173880.0,
+      185886.0
     ],
     "brand": "Royal Canin",
     "category": "perros",
@@ -4642,7 +4642,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "grande",
     "badge": "Razas Grandes",
-    "image_url": "https://tiendademascotasar.vtexassets.com/arquivos/ids/161628-800-auto?v=638297908043800000&width=800&height=auto&aspect=true",
+    "image_url": "https://catycanar.vtexassets.com/arquivos/ids/177185-800-auto?v=639214509443130000&width=800&height=auto&aspect=true",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -4652,21 +4652,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Maxi Adulto 15 kg",
-        "weight_kg": 15,
-        "cost_price": 126100,
-        "margin_percent": 20,
-        "sale_price": 151320,
-        "list_price": 174018,
+        "weight_kg": 15.0,
+        "cost_price": 126100.0,
+        "margin_percent": 20.0,
+        "sale_price": 151320.0,
+        "list_price": 174018.0,
         "stock_qty": 50,
         "sku": "RC-MAXI-AD-15"
       },
       {
         "presentation_name": "Maxi Junior 15 kg",
-        "weight_kg": 15,
-        "cost_price": 134700,
-        "margin_percent": 20,
-        "sale_price": 161640,
-        "list_price": 185886,
+        "weight_kg": 15.0,
+        "cost_price": 134700.0,
+        "margin_percent": 20.0,
+        "sale_price": 161640.0,
+        "list_price": 185886.0,
         "stock_qty": 50,
         "sku": "RC-MAXI-JR-15"
       }
@@ -4676,16 +4676,16 @@ const LOCAL_CATALOG = [
       "Maxi Junior 15 kg"
     ],
     "costs": [
-      126100,
-      134700
+      126100.0,
+      134700.0
     ],
     "prices": [
-      151320,
-      161640
+      151320.0,
+      161640.0
     ],
     "list_prices": [
-      174018,
-      185886
+      174018.0,
+      185886.0
     ],
     "brand": "Royal Canin",
     "category": "perros",
@@ -4702,7 +4702,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "pequeña",
     "badge": "Super Premium",
-    "image_url": "https://puppis.vtexassets.com/arquivos/ids/196560/150038.jpg?v=638858500173300000",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_816176-MLA99341181006_112025-F.jpg",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -4712,11 +4712,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 63200,
-        "margin_percent": 20,
-        "sale_price": 75840,
-        "list_price": 87216,
+        "weight_kg": 15.0,
+        "cost_price": 63200.0,
+        "margin_percent": 20.0,
+        "sale_price": 75840.0,
+        "list_price": 87216.0,
         "stock_qty": 50,
         "sku": "EXC-MINI-15"
       }
@@ -4725,13 +4725,13 @@ const LOCAL_CATALOG = [
       "15 kg"
     ],
     "costs": [
-      63200
+      63200.0
     ],
     "prices": [
-      75840
+      75840.0
     ],
     "list_prices": [
-      87216
+      87216.0
     ],
     "brand": "Excellent",
     "category": "perros",
@@ -4748,7 +4748,7 @@ const LOCAL_CATALOG = [
     "subcat": "cachorro",
     "breed_size": "todas",
     "badge": "Cachorros",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtvDl7vaPQSlplrk59eCeaiwQppfS6H1ZxR_35EpE29w&s=10",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_678554-MLA99451664162_112025-F.jpg",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -4759,20 +4759,20 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Raza Pequeña 7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 38700,
-        "margin_percent": 22,
-        "sale_price": 47214,
-        "list_price": 54296,
+        "cost_price": 38700.0,
+        "margin_percent": 22.0,
+        "sale_price": 47214.0,
+        "list_price": 54296.0,
         "stock_qty": 50,
         "sku": "VC-BAL-CACH-7.5"
       },
       {
         "presentation_name": "Raza Med/Grande 20 kg",
-        "weight_kg": 20,
-        "cost_price": 78400,
-        "margin_percent": 20,
-        "sale_price": 94080,
-        "list_price": 108192,
+        "weight_kg": 20.0,
+        "cost_price": 78400.0,
+        "margin_percent": 20.0,
+        "sale_price": 94080.0,
+        "list_price": 108192.0,
         "stock_qty": 50,
         "sku": "VC-BAL-CACH-20"
       }
@@ -4782,16 +4782,16 @@ const LOCAL_CATALOG = [
       "Raza Med/Grande 20 kg"
     ],
     "costs": [
-      38700,
-      78400
+      38700.0,
+      78400.0
     ],
     "prices": [
-      47214,
-      94080
+      47214.0,
+      94080.0
     ],
     "list_prices": [
-      54296,
-      108192
+      54296.0,
+      108192.0
     ],
     "brand": "Vital Can",
     "category": "perros",
@@ -4808,7 +4808,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Bolsa 20 kg",
-    "image_url": "https://bacanes.com.ar/wp-content/uploads/2023/09/Vital-Complete-Adulto-Pequena.jpg",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_678554-MLA99451664162_112025-F.jpg",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -4818,21 +4818,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Complete Adulto 20 kg",
-        "weight_kg": 20,
-        "cost_price": 48100,
-        "margin_percent": 20,
-        "sale_price": 57720,
-        "list_price": 66378,
+        "weight_kg": 20.0,
+        "cost_price": 48100.0,
+        "margin_percent": 20.0,
+        "sale_price": 57720.0,
+        "list_price": 66378.0,
         "stock_qty": 50,
         "sku": "VC-COMP-AD-20"
       },
       {
         "presentation_name": "Complete Cachorro 20 kg",
-        "weight_kg": 20,
-        "cost_price": 53000,
-        "margin_percent": 20,
-        "sale_price": 63600,
-        "list_price": 73140,
+        "weight_kg": 20.0,
+        "cost_price": 53000.0,
+        "margin_percent": 20.0,
+        "sale_price": 63600.0,
+        "list_price": 73140.0,
         "stock_qty": 50,
         "sku": "VC-COMP-CACH-20"
       }
@@ -4842,16 +4842,16 @@ const LOCAL_CATALOG = [
       "Complete Cachorro 20 kg"
     ],
     "costs": [
-      48100,
-      53000
+      48100.0,
+      53000.0
     ],
     "prices": [
-      57720,
-      63600
+      57720.0,
+      63600.0
     ],
     "list_prices": [
-      66378,
-      73140
+      66378.0,
+      73140.0
     ],
     "brand": "Vital Can",
     "category": "perros",
@@ -4868,7 +4868,7 @@ const LOCAL_CATALOG = [
     "subcat": "cachorro",
     "breed_size": "todas",
     "badge": "Cachorros",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_915876-MLA99892771123_112025-O.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_832243-MLA99340263690_112025-F.jpg",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -4878,31 +4878,31 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Puppy Small 3 kg",
-        "weight_kg": 3,
-        "cost_price": 22400,
-        "margin_percent": 22,
-        "sale_price": 27328,
-        "list_price": 31427,
+        "weight_kg": 3.0,
+        "cost_price": 22400.0,
+        "margin_percent": 22.0,
+        "sale_price": 27328.0,
+        "list_price": 31427.0,
         "stock_qty": 50,
         "sku": "EUK-PUP-SM-3"
       },
       {
         "presentation_name": "Puppy Small 15 kg",
-        "weight_kg": 15,
-        "cost_price": 85300,
-        "margin_percent": 20,
-        "sale_price": 102360,
-        "list_price": 117714,
+        "weight_kg": 15.0,
+        "cost_price": 85300.0,
+        "margin_percent": 20.0,
+        "sale_price": 102360.0,
+        "list_price": 117714.0,
         "stock_qty": 50,
         "sku": "EUK-PUP-SM-15"
       },
       {
         "presentation_name": "Puppy Medium 15 kg",
-        "weight_kg": 15,
-        "cost_price": 80900,
-        "margin_percent": 20,
-        "sale_price": 97080,
-        "list_price": 111642,
+        "weight_kg": 15.0,
+        "cost_price": 80900.0,
+        "margin_percent": 20.0,
+        "sale_price": 97080.0,
+        "list_price": 111642.0,
         "stock_qty": 50,
         "sku": "EUK-PUP-MED-15"
       }
@@ -4913,19 +4913,19 @@ const LOCAL_CATALOG = [
       "Puppy Medium 15 kg"
     ],
     "costs": [
-      22400,
-      85300,
-      80900
+      22400.0,
+      85300.0,
+      80900.0
     ],
     "prices": [
-      27328,
-      102360,
-      97080
+      27328.0,
+      102360.0,
+      97080.0
     ],
     "list_prices": [
-      31427,
-      117714,
-      111642
+      31427.0,
+      117714.0,
+      111642.0
     ],
     "brand": "Eukanuba",
     "category": "perros",
@@ -4942,7 +4942,7 @@ const LOCAL_CATALOG = [
     "subcat": "cachorro",
     "breed_size": "todas",
     "badge": "Cachorros Premium",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_819567-MLA99357047064_112025-O.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_615731-MLA100085791445_122025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -4952,21 +4952,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Puppy Mini 12 kg",
-        "weight_kg": 12,
-        "cost_price": 68000,
-        "margin_percent": 20,
-        "sale_price": 81600,
-        "list_price": 93840,
+        "weight_kg": 12.0,
+        "cost_price": 68000.0,
+        "margin_percent": 20.0,
+        "sale_price": 81600.0,
+        "list_price": 93840.0,
         "stock_qty": 50,
         "sku": "SG-PUP-MINI-12"
       },
       {
         "presentation_name": "Puppy Med & Large 15 kg",
-        "weight_kg": 15,
-        "cost_price": 77330,
-        "margin_percent": 20,
-        "sale_price": 92796,
-        "list_price": 106715,
+        "weight_kg": 15.0,
+        "cost_price": 77330.0,
+        "margin_percent": 20.0,
+        "sale_price": 92796.0,
+        "list_price": 106715.0,
         "stock_qty": 50,
         "sku": "SG-PUP-MED-15"
       }
@@ -4976,16 +4976,16 @@ const LOCAL_CATALOG = [
       "Puppy Med & Large 15 kg"
     ],
     "costs": [
-      68000,
-      77330
+      68000.0,
+      77330.0
     ],
     "prices": [
-      81600,
-      92796
+      81600.0,
+      92796.0
     ],
     "list_prices": [
-      93840,
-      106715
+      93840.0,
+      106715.0
     ],
     "brand": "Sieger",
     "category": "perros",
@@ -5002,7 +5002,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Criadores 20 kg",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_729071-MLA88801612438_082025-O.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_816176-MLA99341181006_112025-F.jpg",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -5012,11 +5012,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "20 kg All in One",
-        "weight_kg": 20,
-        "cost_price": 77700,
-        "margin_percent": 20,
-        "sale_price": 93240,
-        "list_price": 107226,
+        "weight_kg": 20.0,
+        "cost_price": 77700.0,
+        "margin_percent": 20.0,
+        "sale_price": 93240.0,
+        "list_price": 107226.0,
         "stock_qty": 50,
         "sku": "SG-ALLINONE-20"
       }
@@ -5025,13 +5025,13 @@ const LOCAL_CATALOG = [
       "20 kg All in One"
     ],
     "costs": [
-      77700
+      77700.0
     ],
     "prices": [
-      93240
+      93240.0
     ],
     "list_prices": [
-      107226
+      107226.0
     ],
     "brand": "Sieger",
     "category": "perros",
@@ -5048,7 +5048,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "grande",
     "badge": "Cordero Patagónico",
-    "image_url": "https://cordoba.pluspet.com.ar/cdn/shop/files/alimento-maxxium-perro-adulto-cordero-patagonico-y-arroz_e9e2281d-b907-4444-977c-6c46b88efb5d_600x600_crop_center.jpg?v=1755122922",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_615731-MLA100085791445_122025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -5058,11 +5058,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 57200,
-        "margin_percent": 20,
-        "sale_price": 68640,
-        "list_price": 78936,
+        "weight_kg": 15.0,
+        "cost_price": 57200.0,
+        "margin_percent": 20.0,
+        "sale_price": 68640.0,
+        "list_price": 78936.0,
         "stock_qty": 50,
         "sku": "MAXX-15"
       }
@@ -5071,13 +5071,13 @@ const LOCAL_CATALOG = [
       "15 kg"
     ],
     "costs": [
-      57200
+      57200.0
     ],
     "prices": [
-      68640
+      68640.0
     ],
     "list_prices": [
-      78936
+      78936.0
     ],
     "brand": "Maxxium",
     "category": "perros",
@@ -5094,7 +5094,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Bolsa 10 kg",
-    "image_url": "https://acdn-us.mitiendanube.com/stores/003/210/212/products/7vidas1-a23f039ddb54ac249b16879066913477-1024-1024.webp",
+    "image_url": "https://http2.mlstatic.com/D_Q_NP_2X_851344-MLA110627789901_042026-T.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -5104,11 +5104,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "10 kg",
-        "weight_kg": 10,
-        "cost_price": 40600,
-        "margin_percent": 20,
-        "sale_price": 48720,
-        "list_price": 56028,
+        "weight_kg": 10.0,
+        "cost_price": 40600.0,
+        "margin_percent": 20.0,
+        "sale_price": 48720.0,
+        "list_price": 56028.0,
         "stock_qty": 50,
         "sku": "7VIDAS-10"
       }
@@ -5117,13 +5117,13 @@ const LOCAL_CATALOG = [
       "10 kg"
     ],
     "costs": [
-      40600
+      40600.0
     ],
     "prices": [
-      48720
+      48720.0
     ],
     "list_prices": [
-      56028
+      56028.0
     ],
     "brand": "7 Vidas",
     "category": "gatos",
@@ -5140,7 +5140,7 @@ const LOCAL_CATALOG = [
     "subcat": "cachorro",
     "breed_size": "todas",
     "badge": "Bolsa 22 kg",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_835692-MLA27760845177_072018-O.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_704334-MLA99335499802_112025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -5150,11 +5150,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "22 kg",
-        "weight_kg": 22,
-        "cost_price": 36700,
-        "margin_percent": 20,
-        "sale_price": 44040,
-        "list_price": 50646,
+        "weight_kg": 22.0,
+        "cost_price": 36700.0,
+        "margin_percent": 20.0,
+        "sale_price": 44040.0,
+        "list_price": 50646.0,
         "stock_qty": 50,
         "sku": "TIERN-CACH-22"
       }
@@ -5163,13 +5163,13 @@ const LOCAL_CATALOG = [
       "22 kg"
     ],
     "costs": [
-      36700
+      36700.0
     ],
     "prices": [
-      44040
+      44040.0
     ],
     "list_prices": [
-      50646
+      50646.0
     ],
     "brand": "Tiernitos",
     "category": "perros",
@@ -5186,7 +5186,7 @@ const LOCAL_CATALOG = [
     "subcat": "snacks",
     "breed_size": "todas",
     "badge": "Snack Dental",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYW-IoTyL32gy_Zg9IefW7K-r-i023WD25V6L_lJzJE3rAU__VaBuNrj4&s=10",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_876741-MLU79111404727_092024-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -5197,30 +5197,30 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Snack Estrella 120g",
         "weight_kg": 0.12,
-        "cost_price": 1500,
-        "margin_percent": 35,
-        "sale_price": 2025,
-        "list_price": 2329,
+        "cost_price": 1500.0,
+        "margin_percent": 35.0,
+        "sale_price": 2025.0,
+        "list_price": 2329.0,
         "stock_qty": 50,
         "sku": "TIERN-ESTRELLA"
       },
       {
         "presentation_name": "Raza Pequeña 3+1",
         "weight_kg": 0.15,
-        "cost_price": 1150,
-        "margin_percent": 35,
-        "sale_price": 1552,
-        "list_price": 1785,
+        "cost_price": 1150.0,
+        "margin_percent": 35.0,
+        "sale_price": 1552.0,
+        "list_price": 1785.0,
         "stock_qty": 50,
         "sku": "TIERN-SNACK-PEQ"
       },
       {
         "presentation_name": "Raza Mediana/Grande 3+1",
         "weight_kg": 0.25,
-        "cost_price": 1350,
-        "margin_percent": 35,
-        "sale_price": 1823,
-        "list_price": 2096,
+        "cost_price": 1350.0,
+        "margin_percent": 35.0,
+        "sale_price": 1823.0,
+        "list_price": 2096.0,
         "stock_qty": 50,
         "sku": "TIERN-SNACK-MED"
       }
@@ -5231,19 +5231,19 @@ const LOCAL_CATALOG = [
       "Raza Mediana/Grande 3+1"
     ],
     "costs": [
-      1500,
-      1150,
-      1350
+      1500.0,
+      1150.0,
+      1350.0
     ],
     "prices": [
-      2025,
-      1552,
-      1823
+      2025.0,
+      1552.0,
+      1823.0
     ],
     "list_prices": [
-      2329,
-      1785,
-      2096
+      2329.0,
+      1785.0,
+      2096.0
     ],
     "brand": "Tiernitos",
     "category": "snacks",
@@ -5260,7 +5260,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Bolsa 22 kg",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_867452-MLA80803069566_112024-O.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_817905-MLA99842229311_112025-O.webp",
     "is_featured": 0,
     "is_promo": 1,
     "promo_tag": "OFERTA DESTACADA",
@@ -5270,21 +5270,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 18200,
-        "margin_percent": 20,
-        "sale_price": 21840,
-        "list_price": 25116,
+        "weight_kg": 15.0,
+        "cost_price": 18200.0,
+        "margin_percent": 20.0,
+        "sale_price": 21840.0,
+        "list_price": 25116.0,
         "stock_qty": 50,
         "sku": "ROSCO-15"
       },
       {
         "presentation_name": "22 kg Gigante",
-        "weight_kg": 22,
-        "cost_price": 25100,
-        "margin_percent": 20,
-        "sale_price": 30120,
-        "list_price": 34638,
+        "weight_kg": 22.0,
+        "cost_price": 25100.0,
+        "margin_percent": 20.0,
+        "sale_price": 30120.0,
+        "list_price": 34638.0,
         "stock_qty": 50,
         "sku": "ROSCO-22"
       }
@@ -5294,16 +5294,16 @@ const LOCAL_CATALOG = [
       "22 kg Gigante"
     ],
     "costs": [
-      18200,
-      25100
+      18200.0,
+      25100.0
     ],
     "prices": [
-      21840,
-      30120
+      21840.0,
+      30120.0
     ],
     "list_prices": [
-      25116,
-      34638
+      25116.0,
+      34638.0
     ],
     "brand": "Rosco",
     "category": "perros",
@@ -5320,7 +5320,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Económico",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_820015-MLA80803318132_112024-O.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_817905-MLA99842229311_112025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -5330,31 +5330,31 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "10 kg",
-        "weight_kg": 10,
-        "cost_price": 12700,
-        "margin_percent": 22,
-        "sale_price": 15494,
-        "list_price": 17818,
+        "weight_kg": 10.0,
+        "cost_price": 12700.0,
+        "margin_percent": 22.0,
+        "sale_price": 15494.0,
+        "list_price": 17818.0,
         "stock_qty": 50,
         "sku": "PACHA-10"
       },
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 18600,
-        "margin_percent": 20,
-        "sale_price": 22320,
-        "list_price": 25668,
+        "weight_kg": 15.0,
+        "cost_price": 18600.0,
+        "margin_percent": 20.0,
+        "sale_price": 22320.0,
+        "list_price": 25668.0,
         "stock_qty": 50,
         "sku": "PACHA-15"
       },
       {
         "presentation_name": "20 kg",
-        "weight_kg": 20,
-        "cost_price": 24000,
-        "margin_percent": 20,
-        "sale_price": 28800,
-        "list_price": 33120,
+        "weight_kg": 20.0,
+        "cost_price": 24000.0,
+        "margin_percent": 20.0,
+        "sale_price": 28800.0,
+        "list_price": 33120.0,
         "stock_qty": 50,
         "sku": "PACHA-20"
       }
@@ -5365,19 +5365,19 @@ const LOCAL_CATALOG = [
       "20 kg"
     ],
     "costs": [
-      12700,
-      18600,
-      24000
+      12700.0,
+      18600.0,
+      24000.0
     ],
     "prices": [
-      15494,
-      22320,
-      28800
+      15494.0,
+      22320.0,
+      28800.0
     ],
     "list_prices": [
-      17818,
-      25668,
-      33120
+      17818.0,
+      25668.0,
+      33120.0
     ],
     "brand": "Pacha",
     "category": "perros",
@@ -5394,7 +5394,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Hiper Económico",
-    "image_url": "https://http2.mlstatic.com/D_Q_NP_2X_870918-MLA109406530980_042026-P.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_817905-MLA99842229311_112025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -5404,21 +5404,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 16400,
-        "margin_percent": 20,
-        "sale_price": 19680,
-        "list_price": 22632,
+        "weight_kg": 15.0,
+        "cost_price": 16400.0,
+        "margin_percent": 20.0,
+        "sale_price": 19680.0,
+        "list_price": 22632.0,
         "stock_qty": 50,
         "sku": "CHACAL-15"
       },
       {
         "presentation_name": "22 kg",
-        "weight_kg": 22,
-        "cost_price": 23400,
-        "margin_percent": 20,
-        "sale_price": 28080,
-        "list_price": 32292,
+        "weight_kg": 22.0,
+        "cost_price": 23400.0,
+        "margin_percent": 20.0,
+        "sale_price": 28080.0,
+        "list_price": 32292.0,
         "stock_qty": 50,
         "sku": "CHACAL-22"
       }
@@ -5428,16 +5428,16 @@ const LOCAL_CATALOG = [
       "22 kg"
     ],
     "costs": [
-      16400,
-      23400
+      16400.0,
+      23400.0
     ],
     "prices": [
-      19680,
-      28080
+      19680.0,
+      28080.0
     ],
     "list_prices": [
-      22632,
-      32292
+      22632.0,
+      32292.0
     ],
     "brand": "Chacal / Balancín",
     "category": "perros",
@@ -5454,7 +5454,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Bolsa 20 kg",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_897515-MLA54617885598_032023-O.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_817905-MLA99842229311_112025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -5464,21 +5464,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "15 kg",
-        "weight_kg": 15,
-        "cost_price": 23100,
-        "margin_percent": 20,
-        "sale_price": 27720,
-        "list_price": 31878,
+        "weight_kg": 15.0,
+        "cost_price": 23100.0,
+        "margin_percent": 20.0,
+        "sale_price": 27720.0,
+        "list_price": 31878.0,
         "stock_qty": 50,
         "sku": "RAZA-15"
       },
       {
         "presentation_name": "20 kg",
-        "weight_kg": 20,
-        "cost_price": 29750,
-        "margin_percent": 20,
-        "sale_price": 35700,
-        "list_price": 41055,
+        "weight_kg": 20.0,
+        "cost_price": 29750.0,
+        "margin_percent": 20.0,
+        "sale_price": 35700.0,
+        "list_price": 41055.0,
         "stock_qty": 50,
         "sku": "RAZA-20"
       }
@@ -5488,16 +5488,16 @@ const LOCAL_CATALOG = [
       "20 kg"
     ],
     "costs": [
-      23100,
-      29750
+      23100.0,
+      29750.0
     ],
     "prices": [
-      27720,
-      35700
+      27720.0,
+      35700.0
     ],
     "list_prices": [
-      31878,
-      41055
+      31878.0,
+      41055.0
     ],
     "brand": "Raza",
     "category": "perros",
@@ -5514,7 +5514,7 @@ const LOCAL_CATALOG = [
     "subcat": "snacks",
     "breed_size": "todas",
     "badge": "Pack Masticable",
-    "image_url": "https://http2.mlstatic.com/D_Q_NP_2X_763700-MLA99402182618_112025-P.webp",
+    "image_url": "https://resources.claroshop.com/medios-plazavip/mkt/646d0036c12bf_6jpg.jpg",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -5525,10 +5525,10 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Pack Grande",
         "weight_kg": 0.4,
-        "cost_price": 6800,
-        "margin_percent": 35,
-        "sale_price": 9180,
-        "list_price": 10557,
+        "cost_price": 6800.0,
+        "margin_percent": 35.0,
+        "sale_price": 9180.0,
+        "list_price": 10557.0,
         "stock_qty": 50,
         "sku": "PALITOS-PACK"
       }
@@ -5537,13 +5537,13 @@ const LOCAL_CATALOG = [
       "Pack Grande"
     ],
     "costs": [
-      6800
+      6800.0
     ],
     "prices": [
-      9180
+      9180.0
     ],
     "list_prices": [
-      10557
+      10557.0
     ],
     "brand": "Huesos & Premios",
     "category": "snacks",
@@ -5560,7 +5560,7 @@ const LOCAL_CATALOG = [
     "subcat": "higiene",
     "breed_size": "todas",
     "badge": "Económicas",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_736894-MLA96502976507_102025-O.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_767034-MLU73676996172_012024-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -5571,10 +5571,10 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Bulto 10.8 kg (6x1.8kg)",
         "weight_kg": 10.8,
-        "cost_price": 6450,
-        "margin_percent": 30,
-        "sale_price": 8385,
-        "list_price": 9643,
+        "cost_price": 6450.0,
+        "margin_percent": 30.0,
+        "sale_price": 8385.0,
+        "list_price": 9643.0,
         "stock_qty": 50,
         "sku": "MICHI-10.8"
       }
@@ -5583,13 +5583,13 @@ const LOCAL_CATALOG = [
       "Bulto 10.8 kg (6x1.8kg)"
     ],
     "costs": [
-      6450
+      6450.0
     ],
     "prices": [
-      8385
+      8385.0
     ],
     "list_prices": [
-      9643
+      9643.0
     ],
     "brand": "Absorsol / Piedras",
     "category": "higiene",
@@ -5606,7 +5606,7 @@ const LOCAL_CATALOG = [
     "subcat": "higiene",
     "breed_size": "todas",
     "badge": "100% Ecológico",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_958535-MLA106394732270_022026-O.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_752804-MLA100008869329_122025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -5616,21 +5616,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 15 kg",
-        "weight_kg": 15,
-        "cost_price": 9500,
-        "margin_percent": 25,
-        "sale_price": 11875,
-        "list_price": 13656,
+        "weight_kg": 15.0,
+        "cost_price": 9500.0,
+        "margin_percent": 25.0,
+        "sale_price": 11875.0,
+        "list_price": 13656.0,
         "stock_qty": 50,
         "sku": "BEDI-15"
       },
       {
         "presentation_name": "Bulto 25 kg (5x5kg)",
-        "weight_kg": 25,
-        "cost_price": 14000,
-        "margin_percent": 20,
-        "sale_price": 16800,
-        "list_price": 19320,
+        "weight_kg": 25.0,
+        "cost_price": 14000.0,
+        "margin_percent": 20.0,
+        "sale_price": 16800.0,
+        "list_price": 19320.0,
         "stock_qty": 50,
         "sku": "BEDI-25"
       }
@@ -5640,16 +5640,16 @@ const LOCAL_CATALOG = [
       "Bulto 25 kg (5x5kg)"
     ],
     "costs": [
-      9500,
-      14000
+      9500.0,
+      14000.0
     ],
     "prices": [
-      11875,
-      16800
+      11875.0,
+      16800.0
     ],
     "list_prices": [
-      13656,
-      19320
+      13656.0,
+      19320.0
     ],
     "brand": "Absorsol / Piedras",
     "category": "higiene",
@@ -5666,7 +5666,7 @@ const LOCAL_CATALOG = [
     "subcat": "higiene",
     "breed_size": "todas",
     "badge": "Belleza Canina",
-    "image_url": "https://bacanes.com.ar/wp-content/uploads/2023/09/Osspret-Shampoo-Double-2-en-1.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_777998-MLA100083527255_122025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -5677,10 +5677,10 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Botella 250 ml",
         "weight_kg": 0.3,
-        "cost_price": 7400,
-        "margin_percent": 35,
-        "sale_price": 9990,
-        "list_price": 11488,
+        "cost_price": 7400.0,
+        "margin_percent": 35.0,
+        "sale_price": 9990.0,
+        "list_price": 11488.0,
         "stock_qty": 50,
         "sku": "OSSP-DOUB-250"
       }
@@ -5689,13 +5689,13 @@ const LOCAL_CATALOG = [
       "Botella 250 ml"
     ],
     "costs": [
-      7400
+      7400.0
     ],
     "prices": [
-      9990
+      9990.0
     ],
     "list_prices": [
-      11488
+      11488.0
     ],
     "brand": "Osspret / Ecthol",
     "category": "farmacia",
@@ -5712,7 +5712,7 @@ const LOCAL_CATALOG = [
     "subcat": "higiene",
     "breed_size": "todas",
     "badge": "Antiparasitario",
-    "image_url": "https://bacanes.com.ar/wp-content/uploads/2023/09/Osspret-Shampoo-Aqua-Ecto.webp",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_764078-MLA99587766146_122025-O.webp",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -5723,10 +5723,10 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Botella 250 ml",
         "weight_kg": 0.3,
-        "cost_price": 6900,
-        "margin_percent": 35,
-        "sale_price": 9315,
-        "list_price": 10712,
+        "cost_price": 6900.0,
+        "margin_percent": 35.0,
+        "sale_price": 9315.0,
+        "list_price": 10712.0,
         "stock_qty": 50,
         "sku": "OSSP-ECTO-250"
       }
@@ -5735,13 +5735,13 @@ const LOCAL_CATALOG = [
       "Botella 250 ml"
     ],
     "costs": [
-      6900
+      6900.0
     ],
     "prices": [
-      9315
+      9315.0
     ],
     "list_prices": [
-      10712
+      10712.0
     ],
     "brand": "Osspret / Ecthol",
     "category": "farmacia",
@@ -5758,7 +5758,7 @@ const LOCAL_CATALOG = [
     "subcat": "plagas",
     "breed_size": "todas",
     "badge": "Uso Directo",
-    "image_url": "https://neoclean.com.ar/wp-content/uploads/2024/09/hor-tal-polvo-250.png",
+    "image_url": "https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -5769,10 +5769,10 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Talquera 250 grs",
         "weight_kg": 0.25,
-        "cost_price": 3550,
-        "margin_percent": 30,
-        "sale_price": 4615,
-        "list_price": 4615,
+        "cost_price": 3550.0,
+        "margin_percent": 30.0,
+        "sale_price": 4615.0,
+        "list_price": 4615.0,
         "stock_qty": 50,
         "sku": "HT-POLV-250"
       }
@@ -5781,13 +5781,13 @@ const LOCAL_CATALOG = [
       "Talquera 250 grs"
     ],
     "costs": [
-      3550
+      3550.0
     ],
     "prices": [
-      4615
+      4615.0
     ],
     "list_prices": [
-      4615
+      4615.0
     ],
     "brand": "Hor-Tal",
     "category": "plagas",
@@ -5804,7 +5804,7 @@ const LOCAL_CATALOG = [
     "subcat": "plagas",
     "breed_size": "todas",
     "badge": "Cebo Granulado",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_750020-MLA111870301941_052026-O.webp",
+    "image_url": "https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -5815,10 +5815,10 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Pote 250 grs",
         "weight_kg": 0.25,
-        "cost_price": 2900,
-        "margin_percent": 30,
-        "sale_price": 3770,
-        "list_price": 3770,
+        "cost_price": 2900.0,
+        "margin_percent": 30.0,
+        "sale_price": 3770.0,
+        "list_price": 3770.0,
         "stock_qty": 50,
         "sku": "HT-MIR-250"
       }
@@ -5827,13 +5827,13 @@ const LOCAL_CATALOG = [
       "Pote 250 grs"
     ],
     "costs": [
-      2900
+      2900.0
     ],
     "prices": [
-      3770
+      3770.0
     ],
     "list_prices": [
-      3770
+      3770.0
     ],
     "brand": "Hor-Tal",
     "category": "plagas",
@@ -5850,7 +5850,7 @@ const LOCAL_CATALOG = [
     "subcat": "desinfeccion",
     "breed_size": "todas",
     "badge": "Higiene Ambiental",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsXrFU_HFIdmRmQ4hssmnYk-HNMGfBvbfpeQqsMer8FiSUydo-Qp7ri_Oo&s=10",
+    "image_url": "https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -5861,20 +5861,20 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Botella 500 cc",
         "weight_kg": 0.5,
-        "cost_price": 3900,
-        "margin_percent": 30,
-        "sale_price": 5070,
-        "list_price": 5070,
+        "cost_price": 3900.0,
+        "margin_percent": 30.0,
+        "sale_price": 5070.0,
+        "list_price": 5070.0,
         "stock_qty": 50,
         "sku": "FL-TRI-500"
       },
       {
         "presentation_name": "Botella 1000 cc (1 Litro)",
-        "weight_kg": 1,
-        "cost_price": 7100,
-        "margin_percent": 25,
-        "sale_price": 8875,
-        "list_price": 8875,
+        "weight_kg": 1.0,
+        "cost_price": 7100.0,
+        "margin_percent": 25.0,
+        "sale_price": 8875.0,
+        "list_price": 8875.0,
         "stock_qty": 50,
         "sku": "FL-TRI-1000"
       }
@@ -5884,16 +5884,16 @@ const LOCAL_CATALOG = [
       "Botella 1000 cc (1 Litro)"
     ],
     "costs": [
-      3900,
-      7100
+      3900.0,
+      7100.0
     ],
     "prices": [
-      5070,
-      8875
+      5070.0,
+      8875.0
     ],
     "list_prices": [
-      5070,
-      8875
+      5070.0,
+      8875.0
     ],
     "brand": "Feit y Olivari",
     "category": "plagas",
@@ -5910,7 +5910,7 @@ const LOCAL_CATALOG = [
     "subcat": "plagas",
     "breed_size": "todas",
     "badge": "Efecto Dominó",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_824764-MLA99402148660_112025-O.webp",
+    "image_url": "https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -5921,10 +5921,10 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Caja x 6 Cebos",
         "weight_kg": 0.1,
-        "cost_price": 3100,
-        "margin_percent": 30,
-        "sale_price": 4030,
-        "list_price": 4030,
+        "cost_price": 3100.0,
+        "margin_percent": 30.0,
+        "sale_price": 4030.0,
+        "list_price": 4030.0,
         "stock_qty": 50,
         "sku": "GT-CEB-6"
       }
@@ -5933,13 +5933,13 @@ const LOCAL_CATALOG = [
       "Caja x 6 Cebos"
     ],
     "costs": [
-      3100
+      3100.0
     ],
     "prices": [
-      4030
+      4030.0
     ],
     "list_prices": [
-      4030
+      4030.0
     ],
     "brand": "Geltex",
     "category": "plagas",
@@ -5956,7 +5956,7 @@ const LOCAL_CATALOG = [
     "subcat": "plagas",
     "breed_size": "todas",
     "badge": "Acción Prolongada",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwIzMzplX0jpxzNCf5xLR3wy-F44BPTJd6MUYDvHAVwj7eHMEEuZD3_hdr&s=10",
+    "image_url": "https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -5967,20 +5967,20 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Jeringa 6 grs",
         "weight_kg": 0.006,
-        "cost_price": 3900,
-        "margin_percent": 30,
-        "sale_price": 5070,
-        "list_price": 5070,
+        "cost_price": 3900.0,
+        "margin_percent": 30.0,
+        "sale_price": 5070.0,
+        "list_price": 5070.0,
         "stock_qty": 50,
         "sku": "GT-JER-6"
       },
       {
         "presentation_name": "Jeringa 12 grs",
         "weight_kg": 0.012,
-        "cost_price": 5950,
-        "margin_percent": 25,
-        "sale_price": 7438,
-        "list_price": 7438,
+        "cost_price": 5950.0,
+        "margin_percent": 25.0,
+        "sale_price": 7438.0,
+        "list_price": 7438.0,
         "stock_qty": 50,
         "sku": "GT-JER-12"
       }
@@ -5990,16 +5990,16 @@ const LOCAL_CATALOG = [
       "Jeringa 12 grs"
     ],
     "costs": [
-      3900,
-      5950
+      3900.0,
+      5950.0
     ],
     "prices": [
-      5070,
-      7438
+      5070.0,
+      7438.0
     ],
     "list_prices": [
-      5070,
-      7438
+      5070.0,
+      7438.0
     ],
     "brand": "Geltex",
     "category": "plagas",
@@ -6016,7 +6016,7 @@ const LOCAL_CATALOG = [
     "subcat": "plagas",
     "breed_size": "todas",
     "badge": "Cebo Parafinado",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzYeAlEVMgxfcRAZsGAOtceFiyfXTqhSCkdhB3raFA46ExQNk8HYiU5slk&s=10",
+    "image_url": "https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -6027,10 +6027,10 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Estuche 100 grs",
         "weight_kg": 0.1,
-        "cost_price": 4400,
-        "margin_percent": 30,
-        "sale_price": 5720,
-        "list_price": 5720,
+        "cost_price": 4400.0,
+        "margin_percent": 30.0,
+        "sale_price": 5720.0,
+        "list_price": 5720.0,
         "stock_qty": 50,
         "sku": "GT-RAT-100"
       }
@@ -6039,13 +6039,13 @@ const LOCAL_CATALOG = [
       "Estuche 100 grs"
     ],
     "costs": [
-      4400
+      4400.0
     ],
     "prices": [
-      5720
+      5720.0
     ],
     "list_prices": [
-      5720
+      5720.0
     ],
     "brand": "Geltex",
     "category": "plagas",
@@ -6062,7 +6062,7 @@ const LOCAL_CATALOG = [
     "subcat": "plagas",
     "breed_size": "todas",
     "badge": "Monodósico",
-    "image_url": "https://acdn-us.mitiendanube.com/stores/035/032/products/ultra-plus-ratiida1-e046e00108e661f22716720708691420-1024-1024.webp",
+    "image_url": "https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -6073,20 +6073,20 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Sobre 50 grs",
         "weight_kg": 0.05,
-        "cost_price": 2200,
-        "margin_percent": 35,
-        "sale_price": 2970,
-        "list_price": 2970,
+        "cost_price": 2200.0,
+        "margin_percent": 35.0,
+        "sale_price": 2970.0,
+        "list_price": 2970.0,
         "stock_qty": 50,
         "sku": "ULT-SOB-50"
       },
       {
         "presentation_name": "Dispenser 30 Sobres x 50 grs",
         "weight_kg": 1.5,
-        "cost_price": 58500,
-        "margin_percent": 20,
-        "sale_price": 70200,
-        "list_price": 70200,
+        "cost_price": 58500.0,
+        "margin_percent": 20.0,
+        "sale_price": 70200.0,
+        "list_price": 70200.0,
         "stock_qty": 50,
         "sku": "ULT-DISP-30"
       }
@@ -6096,16 +6096,16 @@ const LOCAL_CATALOG = [
       "Dispenser 30 Sobres x 50 grs"
     ],
     "costs": [
-      2200,
-      58500
+      2200.0,
+      58500.0
     ],
     "prices": [
-      2970,
-      70200
+      2970.0,
+      70200.0
     ],
     "list_prices": [
-      2970,
-      70200
+      2970.0,
+      70200.0
     ],
     "brand": "Ultra",
     "category": "plagas",
@@ -6122,7 +6122,7 @@ const LOCAL_CATALOG = [
     "subcat": "aves",
     "breed_size": "todas",
     "badge": "Línea Granja",
-    "image_url": "https://http2.mlstatic.com/D_Q_NP_2X_947935-MLA111838146872_062026-T.webp",
+    "image_url": "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -6132,11 +6132,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 25 kg",
-        "weight_kg": 25,
-        "cost_price": 17400,
-        "margin_percent": 20,
-        "sale_price": 20880,
-        "list_price": 20880,
+        "weight_kg": 25.0,
+        "cost_price": 17400.0,
+        "margin_percent": 20.0,
+        "sale_price": 20880.0,
+        "list_price": 20880.0,
         "stock_qty": 50,
         "sku": "PREN-PARR-ENG-25"
       }
@@ -6145,13 +6145,13 @@ const LOCAL_CATALOG = [
       "Bolsa 25 kg"
     ],
     "costs": [
-      17400
+      17400.0
     ],
     "prices": [
-      20880
+      20880.0
     ],
     "list_prices": [
-      20880
+      20880.0
     ],
     "brand": "Prenut",
     "category": "granja",
@@ -6168,7 +6168,7 @@ const LOCAL_CATALOG = [
     "subcat": "aves",
     "breed_size": "todas",
     "badge": "Alta Postura",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_706242-MLA81112822071_122024-O.webp",
+    "image_url": "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -6178,11 +6178,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 25 kg",
-        "weight_kg": 25,
-        "cost_price": 17200,
-        "margin_percent": 20,
-        "sale_price": 20640,
-        "list_price": 20640,
+        "weight_kg": 25.0,
+        "cost_price": 17200.0,
+        "margin_percent": 20.0,
+        "sale_price": 20640.0,
+        "list_price": 20640.0,
         "stock_qty": 50,
         "sku": "PREN-PONE-25"
       }
@@ -6191,13 +6191,13 @@ const LOCAL_CATALOG = [
       "Bolsa 25 kg"
     ],
     "costs": [
-      17200
+      17200.0
     ],
     "prices": [
-      20640
+      20640.0
     ],
     "list_prices": [
-      20640
+      20640.0
     ],
     "brand": "Prenut",
     "category": "granja",
@@ -6214,7 +6214,7 @@ const LOCAL_CATALOG = [
     "subcat": "roedores",
     "breed_size": "todas",
     "badge": "Roedores y Granja",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_986764-MLA107031304177_022026-O.webp",
+    "image_url": "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -6224,11 +6224,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 25 kg",
-        "weight_kg": 25,
-        "cost_price": 17600,
-        "margin_percent": 20,
-        "sale_price": 21120,
-        "list_price": 21120,
+        "weight_kg": 25.0,
+        "cost_price": 17600.0,
+        "margin_percent": 20.0,
+        "sale_price": 21120.0,
+        "list_price": 21120.0,
         "stock_qty": 50,
         "sku": "PREN-CON-25"
       }
@@ -6237,13 +6237,13 @@ const LOCAL_CATALOG = [
       "Bolsa 25 kg"
     ],
     "costs": [
-      17600
+      17600.0
     ],
     "prices": [
-      21120
+      21120.0
     ],
     "list_prices": [
-      21120
+      21120.0
     ],
     "brand": "Prenut",
     "category": "granja",
@@ -6260,7 +6260,7 @@ const LOCAL_CATALOG = [
     "subcat": "aves",
     "breed_size": "todas",
     "badge": "Aves de Jaula",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_885838-MLA81815250927_012025-O.webp",
+    "image_url": "https://images.unsplash.com/photo-1522858547137-f1dcec554f55?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -6270,11 +6270,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 25 kg",
-        "weight_kg": 25,
-        "cost_price": 33000,
-        "margin_percent": 20,
-        "sale_price": 39600,
-        "list_price": 39600,
+        "weight_kg": 25.0,
+        "cost_price": 33000.0,
+        "margin_percent": 20.0,
+        "sale_price": 39600.0,
+        "list_price": 39600.0,
         "stock_qty": 50,
         "sku": "PREN-PAJ-25"
       }
@@ -6283,13 +6283,13 @@ const LOCAL_CATALOG = [
       "Bolsa 25 kg"
     ],
     "costs": [
-      33000
+      33000.0
     ],
     "prices": [
-      39600
+      39600.0
     ],
     "list_prices": [
-      39600
+      39600.0
     ],
     "brand": "Prenut",
     "category": "granja",
@@ -6306,7 +6306,7 @@ const LOCAL_CATALOG = [
     "subcat": "semillas",
     "breed_size": "todas",
     "badge": "Grano Limpio",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdC6j7JSeX_moLmRjCx4LN4tzVvqrkWhoHqkVq8YkGgyoZS59ksYzPyoc4&s=10",
+    "image_url": "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -6316,21 +6316,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Maíz Partido Grueso 24 kg",
-        "weight_kg": 24,
-        "cost_price": 9900,
-        "margin_percent": 22,
-        "sale_price": 12078,
-        "list_price": 12078,
+        "weight_kg": 24.0,
+        "cost_price": 9900.0,
+        "margin_percent": 22.0,
+        "sale_price": 12078.0,
+        "list_price": 12078.0,
         "stock_qty": 50,
         "sku": "SEM-MAIZ-PART-24"
       },
       {
         "presentation_name": "Maíz Entero 38 kg",
-        "weight_kg": 38,
-        "cost_price": 14990,
-        "margin_percent": 20,
-        "sale_price": 17988,
-        "list_price": 17988,
+        "weight_kg": 38.0,
+        "cost_price": 14990.0,
+        "margin_percent": 20.0,
+        "sale_price": 17988.0,
+        "list_price": 17988.0,
         "stock_qty": 50,
         "sku": "SEM-MAIZ-ENT-38"
       }
@@ -6340,16 +6340,16 @@ const LOCAL_CATALOG = [
       "Maíz Entero 38 kg"
     ],
     "costs": [
-      9900,
-      14990
+      9900.0,
+      14990.0
     ],
     "prices": [
-      12078,
-      17988
+      12078.0,
+      17988.0
     ],
     "list_prices": [
-      12078,
-      17988
+      12078.0,
+      17988.0
     ],
     "brand": "Semillas & Granos",
     "category": "granja",
@@ -6366,7 +6366,7 @@ const LOCAL_CATALOG = [
     "subcat": "semillas",
     "breed_size": "todas",
     "badge": "Forrajera",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_876361-MLA102385848436_122025-O.webp",
+    "image_url": "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -6376,31 +6376,31 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Mezcla Gallina STM 24 kg",
-        "weight_kg": 24,
-        "cost_price": 11900,
-        "margin_percent": 22,
-        "sale_price": 14518,
-        "list_price": 14518,
+        "weight_kg": 24.0,
+        "cost_price": 11900.0,
+        "margin_percent": 22.0,
+        "sale_price": 14518.0,
+        "list_price": 14518.0,
         "stock_qty": 50,
         "sku": "SEM-GAL-STM-24"
       },
       {
         "presentation_name": "Mezcla Gallina Especial 24 kg",
-        "weight_kg": 24,
-        "cost_price": 12000,
-        "margin_percent": 22,
-        "sale_price": 14640,
-        "list_price": 14640,
+        "weight_kg": 24.0,
+        "cost_price": 12000.0,
+        "margin_percent": 22.0,
+        "sale_price": 14640.0,
+        "list_price": 14640.0,
         "stock_qty": 50,
         "sku": "SEM-GAL-ESP-24"
       },
       {
         "presentation_name": "Mezcla Gallina Lumpy 24 kg",
-        "weight_kg": 24,
-        "cost_price": 14500,
-        "margin_percent": 22,
-        "sale_price": 17690,
-        "list_price": 17690,
+        "weight_kg": 24.0,
+        "cost_price": 14500.0,
+        "margin_percent": 22.0,
+        "sale_price": 17690.0,
+        "list_price": 17690.0,
         "stock_qty": 50,
         "sku": "SEM-GAL-LUMP-24"
       }
@@ -6411,19 +6411,19 @@ const LOCAL_CATALOG = [
       "Mezcla Gallina Lumpy 24 kg"
     ],
     "costs": [
-      11900,
-      12000,
-      14500
+      11900.0,
+      12000.0,
+      14500.0
     ],
     "prices": [
-      14518,
-      14640,
-      17690
+      14518.0,
+      14640.0,
+      17690.0
     ],
     "list_prices": [
-      14518,
-      14640,
-      17690
+      14518.0,
+      14640.0,
+      17690.0
     ],
     "brand": "Semillas & Granos",
     "category": "granja",
@@ -6440,7 +6440,7 @@ const LOCAL_CATALOG = [
     "subcat": "semillas",
     "breed_size": "todas",
     "badge": "100% Pura",
-    "image_url": "https://http2.mlstatic.com/D_Q_NP_2X_978564-MLA110010736503_042026-T.webp",
+    "image_url": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -6450,11 +6450,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 30 kg",
-        "weight_kg": 30,
-        "cost_price": 12500,
-        "margin_percent": 20,
-        "sale_price": 15000,
-        "list_price": 15000,
+        "weight_kg": 30.0,
+        "cost_price": 12500.0,
+        "margin_percent": 20.0,
+        "sale_price": 15000.0,
+        "list_price": 15000.0,
         "stock_qty": 50,
         "sku": "SEM-AVEN-30"
       }
@@ -6463,13 +6463,13 @@ const LOCAL_CATALOG = [
       "Bolsa 30 kg"
     ],
     "costs": [
-      12500
+      12500.0
     ],
     "prices": [
-      15000
+      15000.0
     ],
     "list_prices": [
-      15000
+      15000.0
     ],
     "brand": "Semillas & Granos",
     "category": "granja",
@@ -6486,7 +6486,7 @@ const LOCAL_CATALOG = [
     "subcat": "semillas",
     "breed_size": "todas",
     "badge": "Doble Zaranda",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_944291-MLA81133645473_122024-F.jpg",
+    "image_url": "https://images.unsplash.com/photo-1522858547137-f1dcec554f55?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -6496,21 +6496,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 10 kg",
-        "weight_kg": 10,
-        "cost_price": 18000,
-        "margin_percent": 25,
-        "sale_price": 22500,
-        "list_price": 22500,
+        "weight_kg": 10.0,
+        "cost_price": 18000.0,
+        "margin_percent": 25.0,
+        "sale_price": 22500.0,
+        "list_price": 22500.0,
         "stock_qty": 50,
         "sku": "SEM-ALP-10"
       },
       {
         "presentation_name": "Bolsa 30 kg",
-        "weight_kg": 30,
-        "cost_price": 40000,
-        "margin_percent": 20,
-        "sale_price": 48000,
-        "list_price": 48000,
+        "weight_kg": 30.0,
+        "cost_price": 40000.0,
+        "margin_percent": 20.0,
+        "sale_price": 48000.0,
+        "list_price": 48000.0,
         "stock_qty": 50,
         "sku": "SEM-ALP-30"
       }
@@ -6520,16 +6520,16 @@ const LOCAL_CATALOG = [
       "Bolsa 30 kg"
     ],
     "costs": [
-      18000,
-      40000
+      18000.0,
+      40000.0
     ],
     "prices": [
-      22500,
-      48000
+      22500.0,
+      48000.0
     ],
     "list_prices": [
-      22500,
-      48000
+      22500.0,
+      48000.0
     ],
     "brand": "Semillas & Granos",
     "category": "granja",
@@ -6546,7 +6546,7 @@ const LOCAL_CATALOG = [
     "subcat": "semillas",
     "breed_size": "todas",
     "badge": "Grano Selecto",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_971786-MLA90417751499_082025-F.jpg",
+    "image_url": "https://images.unsplash.com/photo-1522858547137-f1dcec554f55?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -6556,21 +6556,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 10 kg",
-        "weight_kg": 10,
-        "cost_price": 9500,
-        "margin_percent": 25,
-        "sale_price": 11875,
-        "list_price": 11875,
+        "weight_kg": 10.0,
+        "cost_price": 9500.0,
+        "margin_percent": 25.0,
+        "sale_price": 11875.0,
+        "list_price": 11875.0,
         "stock_qty": 50,
         "sku": "SEM-MIJ-10"
       },
       {
         "presentation_name": "Bolsa 30 kg",
-        "weight_kg": 30,
-        "cost_price": 24000,
-        "margin_percent": 20,
-        "sale_price": 28800,
-        "list_price": 28800,
+        "weight_kg": 30.0,
+        "cost_price": 24000.0,
+        "margin_percent": 20.0,
+        "sale_price": 28800.0,
+        "list_price": 28800.0,
         "stock_qty": 50,
         "sku": "SEM-MIJ-30"
       }
@@ -6580,16 +6580,16 @@ const LOCAL_CATALOG = [
       "Bolsa 30 kg"
     ],
     "costs": [
-      9500,
-      24000
+      9500.0,
+      24000.0
     ],
     "prices": [
-      11875,
-      28800
+      11875.0,
+      28800.0
     ],
     "list_prices": [
-      11875,
-      28800
+      11875.0,
+      28800.0
     ],
     "brand": "Semillas & Granos",
     "category": "granja",
@@ -6606,7 +6606,7 @@ const LOCAL_CATALOG = [
     "subcat": "semillas",
     "breed_size": "todas",
     "badge": "Canto y Vitalidad",
-    "image_url": "https://http2.mlstatic.com/D_Q_NP_2X_843445-MLA93620197746_102025-T.webp",
+    "image_url": "https://images.unsplash.com/photo-1522858547137-f1dcec554f55?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -6616,21 +6616,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 10 kg",
-        "weight_kg": 10,
-        "cost_price": 17900,
-        "margin_percent": 25,
-        "sale_price": 22375,
-        "list_price": 22375,
+        "weight_kg": 10.0,
+        "cost_price": 17900.0,
+        "margin_percent": 25.0,
+        "sale_price": 22375.0,
+        "list_price": 22375.0,
         "stock_qty": 50,
         "sku": "SEM-CAN-10"
       },
       {
         "presentation_name": "Bolsa 30 kg",
-        "weight_kg": 30,
-        "cost_price": 49500,
-        "margin_percent": 20,
-        "sale_price": 59400,
-        "list_price": 59400,
+        "weight_kg": 30.0,
+        "cost_price": 49500.0,
+        "margin_percent": 20.0,
+        "sale_price": 59400.0,
+        "list_price": 59400.0,
         "stock_qty": 50,
         "sku": "SEM-CAN-30"
       }
@@ -6640,16 +6640,16 @@ const LOCAL_CATALOG = [
       "Bolsa 30 kg"
     ],
     "costs": [
-      17900,
-      49500
+      17900.0,
+      49500.0
     ],
     "prices": [
-      22375,
-      59400
+      22375.0,
+      59400.0
     ],
     "list_prices": [
-      22375,
-      59400
+      22375.0,
+      59400.0
     ],
     "brand": "Semillas & Granos",
     "category": "granja",
@@ -6666,7 +6666,7 @@ const LOCAL_CATALOG = [
     "subcat": "semillas",
     "breed_size": "todas",
     "badge": "Silvestres",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_999715-MLA86959452740_072025-O.webp",
+    "image_url": "https://images.unsplash.com/photo-1522858547137-f1dcec554f55?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -6676,21 +6676,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 10 kg",
-        "weight_kg": 10,
-        "cost_price": 9500,
-        "margin_percent": 25,
-        "sale_price": 11875,
-        "list_price": 11875,
+        "weight_kg": 10.0,
+        "cost_price": 9500.0,
+        "margin_percent": 25.0,
+        "sale_price": 11875.0,
+        "list_price": 11875.0,
         "stock_qty": 50,
         "sku": "SEM-CARD-10"
       },
       {
         "presentation_name": "Bolsa 30 kg",
-        "weight_kg": 30,
-        "cost_price": 26500,
-        "margin_percent": 20,
-        "sale_price": 31800,
-        "list_price": 31800,
+        "weight_kg": 30.0,
+        "cost_price": 26500.0,
+        "margin_percent": 20.0,
+        "sale_price": 31800.0,
+        "list_price": 31800.0,
         "stock_qty": 50,
         "sku": "SEM-CARD-30"
       }
@@ -6700,16 +6700,16 @@ const LOCAL_CATALOG = [
       "Bolsa 30 kg"
     ],
     "costs": [
-      9500,
-      26500
+      9500.0,
+      26500.0
     ],
     "prices": [
-      11875,
-      31800
+      11875.0,
+      31800.0
     ],
     "list_prices": [
-      11875,
-      31800
+      11875.0,
+      31800.0
     ],
     "brand": "Semillas & Granos",
     "category": "granja",
@@ -6726,7 +6726,7 @@ const LOCAL_CATALOG = [
     "subcat": "semillas",
     "breed_size": "todas",
     "badge": "100% Maíz",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX43haJUku7RyU6BdBTFNqcnR0Kg5J82X1syY6MI1LFhnk0Yp1shzLuYfQ&s=10",
+    "image_url": "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -6736,11 +6736,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 25 kg",
-        "weight_kg": 25,
-        "cost_price": 18300,
-        "margin_percent": 20,
-        "sale_price": 21960,
-        "list_price": 21960,
+        "weight_kg": 25.0,
+        "cost_price": 18300.0,
+        "margin_percent": 20.0,
+        "sale_price": 21960.0,
+        "list_price": 21960.0,
         "stock_qty": 50,
         "sku": "SEM-POL-25"
       }
@@ -6749,13 +6749,13 @@ const LOCAL_CATALOG = [
       "Bolsa 25 kg"
     ],
     "costs": [
-      18300
+      18300.0
     ],
     "prices": [
-      21960
+      21960.0
     ],
     "list_prices": [
-      21960
+      21960.0
     ],
     "brand": "Semillas & Granos",
     "category": "granja",
@@ -6772,7 +6772,7 @@ const LOCAL_CATALOG = [
     "subcat": "complementos",
     "breed_size": "todas",
     "badge": "Cocción Rápida",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_660596-MLA109514095993_032026-O.webp",
+    "image_url": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -6782,21 +6782,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Tradicional 15 kg",
-        "weight_kg": 15,
-        "cost_price": 12500,
-        "margin_percent": 25,
-        "sale_price": 15625,
-        "list_price": 15625,
+        "weight_kg": 15.0,
+        "cost_price": 12500.0,
+        "margin_percent": 25.0,
+        "sale_price": 15625.0,
+        "list_price": 15625.0,
         "stock_qty": 50,
         "sku": "GC-ARR-TRAD-15"
       },
       {
         "presentation_name": "Premium 15 kg",
-        "weight_kg": 15,
-        "cost_price": 13400,
-        "margin_percent": 25,
-        "sale_price": 16750,
-        "list_price": 16750,
+        "weight_kg": 15.0,
+        "cost_price": 13400.0,
+        "margin_percent": 25.0,
+        "sale_price": 16750.0,
+        "list_price": 16750.0,
         "stock_qty": 50,
         "sku": "GC-ARR-PREM-15"
       }
@@ -6806,16 +6806,16 @@ const LOCAL_CATALOG = [
       "Premium 15 kg"
     ],
     "costs": [
-      12500,
-      13400
+      12500.0,
+      13400.0
     ],
     "prices": [
-      15625,
-      16750
+      15625.0,
+      16750.0
     ],
     "list_prices": [
-      15625,
-      16750
+      15625.0,
+      16750.0
     ],
     "brand": "Gran Campeón",
     "category": "perros",
@@ -6842,11 +6842,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 30 kg",
-        "weight_kg": 30,
-        "cost_price": 23500,
-        "margin_percent": 20,
-        "sale_price": 28200,
-        "list_price": 28200,
+        "weight_kg": 30.0,
+        "cost_price": 23500.0,
+        "margin_percent": 20.0,
+        "sale_price": 28200.0,
+        "list_price": 28200.0,
         "stock_qty": 50,
         "sku": "GC-ARR-PART-30"
       }
@@ -6855,13 +6855,13 @@ const LOCAL_CATALOG = [
       "Bolsa 30 kg"
     ],
     "costs": [
-      23500
+      23500.0
     ],
     "prices": [
-      28200
+      28200.0
     ],
     "list_prices": [
-      28200
+      28200.0
     ],
     "brand": "Gran Campeón",
     "category": "perros",
@@ -6878,7 +6878,7 @@ const LOCAL_CATALOG = [
     "subcat": "complementos",
     "breed_size": "todas",
     "badge": "Guarnición Canina",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_700056-MLA108673359882_032026-O.webp",
+    "image_url": "https://images.unsplash.com/photo-1551462147-ff29053bfc14?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -6888,11 +6888,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 10 kg",
-        "weight_kg": 10,
-        "cost_price": 7500,
-        "margin_percent": 25,
-        "sale_price": 9375,
-        "list_price": 9375,
+        "weight_kg": 10.0,
+        "cost_price": 7500.0,
+        "margin_percent": 25.0,
+        "sale_price": 9375.0,
+        "list_price": 9375.0,
         "stock_qty": 50,
         "sku": "GC-FID-10"
       }
@@ -6901,13 +6901,13 @@ const LOCAL_CATALOG = [
       "Bolsa 10 kg"
     ],
     "costs": [
-      7500
+      7500.0
     ],
     "prices": [
-      9375
+      9375.0
     ],
     "list_prices": [
-      9375
+      9375.0
     ],
     "brand": "Gran Campeón",
     "category": "perros",
@@ -6924,7 +6924,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "pequeña",
     "badge": "Mordida Chica",
-    "image_url": "https://tiendademascotasar.vtexassets.com/arquivos/ids/159294/PRORTEMIX-ADULTO-RAZA-PEQUENA.jpg?v=637964222202870000",
+    "image_url": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -6934,11 +6934,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 15 kg",
-        "weight_kg": 15,
-        "cost_price": 29100,
-        "margin_percent": 25,
-        "sale_price": 36375,
-        "list_price": 36375,
+        "weight_kg": 15.0,
+        "cost_price": 29100.0,
+        "margin_percent": 25.0,
+        "sale_price": 36375.0,
+        "list_price": 36375.0,
         "stock_qty": 50,
         "sku": "PROT-MINI-15"
       }
@@ -6947,13 +6947,13 @@ const LOCAL_CATALOG = [
       "Bolsa 15 kg"
     ],
     "costs": [
-      29100
+      29100.0
     ],
     "prices": [
-      36375
+      36375.0
     ],
     "list_prices": [
-      36375
+      36375.0
     ],
     "brand": "Protemix",
     "category": "perros",
@@ -6970,7 +6970,7 @@ const LOCAL_CATALOG = [
     "subcat": "cachorro",
     "breed_size": "todas",
     "badge": "Cachorros",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_695609-MLA80803076656_112024-O.webp",
+    "image_url": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -6980,11 +6980,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 10 kg",
-        "weight_kg": 10,
-        "cost_price": 22600,
-        "margin_percent": 25,
-        "sale_price": 28250,
-        "list_price": 28250,
+        "weight_kg": 10.0,
+        "cost_price": 22600.0,
+        "margin_percent": 25.0,
+        "sale_price": 28250.0,
+        "list_price": 28250.0,
         "stock_qty": 50,
         "sku": "PROT-CACH-10"
       }
@@ -6993,13 +6993,13 @@ const LOCAL_CATALOG = [
       "Bolsa 10 kg"
     ],
     "costs": [
-      22600
+      22600.0
     ],
     "prices": [
-      28250
+      28250.0
     ],
     "list_prices": [
-      28250
+      28250.0
     ],
     "brand": "Protemix",
     "category": "perros",
@@ -7016,7 +7016,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Gatos Adultos",
-    "image_url": "https://tiendademascotasar.vtexassets.com/arquivos/ids/156846/ALGA434-1.jpg?v=637733563805800000",
+    "image_url": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -7026,11 +7026,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 10 kg",
-        "weight_kg": 10,
-        "cost_price": 33100,
-        "margin_percent": 25,
-        "sale_price": 41375,
-        "list_price": 41375,
+        "weight_kg": 10.0,
+        "cost_price": 33100.0,
+        "margin_percent": 25.0,
+        "sale_price": 41375.0,
+        "list_price": 41375.0,
         "stock_qty": 50,
         "sku": "PROT-GAT-10"
       }
@@ -7039,13 +7039,13 @@ const LOCAL_CATALOG = [
       "Bolsa 10 kg"
     ],
     "costs": [
-      33100
+      33100.0
     ],
     "prices": [
-      41375
+      41375.0
     ],
     "list_prices": [
-      41375
+      41375.0
     ],
     "brand": "Protemix",
     "category": "gatos",
@@ -7062,7 +7062,7 @@ const LOCAL_CATALOG = [
     "subcat": "cachorro",
     "breed_size": "todas",
     "badge": "Cachorros",
-    "image_url": "https://tiendademascotasar.vtexassets.com/arquivos/ids/156844/ALPC059-1.jpg?v=637733563783900000",
+    "image_url": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -7072,11 +7072,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 10 kg",
-        "weight_kg": 10,
-        "cost_price": 17300,
-        "margin_percent": 25,
-        "sale_price": 21625,
-        "list_price": 21625,
+        "weight_kg": 10.0,
+        "cost_price": 17300.0,
+        "margin_percent": 25.0,
+        "sale_price": 21625.0,
+        "list_price": 21625.0,
         "stock_qty": 50,
         "sku": "GC-CACH-10"
       }
@@ -7085,13 +7085,13 @@ const LOCAL_CATALOG = [
       "Bolsa 10 kg"
     ],
     "costs": [
-      17300
+      17300.0
     ],
     "prices": [
-      21625
+      21625.0
     ],
     "list_prices": [
-      21625
+      21625.0
     ],
     "brand": "Gran Campeón",
     "category": "perros",
@@ -7108,7 +7108,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Económico Gatos",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs7_Rhd2oaWYdSVZDLymjbdHykN_kOgDCFLjUxyk_ruFhEFf_T8oTxpY2a&s=10",
+    "image_url": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -7118,11 +7118,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 10 kg",
-        "weight_kg": 10,
-        "cost_price": 23300,
-        "margin_percent": 25,
-        "sale_price": 29125,
-        "list_price": 29125,
+        "weight_kg": 10.0,
+        "cost_price": 23300.0,
+        "margin_percent": 25.0,
+        "sale_price": 29125.0,
+        "list_price": 29125.0,
         "stock_qty": 50,
         "sku": "GC-GAT-10"
       }
@@ -7131,13 +7131,13 @@ const LOCAL_CATALOG = [
       "Bolsa 10 kg"
     ],
     "costs": [
-      23300
+      23300.0
     ],
     "prices": [
-      29125
+      29125.0
     ],
     "list_prices": [
-      29125
+      29125.0
     ],
     "brand": "Gran Campeón",
     "category": "gatos",
@@ -7154,7 +7154,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Cooperativa ACA",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_962374-MLA82637779099_022025-O.webp",
+    "image_url": "https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -7164,21 +7164,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Carne 20 kg",
-        "weight_kg": 20,
-        "cost_price": 27600,
-        "margin_percent": 22,
-        "sale_price": 33672,
-        "list_price": 33672,
+        "weight_kg": 20.0,
+        "cost_price": 27600.0,
+        "margin_percent": 22.0,
+        "sale_price": 33672.0,
+        "list_price": 33672.0,
         "stock_qty": 50,
         "sku": "ACA-CARN-20"
       },
       {
         "presentation_name": "Pollo 20 kg",
-        "weight_kg": 20,
-        "cost_price": 27600,
-        "margin_percent": 22,
-        "sale_price": 33672,
-        "list_price": 33672,
+        "weight_kg": 20.0,
+        "cost_price": 27600.0,
+        "margin_percent": 22.0,
+        "sale_price": 33672.0,
+        "list_price": 33672.0,
         "stock_qty": 50,
         "sku": "ACA-POLL-20"
       }
@@ -7188,16 +7188,16 @@ const LOCAL_CATALOG = [
       "Pollo 20 kg"
     ],
     "costs": [
-      27600,
-      27600
+      27600.0,
+      27600.0
     ],
     "prices": [
-      33672,
-      33672
+      33672.0,
+      33672.0
     ],
     "list_prices": [
-      33672,
-      33672
+      33672.0,
+      33672.0
     ],
     "brand": "ACA Cooperación",
     "category": "perros",
@@ -7214,7 +7214,7 @@ const LOCAL_CATALOG = [
     "subcat": "cachorro",
     "breed_size": "todas",
     "badge": "Cachorros ACA",
-    "image_url": "https://distribuidoraerre.com.ar/wp-content/uploads/2021/12/ACJC10.jpg",
+    "image_url": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -7224,11 +7224,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 15 kg",
-        "weight_kg": 15,
-        "cost_price": 26400,
-        "margin_percent": 25,
-        "sale_price": 33000,
-        "list_price": 33000,
+        "weight_kg": 15.0,
+        "cost_price": 26400.0,
+        "margin_percent": 25.0,
+        "sale_price": 33000.0,
+        "list_price": 33000.0,
         "stock_qty": 50,
         "sku": "ACA-CACH-15"
       }
@@ -7237,13 +7237,13 @@ const LOCAL_CATALOG = [
       "Bolsa 15 kg"
     ],
     "costs": [
-      26400
+      26400.0
     ],
     "prices": [
-      33000
+      33000.0
     ],
     "list_prices": [
-      33000
+      33000.0
     ],
     "brand": "ACA Cooperación",
     "category": "perros",
@@ -7260,7 +7260,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Gatos ACA",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_900670-MLA82380761852_022025-O.webp",
+    "image_url": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -7270,11 +7270,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 10 kg",
-        "weight_kg": 10,
-        "cost_price": 21100,
-        "margin_percent": 25,
-        "sale_price": 26375,
-        "list_price": 26375,
+        "weight_kg": 10.0,
+        "cost_price": 21100.0,
+        "margin_percent": 25.0,
+        "sale_price": 26375.0,
+        "list_price": 26375.0,
         "stock_qty": 50,
         "sku": "ACA-GAT-10"
       }
@@ -7283,13 +7283,13 @@ const LOCAL_CATALOG = [
       "Bolsa 10 kg"
     ],
     "costs": [
-      21100
+      21100.0
     ],
     "prices": [
-      26375
+      26375.0
     ],
     "list_prices": [
-      26375
+      26375.0
     ],
     "brand": "ACA Cooperación",
     "category": "gatos",
@@ -7306,7 +7306,7 @@ const LOCAL_CATALOG = [
     "subcat": "cachorro",
     "breed_size": "todas",
     "badge": "Super Premium",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpN0WTjHGr9-7zzRE7V_hI55qCLCl0R7L32Mo6zDxxS9ShFawyzoPxEs17&s=10",
+    "image_url": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -7316,11 +7316,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 15 kg",
-        "weight_kg": 15,
-        "cost_price": 83200,
-        "margin_percent": 20,
-        "sale_price": 99840,
-        "list_price": 99840,
+        "weight_kg": 15.0,
+        "cost_price": 83200.0,
+        "margin_percent": 20.0,
+        "sale_price": 99840.0,
+        "list_price": 99840.0,
         "stock_qty": 50,
         "sku": "PERF-CACH-15"
       }
@@ -7329,13 +7329,13 @@ const LOCAL_CATALOG = [
       "Bolsa 15 kg"
     ],
     "costs": [
-      83200
+      83200.0
     ],
     "prices": [
-      99840
+      99840.0
     ],
     "list_prices": [
-      99840
+      99840.0
     ],
     "brand": "Performance",
     "category": "perros",
@@ -7352,7 +7352,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Control de Peso",
-    "image_url": "https://acdn-us.mitiendanube.com/stores/884/444/products/performance-perro-light1-6f43b23b160439bcc815500761697330-640-0.webp",
+    "image_url": "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -7362,11 +7362,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 15 kg",
-        "weight_kg": 15,
-        "cost_price": 77000,
-        "margin_percent": 20,
-        "sale_price": 92400,
-        "list_price": 92400,
+        "weight_kg": 15.0,
+        "cost_price": 77000.0,
+        "margin_percent": 20.0,
+        "sale_price": 92400.0,
+        "list_price": 92400.0,
         "stock_qty": 50,
         "sku": "PERF-LIGHT-15"
       }
@@ -7375,13 +7375,13 @@ const LOCAL_CATALOG = [
       "Bolsa 15 kg"
     ],
     "costs": [
-      77000
+      77000.0
     ],
     "prices": [
-      92400
+      92400.0
     ],
     "list_prices": [
-      92400
+      92400.0
     ],
     "brand": "Performance",
     "category": "perros",
@@ -7398,7 +7398,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Super Premium",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRghEbdSeRl_NY6bebCf2WYI9m7RxrkECYhwGJITUSCaM1SgZN3rgafT3A&s=10",
+    "image_url": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -7409,10 +7409,10 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 66000,
-        "margin_percent": 22,
-        "sale_price": 80520,
-        "list_price": 80520,
+        "cost_price": 66000.0,
+        "margin_percent": 22.0,
+        "sale_price": 80520.0,
+        "list_price": 80520.0,
         "stock_qty": 50,
         "sku": "PERF-CAT-7.5"
       }
@@ -7421,13 +7421,13 @@ const LOCAL_CATALOG = [
       "Bolsa 7.5 kg"
     ],
     "costs": [
-      66000
+      66000.0
     ],
     "prices": [
-      80520
+      80520.0
     ],
     "list_prices": [
-      80520
+      80520.0
     ],
     "brand": "Performance",
     "category": "gatos",
@@ -7444,7 +7444,7 @@ const LOCAL_CATALOG = [
     "subcat": "gatito",
     "breed_size": "todas",
     "badge": "Gatitos",
-    "image_url": "https://puppis.vtexassets.com/arquivos/ids/208150/7790187003910_00.jpg?v=639179259033570000",
+    "image_url": "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -7455,10 +7455,10 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 70300,
-        "margin_percent": 22,
-        "sale_price": 85766,
-        "list_price": 85766,
+        "cost_price": 70300.0,
+        "margin_percent": 22.0,
+        "sale_price": 85766.0,
+        "list_price": 85766.0,
         "stock_qty": 50,
         "sku": "PERF-KIT-7.5"
       }
@@ -7467,13 +7467,13 @@ const LOCAL_CATALOG = [
       "Bolsa 7.5 kg"
     ],
     "costs": [
-      70300
+      70300.0
     ],
     "prices": [
-      85766
+      85766.0
     ],
     "list_prices": [
-      85766
+      85766.0
     ],
     "brand": "Performance",
     "category": "gatos",
@@ -7490,7 +7490,7 @@ const LOCAL_CATALOG = [
     "subcat": "higiene",
     "breed_size": "todas",
     "badge": "Pack x 10 Unidades",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFw5yjPbg0SlFWh8WeADq8yqld9Z3NU9X6UMvgjR-KOIASRRAKoge1pAo&s=10",
+    "image_url": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -7500,11 +7500,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Fardo 10 x 1.8 kg [18 kg]",
-        "weight_kg": 18,
-        "cost_price": 13400,
-        "margin_percent": 25,
-        "sale_price": 16750,
-        "list_price": 16750,
+        "weight_kg": 18.0,
+        "cost_price": 13400.0,
+        "margin_percent": 25.0,
+        "sale_price": 16750.0,
+        "list_price": 16750.0,
         "stock_qty": 50,
         "sku": "TB-CLAS-18"
       }
@@ -7513,13 +7513,13 @@ const LOCAL_CATALOG = [
       "Fardo 10 x 1.8 kg [18 kg]"
     ],
     "costs": [
-      13400
+      13400.0
     ],
     "prices": [
-      16750
+      16750.0
     ],
     "list_prices": [
-      16750
+      16750.0
     ],
     "brand": "The Best / Mi Niño",
     "category": "higiene",
@@ -7536,7 +7536,7 @@ const LOCAL_CATALOG = [
     "subcat": "higiene",
     "breed_size": "todas",
     "badge": "Aroma Floral",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTckbmQx0ogP-ApAtyDJyFDd2mAcoXqpxRN6W0tztSn6n9d2v7rOzUqeAzY&s=10",
+    "image_url": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -7546,21 +7546,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Fardo 10 x 1.8 kg [18 kg]",
-        "weight_kg": 18,
-        "cost_price": 15300,
-        "margin_percent": 25,
-        "sale_price": 19125,
-        "list_price": 19125,
+        "weight_kg": 18.0,
+        "cost_price": 15300.0,
+        "margin_percent": 25.0,
+        "sale_price": 19125.0,
+        "list_price": 19125.0,
         "stock_qty": 50,
         "sku": "TB-PERF-18"
       },
       {
         "presentation_name": "Fardo 6 x 3.6 kg [21.6 kg]",
         "weight_kg": 21.6,
-        "cost_price": 17100,
-        "margin_percent": 25,
-        "sale_price": 21375,
-        "list_price": 21375,
+        "cost_price": 17100.0,
+        "margin_percent": 25.0,
+        "sale_price": 21375.0,
+        "list_price": 21375.0,
         "stock_qty": 50,
         "sku": "TB-PERF-21.6"
       }
@@ -7570,16 +7570,16 @@ const LOCAL_CATALOG = [
       "Fardo 6 x 3.6 kg [21.6 kg]"
     ],
     "costs": [
-      15300,
-      17100
+      15300.0,
+      17100.0
     ],
     "prices": [
-      19125,
-      21375
+      19125.0,
+      21375.0
     ],
     "list_prices": [
-      19125,
-      21375
+      19125.0,
+      21375.0
     ],
     "brand": "The Best / Mi Niño",
     "category": "higiene",
@@ -7596,7 +7596,7 @@ const LOCAL_CATALOG = [
     "subcat": "higiene",
     "breed_size": "todas",
     "badge": "Pack 20 kg",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_985206-MLA99436183118_112025-O.webp",
+    "image_url": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -7606,11 +7606,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Pack 10 x 2 kg [20 kg]",
-        "weight_kg": 20,
-        "cost_price": 12300,
-        "margin_percent": 25,
-        "sale_price": 15375,
-        "list_price": 15375,
+        "weight_kg": 20.0,
+        "cost_price": 12300.0,
+        "margin_percent": 25.0,
+        "sale_price": 15375.0,
+        "list_price": 15375.0,
         "stock_qty": 50,
         "sku": "MN-PIED-20"
       }
@@ -7619,13 +7619,13 @@ const LOCAL_CATALOG = [
       "Pack 10 x 2 kg [20 kg]"
     ],
     "costs": [
-      12300
+      12300.0
     ],
     "prices": [
-      15375
+      15375.0
     ],
     "list_prices": [
-      15375
+      15375.0
     ],
     "brand": "The Best / Mi Niño",
     "category": "higiene",
@@ -7642,7 +7642,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Económico Felino",
-    "image_url": "https://petfoodsaladillo.com.ar/wp-content/uploads/2026/07/chacal-2-scaled.png",
+    "image_url": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -7652,21 +7652,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 8 kg",
-        "weight_kg": 8,
-        "cost_price": 15200,
-        "margin_percent": 25,
-        "sale_price": 19000,
-        "list_price": 19000,
+        "weight_kg": 8.0,
+        "cost_price": 15200.0,
+        "margin_percent": 25.0,
+        "sale_price": 19000.0,
+        "list_price": 19000.0,
         "stock_qty": 50,
         "sku": "CHAC-GAT-8"
       },
       {
         "presentation_name": "Bolsa 15 kg",
-        "weight_kg": 15,
-        "cost_price": 27100,
-        "margin_percent": 22,
-        "sale_price": 33062,
-        "list_price": 33062,
+        "weight_kg": 15.0,
+        "cost_price": 27100.0,
+        "margin_percent": 22.0,
+        "sale_price": 33062.0,
+        "list_price": 33062.0,
         "stock_qty": 50,
         "sku": "CHAC-GAT-15"
       }
@@ -7676,16 +7676,16 @@ const LOCAL_CATALOG = [
       "Bolsa 15 kg"
     ],
     "costs": [
-      15200,
-      27100
+      15200.0,
+      27100.0
     ],
     "prices": [
-      19000,
-      33062
+      19000.0,
+      33062.0
     ],
     "list_prices": [
-      19000,
-      33062
+      19000.0,
+      33062.0
     ],
     "brand": "Chacal / Balancín",
     "category": "gatos",
@@ -7702,7 +7702,7 @@ const LOCAL_CATALOG = [
     "subcat": "adulto",
     "breed_size": "todas",
     "badge": "Súper Económico",
-    "image_url": "https://petfoodsaladillo.com.ar/wp-content/uploads/2026/07/balancin-1-scaled.png",
+    "image_url": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -7712,11 +7712,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 15 kg",
-        "weight_kg": 15,
-        "cost_price": 14300,
-        "margin_percent": 25,
-        "sale_price": 17875,
-        "list_price": 17875,
+        "weight_kg": 15.0,
+        "cost_price": 14300.0,
+        "margin_percent": 25.0,
+        "sale_price": 17875.0,
+        "list_price": 17875.0,
         "stock_qty": 50,
         "sku": "BAL-PERR-15"
       }
@@ -7725,13 +7725,13 @@ const LOCAL_CATALOG = [
       "Bolsa 15 kg"
     ],
     "costs": [
-      14300
+      14300.0
     ],
     "prices": [
-      17875
+      17875.0
     ],
     "list_prices": [
-      17875
+      17875.0
     ],
     "brand": "Chacal / Balancín",
     "category": "perros",
@@ -7748,7 +7748,7 @@ const LOCAL_CATALOG = [
     "subcat": "veterinaria",
     "breed_size": "todas",
     "badge": "Dieta Veterinaria",
-    "image_url": "https://http2.mlstatic.com/D_NQ_NP_704958-MLA95369343665_102025-O.webp",
+    "image_url": "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -7758,21 +7758,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 2 kg",
-        "weight_kg": 2,
-        "cost_price": 33600,
-        "margin_percent": 25,
-        "sale_price": 42000,
-        "list_price": 42000,
+        "weight_kg": 2.0,
+        "cost_price": 33600.0,
+        "margin_percent": 25.0,
+        "sale_price": 42000.0,
+        "list_price": 42000.0,
         "stock_qty": 50,
         "sku": "RC-VET-HIP-2"
       },
       {
         "presentation_name": "Bolsa 10 kg",
-        "weight_kg": 10,
-        "cost_price": 127650,
-        "margin_percent": 20,
-        "sale_price": 153180,
-        "list_price": 153180,
+        "weight_kg": 10.0,
+        "cost_price": 127650.0,
+        "margin_percent": 20.0,
+        "sale_price": 153180.0,
+        "list_price": 153180.0,
         "stock_qty": 50,
         "sku": "RC-VET-HIP-10"
       }
@@ -7782,16 +7782,16 @@ const LOCAL_CATALOG = [
       "Bolsa 10 kg"
     ],
     "costs": [
-      33600,
-      127650
+      33600.0,
+      127650.0
     ],
     "prices": [
-      42000,
-      153180
+      42000.0,
+      153180.0
     ],
     "list_prices": [
-      42000,
-      153180
+      42000.0,
+      153180.0
     ],
     "brand": "Royal Canin",
     "category": "farmacia",
@@ -7808,7 +7808,7 @@ const LOCAL_CATALOG = [
     "subcat": "veterinaria",
     "breed_size": "todas",
     "badge": "Salud Digestiva",
-    "image_url": "https://cdn.royalcanin-weshare-online.io/uD_iX4YBRYZmsWpcifJB/v9/ar-l-gastrointestinal-canine-seco-vhn-01",
+    "image_url": "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -7818,21 +7818,21 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 2 kg",
-        "weight_kg": 2,
-        "cost_price": 27500,
-        "margin_percent": 25,
-        "sale_price": 34375,
-        "list_price": 34375,
+        "weight_kg": 2.0,
+        "cost_price": 27500.0,
+        "margin_percent": 25.0,
+        "sale_price": 34375.0,
+        "list_price": 34375.0,
         "stock_qty": 50,
         "sku": "RC-VET-GAST-2"
       },
       {
         "presentation_name": "Bolsa 10 kg",
-        "weight_kg": 10,
-        "cost_price": 107100,
-        "margin_percent": 20,
-        "sale_price": 128520,
-        "list_price": 128520,
+        "weight_kg": 10.0,
+        "cost_price": 107100.0,
+        "margin_percent": 20.0,
+        "sale_price": 128520.0,
+        "list_price": 128520.0,
         "stock_qty": 50,
         "sku": "RC-VET-GAST-10"
       }
@@ -7842,16 +7842,16 @@ const LOCAL_CATALOG = [
       "Bolsa 10 kg"
     ],
     "costs": [
-      27500,
-      107100
+      27500.0,
+      107100.0
     ],
     "prices": [
-      34375,
-      128520
+      34375.0,
+      128520.0
     ],
     "list_prices": [
-      34375,
-      128520
+      34375.0,
+      128520.0
     ],
     "brand": "Royal Canin",
     "category": "farmacia",
@@ -7868,7 +7868,7 @@ const LOCAL_CATALOG = [
     "subcat": "veterinaria",
     "breed_size": "todas",
     "badge": "Soporte Renal",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGD2SI075EKkzYGdgcncmVRLCrV-uZwVBr3H04M7mB1X33NtOIykpHXtQ&s=10",
+    "image_url": "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -7879,20 +7879,20 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 1.5 kg",
         "weight_kg": 1.5,
-        "cost_price": 20500,
-        "margin_percent": 25,
-        "sale_price": 25625,
-        "list_price": 25625,
+        "cost_price": 20500.0,
+        "margin_percent": 25.0,
+        "sale_price": 25625.0,
+        "list_price": 25625.0,
         "stock_qty": 50,
         "sku": "RC-VET-REN-1.5"
       },
       {
         "presentation_name": "Bolsa 10 kg",
-        "weight_kg": 10,
-        "cost_price": 110000,
-        "margin_percent": 20,
-        "sale_price": 132000,
-        "list_price": 132000,
+        "weight_kg": 10.0,
+        "cost_price": 110000.0,
+        "margin_percent": 20.0,
+        "sale_price": 132000.0,
+        "list_price": 132000.0,
         "stock_qty": 50,
         "sku": "RC-VET-REN-10"
       }
@@ -7902,16 +7902,16 @@ const LOCAL_CATALOG = [
       "Bolsa 10 kg"
     ],
     "costs": [
-      20500,
-      110000
+      20500.0,
+      110000.0
     ],
     "prices": [
-      25625,
-      132000
+      25625.0,
+      132000.0
     ],
     "list_prices": [
-      25625,
-      132000
+      25625.0,
+      132000.0
     ],
     "brand": "Royal Canin",
     "category": "farmacia",
@@ -7928,7 +7928,7 @@ const LOCAL_CATALOG = [
     "subcat": "veterinaria",
     "breed_size": "todas",
     "badge": "Salud Urinaria",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiSh0TwI9oiIjcugUKBOoJNpPqvCeLICh4pko8ozpmJIKRdFGnXNTKCzJq&s=10",
+    "image_url": "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -7939,20 +7939,20 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 1.5 kg",
         "weight_kg": 1.5,
-        "cost_price": 21700,
-        "margin_percent": 25,
-        "sale_price": 27125,
-        "list_price": 27125,
+        "cost_price": 21700.0,
+        "margin_percent": 25.0,
+        "sale_price": 27125.0,
+        "list_price": 27125.0,
         "stock_qty": 50,
         "sku": "RC-VET-URI-1.5"
       },
       {
         "presentation_name": "Bolsa 10 kg",
-        "weight_kg": 10,
-        "cost_price": 119000,
-        "margin_percent": 20,
-        "sale_price": 142800,
-        "list_price": 142800,
+        "weight_kg": 10.0,
+        "cost_price": 119000.0,
+        "margin_percent": 20.0,
+        "sale_price": 142800.0,
+        "list_price": 142800.0,
         "stock_qty": 50,
         "sku": "RC-VET-URI-10"
       }
@@ -7962,16 +7962,16 @@ const LOCAL_CATALOG = [
       "Bolsa 10 kg"
     ],
     "costs": [
-      21700,
-      119000
+      21700.0,
+      119000.0
     ],
     "prices": [
-      27125,
-      142800
+      27125.0,
+      142800.0
     ],
     "list_prices": [
-      27125,
-      142800
+      27125.0,
+      142800.0
     ],
     "brand": "Royal Canin",
     "category": "farmacia",
@@ -7988,7 +7988,7 @@ const LOCAL_CATALOG = [
     "subcat": "veterinaria",
     "breed_size": "todas",
     "badge": "Salud Urinaria Felina",
-    "image_url": "https://acdn-us.mitiendanube.com/stores/860/952/products/rc-urinary-so-gato-f58d04d1986260bd0117253089484110-640-0.webp",
+    "image_url": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -7999,20 +7999,20 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 1.5 kg",
         "weight_kg": 1.5,
-        "cost_price": 31570,
-        "margin_percent": 25,
-        "sale_price": 39462,
-        "list_price": 39462,
+        "cost_price": 31570.0,
+        "margin_percent": 25.0,
+        "sale_price": 39462.0,
+        "list_price": 39462.0,
         "stock_qty": 50,
         "sku": "RC-VET-CAT-URI-1.5"
       },
       {
         "presentation_name": "Bolsa 7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 116520,
-        "margin_percent": 20,
-        "sale_price": 139824,
-        "list_price": 139824,
+        "cost_price": 116520.0,
+        "margin_percent": 20.0,
+        "sale_price": 139824.0,
+        "list_price": 139824.0,
         "stock_qty": 50,
         "sku": "RC-VET-CAT-URI-7.5"
       }
@@ -8022,16 +8022,16 @@ const LOCAL_CATALOG = [
       "Bolsa 7.5 kg"
     ],
     "costs": [
-      31570,
-      116520
+      31570.0,
+      116520.0
     ],
     "prices": [
-      39462,
-      139824
+      39462.0,
+      139824.0
     ],
     "list_prices": [
-      39462,
-      139824
+      39462.0,
+      139824.0
     ],
     "brand": "Royal Canin",
     "category": "farmacia",
@@ -8048,7 +8048,7 @@ const LOCAL_CATALOG = [
     "subcat": "veterinaria",
     "breed_size": "todas",
     "badge": "Salud Digestiva Felina",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5GECyq_fyCkVs86cn1Piqkt0VbcmvmKLIYQkgu_-wo8cxBNtxycJlw4f_&s=10",
+    "image_url": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -8058,11 +8058,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 2 kg",
-        "weight_kg": 2,
-        "cost_price": 39270,
-        "margin_percent": 25,
-        "sale_price": 49088,
-        "list_price": 49088,
+        "weight_kg": 2.0,
+        "cost_price": 39270.0,
+        "margin_percent": 25.0,
+        "sale_price": 49088.0,
+        "list_price": 49088.0,
         "stock_qty": 50,
         "sku": "RC-VET-CAT-GAST-2"
       }
@@ -8071,13 +8071,13 @@ const LOCAL_CATALOG = [
       "Bolsa 2 kg"
     ],
     "costs": [
-      39270
+      39270.0
     ],
     "prices": [
-      49088
+      49088.0
     ],
     "list_prices": [
-      49088
+      49088.0
     ],
     "brand": "Royal Canin",
     "category": "farmacia",
@@ -8094,7 +8094,7 @@ const LOCAL_CATALOG = [
     "subcat": "veterinaria",
     "breed_size": "todas",
     "badge": "Soporte Renal Felino",
-    "image_url": "https://cdn.royalcanin-weshare-online.io/buegf4YBaPOZra8qB_kS/v13/ar-l-renal-feline-seco-vhn-01",
+    "image_url": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -8104,11 +8104,11 @@ const LOCAL_CATALOG = [
     "variants": [
       {
         "presentation_name": "Bolsa 2 kg",
-        "weight_kg": 2,
-        "cost_price": 35950,
-        "margin_percent": 25,
-        "sale_price": 44938,
-        "list_price": 44938,
+        "weight_kg": 2.0,
+        "cost_price": 35950.0,
+        "margin_percent": 25.0,
+        "sale_price": 44938.0,
+        "list_price": 44938.0,
         "stock_qty": 50,
         "sku": "RC-VET-CAT-REN-2"
       }
@@ -8117,13 +8117,13 @@ const LOCAL_CATALOG = [
       "Bolsa 2 kg"
     ],
     "costs": [
-      35950
+      35950.0
     ],
     "prices": [
-      44938
+      44938.0
     ],
     "list_prices": [
-      44938
+      44938.0
     ],
     "brand": "Royal Canin",
     "category": "farmacia",
@@ -8140,7 +8140,7 @@ const LOCAL_CATALOG = [
     "subcat": "veterinaria",
     "breed_size": "todas",
     "badge": "Cuidados Intensivos",
-    "image_url": "https://catycanar.vtexassets.com/arquivos/ids/158916/15983.jpg?v=637732984907600000",
+    "image_url": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600&auto=format&fit=crop&q=80",
     "is_featured": 0,
     "is_promo": 0,
     "promo_tag": null,
@@ -8151,10 +8151,10 @@ const LOCAL_CATALOG = [
       {
         "presentation_name": "Lata 195 gr",
         "weight_kg": 0.195,
-        "cost_price": 7300,
-        "margin_percent": 28,
-        "sale_price": 9344,
-        "list_price": 9344,
+        "cost_price": 7300.0,
+        "margin_percent": 28.0,
+        "sale_price": 9344.0,
+        "list_price": 9344.0,
         "stock_qty": 50,
         "sku": "RC-REC-LATA-195"
       }
@@ -8163,13 +8163,13 @@ const LOCAL_CATALOG = [
       "Lata 195 gr"
     ],
     "costs": [
-      7300
+      7300.0
     ],
     "prices": [
-      9344
+      9344.0
     ],
     "list_prices": [
-      9344
+      9344.0
     ],
     "brand": "Royal Canin",
     "category": "farmacia",
@@ -8178,3 +8178,5 @@ const LOCAL_CATALOG = [
     "promo": false
   }
 ];
+
+if (typeof window !== 'undefined') { window.LOCAL_CATALOG = LOCAL_CATALOG; }
