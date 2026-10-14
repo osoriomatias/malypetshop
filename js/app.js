@@ -1244,9 +1244,61 @@ function initProductCreatorForm() {
   }
 }
 
-function addPresentationRow(name = '', weight = 15, cost = '') {
+function recalculatePresentationRow(inputEl) {
+  const tr = inputEl.closest('tr');
+  if (!tr) return;
+
+  const weightInput = tr.querySelector('.pres-weight-input');
+  const costInput = tr.querySelector('.pres-cost-input');
+  const marginInput = tr.querySelector('.pres-margin-input');
+  const saleInput = tr.querySelector('.pres-sale-input');
+  const profitBadge = tr.querySelector('.badge-calc-profit');
+
+  const weight = parseFloat(weightInput.value) || 1.0;
+  const cost = parseFloat(costInput.value) || 0;
+
+  let marginPct = parseFloat(marginInput.value);
+  if (isNaN(marginPct)) {
+    marginPct = getEffectiveMarginPercent(weight);
+    marginInput.value = marginPct;
+  }
+
+  const salePrice = Math.round(cost * (1.0 + marginPct / 100.0));
+  const profit = salePrice - cost;
+
+  if (saleInput) saleInput.value = salePrice > 0 ? salePrice : '';
+  if (profitBadge) profitBadge.textContent = `+$${profit.toLocaleString('es-AR')} (${marginPct}%)`;
+}
+
+function recalculatePresentationRowFromSalePrice(inputEl) {
+  const tr = inputEl.closest('tr');
+  if (!tr) return;
+
+  const costInput = tr.querySelector('.pres-cost-input');
+  const marginInput = tr.querySelector('.pres-margin-input');
+  const saleInput = tr.querySelector('.pres-sale-input');
+  const profitBadge = tr.querySelector('.badge-calc-profit');
+
+  const cost = parseFloat(costInput.value) || 0;
+  const salePrice = parseFloat(saleInput.value) || 0;
+
+  if (cost > 0 && salePrice >= 0) {
+    const profit = salePrice - cost;
+    const marginPct = Math.round(((salePrice - cost) / cost) * 1000) / 10;
+    if (marginInput) marginInput.value = marginPct;
+    if (profitBadge) profitBadge.textContent = `+$${profit.toLocaleString('es-AR')} (${marginPct}%)`;
+  }
+}
+
+function addPresentationRow(name = '', weight = 15, cost = '', margin = '', sale = '') {
   const tbody = document.getElementById('createProdPresRows');
   if (!tbody) return;
+
+  const wNum = parseFloat(weight) || 1.0;
+  const cNum = parseFloat(cost) || 0;
+  const mNum = (margin !== '' && !isNaN(parseFloat(margin))) ? parseFloat(margin) : getEffectiveMarginPercent(wNum);
+  const sNum = (sale !== '' && !isNaN(parseFloat(sale)) && parseFloat(sale) > 0) ? Math.round(parseFloat(sale)) : (cNum > 0 ? Math.round(cNum * (1.0 + mNum / 100.0)) : '');
+  const profit = (sNum && cNum) ? (sNum - cNum) : 0;
 
   const rowId = `pres_row_${Date.now()}_${Math.floor(Math.random()*1000)}`;
   const tr = document.createElement('tr');
@@ -1254,17 +1306,25 @@ function addPresentationRow(name = '', weight = 15, cost = '') {
 
   tr.innerHTML = `
     <td>
-      <input type="text" class="pres-name-input" value="${name}" placeholder="Ej: Bolsa 15 kg / 250 cc" required>
+      <input type="text" class="pres-name-input" value="${name}" placeholder="Ej: Bolsa 15 kg" required>
     </td>
     <td>
-      <input type="number" step="0.01" class="pres-weight-input" value="${weight}" placeholder="15" oninput="recalculatePresentationRow(this)">
+      <input type="number" step="0.1" class="pres-weight-input" value="${wNum}" placeholder="15" oninput="recalculatePresentationRow(this)">
     </td>
     <td>
       <input type="number" step="10" class="pres-cost-input" value="${cost}" placeholder="Ej: 35000" required oninput="recalculatePresentationRow(this)">
     </td>
     <td>
-      <span class="badge-calc-sale">$0</span>
-      <span class="badge-calc-profit">Ganancia: $0</span>
+      <div style="display: flex; align-items: center; gap: 3px;">
+        <input type="number" step="0.5" min="0" max="150" class="pres-margin-input" value="${mNum}" placeholder="20" style="text-align: center; font-weight: 700; color: #0284c7;" oninput="recalculatePresentationRow(this)">
+        <span style="font-weight: 700; color: #64748b; font-size: 0.78rem;">%</span>
+      </div>
+    </td>
+    <td>
+      <div style="display: flex; flex-direction: column; gap: 2px;">
+        <input type="number" step="10" class="pres-sale-input" value="${sNum}" placeholder="Ej: 42000" style="font-weight: 800; color: #15803d; border-color: #86efac;" oninput="recalculatePresentationRowFromSalePrice(this)">
+        <span class="badge-calc-profit" style="font-size: 0.72rem; color: #15803d; font-weight: 600;">+$${profit.toLocaleString('es-AR')} (${mNum}%)</span>
+      </div>
     </td>
     <td style="text-align: center;">
       <button type="button" onclick="removePresentationRow('${rowId}')" style="background: none; border: none; color: #dc2626; cursor: pointer; font-size: 1.1rem;" title="Eliminar presentación">🗑️</button>
@@ -1272,10 +1332,6 @@ function addPresentationRow(name = '', weight = 15, cost = '') {
   `;
 
   tbody.appendChild(tr);
-  if (cost) {
-    const costInput = tr.querySelector('.pres-cost-input');
-    recalculatePresentationRow(costInput);
-  }
 }
 
 function removePresentationRow(rowId) {
@@ -1371,10 +1427,13 @@ async function handleCreateProductSubmit() {
     const pName = tr.querySelector('.pres-name-input').value.trim();
     const weight = parseFloat(tr.querySelector('.pres-weight-input').value) || 1.0;
     const cost = parseFloat(tr.querySelector('.pres-cost-input').value) || 0;
+    const marginInput = tr.querySelector('.pres-margin-input');
+    const marginPct = marginInput ? (parseFloat(marginInput.value) || getEffectiveMarginPercent(weight)) : getEffectiveMarginPercent(weight);
+    const saleInput = tr.querySelector('.pres-sale-input');
+    const customSale = saleInput ? parseFloat(saleInput.value) : 0;
+    const sale = customSale > 0 ? customSale : Math.round(cost * (1.0 + marginPct / 100.0));
+    const list = is_promo ? Math.round(sale * 1.15) : sale;
     if (pName && cost > 0) {
-      const marginPct = getEffectiveMarginPercent(weight);
-      const sale = Math.round(cost * (1.0 + marginPct / 100.0));
-      const list = is_promo ? Math.round(sale * 1.15) : sale;
       variants.push({
         presentation_name: pName,
         weight_kg: weight,
@@ -1593,7 +1652,9 @@ function openEditProductModal(productId) {
   presList.forEach((presName, idx) => {
     const cost = costsList[idx] || (variants[idx] && variants[idx].cost_price) || 1000;
     const weight = (variants[idx] && variants[idx].weight_kg) || 15;
-    addEditPresentationRow(presName, weight, cost);
+    const margin = (variants[idx] && variants[idx].margin_percent !== undefined) ? variants[idx].margin_percent : getEffectiveMarginPercent(weight);
+    const sale = (p.prices && p.prices[idx]) || (variants[idx] && variants[idx].sale_price) || Math.round(cost * (1.0 + margin / 100.0));
+    addEditPresentationRow(presName, weight, cost, margin, sale);
   });
 
   document.getElementById('editProdStatusMsg').textContent = '';
@@ -1638,9 +1699,61 @@ function handleEditProductFileUpload(event) {
   reader.readAsDataURL(file);
 }
 
-function addEditPresentationRow(name = '', weight = 15, cost = '') {
+function recalculateEditPresentationRow(inputEl) {
+  const tr = inputEl.closest('tr');
+  if (!tr) return;
+
+  const weightInput = tr.querySelector('.pres-weight-input');
+  const costInput = tr.querySelector('.pres-cost-input');
+  const marginInput = tr.querySelector('.pres-margin-input');
+  const saleInput = tr.querySelector('.pres-sale-input');
+  const profitBadge = tr.querySelector('.badge-calc-profit');
+
+  const weight = parseFloat(weightInput.value) || 1.0;
+  const cost = parseFloat(costInput.value) || 0;
+
+  let marginPct = parseFloat(marginInput.value);
+  if (isNaN(marginPct)) {
+    marginPct = getEffectiveMarginPercent(weight);
+    marginInput.value = marginPct;
+  }
+
+  const salePrice = Math.round(cost * (1.0 + marginPct / 100.0));
+  const profit = salePrice - cost;
+
+  if (saleInput) saleInput.value = salePrice > 0 ? salePrice : '';
+  if (profitBadge) profitBadge.textContent = `+$${profit.toLocaleString('es-AR')} (${marginPct}%)`;
+}
+
+function recalculateEditPresentationRowFromSalePrice(inputEl) {
+  const tr = inputEl.closest('tr');
+  if (!tr) return;
+
+  const costInput = tr.querySelector('.pres-cost-input');
+  const marginInput = tr.querySelector('.pres-margin-input');
+  const saleInput = tr.querySelector('.pres-sale-input');
+  const profitBadge = tr.querySelector('.badge-calc-profit');
+
+  const cost = parseFloat(costInput.value) || 0;
+  const salePrice = parseFloat(saleInput.value) || 0;
+
+  if (cost > 0 && salePrice >= 0) {
+    const profit = salePrice - cost;
+    const marginPct = Math.round(((salePrice - cost) / cost) * 1000) / 10;
+    if (marginInput) marginInput.value = marginPct;
+    if (profitBadge) profitBadge.textContent = `+$${profit.toLocaleString('es-AR')} (${marginPct}%)`;
+  }
+}
+
+function addEditPresentationRow(name = '', weight = 15, cost = '', margin = '', sale = '') {
   const tbody = document.getElementById('editProdPresRows');
   if (!tbody) return;
+
+  const wNum = parseFloat(weight) || 1.0;
+  const cNum = parseFloat(cost) || 0;
+  const mNum = (margin !== '' && !isNaN(parseFloat(margin))) ? parseFloat(margin) : getEffectiveMarginPercent(wNum);
+  const sNum = (sale !== '' && !isNaN(parseFloat(sale)) && parseFloat(sale) > 0) ? Math.round(parseFloat(sale)) : (cNum > 0 ? Math.round(cNum * (1.0 + mNum / 100.0)) : '');
+  const profit = (sNum && cNum) ? (sNum - cNum) : 0;
 
   const rowId = `edit_pres_row_${Date.now()}_${Math.floor(Math.random()*1000)}`;
   const tr = document.createElement('tr');
@@ -1648,17 +1761,25 @@ function addEditPresentationRow(name = '', weight = 15, cost = '') {
 
   tr.innerHTML = `
     <td>
-      <input type="text" class="pres-name-input" value="${name}" placeholder="Ej: Bolsa 15 kg / 250 cc" required>
+      <input type="text" class="pres-name-input" value="${name}" placeholder="Ej: Bolsa 15 kg" required>
     </td>
     <td>
-      <input type="number" step="0.01" class="pres-weight-input" value="${weight}" placeholder="15" oninput="recalculateEditPresentationRow(this)">
+      <input type="number" step="0.1" class="pres-weight-input" value="${wNum}" placeholder="15" oninput="recalculateEditPresentationRow(this)">
     </td>
     <td>
       <input type="number" step="10" class="pres-cost-input" value="${cost}" placeholder="Ej: 35000" required oninput="recalculateEditPresentationRow(this)">
     </td>
     <td>
-      <span class="badge-calc-sale">$0</span>
-      <span class="badge-calc-profit">Ganancia: $0</span>
+      <div style="display: flex; align-items: center; gap: 3px;">
+        <input type="number" step="0.5" min="0" max="150" class="pres-margin-input" value="${mNum}" placeholder="20" style="text-align: center; font-weight: 700; color: #0284c7;" oninput="recalculateEditPresentationRow(this)">
+        <span style="font-weight: 700; color: #64748b; font-size: 0.78rem;">%</span>
+      </div>
+    </td>
+    <td>
+      <div style="display: flex; flex-direction: column; gap: 2px;">
+        <input type="number" step="10" class="pres-sale-input" value="${sNum}" placeholder="Ej: 42000" style="font-weight: 800; color: #15803d; border-color: #86efac;" oninput="recalculateEditPresentationRowFromSalePrice(this)">
+        <span class="badge-calc-profit" style="font-size: 0.72rem; color: #15803d; font-weight: 600;">+$${profit.toLocaleString('es-AR')} (${mNum}%)</span>
+      </div>
     </td>
     <td style="text-align: center;">
       <button type="button" onclick="removeEditPresentationRow('${rowId}')" style="background: none; border: none; color: #dc2626; cursor: pointer; font-size: 1.1rem;" title="Eliminar presentación">🗑️</button>
@@ -1666,10 +1787,6 @@ function addEditPresentationRow(name = '', weight = 15, cost = '') {
   `;
 
   tbody.appendChild(tr);
-  if (cost) {
-    const costInput = tr.querySelector('.pres-cost-input');
-    recalculateEditPresentationRow(costInput);
-  }
 }
 
 function removeEditPresentationRow(rowId) {
@@ -1682,25 +1799,7 @@ function removeEditPresentationRow(rowId) {
   if (row) row.remove();
 }
 
-function recalculateEditPresentationRow(inputEl) {
-  const tr = inputEl.closest('tr');
-  if (!tr) return;
 
-  const weightInput = tr.querySelector('.pres-weight-input');
-  const costInput = tr.querySelector('.pres-cost-input');
-  const saleBadge = tr.querySelector('.badge-calc-sale');
-  const profitBadge = tr.querySelector('.badge-calc-profit');
-
-  const weight = parseFloat(weightInput.value) || 1.0;
-  const cost = parseFloat(costInput.value) || 0;
-  const marginPct = getEffectiveMarginPercent(weight);
-
-  const salePrice = Math.round(cost * (1.0 + marginPct / 100.0));
-  const profit = salePrice - cost;
-
-  if (saleBadge) saleBadge.textContent = `$${salePrice.toLocaleString('es-AR')}`;
-  if (profitBadge) profitBadge.textContent = `Ganancia: +$${profit.toLocaleString('es-AR')} (${marginPct}%)`;
-}
 
 async function handleEditProductSubmit() {
   const productId = parseInt(document.getElementById('editProdId').value);
@@ -1728,10 +1827,13 @@ async function handleEditProductSubmit() {
     const pName = tr.querySelector('.pres-name-input').value.trim();
     const weight = parseFloat(tr.querySelector('.pres-weight-input').value) || 1.0;
     const cost = parseFloat(tr.querySelector('.pres-cost-input').value) || 0;
+    const marginInput = tr.querySelector('.pres-margin-input');
+    const marginPct = marginInput ? (parseFloat(marginInput.value) || getEffectiveMarginPercent(weight)) : getEffectiveMarginPercent(weight);
+    const saleInput = tr.querySelector('.pres-sale-input');
+    const customSale = saleInput ? parseFloat(saleInput.value) : 0;
+    const sale = customSale > 0 ? customSale : Math.round(cost * (1.0 + marginPct / 100.0));
+    const list = is_promo ? Math.round(sale * 1.15) : sale;
     if (pName && cost > 0) {
-      const marginPct = getEffectiveMarginPercent(weight);
-      const sale = Math.round(cost * (1.0 + marginPct / 100.0));
-      const list = is_promo ? Math.round(sale * 1.15) : sale;
       variants.push({
         presentation_name: pName,
         weight_kg: weight,
