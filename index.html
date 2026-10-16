@@ -26,7 +26,7 @@
   <link rel="icon" type="image/svg+xml" href="images/maly_mascot_avatar.svg">
   <link rel="alternate icon" href="images/maly_mascot_avatar.png">
 
-  <link rel="stylesheet" href="css/styles.css?v=7.2_prices">
+  <link rel="stylesheet" href="css/styles.css?v=8.0_mobile_search">
 </head>
 <body>
 
@@ -114,10 +114,12 @@
         })();
       </script>
 
-      <!-- Buscador en tiempo real -->
-      <div class="header-search">
+      <!-- Buscador en tiempo real inteligente estilo Google -->
+      <div class="header-search" id="headerSearchContainer">
         <span class="search-icon">🔍</span>
-        <input type="text" id="searchInput" placeholder="Buscá por marca (Royal Canin, Pro Plan, Dog Chow...), producto o tamaño..." autocomplete="off">
+        <input type="text" id="searchInput" placeholder="Buscá por marca (Royal Canin, Pro Plan, Sieger...), alimento o tamaño..." autocomplete="off" spellcheck="false">
+        <button type="button" class="search-clear-btn" id="searchClearBtn" style="display: none;" title="Limpiar búsqueda" aria-label="Limpiar búsqueda">✕</button>
+        <div class="search-suggestions-dropdown" id="searchSuggestionsDropdown" style="display: none;"></div>
       </div>
 
       <!-- Acciones de cabecera -->
@@ -554,9 +556,14 @@
                 Guarda todas tus fotos, nuevos productos y precios directamente en <code>public/js/catalog-data.js</code> para que Vercel se vea exactamente igual a tu PC.
               </p>
             </div>
-            <button type="button" onclick="exportCatalogForVercel()" style="background: #16a34a; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-size: 0.88rem; box-shadow: 0 2px 6px rgba(22, 163, 74, 0.3);">
-              <span>💾</span> Guardar para Vercel
-            </button>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <button type="button" onclick="exportCatalogForVercel()" style="background: #16a34a; color: white; border: none; padding: 10px 16px; border-radius: 8px; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; box-shadow: 0 2px 6px rgba(22, 163, 74, 0.3);">
+                <span>💾</span> Guardar para Vercel
+              </button>
+              <button type="button" onclick="exportPriceAuditCSV()" style="background: #0284c7; color: white; border: none; padding: 10px 16px; border-radius: 8px; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; box-shadow: 0 2px 6px rgba(2, 132, 199, 0.3);" title="Descargar listado para comparar con IA y el mercado">
+                <span>📊</span> Exportar Precios para IA (Excel/CSV)
+              </button>
+            </div>
           </div>
           <div id="exportVercelStatusMsg" style="margin-top: 10px; font-size: 0.82rem; font-weight: 700;"></div>
         </div>
@@ -1048,9 +1055,9 @@
 
   <!-- SCRIPTS CON VERSIÓN ANTI-CACHE -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/config.js?v=7.2_prices"></script>
-  <script src="js/catalog-data.js?v=7.2_prices"></script>
-  <script src="js/api.js?v=7.2_prices"></script>
-  <script src="js/app.js?v=7.2_prices"></script>
+  <script src="js/config.js?v=7.3_audit"></script>
+  <script src="js/catalog-data.js?v=7.3_audit"></script>
+  <script src="js/api.js?v=7.3_audit"></script>
+  <script src="js/app.js?v=7.3_audit"></script>
 </body>
 </html>
