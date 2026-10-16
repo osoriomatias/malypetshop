@@ -85,7 +85,13 @@ function handleProductCardClick(event, productId) {
 }
 
 function openProductDetailModal(productId) {
-  const p = PRODUCTS_DB.find(item => item.id === productId);
+  let p = PRODUCTS_DB.find(item => item.id === productId);
+  if (!p && ALL_PRODUCTS_MASTER && ALL_PRODUCTS_MASTER.length) {
+    p = ALL_PRODUCTS_MASTER.find(item => item.id === productId);
+  }
+  if (!p && typeof LOCAL_CATALOG !== 'undefined' && Array.isArray(LOCAL_CATALOG)) {
+    p = LOCAL_CATALOG.find(item => item.id === productId);
+  }
   if (!p) return;
 
   currentDetailProduct = p;
@@ -440,6 +446,7 @@ function goToInstagram(event) {
 }
 
 let PRODUCTS_DB = [];
+let ALL_PRODUCTS_MASTER = [];
 let selectedPresIndices = {};
 let cart = JSON.parse(localStorage.getItem('petshop_cart') || '[]');
 
@@ -559,6 +566,29 @@ async function checkDbStatus() {
   }
 }
 
+
+async function ensureMasterProductsLoaded() {
+  if (ALL_PRODUCTS_MASTER && ALL_PRODUCTS_MASTER.length > 0) return ALL_PRODUCTS_MASTER;
+  try {
+    const all = await API.getProducts({ category: 'todos' });
+    if (Array.isArray(all) && all.length > 0) {
+      const customImages = JSON.parse(localStorage.getItem('petshop_custom_images') || '{}');
+      all.forEach(p => {
+        if (customImages[p.id]) p.image_url = customImages[p.id];
+      });
+      ALL_PRODUCTS_MASTER = all;
+      return ALL_PRODUCTS_MASTER;
+    }
+  } catch (e) {}
+
+  if (typeof LOCAL_CATALOG !== 'undefined' && Array.isArray(LOCAL_CATALOG) && LOCAL_CATALOG.length) {
+    ALL_PRODUCTS_MASTER = [...LOCAL_CATALOG];
+  } else if (PRODUCTS_DB && PRODUCTS_DB.length) {
+    ALL_PRODUCTS_MASTER = [...PRODUCTS_DB];
+  }
+  return ALL_PRODUCTS_MASTER;
+}
+
 async function loadCatalogAndRender() {
   showLoading(true);
   try {
@@ -577,6 +607,10 @@ async function loadCatalogAndRender() {
         selectedPresIndices[p.id] = (p.presentations && p.presentations.length > 0) ? p.presentations.length - 1 : 0;
       }
     });
+
+    if (ALL_PRODUCTS_MASTER.length === 0 && (!catalogFilters.category || catalogFilters.category === 'todos') && !catalogFilters.search) {
+      ALL_PRODUCTS_MASTER = [...PRODUCTS_DB];
+    }
 
     renderHomepageGrids();
     renderCatalogGrid();
@@ -1022,11 +1056,13 @@ function filterCategory(cat, subcat = 'todas') {
   loadCatalogAndRender();
 }
 
-function filterBySearch(text) {
-  catalogFilters.search = text;
-  const catalogSection = document.getElementById('catalogSection');
-  if (catalogSection && text.length > 1) {
-    catalogSection.scrollIntoView({ behavior: 'smooth' });
+function filterBySearch(text, shouldScroll = false) {
+  catalogFilters.search = text || '';
+  if (shouldScroll) {
+    const catalogSection = document.getElementById('catalogSection');
+    if (catalogSection) {
+      catalogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
   loadCatalogAndRender();
 }
@@ -2070,6 +2106,230 @@ function applyConfigToDOM() {
   }
 }
 
+
+let activeSuggestionIndex = -1;
+
+function highlightMatchTokens(text, tokens) {
+  if (!text) return '';
+  if (!tokens || !tokens.length) return escapeHtml(text);
+  try {
+    const escapedTokens = tokens.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).filter(Boolean);
+    if (!escapedTokens.length) return escapeHtml(text);
+    const regex = new RegExp(`(${escapedTokens.join('|')})`, 'gi');
+    return escapeHtml(text).replace(regex, '<mark>$1</mark>');
+  } catch (e) {
+    return escapeHtml(text);
+  }
+}
+
+function escapeHtml(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function initSearchAutocomplete() {
+  const searchInput = document.getElementById('searchInput');
+  const searchContainer = document.getElementById('headerSearchContainer');
+  const dropdown = document.getElementById('searchSuggestionsDropdown');
+  const clearBtn = document.getElementById('searchClearBtn');
+
+  if (!searchInput || !dropdown) return;
+
+  let debounceTimer = null;
+  activeSuggestionIndex = -1;
+
+  async function getCatalogSource() {
+    if (ALL_PRODUCTS_MASTER && ALL_PRODUCTS_MASTER.length > 0) {
+      return ALL_PRODUCTS_MASTER;
+    }
+    return await ensureMasterProductsLoaded();
+  }
+
+  async function handleSearchInput() {
+    const val = (searchInput.value || '').trim();
+    if (clearBtn) {
+      clearBtn.style.display = val ? 'flex' : 'none';
+    }
+
+    if (val.length < 1) {
+      dropdown.style.display = 'none';
+      dropdown.innerHTML = '';
+      activeSuggestionIndex = -1;
+      if (catalogFilters.search) {
+        filterBySearch('', false);
+      }
+      return;
+    }
+
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(async () => {
+      const source = await getCatalogSource();
+      const matches = API.searchProductsLike ? API.searchProductsLike(val, source) : [];
+      renderSuggestions(val, matches);
+    }, 120);
+  }
+
+  function renderSuggestions(query, matches) {
+    const normQ = API.normalizeSearchText ? API.normalizeSearchText(query) : query.toLowerCase().trim();
+    const tokens = normQ.split(/\s+/).filter(t => t.length > 0);
+
+    if (!matches || matches.length === 0) {
+      dropdown.innerHTML = `
+        <div class="suggestion-empty">
+          <strong>🐾 Sin resultados exactos para "${escapeHtml(query)}"</strong>
+          <span>Probá buscando por marca (ej: <em>Royal Canin, Pro Plan, Sieger</em>), por especie (<em>perros, gatos</em>) o revisá la ortografía.</span>
+        </div>
+      `;
+      dropdown.style.display = 'block';
+      activeSuggestionIndex = -1;
+      return;
+    }
+
+    const maxItems = 6;
+    const topMatches = matches.slice(0, maxItems);
+
+    let html = `
+      <div class="suggestion-header">
+        <span>Sugerencias disponibles (${matches.length})</span>
+        <span style="font-weight: 500; font-size: 0.7rem; color: #94a3b8;">Tocá para ver producto</span>
+      </div>
+    `;
+
+    topMatches.forEach((p, idx) => {
+      const brand = p.brand_name || p.brand || '';
+      const safeName = p.name || '';
+      const highlightedName = highlightMatchTokens(safeName, tokens);
+      const highlightedBrand = highlightMatchTokens(brand, tokens);
+
+      let priceDisplay = '';
+      if (Array.isArray(p.prices) && p.prices.length > 0) {
+        const minPrice = Math.min(...p.prices);
+        priceDisplay = p.prices.length > 1 ? `Desde $${minPrice.toLocaleString('es-AR')}` : `$${minPrice.toLocaleString('es-AR')}`;
+      } else if (p.sale_price) {
+        priceDisplay = `$${Number(p.sale_price).toLocaleString('es-AR')}`;
+      } else {
+        priceDisplay = 'Consultar';
+      }
+
+      const presList = Array.isArray(p.presentations) ? p.presentations : [];
+      const presText = presList.length > 0 ? presList.slice(0, 3).join(' • ') : '';
+      const fallbackImg = 'https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=300&auto=format&fit=crop&q=80';
+      const imgSrc = p.image_url || fallbackImg;
+
+      html += `
+        <div class="suggestion-item" data-product-id="${p.id}" data-index="${idx}" onclick="selectSuggestionItem(${p.id})">
+          <div class="suggestion-thumb-box">
+            <img src="${imgSrc}" alt="${escapeHtml(safeName)}" class="suggestion-thumb" onerror="this.src='${fallbackImg}'">
+          </div>
+          <div class="suggestion-info">
+            ${brand ? `<div class="suggestion-brand">${highlightedBrand}</div>` : ''}
+            <div class="suggestion-title">${highlightedName}</div>
+            ${presText ? `<div class="suggestion-meta"><span>📦 ${escapeHtml(presText)}</span></div>` : ''}
+          </div>
+          <div class="suggestion-price-box">
+            <div class="suggestion-price">${priceDisplay}</div>
+            <div style="font-size: 0.68rem; color: #94a3b8; text-align: right;">Ver ficha ›</div>
+          </div>
+        </div>
+      `;
+    });
+
+    html += `
+      <div class="suggestion-footer" onclick="submitSearchFromDropdown('${escapeHtml(query).replace(/'/g, "\\'")}')">
+        <span>🔍 Ver los <strong>${matches.length}</strong> productos en el catálogo ➔</span>
+      </div>
+    `;
+
+    dropdown.innerHTML = html;
+    dropdown.style.display = 'block';
+    activeSuggestionIndex = -1;
+  }
+
+  searchInput.addEventListener('keydown', (e) => {
+    const items = dropdown.querySelectorAll('.suggestion-item');
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      if (!items.length || dropdown.style.display === 'none') return;
+      activeSuggestionIndex = (activeSuggestionIndex + 1) % items.length;
+      updateActiveSuggestion(items);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      if (!items.length || dropdown.style.display === 'none') return;
+      activeSuggestionIndex = (activeSuggestionIndex - 1 + items.length) % items.length;
+      updateActiveSuggestion(items);
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (activeSuggestionIndex >= 0 && items[activeSuggestionIndex]) {
+        const prodId = parseInt(items[activeSuggestionIndex].getAttribute('data-product-id'), 10);
+        selectSuggestionItem(prodId);
+      } else {
+        const val = (searchInput.value || '').trim();
+        submitSearchFromDropdown(val);
+      }
+    } else if (e.key === 'Escape') {
+      dropdown.style.display = 'none';
+      activeSuggestionIndex = -1;
+    }
+  });
+
+  function updateActiveSuggestion(items) {
+    items.forEach((item, idx) => {
+      item.classList.toggle('active', idx === activeSuggestionIndex);
+      if (idx === activeSuggestionIndex) {
+        item.scrollIntoView({ block: 'nearest' });
+      }
+    });
+  }
+
+  searchInput.addEventListener('input', handleSearchInput);
+
+  searchInput.addEventListener('focus', () => {
+    const val = (searchInput.value || '').trim();
+    if (val.length >= 1 && dropdown.innerHTML.trim().length > 0) {
+      dropdown.style.display = 'block';
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (searchContainer && !searchContainer.contains(e.target)) {
+      dropdown.style.display = 'none';
+      activeSuggestionIndex = -1;
+    }
+  });
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      searchInput.value = '';
+      clearBtn.style.display = 'none';
+      dropdown.style.display = 'none';
+      dropdown.innerHTML = '';
+      activeSuggestionIndex = -1;
+      filterBySearch('', false);
+      searchInput.focus();
+    });
+  }
+}
+
+function selectSuggestionItem(productId) {
+  const dropdown = document.getElementById('searchSuggestionsDropdown');
+  if (dropdown) dropdown.style.display = 'none';
+  openProductDetailModal(productId);
+}
+
+function submitSearchFromDropdown(query) {
+  const dropdown = document.getElementById('searchSuggestionsDropdown');
+  if (dropdown) dropdown.style.display = 'none';
+  const searchInput = document.getElementById('searchInput');
+  if (searchInput) searchInput.value = query;
+  filterBySearch(query, true);
+}
+
 function setupEventListeners() {
   // Sincronización en tiempo real del usuario de Instagram al tipear
   const inputWa = document.getElementById('inputWaNumber');
@@ -2089,16 +2349,8 @@ function setupEventListeners() {
     });
   }
 
-  const searchInput = document.getElementById('searchInput');
-  if (searchInput) {
-    let debounceTimer;
-    searchInput.addEventListener('input', (e) => {
-      clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(() => {
-        filterBySearch(e.target.value);
-      }, 300);
-    });
-  }
+  // Inicializar buscador inteligente estilo Google con autocompletado en vivo
+  initSearchAutocomplete();
 
   // Buscador dentro del gestor de imágenes de admin
   const adminSearch = document.getElementById('adminImageSearchInput');
@@ -2183,5 +2435,56 @@ async function exportCatalogForVercel() {
       statusEl.style.color = '#dc2626';
     }
   }
+}
+
+
+
+function exportPriceAuditCSV() {
+  const products = (typeof PRODUCTS_DB !== 'undefined' && PRODUCTS_DB.length) ? PRODUCTS_DB : (window.LOCAL_CATALOG || []);
+  if (!products || !products.length) {
+    alert("No hay productos cargados para exportar.");
+    return;
+  }
+
+  let csvContent = "ID_Producto,Marca,Producto,Categoria,Presentacion,Peso_KG,Costo_Proveedor,Margen_Pct,Ganancia_Neta,Precio_Venta_Final,Precio_Lista_Tachado,Es_Oferta\n";
+
+  products.forEach(p => {
+    const brand = (p.brand_name || p.brand || '').replace(/"/g, '""');
+    const name = (p.name || '').replace(/"/g, '""');
+    const cat = (p.category_name || p.category || '').replace(/"/g, '""');
+    const isPromo = Boolean(p.is_promo || p.promo) ? "SI" : "NO";
+    const variants = p.variants || [];
+
+    if (variants.length > 0) {
+      variants.forEach(v => {
+        const pres = (v.presentation_name || '').replace(/"/g, '""');
+        const weight = Number(v.weight_kg || 1);
+        const cost = Number(v.cost_price || 0);
+        const margin = Number(v.margin_percent || 20);
+        const sale = Number(v.sale_price || Math.round(cost * (1 + margin / 100)));
+        const list = Number(v.list_price || sale);
+        const profit = sale - cost;
+
+        csvContent += `${p.id},"${brand}","${name}","${cat}","${pres}",${weight},${cost},"${margin}%",${profit},${sale},${list},${isPromo}\n`;
+      });
+    } else {
+      const pres = (p.presentations && p.presentations[0]) || "Unidad";
+      const cost = (p.costs && p.costs[0]) || 0;
+      const sale = (p.prices && p.prices[0]) || 0;
+      const profit = sale - cost;
+      const margin = cost > 0 ? Math.round(((sale - cost) / cost) * 100) : 20;
+      csvContent += `${p.id},"${brand}","${name}","${cat}","${pres}",1,${cost},"${margin}%",${profit},${sale},${sale},${isPromo}\n`;
+    }
+  });
+
+  const blob = new Blob(["\uFEFF" + csvContent], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `precios_malypetshop_${new Date().toISOString().split('T')[0]}.csv`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 }
 

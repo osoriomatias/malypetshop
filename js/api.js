@@ -159,10 +159,7 @@ window.API = {
           query = query.eq('is_promo', true);
         }
 
-        if (params.search) {
-          const term = `%${params.search.trim().toLowerCase()}%`;
-          query = query.ilike('name', term);
-        }
+        // Búsqueda inteligente SQL LIKE tokenizada aplicada a los productos obtenidos
 
         const { data, error } = await query;
         if (!error && Array.isArray(data) && data.length > 0) {
@@ -172,6 +169,9 @@ window.API = {
           }
           if (params.brand && params.brand !== 'todas') {
             formatted = formatted.filter(p => p.brand_name.toLowerCase() === params.brand.toLowerCase());
+          }
+          if (params.search) {
+            formatted = this.searchProductsLike(params.search, formatted);
           }
           console.log(`✅ [Supabase] ${formatted.length} productos cargados desde la nube.`);
           return formatted;
@@ -502,6 +502,41 @@ window.API = {
     return { order_code: orderCode, status: 'pendiente' };
   },
 
+    normalizeSearchText(str) {
+    if (!str) return '';
+    return str
+      .toString()
+      .normalize('NFD')
+      .replace(/[̀-ͯ]/g, '')
+      .toLowerCase()
+      .trim();
+  },
+
+  searchProductsLike(query, list = []) {
+    if (!query || !query.trim()) return list;
+    const normQ = this.normalizeSearchText(query);
+    const tokens = normQ.split(/\s+/).filter(t => t.length > 0);
+    if (!tokens.length) return list;
+
+    return list.filter(p => {
+      const presStr = Array.isArray(p.presentations) ? p.presentations.join(' ') : (p.presentation || '');
+      const fields = [
+        p.name || '',
+        p.brand || p.brand_name || '',
+        p.category || p.category_name || p.category_slug || '',
+        p.subcat || '',
+        p.pet_type || '',
+        p.breed_size || '',
+        p.description || '',
+        presStr,
+        p.promo_tag || '',
+        p.badge || ''
+      ];
+      const searchable = this.normalizeSearchText(fields.join(' '));
+      return tokens.every(token => searchable.includes(token));
+    });
+  },
+
   filterLocalProducts(params = {}) {
     const catalogSource = (typeof LOCAL_CATALOG !== 'undefined' && Array.isArray(LOCAL_CATALOG) && LOCAL_CATALOG.length) 
                           ? LOCAL_CATALOG 
@@ -530,8 +565,7 @@ window.API = {
       list = list.filter(p => p.is_promo || p.promo);
     }
     if (params.search) {
-      const term = params.search.toLowerCase().trim();
-      list = list.filter(p => p.name.toLowerCase().includes(term) || (p.brand || '').toLowerCase().includes(term));
+      list = this.searchProductsLike(params.search, list);
     }
     return list;
   }
