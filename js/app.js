@@ -840,6 +840,26 @@ function initCarousel() {
   if (wrapper) {
     wrapper.addEventListener('mouseenter', () => clearInterval(carouselInterval));
     wrapper.addEventListener('mouseleave', () => startTimer());
+
+    // Soporte táctil para deslizar con el dedo en celulares (swipe touch)
+    let touchStartX = 0;
+    let touchEndX = 0;
+    wrapper.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      clearInterval(carouselInterval);
+    }, { passive: true });
+
+    wrapper.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) nextSlide();
+        else prevSlide();
+        resetTimer();
+      } else {
+        startTimer();
+      }
+    }, { passive: true });
   }
 
   startTimer();
