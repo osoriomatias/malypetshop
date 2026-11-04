@@ -26,7 +26,7 @@
   <link rel="icon" type="image/svg+xml" href="images/maly_mascot_avatar.svg">
   <link rel="alternate icon" href="images/maly_mascot_avatar.png">
 
-  <link rel="stylesheet" href="css/styles.css?v=8.3_security_auth">
+  <link rel="stylesheet" href="css/styles.css?v=9.0_visual_revamp">
 </head>
 <body>
 
@@ -39,7 +39,7 @@
       <span class="highlight-badge">PRECIOS DIRECTOS</span> El catálogo más completo de primeras marcas
     </div>
     <div class="info-item" style="display: none; @media(min-width: 768px){display: flex;}">
-      <span>⭐</span> Calificación 4.9 en Google Reviews
+      <span>🛵</span> Envíos a domicilio y atención personalizada
     </div>
   </div>
 
@@ -309,6 +309,52 @@
     </div>
   </section>
 
+  <!-- SECCIÓN DE BURBUJAS DE CATEGORÍAS RÁPIDAS (ESTILO APP MÓVIL) -->
+  <section class="category-bubbles-section">
+    <div class="category-bubbles-container">
+      <div class="category-bubble-item" onclick="filterCategory('perros')">
+        <div class="bubble-circle icon-dog">🐶</div>
+        <span class="bubble-label">Perros</span>
+      </div>
+      <div class="category-bubble-item" onclick="filterCategory('gatos')">
+        <div class="bubble-circle icon-cat">🐱</div>
+        <span class="bubble-label">Gatos</span>
+      </div>
+      <div class="category-bubble-item" onclick="filterCategory('promociones')">
+        <div class="bubble-circle icon-promo">🔥</div>
+        <span class="bubble-label">Ofertas</span>
+      </div>
+      <div class="category-bubble-item" onclick="filterCategory('snacks')">
+        <div class="bubble-circle icon-snack">🥓</div>
+        <span class="bubble-label">Snacks</span>
+      </div>
+      <div class="category-bubble-item" onclick="filterCategory('granja')">
+        <div class="bubble-circle icon-farm">🌾</div>
+        <span class="bubble-label">Granja</span>
+      </div>
+      <div class="category-bubble-item" onclick="filterCategory('higiene')">
+        <div class="bubble-circle icon-hygiene">✨</div>
+        <span class="bubble-label">Piedras</span>
+      </div>
+      <div class="category-bubble-item" onclick="filterCategory('farmacia')">
+        <div class="bubble-circle icon-pharmacy">🧴</div>
+        <span class="bubble-label">Farmacia</span>
+      </div>
+      <div class="category-bubble-item" onclick="filterCategory('peces')">
+        <div class="bubble-circle icon-fish">🐠</div>
+        <span class="bubble-label">Peces</span>
+      </div>
+      <div class="category-bubble-item" onclick="filterCategory('plagas')">
+        <div class="bubble-circle icon-pest">🛡️</div>
+        <span class="bubble-label">Sanidad</span>
+      </div>
+      <div class="category-bubble-item" onclick="filterCategory('todos'); resetFilters();">
+        <div class="bubble-circle icon-all">📦</div>
+        <span class="bubble-label">Todo</span>
+      </div>
+    </div>
+  </section>
+
   <!-- BENEFICIOS CLAVE -->
   <section class="benefits-bar">
     <div class="benefit-card">
@@ -374,37 +420,47 @@
     </div>
   </section>
 
-  <!-- SECCIÓN 4: TESTIMONIOS Y GOOGLE REVIEWS -->
-  <section class="section-wrapper">
-    <div class="reviews-section">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
-        <div>
-          <h3 style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: var(--gray-900);">Opiniones de Nuestros Clientes</h3>
-          <p style="font-size: 0.85rem; color: #64748b;">La confianza de cientos de familias que nos eligen mes a mes.</p>
-        </div>
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 6px 14px; border-radius: 9999px; display: flex; align-items: center; gap: 8px;">
-          <span style="color: #f59e0b; font-weight: 800;">★ 4.9 / 5.0</span>
-          <span style="font-size: 0.8rem; color: #475569;">en Google Reviews</span>
-        </div>
-      </div>
-
-      <div class="reviews-grid">
-        <div class="review-box">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-comment">"Excelente atención y rapidez. Me asesoraron enseguida por WhatsApp y coordinamos la entrega sin ningún problema."</p>
-          <div class="review-author">— Valeria R.</div>
-        </div>
-        <div class="review-box">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-comment">"Tienen todas las marcas y bolsas grandes que no se consiguen en cualquier lado. Súper recomendado."</p>
-          <div class="review-author">— Martín G.</div>
-        </div>
-        <div class="review-box">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-comment">"Los snacks de Dentastix y los huesos prensados son excelentes. Siempre atentos y muy cumplidores."</p>
-          <div class="review-author">— Camila F.</div>
-        </div>
-      </div>
+  
+  <!-- BARRA DE MARCAS DESTACADAS (SHOWCASE INTERACTIVO) -->
+  <section class="section-wrapper brands-showcase-section">
+    <div class="brands-showcase-header">
+      <h3 class="brands-showcase-title">🏆 Primeras Marcas Disponibles</h3>
+      <span class="brands-showcase-subtitle">Tocá una marca para ver sus alimentos oficiales cerrados de fábrica:</span>
+    </div>
+    <div class="brands-pills-container" id="brandsPillsContainer">
+      <button type="button" class="brand-pill" onclick="filterByBrand('Royal Canin')">
+        <span class="brand-pill-star">★</span> Royal Canin
+      </button>
+      <button type="button" class="brand-pill" onclick="filterByBrand('Pro Plan')">
+        <span class="brand-pill-star">★</span> Purina Pro Plan
+      </button>
+      <button type="button" class="brand-pill" onclick="filterByBrand('Eukanuba')">
+        <span class="brand-pill-star">★</span> Eukanuba
+      </button>
+      <button type="button" class="brand-pill" onclick="filterByBrand('Sieger')">
+        <span class="brand-pill-star">★</span> Sieger
+      </button>
+      <button type="button" class="brand-pill" onclick="filterByBrand('Dog Chow')">
+        <span class="brand-pill-star">★</span> Dog Chow
+      </button>
+      <button type="button" class="brand-pill" onclick="filterByBrand('Cat Chow')">
+        <span class="brand-pill-star">★</span> Cat Chow
+      </button>
+      <button type="button" class="brand-pill" onclick="filterByBrand('Vital Can')">
+        <span class="brand-pill-star">★</span> Vital Can
+      </button>
+      <button type="button" class="brand-pill" onclick="filterByBrand('Dog Selection')">
+        <span class="brand-pill-star">★</span> Dog Selection
+      </button>
+      <button type="button" class="brand-pill" onclick="filterByBrand('Tiernitos')">
+        <span class="brand-pill-star">★</span> Tiernitos
+      </button>
+      <button type="button" class="brand-pill" onclick="filterByBrand('Raza')">
+        <span class="brand-pill-star">★</span> Raza Nutripet
+      </button>
+      <button type="button" class="brand-pill" onclick="filterByBrand('Osspret')">
+        <span class="brand-pill-star">★</span> Osspret / Ecthol
+      </button>
     </div>
   </section>
 
@@ -457,11 +513,22 @@
         <strong id="cartTotal" style="color: #0284c7;">$0</strong>
       </div>
 
+      <div class="checkout-fields" style="margin: 10px 0 12px 0; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 10px 12px;">
+        <div style="margin-bottom: 8px;">
+          <label style="font-size: 0.74rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">Tu Nombre (opcional):</label>
+          <input type="text" id="checkoutCustomerName" placeholder="Ej: Juan Pérez" style="width: 100%; padding: 7px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.85rem; outline: none; background: white;">
+        </div>
+        <div>
+          <label style="font-size: 0.74rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">Dirección / Barrio (opcional):</label>
+          <input type="text" id="checkoutCustomerAddress" placeholder="Ej: Ciudad Evita, calle y altura" style="width: 100%; padding: 7px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.85rem; outline: none; background: white;">
+        </div>
+      </div>
+
       <button class="btn-checkout-wa" id="btnCheckoutWa" onclick="checkoutWhatsApp()">
         <span>💬</span> Enviar Pedido por WhatsApp
       </button>
-      <p style="text-align: center; font-size: 0.76rem; color: #64748b; margin-top: 8px;">
-        Te responderemos por WhatsApp para coordinar la entrega y el pago.
+      <p style="text-align: center; font-size: 0.74rem; color: #64748b; margin-top: 6px;">
+        Te responderemos enseguida por WhatsApp para coordinar la entrega y el pago.
       </p>
     </div>
   </aside>
