@@ -447,6 +447,7 @@ function goToInstagram(event) {
 
 let PRODUCTS_DB = [];
 let ALL_PRODUCTS_MASTER = [];
+let ADMIN_PRODUCTS_DB = [];
 let selectedPresIndices = {};
 let cart = JSON.parse(localStorage.getItem('petshop_cart') || '[]');
 
@@ -614,6 +615,17 @@ async function loadCatalogAndRender() {
 
     renderHomepageGrids();
     renderCatalogGrid();
+
+    // Actualizar contadores de productos dinámicamente en todo el sitio
+    const totalCount = (ALL_PRODUCTS_MASTER && ALL_PRODUCTS_MASTER.length) ? ALL_PRODUCTS_MASTER.length : (PRODUCTS_DB ? PRODUCTS_DB.length : 182);
+    document.querySelectorAll('.catalog-total-count').forEach(el => {
+      el.textContent = totalCount;
+    });
+    const catalogBadge = document.getElementById('catalogCountBadge');
+    if (catalogBadge) {
+      const activeCount = PRODUCTS_DB ? PRODUCTS_DB.length : totalCount;
+      catalogBadge.textContent = `${activeCount} artículos disponibles`;
+    }
   } catch (err) {
     console.error("Error al cargar catálogo:", err);
   } finally {
@@ -758,7 +770,7 @@ function createProductCardHTML(p) {
 // -------------------------------------------------------------
 function selectPresentation(productId, presIdx) {
   selectedPresIndices[productId] = presIdx;
-  const p = PRODUCTS_DB.find(item => item.id === productId);
+  const p = (ADMIN_PRODUCTS_DB && ADMIN_PRODUCTS_DB.find(item => item.id === productId)) || PRODUCTS_DB.find(item => item.id === productId);
   if (!p) return;
 
   const price = (p.prices && p.prices[presIdx] !== undefined) ? p.prices[presIdx] : 0;
@@ -870,7 +882,7 @@ function initCarousel() {
 // CARRITO Y WHATSAPP
 // -------------------------------------------------------------
 function addToCart(productId) {
-  const p = PRODUCTS_DB.find(item => item.id === productId);
+  const p = (ADMIN_PRODUCTS_DB && ADMIN_PRODUCTS_DB.find(item => item.id === productId)) || PRODUCTS_DB.find(item => item.id === productId);
   if (!p) return;
 
   const presIdx = selectedPresIndices[productId] || 0;
@@ -1031,7 +1043,7 @@ async function checkoutWhatsApp() {
 }
 
 function askProductWhatsApp(productId) {
-  const p = PRODUCTS_DB.find(item => item.id === productId);
+  const p = (ADMIN_PRODUCTS_DB && ADMIN_PRODUCTS_DB.find(item => item.id === productId)) || PRODUCTS_DB.find(item => item.id === productId);
   if (!p) return;
   const presIdx = selectedPresIndices[productId] || 0;
   const pres = (p.presentations && p.presentations[presIdx]) ? p.presentations[presIdx] : "";
@@ -1152,6 +1164,65 @@ function closeAdminPinModalOnBackdrop(event) {
   }
 }
 
+
+async function handleAdminLogin() {
+  const emailInput = document.getElementById('inputAdminEmail');
+  const passInput = document.getElementById('inputAdminPassword');
+  const errorMsg = document.getElementById('pinErrorMsg');
+  const submitBtn = document.getElementById('btnAdminLoginSubmit');
+
+  const email = emailInput ? emailInput.value.trim() : '';
+  const password = passInput ? passInput.value : '';
+
+  if (!email || !password) {
+    if (errorMsg) errorMsg.textContent = 'Ingresá tu email y contraseña de administrador.';
+    return;
+  }
+
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Verificando...';
+  }
+  if (errorMsg) errorMsg.textContent = '';
+
+  const res = await API.loginAdmin(email, password);
+  if (submitBtn) {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Iniciar Sesión';
+  }
+
+  if (res.success) {
+    isAdminAuthenticated = true;
+    closeAdminPinModal();
+    showAdminSettingsContent();
+  } else {
+    if (errorMsg) {
+      if (res.error && res.error.includes('Invalid login credentials')) {
+        errorMsg.textContent = '❌ Email o contraseña incorrectos.';
+      } else {
+        errorMsg.textContent = `❌ ${res.error || 'Error al iniciar sesión'}`;
+      }
+    }
+  }
+}
+
+async function handleAdminLogout() {
+  if (confirm('¿Deseás cerrar la sesión de administración?')) {
+    await API.logoutAdmin();
+    isAdminAuthenticated = false;
+    closeSettingsModal();
+    alert('Has cerrado sesión como administrador.');
+  }
+}
+
+function togglePinFallback(event) {
+  if (event) event.preventDefault();
+  const box = document.getElementById('pinFallbackBox');
+  if (box) {
+    box.style.display = box.style.display === 'none' ? 'block' : 'none';
+  }
+}
+
 function verifyAdminPin() {
   const inputPin = document.getElementById('inputSecurityPin');
   const errorMsg = document.getElementById('pinErrorMsg');
@@ -1219,6 +1290,13 @@ function showAdminSettingsContent() {
     }
   });
 
+  API.getAdminProducts().then(adminProds => {
+    if (adminProds && adminProds.length) {
+      ADMIN_PRODUCTS_DB = adminProds;
+      renderAdminProductImageList();
+    }
+  });
+
   renderAdminProductImageList();
   switchAdminTab('general');
 
@@ -1270,6 +1348,37 @@ function switchAdminTab(tabName) {
 // -------------------------------------------------------------
 let createProductCustomImage = '';
 
+
+function parseFlexibleNumber(val) {
+  if (val === null || val === undefined) return 0;
+  if (typeof val === 'number') return isNaN(val) ? 0 : val;
+  let str = String(val).trim().replace(/[$]/g, '').trim();
+  if (!str) return 0;
+
+  // Manejo inteligente de puntos y comas (notación argentina / internacional)
+  if (str.includes('.') && str.includes(',')) {
+    if (str.lastIndexOf(',') > str.lastIndexOf('.')) {
+      str = str.replace(/\./g, '').replace(',', '.');
+    } else {
+      str = str.replace(/,/g, '');
+    }
+  } else if (str.includes('.') && !str.includes(',')) {
+    const parts = str.split('.');
+    if (parts.length > 2 || (parts.length === 2 && parts[1].length === 3 && parseFloat(parts[0]) >= 1)) {
+      str = str.replace(/\./g, '');
+    }
+  } else if (str.includes(',') && !str.includes('.')) {
+    const parts = str.split(',');
+    if (parts.length === 2 && parts[1].length === 3) {
+      str = str.replace(/,/g, '');
+    } else {
+      str = str.replace(',', '.');
+    }
+  }
+  const num = parseFloat(str);
+  return isNaN(num) ? 0 : num;
+}
+
 function getEffectiveMarginPercent(weightKg = 15) {
   if (CONFIG.marginPolicy === 'recommended') {
     if (weightKg >= 18) return 20.0;
@@ -1310,20 +1419,23 @@ function recalculatePresentationRow(inputEl) {
   const saleInput = tr.querySelector('.pres-sale-input');
   const profitBadge = tr.querySelector('.badge-calc-profit');
 
-  const weight = parseFloat(weightInput.value) || 1.0;
-  const cost = parseFloat(costInput.value) || 0;
+  const weight = parseFlexibleNumber(weightInput ? weightInput.value : 1.0) || 1.0;
+  const cost = parseFlexibleNumber(costInput ? costInput.value : 0);
 
-  let marginPct = parseFloat(marginInput.value);
-  if (isNaN(marginPct)) {
-    marginPct = getEffectiveMarginPercent(weight);
+  let marginVal = marginInput ? marginInput.value.trim() : '';
+  let marginPct = marginVal !== '' ? parseFlexibleNumber(marginVal) : getEffectiveMarginPercent(weight);
+  if (marginInput && marginVal === '') {
     marginInput.value = marginPct;
   }
 
   const salePrice = Math.round(cost * (1.0 + marginPct / 100.0));
   const profit = salePrice - cost;
 
-  if (saleInput) saleInput.value = salePrice > 0 ? salePrice : '';
-  if (profitBadge) profitBadge.textContent = `+$${profit.toLocaleString('es-AR')} (${marginPct}%)`;
+  if (saleInput && cost > 0) saleInput.value = salePrice > 0 ? salePrice : '';
+  if (profitBadge) {
+    profitBadge.textContent = `${profit >= 0 ? '+' : ''}$${profit.toLocaleString('es-AR')} (${marginPct}%)`;
+    profitBadge.style.color = profit >= 0 ? '#15803d' : '#dc2626';
+  }
 }
 
 function recalculatePresentationRowFromSalePrice(inputEl) {
@@ -1335,14 +1447,20 @@ function recalculatePresentationRowFromSalePrice(inputEl) {
   const saleInput = tr.querySelector('.pres-sale-input');
   const profitBadge = tr.querySelector('.badge-calc-profit');
 
-  const cost = parseFloat(costInput.value) || 0;
-  const salePrice = parseFloat(saleInput.value) || 0;
+  const cost = parseFlexibleNumber(costInput ? costInput.value : 0);
+  const salePrice = parseFlexibleNumber(saleInput ? saleInput.value : 0);
 
   if (cost > 0 && salePrice >= 0) {
     const profit = salePrice - cost;
     const marginPct = Math.round(((salePrice - cost) / cost) * 1000) / 10;
     if (marginInput) marginInput.value = marginPct;
-    if (profitBadge) profitBadge.textContent = `+$${profit.toLocaleString('es-AR')} (${marginPct}%)`;
+    if (profitBadge) {
+      profitBadge.textContent = `${profit >= 0 ? '+' : ''}$${profit.toLocaleString('es-AR')} (${marginPct}%)`;
+      profitBadge.style.color = profit >= 0 ? '#15803d' : '#dc2626';
+    }
+  } else if (cost === 0 && salePrice > 0 && profitBadge) {
+    profitBadge.textContent = `Venta libre: $${salePrice.toLocaleString('es-AR')}`;
+    profitBadge.style.color = '#0284c7';
   }
 }
 
@@ -1365,20 +1483,20 @@ function addPresentationRow(name = '', weight = 15, cost = '', margin = '', sale
       <input type="text" class="pres-name-input" value="${name}" placeholder="Ej: Bolsa 15 kg" required>
     </td>
     <td>
-      <input type="number" step="0.1" class="pres-weight-input" value="${wNum}" placeholder="15" oninput="recalculatePresentationRow(this)">
+      <input type="number" step="any" min="0" class="pres-weight-input" value="${wNum}" placeholder="15" oninput="recalculatePresentationRow(this)">
     </td>
     <td>
-      <input type="number" step="10" class="pres-cost-input" value="${cost}" placeholder="Ej: 35000" required oninput="recalculatePresentationRow(this)">
+      <input type="number" step="any" min="0" class="pres-cost-input" value="${cost}" placeholder="Ej: 35000" oninput="recalculatePresentationRow(this)">
     </td>
     <td>
       <div style="display: flex; align-items: center; gap: 3px;">
-        <input type="number" step="0.5" min="0" max="150" class="pres-margin-input" value="${mNum}" placeholder="20" style="text-align: center; font-weight: 700; color: #0284c7;" oninput="recalculatePresentationRow(this)">
+        <input type="number" step="any" class="pres-margin-input" value="${mNum}" placeholder="20" style="text-align: center; font-weight: 700; color: #0284c7;" oninput="recalculatePresentationRow(this)">
         <span style="font-weight: 700; color: #64748b; font-size: 0.78rem;">%</span>
       </div>
     </td>
     <td>
       <div style="display: flex; flex-direction: column; gap: 2px;">
-        <input type="number" step="10" class="pres-sale-input" value="${sNum}" placeholder="Ej: 42000" style="font-weight: 800; color: #15803d; border-color: #86efac;" oninput="recalculatePresentationRowFromSalePrice(this)">
+        <input type="number" step="any" min="0" class="pres-sale-input" value="${sNum}" placeholder="Ej: 42000" style="font-weight: 800; color: #15803d; border-color: #86efac;" oninput="recalculatePresentationRowFromSalePrice(this)">
         <span class="badge-calc-profit" style="font-size: 0.72rem; color: #15803d; font-weight: 600;">+$${profit.toLocaleString('es-AR')} (${mNum}%)</span>
       </div>
     </td>
@@ -1400,25 +1518,7 @@ function removePresentationRow(rowId) {
   if (row) row.remove();
 }
 
-function recalculatePresentationRow(inputEl) {
-  const tr = inputEl.closest('tr');
-  if (!tr) return;
-
-  const weightInput = tr.querySelector('.pres-weight-input');
-  const costInput = tr.querySelector('.pres-cost-input');
-  const saleBadge = tr.querySelector('.badge-calc-sale');
-  const profitBadge = tr.querySelector('.badge-calc-profit');
-
-  const weight = parseFloat(weightInput.value) || 1.0;
-  const cost = parseFloat(costInput.value) || 0;
-  const marginPct = getEffectiveMarginPercent(weight);
-
-  const salePrice = Math.round(cost * (1.0 + marginPct / 100.0));
-  const profit = salePrice - cost;
-
-  if (saleBadge) saleBadge.textContent = `$${salePrice.toLocaleString('es-AR')}`;
-  if (profitBadge) profitBadge.textContent = `Ganancia: +$${profit.toLocaleString('es-AR')} (${marginPct}%)`;
-}
+// [Función duplicada obsoleta eliminada para usar la versión completa con margen editable]
 
 function previewCreateProductImage() {
   const url = document.getElementById('createProdImgUrl').value.trim();
@@ -1481,19 +1581,20 @@ async function handleCreateProductSubmit() {
   const variants = [];
   trs.forEach((tr, idx) => {
     const pName = tr.querySelector('.pres-name-input').value.trim();
-    const weight = parseFloat(tr.querySelector('.pres-weight-input').value) || 1.0;
-    const cost = parseFloat(tr.querySelector('.pres-cost-input').value) || 0;
+    const weight = parseFlexibleNumber(tr.querySelector('.pres-weight-input').value) || 1.0;
+    const cost = parseFlexibleNumber(tr.querySelector('.pres-cost-input').value);
     const marginInput = tr.querySelector('.pres-margin-input');
-    const marginPct = marginInput ? (parseFloat(marginInput.value) || getEffectiveMarginPercent(weight)) : getEffectiveMarginPercent(weight);
+    const marginPct = marginInput ? parseFlexibleNumber(marginInput.value || getEffectiveMarginPercent(weight)) : getEffectiveMarginPercent(weight);
     const saleInput = tr.querySelector('.pres-sale-input');
-    const customSale = saleInput ? parseFloat(saleInput.value) : 0;
+    const customSale = saleInput ? parseFlexibleNumber(saleInput.value) : 0;
     const sale = customSale > 0 ? customSale : Math.round(cost * (1.0 + marginPct / 100.0));
+    const finalCost = cost > 0 ? cost : (sale > 0 ? Math.round(sale / (1.0 + marginPct / 100.0)) : 0);
     const list = is_promo ? Math.round(sale * 1.15) : sale;
-    if (pName && cost > 0) {
+    if (pName && (finalCost > 0 || sale > 0)) {
       variants.push({
         presentation_name: pName,
         weight_kg: weight,
-        cost_price: cost,
+        cost_price: finalCost,
         margin_percent: marginPct,
         sale_price: sale,
         list_price: list,
@@ -1503,7 +1604,7 @@ async function handleCreateProductSubmit() {
   });
 
   if (variants.length === 0) {
-    alert("Tenés que agregar al menos una presentación con costo proveedor válido.");
+    alert("Por favor agregá al menos una presentación con precio de venta o costo.");
     return;
   }
 
@@ -1580,7 +1681,7 @@ function renderAdminProductImageList(filterQuery = '') {
   const listContainer = document.getElementById('adminProductImageRows');
   if (!listContainer) return;
 
-  let prods = [...PRODUCTS_DB];
+  let prods = (ADMIN_PRODUCTS_DB && ADMIN_PRODUCTS_DB.length) ? [...ADMIN_PRODUCTS_DB] : [...PRODUCTS_DB];
 
   // Filtro por categoría en admin
   if (currentAdminCategoryFilter !== 'todos') {
@@ -1670,7 +1771,7 @@ function renderAdminProductImageList(filterQuery = '') {
 let editProductCustomImage = '';
 
 function openEditProductModal(productId) {
-  const p = PRODUCTS_DB.find(item => item.id === productId);
+  const p = (ADMIN_PRODUCTS_DB && ADMIN_PRODUCTS_DB.find(item => item.id === productId)) || PRODUCTS_DB.find(item => item.id === productId);
   if (!p) return;
 
   document.getElementById('editProdId').value = p.id;
@@ -1765,20 +1866,23 @@ function recalculateEditPresentationRow(inputEl) {
   const saleInput = tr.querySelector('.pres-sale-input');
   const profitBadge = tr.querySelector('.badge-calc-profit');
 
-  const weight = parseFloat(weightInput.value) || 1.0;
-  const cost = parseFloat(costInput.value) || 0;
+  const weight = parseFlexibleNumber(weightInput ? weightInput.value : 1.0) || 1.0;
+  const cost = parseFlexibleNumber(costInput ? costInput.value : 0);
 
-  let marginPct = parseFloat(marginInput.value);
-  if (isNaN(marginPct)) {
-    marginPct = getEffectiveMarginPercent(weight);
+  let marginVal = marginInput ? marginInput.value.trim() : '';
+  let marginPct = marginVal !== '' ? parseFlexibleNumber(marginVal) : getEffectiveMarginPercent(weight);
+  if (marginInput && marginVal === '') {
     marginInput.value = marginPct;
   }
 
   const salePrice = Math.round(cost * (1.0 + marginPct / 100.0));
   const profit = salePrice - cost;
 
-  if (saleInput) saleInput.value = salePrice > 0 ? salePrice : '';
-  if (profitBadge) profitBadge.textContent = `+$${profit.toLocaleString('es-AR')} (${marginPct}%)`;
+  if (saleInput && cost > 0) saleInput.value = salePrice > 0 ? salePrice : '';
+  if (profitBadge) {
+    profitBadge.textContent = `${profit >= 0 ? '+' : ''}$${profit.toLocaleString('es-AR')} (${marginPct}%)`;
+    profitBadge.style.color = profit >= 0 ? '#15803d' : '#dc2626';
+  }
 }
 
 function recalculateEditPresentationRowFromSalePrice(inputEl) {
@@ -1790,14 +1894,20 @@ function recalculateEditPresentationRowFromSalePrice(inputEl) {
   const saleInput = tr.querySelector('.pres-sale-input');
   const profitBadge = tr.querySelector('.badge-calc-profit');
 
-  const cost = parseFloat(costInput.value) || 0;
-  const salePrice = parseFloat(saleInput.value) || 0;
+  const cost = parseFlexibleNumber(costInput ? costInput.value : 0);
+  const salePrice = parseFlexibleNumber(saleInput ? saleInput.value : 0);
 
   if (cost > 0 && salePrice >= 0) {
     const profit = salePrice - cost;
     const marginPct = Math.round(((salePrice - cost) / cost) * 1000) / 10;
     if (marginInput) marginInput.value = marginPct;
-    if (profitBadge) profitBadge.textContent = `+$${profit.toLocaleString('es-AR')} (${marginPct}%)`;
+    if (profitBadge) {
+      profitBadge.textContent = `${profit >= 0 ? '+' : ''}$${profit.toLocaleString('es-AR')} (${marginPct}%)`;
+      profitBadge.style.color = profit >= 0 ? '#15803d' : '#dc2626';
+    }
+  } else if (cost === 0 && salePrice > 0 && profitBadge) {
+    profitBadge.textContent = `Venta libre: $${salePrice.toLocaleString('es-AR')}`;
+    profitBadge.style.color = '#0284c7';
   }
 }
 
@@ -1820,20 +1930,20 @@ function addEditPresentationRow(name = '', weight = 15, cost = '', margin = '', 
       <input type="text" class="pres-name-input" value="${name}" placeholder="Ej: Bolsa 15 kg" required>
     </td>
     <td>
-      <input type="number" step="0.1" class="pres-weight-input" value="${wNum}" placeholder="15" oninput="recalculateEditPresentationRow(this)">
+      <input type="number" step="any" min="0" class="pres-weight-input" value="${wNum}" placeholder="15" oninput="recalculateEditPresentationRow(this)">
     </td>
     <td>
-      <input type="number" step="10" class="pres-cost-input" value="${cost}" placeholder="Ej: 35000" required oninput="recalculateEditPresentationRow(this)">
+      <input type="number" step="any" min="0" class="pres-cost-input" value="${cost}" placeholder="Ej: 35000" oninput="recalculateEditPresentationRow(this)">
     </td>
     <td>
       <div style="display: flex; align-items: center; gap: 3px;">
-        <input type="number" step="0.5" min="0" max="150" class="pres-margin-input" value="${mNum}" placeholder="20" style="text-align: center; font-weight: 700; color: #0284c7;" oninput="recalculateEditPresentationRow(this)">
+        <input type="number" step="any" class="pres-margin-input" value="${mNum}" placeholder="20" style="text-align: center; font-weight: 700; color: #0284c7;" oninput="recalculateEditPresentationRow(this)">
         <span style="font-weight: 700; color: #64748b; font-size: 0.78rem;">%</span>
       </div>
     </td>
     <td>
       <div style="display: flex; flex-direction: column; gap: 2px;">
-        <input type="number" step="10" class="pres-sale-input" value="${sNum}" placeholder="Ej: 42000" style="font-weight: 800; color: #15803d; border-color: #86efac;" oninput="recalculateEditPresentationRowFromSalePrice(this)">
+        <input type="number" step="any" min="0" class="pres-sale-input" value="${sNum}" placeholder="Ej: 42000" style="font-weight: 800; color: #15803d; border-color: #86efac;" oninput="recalculateEditPresentationRowFromSalePrice(this)">
         <span class="badge-calc-profit" style="font-size: 0.72rem; color: #15803d; font-weight: 600;">+$${profit.toLocaleString('es-AR')} (${mNum}%)</span>
       </div>
     </td>
@@ -1881,19 +1991,20 @@ async function handleEditProductSubmit() {
   const variants = [];
   trs.forEach((tr, idx) => {
     const pName = tr.querySelector('.pres-name-input').value.trim();
-    const weight = parseFloat(tr.querySelector('.pres-weight-input').value) || 1.0;
-    const cost = parseFloat(tr.querySelector('.pres-cost-input').value) || 0;
+    const weight = parseFlexibleNumber(tr.querySelector('.pres-weight-input').value) || 1.0;
+    const cost = parseFlexibleNumber(tr.querySelector('.pres-cost-input').value);
     const marginInput = tr.querySelector('.pres-margin-input');
-    const marginPct = marginInput ? (parseFloat(marginInput.value) || getEffectiveMarginPercent(weight)) : getEffectiveMarginPercent(weight);
+    const marginPct = marginInput ? parseFlexibleNumber(marginInput.value || getEffectiveMarginPercent(weight)) : getEffectiveMarginPercent(weight);
     const saleInput = tr.querySelector('.pres-sale-input');
-    const customSale = saleInput ? parseFloat(saleInput.value) : 0;
+    const customSale = saleInput ? parseFlexibleNumber(saleInput.value) : 0;
     const sale = customSale > 0 ? customSale : Math.round(cost * (1.0 + marginPct / 100.0));
+    const finalCost = cost > 0 ? cost : (sale > 0 ? Math.round(sale / (1.0 + marginPct / 100.0)) : 0);
     const list = is_promo ? Math.round(sale * 1.15) : sale;
-    if (pName && cost > 0) {
+    if (pName && (finalCost > 0 || sale > 0)) {
       variants.push({
         presentation_name: pName,
         weight_kg: weight,
-        cost_price: cost,
+        cost_price: finalCost,
         margin_percent: marginPct,
         sale_price: sale,
         list_price: list,
@@ -1903,7 +2014,7 @@ async function handleEditProductSubmit() {
   });
 
   if (variants.length === 0) {
-    alert("El producto debe tener al menos una presentación con costo válido.");
+    alert("El producto debe tener al menos una presentación con precio de venta o costo.");
     return;
   }
 

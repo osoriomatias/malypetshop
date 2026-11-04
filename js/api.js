@@ -31,6 +31,45 @@ window.API = {
     }
   },
 
+    async loginAdmin(email, password) {
+    if (!this.supabaseClient) this.init();
+    if (!this.supabaseClient) {
+      return { success: false, error: 'No se pudo conectar con Supabase.' };
+    }
+    try {
+      const { data, error } = await this.supabaseClient.auth.signInWithPassword({
+        email: email.trim(),
+        password: password
+      });
+      if (error) {
+        return { success: false, error: error.message };
+      }
+      return { success: true, session: data.session, user: data.user };
+    } catch (e) {
+      return { success: false, error: e.message };
+    }
+  },
+
+  async logoutAdmin() {
+    if (!this.supabaseClient) this.init();
+    if (this.supabaseClient) {
+      try {
+        await this.supabaseClient.auth.signOut();
+      } catch (e) {}
+    }
+  },
+
+  async getAdminSession() {
+    if (!this.supabaseClient) this.init();
+    if (!this.supabaseClient) return null;
+    try {
+      const { data } = await this.supabaseClient.auth.getSession();
+      return data ? data.session : null;
+    } catch (e) {
+      return null;
+    }
+  },
+
   async checkHealth() {
     if (!this.supabaseClient) this.init();
 
@@ -63,14 +102,13 @@ window.API = {
     return null;
   },
 
-  formatSupabaseProduct(p) {
+  formatSupabaseProduct(p, includeAdminCosts = false) {
     // Variantes
     const rawVariants = Array.isArray(p.product_variants) ? p.product_variants : [];
     const variants = rawVariants.sort((a, b) => (Number(a.weight_kg) || 0) - (Number(b.weight_kg) || 0));
     const presentations = variants.map(v => v.presentation_name);
     const prices = variants.map(v => Number(v.sale_price));
     const list_prices = variants.map(v => Number(v.list_price || Math.round(v.sale_price * 1.15)));
-    const costs = variants.map(v => Number(v.cost_price || 0));
 
     // Categoría
     let catName = 'General';
@@ -95,7 +133,17 @@ window.API = {
       }
     }
 
-    return {
+    // Variantes públicas limpias (sin cost_price ni margin_percent para clientes)
+    const publicVariants = variants.map(v => ({
+      presentation_name: v.presentation_name,
+      weight_kg: Number(v.weight_kg || 0),
+      sale_price: Number(v.sale_price || 0),
+      list_price: Number(v.list_price || Math.round(v.sale_price * 1.15)),
+      stock_qty: v.stock_qty,
+      sku: v.sku
+    }));
+
+    const formatted = {
       id: p.id,
       name: p.name,
       slug: p.slug,
@@ -116,12 +164,17 @@ window.API = {
       category: catSlug,
       brand_name: brandName,
       brand: brandName,
-      variants: variants,
+      variants: includeAdminCosts ? variants : publicVariants,
       presentations: presentations.length ? presentations : ['Única'],
       prices: prices.length ? prices : [0],
-      list_prices: list_prices.length ? list_prices : [0],
-      costs: costs.length ? costs : [0]
+      list_prices: list_prices.length ? list_prices : [0]
     };
+
+    if (includeAdminCosts) {
+      formatted.costs = variants.map(v => Number(v.cost_price || 0));
+    }
+
+    return formatted;
   },
 
   async getProducts(params = {}) {
@@ -163,7 +216,7 @@ window.API = {
 
         const { data, error } = await query;
         if (!error && Array.isArray(data) && data.length > 0) {
-          let formatted = data.map(p => this.formatSupabaseProduct(p));
+          let formatted = data.map(p => this.formatSupabaseProduct(p, false));
           if (params.category && params.category !== 'todos' && params.category !== 'promociones') {
             formatted = formatted.filter(p => p.category_slug === params.category);
           }
@@ -233,27 +286,64 @@ window.API = {
     custom[productId] = imageUrl;
     localStorage.setItem('petshop_custom_images', JSON.stringify(custom));
     
-    // 3. Actualizar inmediatamente en el catálogo en memoria
+    // 3. Actualizar inmediatamente en el catálogo en memoria sin errores de variables
     const source = (typeof window !== 'undefined' && window.LOCAL_CATALOG) || (typeof LOCAL_CATALOG !== 'undefined' && LOCAL_CATALOG);
     if (source && Array.isArray(source)) {
       const p = source.find(item => item.id === productId);
-      if (p) {
-        if (productData.name) p.name = productData.name;
-        if (productData.description !== undefined) p.description = productData.description;
-        if (productData.image_url) p.image_url = productData.image_url;
-        if (productData.badge !== undefined) p.badge = productData.badge;
-        if (productData.is_promo !== undefined) p.is_promo = productData.is_promo ? 1 : 0;
-        if (productData.is_featured !== undefined) p.is_featured = productData.is_featured ? 1 : 0;
-        if (productData.variants && productData.variants.length > 0) {
-          p.variants = productData.variants;
-          p.presentations = productData.variants.map(v => v.presentation_name);
-          p.costs = productData.variants.map(v => Number(v.cost_price));
-          p.prices = productData.variants.map(v => Number(v.sale_price));
-          p.list_prices = productData.variants.map(v => Number(v.list_price));
-        }
-      }
+      if (p) p.image_url = imageUrl;
+    }
+    if (typeof ALL_PRODUCTS_MASTER !== 'undefined' && Array.isArray(ALL_PRODUCTS_MASTER)) {
+      const pMaster = ALL_PRODUCTS_MASTER.find(item => item.id === productId);
+      if (pMaster) pMaster.image_url = imageUrl;
+    }
+    if (typeof PRODUCTS_DB !== 'undefined' && Array.isArray(PRODUCTS_DB)) {
+      const pDb = PRODUCTS_DB.find(item => item.id === productId);
+      if (pDb) pDb.image_url = imageUrl;
     }
     return true;
+  },
+
+    async getAdminProducts() {
+    if (!this.supabaseClient) this.init();
+
+    if (this.supabaseClient) {
+      try {
+        const { data, error } = await this.supabaseClient
+          .from('products')
+          .select('*, categories(name, slug), brands(name), product_variants(*)')
+          .eq('active', true)
+          .order('id', { ascending: true });
+        if (!error && Array.isArray(data) && data.length > 0) {
+          return data.map(p => this.formatSupabaseProduct(p, true));
+        }
+      } catch (err) {}
+    }
+
+    try {
+      const res = await fetch(`${this.baseUrl}/api/products`);
+      if (res.ok) {
+        return await res.json();
+      }
+    } catch (e) {}
+
+    return (typeof LOCAL_CATALOG !== 'undefined' && Array.isArray(LOCAL_CATALOG)) ? LOCAL_CATALOG : [];
+  },
+
+  async getAdminProductVariants(productId) {
+    if (!this.supabaseClient) this.init();
+    if (this.supabaseClient) {
+      try {
+        const { data, error } = await this.supabaseClient
+          .from('product_variants')
+          .select('*')
+          .eq('product_id', productId)
+          .order('weight_kg', { ascending: true });
+        if (!error && Array.isArray(data)) {
+          return data;
+        }
+      } catch (e) {}
+    }
+    return [];
   },
 
   async updateProduct(productId, productData) {
@@ -316,26 +406,64 @@ window.API = {
     }
 
     
-    // 3. Actualizar inmediatamente en el catálogo en memoria
+    // 3. Actualizar inmediatamente todas las propiedades del producto en memoria
+    function applyProductUpdate(targetProd) {
+      if (!targetProd) return;
+      if (productData.name) targetProd.name = productData.name;
+      if (productData.description !== undefined) {
+        targetProd.description = productData.description;
+        targetProd.desc = productData.description;
+      }
+      if (productData.pet_type) targetProd.pet_type = productData.pet_type;
+      if (productData.subcat) targetProd.subcat = productData.subcat;
+      if (productData.breed_size) targetProd.breed_size = productData.breed_size;
+      if (productData.badge !== undefined) targetProd.badge = productData.badge;
+      if (productData.image_url) targetProd.image_url = productData.image_url;
+      if (productData.is_featured !== undefined) {
+        targetProd.is_featured = productData.is_featured ? 1 : 0;
+        targetProd.featured = Boolean(productData.is_featured);
+      }
+      if (productData.is_promo !== undefined) {
+        targetProd.is_promo = productData.is_promo ? 1 : 0;
+        targetProd.promo = Boolean(productData.is_promo);
+      }
+      if (productData.promo_tag !== undefined) targetProd.promo_tag = productData.promo_tag;
+      if (productData.category_slug) {
+        targetProd.category_slug = productData.category_slug;
+        targetProd.category = productData.category_slug;
+      }
+      if (productData.brand_name) {
+        targetProd.brand_name = productData.brand_name;
+        targetProd.brand = productData.brand_name;
+      }
+
+      if (productData.variants && Array.isArray(productData.variants) && productData.variants.length > 0) {
+        targetProd.variants = productData.variants;
+        targetProd.presentations = productData.variants.map(v => v.presentation_name);
+        targetProd.prices = productData.variants.map(v => Number(v.sale_price));
+        targetProd.list_prices = productData.variants.map(v => Number(v.list_price || v.sale_price));
+        targetProd.costs = productData.variants.map(v => Number(v.cost_price || 0));
+      }
+    }
+
     const source = (typeof window !== 'undefined' && window.LOCAL_CATALOG) || (typeof LOCAL_CATALOG !== 'undefined' && LOCAL_CATALOG);
     if (source && Array.isArray(source)) {
       const p = source.find(item => item.id === productId);
-      if (p) {
-        if (productData.name) p.name = productData.name;
-        if (productData.description !== undefined) p.description = productData.description;
-        if (productData.image_url) p.image_url = productData.image_url;
-        if (productData.badge !== undefined) p.badge = productData.badge;
-        if (productData.is_promo !== undefined) p.is_promo = productData.is_promo ? 1 : 0;
-        if (productData.is_featured !== undefined) p.is_featured = productData.is_featured ? 1 : 0;
-        if (productData.variants && productData.variants.length > 0) {
-          p.variants = productData.variants;
-          p.presentations = productData.variants.map(v => v.presentation_name);
-          p.costs = productData.variants.map(v => Number(v.cost_price));
-          p.prices = productData.variants.map(v => Number(v.sale_price));
-          p.list_prices = productData.variants.map(v => Number(v.list_price));
-        }
-      }
+      if (p) applyProductUpdate(p);
     }
+    if (typeof ALL_PRODUCTS_MASTER !== 'undefined' && Array.isArray(ALL_PRODUCTS_MASTER)) {
+      const pMaster = ALL_PRODUCTS_MASTER.find(item => item.id === productId);
+      if (pMaster) applyProductUpdate(pMaster);
+    }
+    if (typeof PRODUCTS_DB !== 'undefined' && Array.isArray(PRODUCTS_DB)) {
+      const pDb = PRODUCTS_DB.find(item => item.id === productId);
+      if (pDb) applyProductUpdate(pDb);
+    }
+    if (typeof ADMIN_PRODUCTS_DB !== 'undefined' && Array.isArray(ADMIN_PRODUCTS_DB)) {
+      const pAdmin = ADMIN_PRODUCTS_DB.find(item => item.id === productId);
+      if (pAdmin) applyProductUpdate(pAdmin);
+    }
+
     return true;
   },
 
@@ -452,6 +580,9 @@ window.API = {
     if (this.supabaseClient) {
       try {
         const { count: prodCount } = await this.supabaseClient.from('products').select('*', { count: 'exact', head: true }).eq('active', true);
+        const { count: variantCount } = await this.supabaseClient.from('product_variants').select('*', { count: 'exact', head: true });
+        const { count: brandCount } = await this.supabaseClient.from('brands').select('*', { count: 'exact', head: true });
+        const { count: catCount } = await this.supabaseClient.from('categories').select('*', { count: 'exact', head: true });
         const { count: visitCount } = await this.supabaseClient.from('site_visits').select('*', { count: 'exact', head: true });
         const { data: visits } = await this.supabaseClient.from('site_visits').select('session_id, visit_date, visit_time').order('visit_time', { ascending: false }).limit(100);
 
@@ -461,7 +592,10 @@ window.API = {
         const lastVisit = (visits && visits[0]) ? new Date(visits[0].visit_time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'Reciente';
 
         return {
-          total_products: prodCount || 144,
+          total_products: prodCount || 182,
+          total_variants: variantCount || 230,
+          total_brands: brandCount || 18,
+          total_categories: catCount || 8,
           total_views: visitCount || 1,
           unique_visitors: uniqueSessions || 1,
           today_views: todayVisits || 1,
@@ -470,8 +604,17 @@ window.API = {
       } catch (e) {}
     }
 
+    const catSource = (typeof LOCAL_CATALOG !== 'undefined' && Array.isArray(LOCAL_CATALOG)) ? LOCAL_CATALOG : [];
+    const bSet = new Set(catSource.map(p => p.brand || p.brand_name).filter(Boolean));
+    const cSet = new Set(catSource.map(p => p.category || p.category_name).filter(Boolean));
+    let tVar = 0;
+    catSource.forEach(p => { tVar += (p.presentations && p.presentations.length) ? p.presentations.length : 1; });
+
     return {
-      total_products: 144,
+      total_products: catSource.length || 182,
+      total_variants: tVar || 230,
+      total_brands: bSet.size || 18,
+      total_categories: cSet.size || 8,
       total_views: 1,
       unique_visitors: 1,
       today_views: 1,

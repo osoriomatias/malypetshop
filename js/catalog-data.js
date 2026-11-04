@@ -1,4 +1,4 @@
-var LOCAL_CATALOG = [
+const LOCAL_CATALOG = [
   {
     "id": 2,
     "name": "Dog Chow Adulto Mini / Raza Pequeña",
@@ -19,8 +19,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "20 kg",
         "weight_kg": 20.0,
-        "cost_price": 53100.0,
-        "margin_percent": 20.0,
         "sale_price": 63720.0,
         "list_price": 73278.0,
         "stock_qty": 50,
@@ -29,9 +27,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "20 kg"
-    ],
-    "costs": [
-      53100.0
     ],
     "prices": [
       63720.0
@@ -65,8 +60,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "8 kg",
         "weight_kg": 8.0,
-        "cost_price": 41700.0,
-        "margin_percent": 22.0,
         "sale_price": 50874.0,
         "list_price": 58505.0,
         "stock_qty": 50,
@@ -75,8 +68,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 71700.0,
-        "margin_percent": 20.0,
         "sale_price": 86040.0,
         "list_price": 98946.0,
         "stock_qty": 50,
@@ -86,10 +77,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "8 kg",
       "15 kg"
-    ],
-    "costs": [
-      41700.0,
-      71700.0
     ],
     "prices": [
       50874.0,
@@ -125,8 +112,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "2 kg",
         "weight_kg": 2.0,
-        "cost_price": 6600.0,
-        "margin_percent": 30.0,
         "sale_price": 8580.0,
         "list_price": 9867.0,
         "stock_qty": 50,
@@ -135,8 +120,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 37200.0,
-        "margin_percent": 20.0,
         "sale_price": 44640.0,
         "list_price": 51336.0,
         "stock_qty": 50,
@@ -145,8 +128,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "21 kg Gigante",
         "weight_kg": 21.0,
-        "cost_price": 49000.0,
-        "margin_percent": 20.0,
         "sale_price": 58800.0,
         "list_price": 67620.0,
         "stock_qty": 50,
@@ -157,11 +138,6 @@ var LOCAL_CATALOG = [
       "2 kg",
       "15 kg",
       "21 kg Gigante"
-    ],
-    "costs": [
-      6600.0,
-      37200.0,
-      49000.0
     ],
     "prices": [
       8580.0,
@@ -199,8 +175,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "2 kg",
         "weight_kg": 2.0,
-        "cost_price": 12800.0,
-        "margin_percent": 25.0,
         "sale_price": 16000.0,
         "list_price": 18400.0,
         "stock_qty": 50,
@@ -209,8 +183,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "10+1 kg Promo",
         "weight_kg": 11.0,
-        "cost_price": 40700.0,
-        "margin_percent": 20.0,
         "sale_price": 48840.0,
         "list_price": 56166.0,
         "stock_qty": 50,
@@ -220,10 +192,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "2 kg",
       "10+1 kg Promo"
-    ],
-    "costs": [
-      12800.0,
-      40700.0
     ],
     "prices": [
       16000.0,
@@ -259,8 +227,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "1.5 kg",
         "weight_kg": 1.5,
-        "cost_price": 4400.0,
-        "margin_percent": 30.0,
         "sale_price": 5720.0,
         "list_price": 6578.0,
         "stock_qty": 50,
@@ -269,8 +235,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "3 kg",
         "weight_kg": 3.0,
-        "cost_price": 8300.0,
-        "margin_percent": 25.0,
         "sale_price": 10375.0,
         "list_price": 11931.0,
         "stock_qty": 50,
@@ -279,8 +243,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "8 kg",
         "weight_kg": 8.0,
-        "cost_price": 18000.0,
-        "margin_percent": 22.0,
         "sale_price": 21960.0,
         "list_price": 25254.0,
         "stock_qty": 50,
@@ -289,8 +251,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 31700.0,
-        "margin_percent": 20.0,
         "sale_price": 38040.0,
         "list_price": 43746.0,
         "stock_qty": 50,
@@ -299,8 +259,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "21 kg",
         "weight_kg": 21.0,
-        "cost_price": 41500.0,
-        "margin_percent": 20.0,
         "sale_price": 49800.0,
         "list_price": 57270.0,
         "stock_qty": 50,
@@ -313,13 +271,6 @@ var LOCAL_CATALOG = [
       "8 kg",
       "15 kg",
       "21 kg"
-    ],
-    "costs": [
-      4400.0,
-      8300.0,
-      18000.0,
-      31700.0,
-      41500.0
     ],
     "prices": [
       5720.0,
@@ -361,8 +312,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "21+3 kg (24 kg)",
         "weight_kg": 24.0,
-        "cost_price": 46600.0,
-        "margin_percent": 20.0,
         "sale_price": 55920.0,
         "list_price": 64308.0,
         "stock_qty": 50,
@@ -371,9 +320,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "21+3 kg (24 kg)"
-    ],
-    "costs": [
-      46600.0
     ],
     "prices": [
       55920.0
@@ -407,8 +353,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "2 kg",
         "weight_kg": 2.0,
-        "cost_price": 8400.0,
-        "margin_percent": 25.0,
         "sale_price": 10500.0,
         "list_price": 12075.0,
         "stock_qty": 50,
@@ -417,8 +361,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 47000.0,
-        "margin_percent": 20.0,
         "sale_price": 56400.0,
         "list_price": 64860.0,
         "stock_qty": 50,
@@ -428,10 +370,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "2 kg",
       "15 kg"
-    ],
-    "costs": [
-      8400.0,
-      47000.0
     ],
     "prices": [
       10500.0,
@@ -467,8 +405,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "2 kg",
         "weight_kg": 2.0,
-        "cost_price": 8400.0,
-        "margin_percent": 25.0,
         "sale_price": 10500.0,
         "list_price": 12075.0,
         "stock_qty": 50,
@@ -477,8 +413,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 47000.0,
-        "margin_percent": 20.0,
         "sale_price": 56400.0,
         "list_price": 64860.0,
         "stock_qty": 50,
@@ -487,8 +421,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "21 kg",
         "weight_kg": 21.0,
-        "cost_price": 62400.0,
-        "margin_percent": 20.0,
         "sale_price": 74880.0,
         "list_price": 86112.0,
         "stock_qty": 50,
@@ -499,11 +431,6 @@ var LOCAL_CATALOG = [
       "2 kg",
       "15 kg",
       "21 kg"
-    ],
-    "costs": [
-      8400.0,
-      47000.0,
-      62400.0
     ],
     "prices": [
       10500.0,
@@ -541,8 +468,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "2 kg",
         "weight_kg": 2.0,
-        "cost_price": 12800.0,
-        "margin_percent": 25.0,
         "sale_price": 16000.0,
         "list_price": 18400.0,
         "stock_qty": 50,
@@ -551,8 +476,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "10 kg Adults / Indoor",
         "weight_kg": 10.0,
-        "cost_price": 47500.0,
-        "margin_percent": 20.0,
         "sale_price": 57000.0,
         "list_price": 65550.0,
         "stock_qty": 50,
@@ -561,8 +484,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "10 kg Kitten",
         "weight_kg": 10.0,
-        "cost_price": 48000.0,
-        "margin_percent": 20.0,
         "sale_price": 57600.0,
         "list_price": 66240.0,
         "stock_qty": 50,
@@ -573,11 +494,6 @@ var LOCAL_CATALOG = [
       "2 kg",
       "10 kg Adults / Indoor",
       "10 kg Kitten"
-    ],
-    "costs": [
-      12800.0,
-      47500.0,
-      48000.0
     ],
     "prices": [
       16000.0,
@@ -615,8 +531,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "8 kg",
         "weight_kg": 8.0,
-        "cost_price": 23370.0,
-        "margin_percent": 22.0,
         "sale_price": 28511.0,
         "list_price": 32788.0,
         "stock_qty": 50,
@@ -625,8 +539,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "21 kg Gigante",
         "weight_kg": 21.0,
-        "cost_price": 52390.0,
-        "margin_percent": 20.0,
         "sale_price": 62868.0,
         "list_price": 72298.0,
         "stock_qty": 50,
@@ -636,10 +548,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "8 kg",
       "21 kg Gigante"
-    ],
-    "costs": [
-      23370.0,
-      52390.0
     ],
     "prices": [
       28511.0,
@@ -675,8 +583,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "10 kg",
         "weight_kg": 10.0,
-        "cost_price": 40900.0,
-        "margin_percent": 20.0,
         "sale_price": 49080.0,
         "list_price": 56442.0,
         "stock_qty": 50,
@@ -685,8 +591,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "20 kg Gigante",
         "weight_kg": 20.0,
-        "cost_price": 71450.0,
-        "margin_percent": 20.0,
         "sale_price": 85740.0,
         "list_price": 98601.0,
         "stock_qty": 50,
@@ -696,10 +600,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "10 kg",
       "20 kg Gigante"
-    ],
-    "costs": [
-      40900.0,
-      71450.0
     ],
     "prices": [
       49080.0,
@@ -735,8 +635,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Caja 12 sobres",
         "weight_kg": 1.0,
-        "cost_price": 11200.0,
-        "margin_percent": 25.0,
         "sale_price": 14000.0,
         "list_price": 16100.0,
         "stock_qty": 50,
@@ -745,9 +643,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Caja 12 sobres"
-    ],
-    "costs": [
-      11200.0
     ],
     "prices": [
       14000.0
@@ -781,8 +676,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Sobre 40 g",
         "weight_kg": 0.04,
-        "cost_price": 1320.0,
-        "margin_percent": 35.0,
         "sale_price": 1782.0,
         "list_price": 2049.0,
         "stock_qty": 50,
@@ -791,8 +684,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Sobre 80 g",
         "weight_kg": 0.08,
-        "cost_price": 2220.0,
-        "margin_percent": 35.0,
         "sale_price": 2997.0,
         "list_price": 3447.0,
         "stock_qty": 50,
@@ -802,10 +693,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Sobre 40 g",
       "Sobre 80 g"
-    ],
-    "costs": [
-      1320.0,
-      2220.0
     ],
     "prices": [
       1782.0,
@@ -841,8 +728,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Pack 48 g",
         "weight_kg": 0.048,
-        "cost_price": 2770.0,
-        "margin_percent": 35.0,
         "sale_price": 3740.0,
         "list_price": 4301.0,
         "stock_qty": 50,
@@ -851,9 +736,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Pack 48 g"
-    ],
-    "costs": [
-      2770.0
     ],
     "prices": [
       3740.0
@@ -887,8 +769,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "1 Unidad",
         "weight_kg": 0.03,
-        "cost_price": 430.0,
-        "margin_percent": 35.0,
         "sale_price": 580.0,
         "list_price": 667.0,
         "stock_qty": 50,
@@ -897,8 +777,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Pack x 3 Unidades",
         "weight_kg": 0.09,
-        "cost_price": 1250.0,
-        "margin_percent": 35.0,
         "sale_price": 1688.0,
         "list_price": 1941.0,
         "stock_qty": 50,
@@ -907,8 +785,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Pack Semanal x 7 Unid.",
         "weight_kg": 0.21,
-        "cost_price": 2420.0,
-        "margin_percent": 30.0,
         "sale_price": 3146.0,
         "list_price": 3618.0,
         "stock_qty": 50,
@@ -919,11 +795,6 @@ var LOCAL_CATALOG = [
       "1 Unidad",
       "Pack x 3 Unidades",
       "Pack Semanal x 7 Unid."
-    ],
-    "costs": [
-      430.0,
-      1250.0,
-      2420.0
     ],
     "prices": [
       580.0,
@@ -961,8 +832,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "1 Unidad",
         "weight_kg": 0.05,
-        "cost_price": 510.0,
-        "margin_percent": 35.0,
         "sale_price": 688.0,
         "list_price": 791.0,
         "stock_qty": 50,
@@ -971,8 +840,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Pack x 3 Unidades",
         "weight_kg": 0.15,
-        "cost_price": 1450.0,
-        "margin_percent": 35.0,
         "sale_price": 1958.0,
         "list_price": 2252.0,
         "stock_qty": 50,
@@ -981,8 +848,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Pack Semanal x 7 Unid.",
         "weight_kg": 0.35,
-        "cost_price": 2850.0,
-        "margin_percent": 30.0,
         "sale_price": 3705.0,
         "list_price": 4261.0,
         "stock_qty": 50,
@@ -993,11 +858,6 @@ var LOCAL_CATALOG = [
       "1 Unidad",
       "Pack x 3 Unidades",
       "Pack Semanal x 7 Unid."
-    ],
-    "costs": [
-      510.0,
-      1450.0,
-      2850.0
     ],
     "prices": [
       688.0,
@@ -1035,8 +895,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "3 kg",
         "weight_kg": 3.0,
-        "cost_price": 31150.0,
-        "margin_percent": 22.0,
         "sale_price": 38003.0,
         "list_price": 43703.0,
         "stock_qty": 50,
@@ -1045,8 +903,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 63780.0,
-        "margin_percent": 20.0,
         "sale_price": 76536.0,
         "list_price": 88016.0,
         "stock_qty": 50,
@@ -1056,10 +912,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "3 kg",
       "7.5 kg"
-    ],
-    "costs": [
-      31150.0,
-      63780.0
     ],
     "prices": [
       38003.0,
@@ -1095,8 +947,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "3 kg",
         "weight_kg": 3.0,
-        "cost_price": 30090.0,
-        "margin_percent": 22.0,
         "sale_price": 36710.0,
         "list_price": 42216.0,
         "stock_qty": 50,
@@ -1105,8 +955,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 100690.0,
-        "margin_percent": 20.0,
         "sale_price": 120828.0,
         "list_price": 138952.0,
         "stock_qty": 50,
@@ -1116,10 +964,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "3 kg",
       "15 kg"
-    ],
-    "costs": [
-      30090.0,
-      100690.0
     ],
     "prices": [
       36710.0,
@@ -1155,8 +999,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "1 kg",
         "weight_kg": 1.0,
-        "cost_price": 15550.0,
-        "margin_percent": 25.0,
         "sale_price": 19438.0,
         "list_price": 22354.0,
         "stock_qty": 50,
@@ -1165,8 +1007,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 85460.0,
-        "margin_percent": 20.0,
         "sale_price": 102552.0,
         "list_price": 117935.0,
         "stock_qty": 50,
@@ -1175,8 +1015,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 150030.0,
-        "margin_percent": 20.0,
         "sale_price": 180036.0,
         "list_price": 207041.0,
         "stock_qty": 50,
@@ -1187,11 +1025,6 @@ var LOCAL_CATALOG = [
       "1 kg",
       "7.5 kg",
       "15 kg"
-    ],
-    "costs": [
-      15550.0,
-      85460.0,
-      150030.0
     ],
     "prices": [
       19438.0,
@@ -1229,8 +1062,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "3 kg",
         "weight_kg": 3.0,
-        "cost_price": 35400.0,
-        "margin_percent": 22.0,
         "sale_price": 43188.0,
         "list_price": 49666.0,
         "stock_qty": 50,
@@ -1239,8 +1070,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 81170.0,
-        "margin_percent": 20.0,
         "sale_price": 97404.0,
         "list_price": 112015.0,
         "stock_qty": 50,
@@ -1249,8 +1078,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg Nuevo",
         "weight_kg": 15.0,
-        "cost_price": 133460.0,
-        "margin_percent": 20.0,
         "sale_price": 160152.0,
         "list_price": 184175.0,
         "stock_qty": 50,
@@ -1261,11 +1088,6 @@ var LOCAL_CATALOG = [
       "3 kg",
       "7.5 kg",
       "15 kg Nuevo"
-    ],
-    "costs": [
-      35400.0,
-      81170.0,
-      133460.0
     ],
     "prices": [
       43188.0,
@@ -1303,8 +1125,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "3 kg",
         "weight_kg": 3.0,
-        "cost_price": 36900.0,
-        "margin_percent": 22.0,
         "sale_price": 45018.0,
         "list_price": 51771.0,
         "stock_qty": 50,
@@ -1313,8 +1133,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 74340.0,
-        "margin_percent": 20.0,
         "sale_price": 89208.0,
         "list_price": 102589.0,
         "stock_qty": 50,
@@ -1323,8 +1141,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 138290.0,
-        "margin_percent": 20.0,
         "sale_price": 165948.0,
         "list_price": 190840.0,
         "stock_qty": 50,
@@ -1335,11 +1151,6 @@ var LOCAL_CATALOG = [
       "3 kg",
       "7.5 kg",
       "15 kg"
-    ],
-    "costs": [
-      36900.0,
-      74340.0,
-      138290.0
     ],
     "prices": [
       45018.0,
@@ -1377,8 +1188,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Caniche Adulto 3 kg",
         "weight_kg": 3.0,
-        "cost_price": 38600.0,
-        "margin_percent": 22.0,
         "sale_price": 47092.0,
         "list_price": 54156.0,
         "stock_qty": 50,
@@ -1387,8 +1196,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bulldog Francés 3 kg",
         "weight_kg": 3.0,
-        "cost_price": 38600.0,
-        "margin_percent": 22.0,
         "sale_price": 47092.0,
         "list_price": 54156.0,
         "stock_qty": 50,
@@ -1397,8 +1204,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Yorkshire Terrier 3 kg",
         "weight_kg": 3.0,
-        "cost_price": 38600.0,
-        "margin_percent": 22.0,
         "sale_price": 47092.0,
         "list_price": 54156.0,
         "stock_qty": 50,
@@ -1409,11 +1214,6 @@ var LOCAL_CATALOG = [
       "Caniche Adulto 3 kg",
       "Bulldog Francés 3 kg",
       "Yorkshire Terrier 3 kg"
-    ],
-    "costs": [
-      38600.0,
-      38600.0,
-      38600.0
     ],
     "prices": [
       47092.0,
@@ -1451,8 +1251,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "1.5 kg",
         "weight_kg": 1.5,
-        "cost_price": 26350.0,
-        "margin_percent": 25.0,
         "sale_price": 32938.0,
         "list_price": 37879.0,
         "stock_qty": 50,
@@ -1461,8 +1259,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 110750.0,
-        "margin_percent": 20.0,
         "sale_price": 132900.0,
         "list_price": 152835.0,
         "stock_qty": 50,
@@ -1471,8 +1267,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 186750.0,
-        "margin_percent": 20.0,
         "sale_price": 224100.0,
         "list_price": 257715.0,
         "stock_qty": 50,
@@ -1483,11 +1277,6 @@ var LOCAL_CATALOG = [
       "1.5 kg",
       "7.5 kg",
       "15 kg"
-    ],
-    "costs": [
-      26350.0,
-      110750.0,
-      186750.0
     ],
     "prices": [
       32938.0,
@@ -1525,8 +1314,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 110420.0,
-        "margin_percent": 20.0,
         "sale_price": 132504.0,
         "list_price": 152380.0,
         "stock_qty": 50,
@@ -1535,9 +1322,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "7.5 kg"
-    ],
-    "costs": [
-      110420.0
     ],
     "prices": [
       132504.0
@@ -1571,8 +1355,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 60300.0,
-        "margin_percent": 20.0,
         "sale_price": 72360.0,
         "list_price": 83214.0,
         "stock_qty": 50,
@@ -1581,8 +1363,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "20 kg Gigante",
         "weight_kg": 20.0,
-        "cost_price": 71600.0,
-        "margin_percent": 20.0,
         "sale_price": 85920.0,
         "list_price": 98808.0,
         "stock_qty": 50,
@@ -1592,10 +1372,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "15 kg",
       "20 kg Gigante"
-    ],
-    "costs": [
-      60300.0,
-      71600.0
     ],
     "prices": [
       72360.0,
@@ -1631,8 +1407,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "3 kg",
         "weight_kg": 3.0,
-        "cost_price": 26500.0,
-        "margin_percent": 22.0,
         "sale_price": 32330.0,
         "list_price": 37180.0,
         "stock_qty": 50,
@@ -1641,8 +1415,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 54200.0,
-        "margin_percent": 20.0,
         "sale_price": 65040.0,
         "list_price": 74796.0,
         "stock_qty": 50,
@@ -1651,8 +1423,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 104500.0,
-        "margin_percent": 20.0,
         "sale_price": 125400.0,
         "list_price": 144210.0,
         "stock_qty": 50,
@@ -1663,11 +1433,6 @@ var LOCAL_CATALOG = [
       "3 kg",
       "7.5 kg",
       "15 kg"
-    ],
-    "costs": [
-      26500.0,
-      54200.0,
-      104500.0
     ],
     "prices": [
       32330.0,
@@ -1705,8 +1470,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Raza Pequeña 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 51400.0,
-        "margin_percent": 20.0,
         "sale_price": 61680.0,
         "list_price": 70932.0,
         "stock_qty": 50,
@@ -1715,8 +1478,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Raza Med/Grande 20 kg",
         "weight_kg": 20.0,
-        "cost_price": 63900.0,
-        "margin_percent": 20.0,
         "sale_price": 76680.0,
         "list_price": 88182.0,
         "stock_qty": 50,
@@ -1726,10 +1487,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Raza Pequeña 15 kg",
       "Raza Med/Grande 20 kg"
-    ],
-    "costs": [
-      51400.0,
-      63900.0
     ],
     "prices": [
       61680.0,
@@ -1765,8 +1522,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Small Breed 3 kg",
         "weight_kg": 3.0,
-        "cost_price": 21500.0,
-        "margin_percent": 22.0,
         "sale_price": 26230.0,
         "list_price": 30164.0,
         "stock_qty": 50,
@@ -1775,8 +1530,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Small Breed 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 83100.0,
-        "margin_percent": 20.0,
         "sale_price": 99720.0,
         "list_price": 114678.0,
         "stock_qty": 50,
@@ -1785,8 +1538,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Medium Breed 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 80600.0,
-        "margin_percent": 20.0,
         "sale_price": 96720.0,
         "list_price": 111228.0,
         "stock_qty": 50,
@@ -1795,8 +1546,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Large Breed 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 80300.0,
-        "margin_percent": 20.0,
         "sale_price": 96360.0,
         "list_price": 110814.0,
         "stock_qty": 50,
@@ -1808,12 +1557,6 @@ var LOCAL_CATALOG = [
       "Small Breed 15 kg",
       "Medium Breed 15 kg",
       "Large Breed 15 kg"
-    ],
-    "costs": [
-      21500.0,
-      83100.0,
-      80600.0,
-      80300.0
     ],
     "prices": [
       26230.0,
@@ -1853,8 +1596,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Mini Adulto 12 kg",
         "weight_kg": 12.0,
-        "cost_price": 63400.0,
-        "margin_percent": 20.0,
         "sale_price": 76080.0,
         "list_price": 87492.0,
         "stock_qty": 50,
@@ -1863,8 +1604,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Med & Large 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 72800.0,
-        "margin_percent": 20.0,
         "sale_price": 87360.0,
         "list_price": 100464.0,
         "stock_qty": 50,
@@ -1874,10 +1613,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Mini Adulto 12 kg",
       "Med & Large 15 kg"
-    ],
-    "costs": [
-      63400.0,
-      72800.0
     ],
     "prices": [
       76080.0,
@@ -1913,8 +1648,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Talla Pequeña 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 50900.0,
-        "margin_percent": 20.0,
         "sale_price": 61080.0,
         "list_price": 70242.0,
         "stock_qty": 50,
@@ -1923,8 +1656,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Adulto 20 kg",
         "weight_kg": 20.0,
-        "cost_price": 55400.0,
-        "margin_percent": 20.0,
         "sale_price": 66480.0,
         "list_price": 76452.0,
         "stock_qty": 50,
@@ -1933,8 +1664,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Cachorro 20 kg",
         "weight_kg": 20.0,
-        "cost_price": 63700.0,
-        "margin_percent": 20.0,
         "sale_price": 76440.0,
         "list_price": 87906.0,
         "stock_qty": 50,
@@ -1945,11 +1674,6 @@ var LOCAL_CATALOG = [
       "Talla Pequeña 15 kg",
       "Adulto 20 kg",
       "Cachorro 20 kg"
-    ],
-    "costs": [
-      50900.0,
-      55400.0,
-      63700.0
     ],
     "prices": [
       61080.0,
@@ -1987,8 +1711,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Cat Adulto 10 kg",
         "weight_kg": 10.0,
-        "cost_price": 55900.0,
-        "margin_percent": 20.0,
         "sale_price": 67080.0,
         "list_price": 77142.0,
         "stock_qty": 50,
@@ -1997,8 +1719,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Cat Kitten 10 kg",
         "weight_kg": 10.0,
-        "cost_price": 60500.0,
-        "margin_percent": 20.0,
         "sale_price": 72600.0,
         "list_price": 83490.0,
         "stock_qty": 50,
@@ -2007,8 +1727,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Cat Urinary 10 kg",
         "weight_kg": 10.0,
-        "cost_price": 60500.0,
-        "margin_percent": 20.0,
         "sale_price": 72600.0,
         "list_price": 83490.0,
         "stock_qty": 50,
@@ -2019,11 +1737,6 @@ var LOCAL_CATALOG = [
       "Cat Adulto 10 kg",
       "Cat Kitten 10 kg",
       "Cat Urinary 10 kg"
-    ],
-    "costs": [
-      55900.0,
-      60500.0,
-      60500.0
     ],
     "prices": [
       67080.0,
@@ -2061,8 +1774,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "22 kg",
         "weight_kg": 22.0,
-        "cost_price": 32400.0,
-        "margin_percent": 20.0,
         "sale_price": 38880.0,
         "list_price": 44712.0,
         "stock_qty": 50,
@@ -2071,9 +1782,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "22 kg"
-    ],
-    "costs": [
-      32400.0
     ],
     "prices": [
       38880.0
@@ -2107,8 +1815,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Hueso N°1 Chico (3-4 pulgadas)",
         "weight_kg": 0.05,
-        "cost_price": 800.0,
-        "margin_percent": 35.0,
         "sale_price": 1080.0,
         "list_price": 1242.0,
         "stock_qty": 50,
@@ -2117,8 +1823,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Hueso N°2 Mediano (7-8 pulgadas)",
         "weight_kg": 0.12,
-        "cost_price": 1300.0,
-        "margin_percent": 35.0,
         "sale_price": 1755.0,
         "list_price": 2018.0,
         "stock_qty": 50,
@@ -2127,8 +1831,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Hueso N°3 Grande (8-9 pulgadas)",
         "weight_kg": 0.22,
-        "cost_price": 3100.0,
-        "margin_percent": 35.0,
         "sale_price": 4185.0,
         "list_price": 4813.0,
         "stock_qty": 50,
@@ -2137,8 +1839,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Hueso N°4 Extra Grande (9-10 pulgadas)",
         "weight_kg": 0.35,
-        "cost_price": 4440.0,
-        "margin_percent": 35.0,
         "sale_price": 5994.0,
         "list_price": 6893.0,
         "stock_qty": 50,
@@ -2147,8 +1847,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Hueso N°5 Gigante (10-11 pulgadas)",
         "weight_kg": 0.5,
-        "cost_price": 4700.0,
-        "margin_percent": 35.0,
         "sale_price": 6345.0,
         "list_price": 7297.0,
         "stock_qty": 50,
@@ -2161,13 +1859,6 @@ var LOCAL_CATALOG = [
       "Hueso N°3 Grande (8-9 pulgadas)",
       "Hueso N°4 Extra Grande (9-10 pulgadas)",
       "Hueso N°5 Gigante (10-11 pulgadas)"
-    ],
-    "costs": [
-      800.0,
-      1300.0,
-      3100.0,
-      4440.0,
-      4700.0
     ],
     "prices": [
       1080.0,
@@ -2209,8 +1900,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Unidad Especial",
         "weight_kg": 0.08,
-        "cost_price": 800.0,
-        "margin_percent": 35.0,
         "sale_price": 1080.0,
         "list_price": 1242.0,
         "stock_qty": 50,
@@ -2219,9 +1908,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Unidad Especial"
-    ],
-    "costs": [
-      800.0
     ],
     "prices": [
       1080.0
@@ -2255,8 +1941,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 8 kg",
         "weight_kg": 8.0,
-        "cost_price": 6100.0,
-        "margin_percent": 30.0,
         "sale_price": 7930.0,
         "list_price": 9120.0,
         "stock_qty": 50,
@@ -2265,8 +1949,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bulto 12 kg (6x2kg)",
         "weight_kg": 12.0,
-        "cost_price": 10100.0,
-        "margin_percent": 25.0,
         "sale_price": 12625.0,
         "list_price": 14519.0,
         "stock_qty": 50,
@@ -2275,8 +1957,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bulto 21.6 kg (6x3.6kg)",
         "weight_kg": 21.6,
-        "cost_price": 16850.0,
-        "margin_percent": 20.0,
         "sale_price": 20220.0,
         "list_price": 23253.0,
         "stock_qty": 50,
@@ -2287,11 +1967,6 @@ var LOCAL_CATALOG = [
       "Bolsa 8 kg",
       "Bulto 12 kg (6x2kg)",
       "Bulto 21.6 kg (6x3.6kg)"
-    ],
-    "costs": [
-      6100.0,
-      10100.0,
-      16850.0
     ],
     "prices": [
       7930.0,
@@ -2329,8 +2004,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bulto 12 kg (6x2kg)",
         "weight_kg": 12.0,
-        "cost_price": 14700.0,
-        "margin_percent": 25.0,
         "sale_price": 18375.0,
         "list_price": 21131.0,
         "stock_qty": 50,
@@ -2339,8 +2012,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bulto 21.6 kg (6x3.6kg)",
         "weight_kg": 21.6,
-        "cost_price": 25500.0,
-        "margin_percent": 20.0,
         "sale_price": 30600.0,
         "list_price": 35190.0,
         "stock_qty": 50,
@@ -2350,10 +2021,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Bulto 12 kg (6x2kg)",
       "Bulto 21.6 kg (6x3.6kg)"
-    ],
-    "costs": [
-      14700.0,
-      25500.0
     ],
     "prices": [
       18375.0,
@@ -2389,8 +2056,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bulto 24 kg (6x4kg)",
         "weight_kg": 24.0,
-        "cost_price": 17800.0,
-        "margin_percent": 20.0,
         "sale_price": 21360.0,
         "list_price": 24564.0,
         "stock_qty": 50,
@@ -2399,9 +2064,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bulto 24 kg (6x4kg)"
-    ],
-    "costs": [
-      17800.0
     ],
     "prices": [
       21360.0
@@ -2435,8 +2097,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Botella 250 ml",
         "weight_kg": 0.3,
-        "cost_price": 6800.0,
-        "margin_percent": 35.0,
         "sale_price": 9180.0,
         "list_price": 10557.0,
         "stock_qty": 50,
@@ -2445,9 +2105,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Botella 250 ml"
-    ],
-    "costs": [
-      6800.0
     ],
     "prices": [
       9180.0
@@ -2481,8 +2138,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Frasco 70 cc",
         "weight_kg": 0.1,
-        "cost_price": 4700.0,
-        "margin_percent": 35.0,
         "sale_price": 6345.0,
         "list_price": 7297.0,
         "stock_qty": 50,
@@ -2491,8 +2146,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Frasco 120 cc",
         "weight_kg": 0.15,
-        "cost_price": 6600.0,
-        "margin_percent": 35.0,
         "sale_price": 8910.0,
         "list_price": 10246.0,
         "stock_qty": 50,
@@ -2502,10 +2155,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Frasco 70 cc",
       "Frasco 120 cc"
-    ],
-    "costs": [
-      4700.0,
-      6600.0
     ],
     "prices": [
       6345.0,
@@ -2541,8 +2190,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "10 grs Nro. 1",
         "weight_kg": 0.01,
-        "cost_price": 2100.0,
-        "margin_percent": 30.0,
         "sale_price": 2730.0,
         "list_price": 2730.0,
         "stock_qty": 50,
@@ -2551,8 +2198,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "20 grs Nro. 2",
         "weight_kg": 0.02,
-        "cost_price": 3600.0,
-        "margin_percent": 30.0,
         "sale_price": 4680.0,
         "list_price": 4680.0,
         "stock_qty": 50,
@@ -2561,8 +2206,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "40 grs Nro. 3",
         "weight_kg": 0.04,
-        "cost_price": 6700.0,
-        "margin_percent": 25.0,
         "sale_price": 8375.0,
         "list_price": 8375.0,
         "stock_qty": 50,
@@ -2571,8 +2214,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Caja Criador x 2.2 kg",
         "weight_kg": 2.2,
-        "cost_price": 124400.0,
-        "margin_percent": 20.0,
         "sale_price": 149280.0,
         "list_price": 149280.0,
         "stock_qty": 50,
@@ -2584,12 +2225,6 @@ var LOCAL_CATALOG = [
       "20 grs Nro. 2",
       "40 grs Nro. 3",
       "Caja Criador x 2.2 kg"
-    ],
-    "costs": [
-      2100.0,
-      3600.0,
-      6700.0,
-      124400.0
     ],
     "prices": [
       2730.0,
@@ -2629,8 +2264,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Frasco 60 cc",
         "weight_kg": 0.06,
-        "cost_price": 2750.0,
-        "margin_percent": 30.0,
         "sale_price": 3575.0,
         "list_price": 3575.0,
         "stock_qty": 50,
@@ -2639,8 +2272,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Frasco 120 cc",
         "weight_kg": 0.12,
-        "cost_price": 3950.0,
-        "margin_percent": 30.0,
         "sale_price": 5135.0,
         "list_price": 5135.0,
         "stock_qty": 50,
@@ -2649,8 +2280,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Frasco 250 cc",
         "weight_kg": 0.25,
-        "cost_price": 6500.0,
-        "margin_percent": 25.0,
         "sale_price": 8125.0,
         "list_price": 8125.0,
         "stock_qty": 50,
@@ -2661,11 +2290,6 @@ var LOCAL_CATALOG = [
       "Frasco 60 cc",
       "Frasco 120 cc",
       "Frasco 250 cc"
-    ],
-    "costs": [
-      2750.0,
-      3950.0,
-      6500.0
     ],
     "prices": [
       3575.0,
@@ -2703,8 +2327,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Envase 350 cc",
         "weight_kg": 0.35,
-        "cost_price": 5300.0,
-        "margin_percent": 28.0,
         "sale_price": 6784.0,
         "list_price": 6784.0,
         "stock_qty": 50,
@@ -2713,8 +2335,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Envase 700 cc",
         "weight_kg": 0.7,
-        "cost_price": 11400.0,
-        "margin_percent": 25.0,
         "sale_price": 14250.0,
         "list_price": 14250.0,
         "stock_qty": 50,
@@ -2724,10 +2344,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Envase 350 cc",
       "Envase 700 cc"
-    ],
-    "costs": [
-      5300.0,
-      11400.0
     ],
     "prices": [
       6784.0,
@@ -2763,8 +2379,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 25 kg",
         "weight_kg": 25.0,
-        "cost_price": 17600.0,
-        "margin_percent": 20.0,
         "sale_price": 21120.0,
         "list_price": 21120.0,
         "stock_qty": 50,
@@ -2773,9 +2387,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 25 kg"
-    ],
-    "costs": [
-      17600.0
     ],
     "prices": [
       21120.0
@@ -2809,8 +2420,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 10 kg",
         "weight_kg": 10.0,
-        "cost_price": 7500.0,
-        "margin_percent": 25.0,
         "sale_price": 9375.0,
         "list_price": 9375.0,
         "stock_qty": 50,
@@ -2819,8 +2428,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 20 kg",
         "weight_kg": 20.0,
-        "cost_price": 12800.0,
-        "margin_percent": 22.0,
         "sale_price": 15616.0,
         "list_price": 15616.0,
         "stock_qty": 50,
@@ -2830,10 +2437,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Bolsa 10 kg",
       "Bolsa 20 kg"
-    ],
-    "costs": [
-      7500.0,
-      12800.0
     ],
     "prices": [
       9375.0,
@@ -2869,8 +2472,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 29100.0,
-        "margin_percent": 25.0,
         "sale_price": 36375.0,
         "list_price": 36375.0,
         "stock_qty": 50,
@@ -2879,8 +2480,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 21 kg",
         "weight_kg": 21.0,
-        "cost_price": 38300.0,
-        "margin_percent": 22.0,
         "sale_price": 46726.0,
         "list_price": 46726.0,
         "stock_qty": 50,
@@ -2890,10 +2489,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Bolsa 15 kg",
       "Bolsa 21 kg"
-    ],
-    "costs": [
-      29100.0,
-      38300.0
     ],
     "prices": [
       36375.0,
@@ -2929,8 +2524,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Perro Carne 21 kg",
         "weight_kg": 21.0,
-        "cost_price": 27650.0,
-        "margin_percent": 22.0,
         "sale_price": 33733.0,
         "list_price": 33733.0,
         "stock_qty": 50,
@@ -2939,8 +2532,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Perro Tradicional 21 kg",
         "weight_kg": 21.0,
-        "cost_price": 27650.0,
-        "margin_percent": 22.0,
         "sale_price": 33733.0,
         "list_price": 33733.0,
         "stock_qty": 50,
@@ -2949,8 +2540,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Mantenimiento 21 kg",
         "weight_kg": 21.0,
-        "cost_price": 24700.0,
-        "margin_percent": 22.0,
         "sale_price": 30134.0,
         "list_price": 30134.0,
         "stock_qty": 50,
@@ -2961,11 +2550,6 @@ var LOCAL_CATALOG = [
       "Perro Carne 21 kg",
       "Perro Tradicional 21 kg",
       "Mantenimiento 21 kg"
-    ],
-    "costs": [
-      27650.0,
-      27650.0,
-      24700.0
     ],
     "prices": [
       33733.0,
@@ -3003,8 +2587,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 77000.0,
-        "margin_percent": 22.0,
         "sale_price": 93940.0,
         "list_price": 93940.0,
         "stock_qty": 50,
@@ -3013,8 +2595,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 20 kg",
         "weight_kg": 20.0,
-        "cost_price": 98600.0,
-        "margin_percent": 20.0,
         "sale_price": 118320.0,
         "list_price": 118320.0,
         "stock_qty": 50,
@@ -3024,10 +2604,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Bolsa 15 kg",
       "Bolsa 20 kg"
-    ],
-    "costs": [
-      77000.0,
-      98600.0
     ],
     "prices": [
       93940.0,
@@ -3040,6 +2616,378 @@ var LOCAL_CATALOG = [
     "brand": "Performance",
     "category": "perros",
     "desc": "Nutrición Super Premium con ingredientes de altísima digestibilidad, condroitín sulfato y glucosamina para articulaciones saludables.",
+    "featured": true,
+    "promo": false
+  },
+  {
+    "id": 145,
+    "name": "Royal Canin Feline Kitten (Gatitos)",
+    "slug": "royal-canin-feline-kitten",
+    "description": "Nutrición a medida para gatitos de 4 a 12 meses. Con defensas naturales reforzadas y alta digestibilidad.",
+    "pet_type": "gato",
+    "subcat": "cachorro",
+    "breed_size": "todas",
+    "badge": "Cachorro",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_672535-MLA71077755104_082023-O.webp",
+    "is_featured": 1,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Gatos",
+    "category_slug": "gatos",
+    "brand_name": "Royal Canin",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 1,5 kg",
+        "weight_kg": 1.5,
+        "sale_price": 37625.0,
+        "list_price": 37625.0,
+        "stock_qty": 100,
+        "sku": "RC-KIT-1.5"
+      },
+      {
+        "presentation_name": "Bolsa 7,5 kg",
+        "weight_kg": 7.5,
+        "sale_price": 132780.0,
+        "list_price": 132780.0,
+        "stock_qty": 100,
+        "sku": "RC-KIT-7.5"
+      }
+    ],
+    "presentations": [
+      "Bolsa 1,5 kg",
+      "Bolsa 7,5 kg"
+    ],
+    "prices": [
+      37625.0,
+      132780.0
+    ],
+    "list_prices": [
+      37625.0,
+      132780.0
+    ],
+    "brand": "Royal Canin",
+    "category": "gatos",
+    "desc": "Nutrición a medida para gatitos de 4 a 12 meses. Con defensas naturales reforzadas y alta digestibilidad.",
+    "featured": true,
+    "promo": false
+  },
+  {
+    "id": 146,
+    "name": "Royal Canin Feline Urinary Care",
+    "slug": "royal-canin-feline-urinary-care",
+    "description": "Fórmula nutricional precisa que ayuda a mantener el equilibrio saludable de minerales en la orina de gatos adultos sanos.",
+    "pet_type": "gato",
+    "subcat": "adulto",
+    "breed_size": "todas",
+    "badge": "Cuidado Urinario",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_649646-MLA71391763715_082023-O.webp",
+    "is_featured": 1,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Gatos",
+    "category_slug": "gatos",
+    "brand_name": "Royal Canin",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 1,5 kg",
+        "weight_kg": 1.5,
+        "sale_price": 38438.0,
+        "list_price": 38438.0,
+        "stock_qty": 100,
+        "sku": "RC-URCARE-1.5"
+      },
+      {
+        "presentation_name": "Bolsa 7,5 kg",
+        "weight_kg": 7.5,
+        "sale_price": 152796.0,
+        "list_price": 152796.0,
+        "stock_qty": 100,
+        "sku": "RC-URCARE-7.5"
+      }
+    ],
+    "presentations": [
+      "Bolsa 1,5 kg",
+      "Bolsa 7,5 kg"
+    ],
+    "prices": [
+      38438.0,
+      152796.0
+    ],
+    "list_prices": [
+      38438.0,
+      152796.0
+    ],
+    "brand": "Royal Canin",
+    "category": "gatos",
+    "desc": "Fórmula nutricional precisa que ayuda a mantener el equilibrio saludable de minerales en la orina de gatos adultos sanos.",
+    "featured": true,
+    "promo": false
+  },
+  {
+    "id": 152,
+    "name": "Pro Plan Cat Kitten (Gatitos)",
+    "slug": "pro-plan-cat-kitten",
+    "description": "Nutrición avanzada con OptiStart para gatitos de hasta 12 meses. Promueve el desarrollo óptimo del cerebro y la visión con DHA.",
+    "pet_type": "gato",
+    "subcat": "cachorro",
+    "breed_size": "todas",
+    "badge": "Super Premium",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_830605-MLA46675043688_072021-O.webp",
+    "is_featured": 1,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Gatos",
+    "category_slug": "gatos",
+    "brand_name": "Pro Plan",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 1 kg",
+        "weight_kg": 1.0,
+        "sale_price": 22462.0,
+        "list_price": 22462.0,
+        "stock_qty": 100,
+        "sku": "PP-CAT-KIT-1"
+      }
+    ],
+    "presentations": [
+      "Bolsa 1 kg"
+    ],
+    "prices": [
+      22462.0
+    ],
+    "list_prices": [
+      22462.0
+    ],
+    "brand": "Pro Plan",
+    "category": "gatos",
+    "desc": "Nutrición avanzada con OptiStart para gatitos de hasta 12 meses. Promueve el desarrollo óptimo del cerebro y la visión con DHA.",
+    "featured": true,
+    "promo": false
+  },
+  {
+    "id": 154,
+    "name": "Excellent Perro Puppy (Cachorros)",
+    "slug": "excellent-perro-puppy",
+    "description": "Alimento completo con proteínas de alta digestibilidad, calcio y fósforo para un crecimiento óseo y muscular óptimo.",
+    "pet_type": "perro",
+    "subcat": "cachorro",
+    "breed_size": "todas",
+    "badge": "Cachorro",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_816176-MLA99341181006_112025-F.jpg",
+    "is_featured": 1,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Perros",
+    "category_slug": "perros",
+    "brand_name": "Excellent",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 15 kg",
+        "weight_kg": 15.0,
+        "sale_price": 84984.0,
+        "list_price": 84984.0,
+        "stock_qty": 100,
+        "sku": "EXC-PUP-15"
+      },
+      {
+        "presentation_name": "Bolsa 20 kg",
+        "weight_kg": 20.0,
+        "sale_price": 102046.0,
+        "list_price": 102046.0,
+        "stock_qty": 100,
+        "sku": "EXC-PUP-20"
+      }
+    ],
+    "presentations": [
+      "Bolsa 15 kg",
+      "Bolsa 20 kg"
+    ],
+    "prices": [
+      84984.0,
+      102046.0
+    ],
+    "list_prices": [
+      84984.0,
+      102046.0
+    ],
+    "brand": "Excellent",
+    "category": "perros",
+    "desc": "Alimento completo con proteínas de alta digestibilidad, calcio y fósforo para un crecimiento óseo y muscular óptimo.",
+    "featured": true,
+    "promo": false
+  },
+  {
+    "id": 157,
+    "name": "Excellent Cat Urinary",
+    "slug": "excellent-cat-urinary",
+    "description": "Fórmula especialmente desarrollada para colaborar con el mantenimiento de la salud del tracto urinario inferior en felinos adultos.",
+    "pet_type": "gato",
+    "subcat": "adulto",
+    "breed_size": "todas",
+    "badge": "Salud Urinaria",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_907577-MLA46675043690_072021-O.webp",
+    "is_featured": 1,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Gatos",
+    "category_slug": "gatos",
+    "brand_name": "Excellent",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 7,5 kg",
+        "weight_kg": 7.5,
+        "sale_price": 81374.0,
+        "list_price": 81374.0,
+        "stock_qty": 100,
+        "sku": "EXC-CAT-URI-7.5"
+      },
+      {
+        "presentation_name": "Bolsa 15 kg",
+        "weight_kg": 15.0,
+        "sale_price": 152574.0,
+        "list_price": 152574.0,
+        "stock_qty": 100,
+        "sku": "EXC-CAT-URI-15"
+      }
+    ],
+    "presentations": [
+      "Bolsa 7,5 kg",
+      "Bolsa 15 kg"
+    ],
+    "prices": [
+      81374.0,
+      152574.0
+    ],
+    "list_prices": [
+      81374.0,
+      152574.0
+    ],
+    "brand": "Excellent",
+    "category": "gatos",
+    "desc": "Fórmula especialmente desarrollada para colaborar con el mantenimiento de la salud del tracto urinario inferior en felinos adultos.",
+    "featured": true,
+    "promo": false
+  },
+  {
+    "id": 159,
+    "name": "Excellent Cat Sterilized",
+    "slug": "excellent-cat-sterilized",
+    "description": "Alimento formulado específicamente para las necesidades metabólicas de gatos castrados: control calórico y saciedad.",
+    "pet_type": "gato",
+    "subcat": "castrado",
+    "breed_size": "todas",
+    "badge": "Nuevo",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_727189-MLA46675043693_072021-O.webp",
+    "is_featured": 1,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Gatos",
+    "category_slug": "gatos",
+    "brand_name": "Excellent",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 7,5 kg",
+        "weight_kg": 7.5,
+        "sale_price": 81496.0,
+        "list_price": 81496.0,
+        "stock_qty": 100,
+        "sku": "EXC-CAT-STER-7.5"
+      }
+    ],
+    "presentations": [
+      "Bolsa 7,5 kg"
+    ],
+    "prices": [
+      81496.0
+    ],
+    "list_prices": [
+      81496.0
+    ],
+    "brand": "Excellent",
+    "category": "gatos",
+    "desc": "Alimento formulado específicamente para las necesidades metabólicas de gatos castrados: control calórico y saciedad.",
+    "featured": true,
+    "promo": false
+  },
+  {
+    "id": 163,
+    "name": "Eukanuba Gato Adulto",
+    "slug": "eukanuba-gato-adulto",
+    "description": "Nueva línea felina Super Premium de Eukanuba. Proteína animal de alta calidad con pulpa de remolacha y salud digestiva superior.",
+    "pet_type": "gato",
+    "subcat": "adulto",
+    "breed_size": "todas",
+    "badge": "Nuevo",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_667232-MLA51368945413_092022-O.webp",
+    "is_featured": 1,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Gatos",
+    "category_slug": "gatos",
+    "brand_name": "Eukanuba",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 7,5 kg",
+        "weight_kg": 7.5,
+        "sale_price": 79178.0,
+        "list_price": 79178.0,
+        "stock_qty": 100,
+        "sku": "EUK-CAT-AD-7.5"
+      }
+    ],
+    "presentations": [
+      "Bolsa 7,5 kg"
+    ],
+    "prices": [
+      79178.0
+    ],
+    "list_prices": [
+      79178.0
+    ],
+    "brand": "Eukanuba",
+    "category": "gatos",
+    "desc": "Nueva línea felina Super Premium de Eukanuba. Proteína animal de alta calidad con pulpa de remolacha y salud digestiva superior.",
+    "featured": true,
+    "promo": false
+  },
+  {
+    "id": 176,
+    "name": "Tiernitos Pouch Alimento Húmedo (Carne / Cordero / Pavita)",
+    "slug": "tiernitos-pouch-humedo",
+    "description": "Sobres pouch de alimento húmedo premium cocido al vapor en trozos jugosos. Sabores surtidos: Carne, Cordero y Pavita.",
+    "pet_type": "perro",
+    "subcat": "humedo",
+    "breed_size": "todas",
+    "badge": "Húmedo",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_795475-MLA99878002573_112025-O.webp",
+    "is_featured": 1,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Snacks & Masticables",
+    "category_slug": "snacks",
+    "brand_name": "Tiernitos",
+    "variants": [
+      {
+        "presentation_name": "Sobre 100+20 gr (120 g)",
+        "weight_kg": 0.12,
+        "sale_price": 1170.0,
+        "list_price": 1170.0,
+        "stock_qty": 100,
+        "sku": "TIER-POUCH-120"
+      }
+    ],
+    "presentations": [
+      "Sobre 100+20 gr (120 g)"
+    ],
+    "prices": [
+      1170.0
+    ],
+    "list_prices": [
+      1170.0
+    ],
+    "brand": "Tiernitos",
+    "category": "snacks",
+    "desc": "Sobres pouch de alimento húmedo premium cocido al vapor en trozos jugosos. Sabores surtidos: Carne, Cordero y Pavita.",
     "featured": true,
     "promo": false
   },
@@ -3063,8 +3011,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "20 kg",
         "weight_kg": 20.0,
-        "cost_price": 50200.0,
-        "margin_percent": 20.0,
         "sale_price": 60240.0,
         "list_price": 69276.0,
         "stock_qty": 50,
@@ -3073,9 +3019,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "20 kg"
-    ],
-    "costs": [
-      50200.0
     ],
     "prices": [
       60240.0
@@ -3109,8 +3052,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "21 kg",
         "weight_kg": 21.0,
-        "cost_price": 57500.0,
-        "margin_percent": 20.0,
         "sale_price": 69000.0,
         "list_price": 79350.0,
         "stock_qty": 50,
@@ -3119,9 +3060,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "21 kg"
-    ],
-    "costs": [
-      57500.0
     ],
     "prices": [
       69000.0
@@ -3155,8 +3093,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "21 kg",
         "weight_kg": 21.0,
-        "cost_price": 60100.0,
-        "margin_percent": 20.0,
         "sale_price": 72120.0,
         "list_price": 82938.0,
         "stock_qty": 50,
@@ -3165,9 +3101,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "21 kg"
-    ],
-    "costs": [
-      60100.0
     ],
     "prices": [
       72120.0
@@ -3201,8 +3134,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "21 kg",
         "weight_kg": 21.0,
-        "cost_price": 58000.0,
-        "margin_percent": 20.0,
         "sale_price": 69600.0,
         "list_price": 80040.0,
         "stock_qty": 50,
@@ -3211,9 +3142,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "21 kg"
-    ],
-    "costs": [
-      58000.0
     ],
     "prices": [
       69600.0
@@ -3247,8 +3175,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 78400.0,
-        "margin_percent": 20.0,
         "sale_price": 94080.0,
         "list_price": 108192.0,
         "stock_qty": 50,
@@ -3257,9 +3183,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "15 kg"
-    ],
-    "costs": [
-      78400.0
     ],
     "prices": [
       94080.0
@@ -3293,8 +3216,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "21 kg",
         "weight_kg": 21.0,
-        "cost_price": 36900.0,
-        "margin_percent": 20.0,
         "sale_price": 44280.0,
         "list_price": 50922.0,
         "stock_qty": 50,
@@ -3303,9 +3224,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "21 kg"
-    ],
-    "costs": [
-      36900.0
     ],
     "prices": [
       44280.0
@@ -3339,8 +3257,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "21 kg",
         "weight_kg": 21.0,
-        "cost_price": 40530.0,
-        "margin_percent": 20.0,
         "sale_price": 48636.0,
         "list_price": 55931.0,
         "stock_qty": 50,
@@ -3349,9 +3265,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "21 kg"
-    ],
-    "costs": [
-      40530.0
     ],
     "prices": [
       48636.0
@@ -3385,8 +3298,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 41390.0,
-        "margin_percent": 20.0,
         "sale_price": 49668.0,
         "list_price": 57118.0,
         "stock_qty": 50,
@@ -3395,9 +3306,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "15 kg"
-    ],
-    "costs": [
-      41390.0
     ],
     "prices": [
       49668.0
@@ -3431,8 +3339,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 37200.0,
-        "margin_percent": 20.0,
         "sale_price": 44640.0,
         "list_price": 51336.0,
         "stock_qty": 50,
@@ -3441,9 +3347,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "15 kg"
-    ],
-    "costs": [
-      37200.0
     ],
     "prices": [
       44640.0
@@ -3477,8 +3380,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "2 kg",
         "weight_kg": 2.0,
-        "cost_price": 7800.0,
-        "margin_percent": 30.0,
         "sale_price": 10140.0,
         "list_price": 11661.0,
         "stock_qty": 50,
@@ -3487,8 +3388,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 42000.0,
-        "margin_percent": 20.0,
         "sale_price": 50400.0,
         "list_price": 57960.0,
         "stock_qty": 50,
@@ -3498,10 +3397,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "2 kg",
       "15 kg"
-    ],
-    "costs": [
-      7800.0,
-      42000.0
     ],
     "prices": [
       10140.0,
@@ -3537,8 +3432,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 31700.0,
-        "margin_percent": 20.0,
         "sale_price": 38040.0,
         "list_price": 43746.0,
         "stock_qty": 50,
@@ -3547,9 +3440,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "15 kg"
-    ],
-    "costs": [
-      31700.0
     ],
     "prices": [
       38040.0
@@ -3583,8 +3473,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "1.5 kg",
         "weight_kg": 1.5,
-        "cost_price": 4900.0,
-        "margin_percent": 30.0,
         "sale_price": 6370.0,
         "list_price": 7325.0,
         "stock_qty": 50,
@@ -3593,8 +3481,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "3 kg",
         "weight_kg": 3.0,
-        "cost_price": 9300.0,
-        "margin_percent": 25.0,
         "sale_price": 11625.0,
         "list_price": 13369.0,
         "stock_qty": 50,
@@ -3603,8 +3489,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "8 kg",
         "weight_kg": 8.0,
-        "cost_price": 19700.0,
-        "margin_percent": 22.0,
         "sale_price": 24034.0,
         "list_price": 27639.0,
         "stock_qty": 50,
@@ -3613,8 +3497,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "21 kg",
         "weight_kg": 21.0,
-        "cost_price": 46600.0,
-        "margin_percent": 20.0,
         "sale_price": 55920.0,
         "list_price": 64308.0,
         "stock_qty": 50,
@@ -3626,12 +3508,6 @@ var LOCAL_CATALOG = [
       "3 kg",
       "8 kg",
       "21 kg"
-    ],
-    "costs": [
-      4900.0,
-      9300.0,
-      19700.0,
-      46600.0
     ],
     "prices": [
       6370.0,
@@ -3671,8 +3547,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 35300.0,
-        "margin_percent": 20.0,
         "sale_price": 42360.0,
         "list_price": 48714.0,
         "stock_qty": 50,
@@ -3681,9 +3555,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "15 kg"
-    ],
-    "costs": [
-      35300.0
     ],
     "prices": [
       42360.0
@@ -3717,8 +3588,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "1.5 kg",
         "weight_kg": 1.5,
-        "cost_price": 5300.0,
-        "margin_percent": 30.0,
         "sale_price": 6890.0,
         "list_price": 7923.0,
         "stock_qty": 50,
@@ -3727,8 +3596,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 37500.0,
-        "margin_percent": 20.0,
         "sale_price": 45000.0,
         "list_price": 51750.0,
         "stock_qty": 50,
@@ -3738,10 +3605,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "1.5 kg",
       "15 kg"
-    ],
-    "costs": [
-      5300.0,
-      37500.0
     ],
     "prices": [
       6890.0,
@@ -3777,8 +3640,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "1 kg",
         "weight_kg": 1.0,
-        "cost_price": 1800.0,
-        "margin_percent": 35.0,
         "sale_price": 2430.0,
         "list_price": 2794.0,
         "stock_qty": 50,
@@ -3787,8 +3648,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "10+1 kg Promo",
         "weight_kg": 11.0,
-        "cost_price": 26800.0,
-        "margin_percent": 20.0,
         "sale_price": 32160.0,
         "list_price": 36984.0,
         "stock_qty": 50,
@@ -3798,10 +3657,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "1 kg",
       "10+1 kg Promo"
-    ],
-    "costs": [
-      1800.0,
-      26800.0
     ],
     "prices": [
       2430.0,
@@ -3837,8 +3692,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "2 kg",
         "weight_kg": 2.0,
-        "cost_price": 8400.0,
-        "margin_percent": 25.0,
         "sale_price": 10500.0,
         "list_price": 12075.0,
         "stock_qty": 50,
@@ -3847,8 +3700,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 47000.0,
-        "margin_percent": 20.0,
         "sale_price": 56400.0,
         "list_price": 64860.0,
         "stock_qty": 50,
@@ -3858,10 +3709,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "2 kg",
       "15 kg"
-    ],
-    "costs": [
-      8400.0,
-      47000.0
     ],
     "prices": [
       10500.0,
@@ -3897,8 +3744,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "2 kg",
         "weight_kg": 2.0,
-        "cost_price": 9100.0,
-        "margin_percent": 25.0,
         "sale_price": 11375.0,
         "list_price": 13081.0,
         "stock_qty": 50,
@@ -3907,8 +3752,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 51300.0,
-        "margin_percent": 20.0,
         "sale_price": 61560.0,
         "list_price": 70794.0,
         "stock_qty": 50,
@@ -3918,10 +3761,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "2 kg",
       "15 kg"
-    ],
-    "costs": [
-      9100.0,
-      51300.0
     ],
     "prices": [
       11375.0,
@@ -3957,8 +3796,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "2 kg",
         "weight_kg": 2.0,
-        "cost_price": 8400.0,
-        "margin_percent": 25.0,
         "sale_price": 10500.0,
         "list_price": 12075.0,
         "stock_qty": 50,
@@ -3967,8 +3804,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 47000.0,
-        "margin_percent": 20.0,
         "sale_price": 56400.0,
         "list_price": 64860.0,
         "stock_qty": 50,
@@ -3978,10 +3813,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "2 kg",
       "15 kg"
-    ],
-    "costs": [
-      8400.0,
-      47000.0
     ],
     "prices": [
       10500.0,
@@ -4017,8 +3848,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "21 kg",
         "weight_kg": 21.0,
-        "cost_price": 55490.0,
-        "margin_percent": 20.0,
         "sale_price": 66588.0,
         "list_price": 76576.0,
         "stock_qty": 50,
@@ -4027,9 +3856,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "21 kg"
-    ],
-    "costs": [
-      55490.0
     ],
     "prices": [
       66588.0
@@ -4063,8 +3889,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "21 kg",
         "weight_kg": 21.0,
-        "cost_price": 52390.0,
-        "margin_percent": 20.0,
         "sale_price": 62868.0,
         "list_price": 72298.0,
         "stock_qty": 50,
@@ -4073,9 +3897,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "21 kg"
-    ],
-    "costs": [
-      52390.0
     ],
     "prices": [
       62868.0
@@ -4109,8 +3930,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "9 kg",
         "weight_kg": 9.0,
-        "cost_price": 21120.0,
-        "margin_percent": 22.0,
         "sale_price": 25766.0,
         "list_price": 29631.0,
         "stock_qty": 50,
@@ -4119,9 +3938,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "9 kg"
-    ],
-    "costs": [
-      21120.0
     ],
     "prices": [
       25766.0
@@ -4155,8 +3971,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "10 kg",
         "weight_kg": 10.0,
-        "cost_price": 45770.0,
-        "margin_percent": 20.0,
         "sale_price": 54924.0,
         "list_price": 63163.0,
         "stock_qty": 50,
@@ -4165,9 +3979,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "10 kg"
-    ],
-    "costs": [
-      45770.0
     ],
     "prices": [
       54924.0
@@ -4201,8 +4012,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Lata 290g / 340g",
         "weight_kg": 0.34,
-        "cost_price": 3220.0,
-        "margin_percent": 30.0,
         "sale_price": 4186.0,
         "list_price": 4814.0,
         "stock_qty": 50,
@@ -4211,9 +4020,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Lata 290g / 340g"
-    ],
-    "costs": [
-      3220.0
     ],
     "prices": [
       4186.0
@@ -4247,8 +4053,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Pack 40 g",
         "weight_kg": 0.04,
-        "cost_price": 1050.0,
-        "margin_percent": 35.0,
         "sale_price": 1418.0,
         "list_price": 1631.0,
         "stock_qty": 50,
@@ -4257,8 +4061,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Pack 80 g",
         "weight_kg": 0.08,
-        "cost_price": 1780.0,
-        "margin_percent": 35.0,
         "sale_price": 2403.0,
         "list_price": 2763.0,
         "stock_qty": 50,
@@ -4268,10 +4070,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Pack 40 g",
       "Pack 80 g"
-    ],
-    "costs": [
-      1050.0,
-      1780.0
     ],
     "prices": [
       1418.0,
@@ -4307,8 +4105,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Caja 100 g",
         "weight_kg": 0.1,
-        "cost_price": 1430.0,
-        "margin_percent": 35.0,
         "sale_price": 1931.0,
         "list_price": 2221.0,
         "stock_qty": 50,
@@ -4317,8 +4113,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Caja Familiar 500 g",
         "weight_kg": 0.5,
-        "cost_price": 4590.0,
-        "margin_percent": 30.0,
         "sale_price": 5967.0,
         "list_price": 6862.0,
         "stock_qty": 50,
@@ -4328,10 +4122,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Caja 100 g",
       "Caja Familiar 500 g"
-    ],
-    "costs": [
-      1430.0,
-      4590.0
     ],
     "prices": [
       1931.0,
@@ -4367,8 +4157,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "3 kg",
         "weight_kg": 3.0,
-        "cost_price": 34200.0,
-        "margin_percent": 22.0,
         "sale_price": 41724.0,
         "list_price": 47983.0,
         "stock_qty": 50,
@@ -4377,8 +4165,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 70650.0,
-        "margin_percent": 20.0,
         "sale_price": 84780.0,
         "list_price": 97497.0,
         "stock_qty": 50,
@@ -4388,10 +4174,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "3 kg",
       "7.5 kg"
-    ],
-    "costs": [
-      34200.0,
-      70650.0
     ],
     "prices": [
       41724.0,
@@ -4427,8 +4209,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "3 kg",
         "weight_kg": 3.0,
-        "cost_price": 32850.0,
-        "margin_percent": 22.0,
         "sale_price": 40077.0,
         "list_price": 46089.0,
         "stock_qty": 50,
@@ -4437,8 +4217,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 110790.0,
-        "margin_percent": 20.0,
         "sale_price": 132948.0,
         "list_price": 152890.0,
         "stock_qty": 50,
@@ -4448,10 +4226,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "3 kg",
       "15 kg"
-    ],
-    "costs": [
-      32850.0,
-      110790.0
     ],
     "prices": [
       40077.0,
@@ -4487,8 +4261,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "12 kg",
         "weight_kg": 12.0,
-        "cost_price": 96370.0,
-        "margin_percent": 20.0,
         "sale_price": 115644.0,
         "list_price": 132991.0,
         "stock_qty": 50,
@@ -4497,9 +4269,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "12 kg"
-    ],
-    "costs": [
-      96370.0
     ],
     "prices": [
       115644.0
@@ -4533,8 +4302,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 93820.0,
-        "margin_percent": 20.0,
         "sale_price": 112584.0,
         "list_price": 129472.0,
         "stock_qty": 50,
@@ -4543,8 +4310,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 160480.0,
-        "margin_percent": 20.0,
         "sale_price": 192576.0,
         "list_price": 221462.0,
         "stock_qty": 50,
@@ -4554,10 +4319,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "7.5 kg",
       "15 kg"
-    ],
-    "costs": [
-      93820.0,
-      160480.0
     ],
     "prices": [
       112584.0,
@@ -4593,8 +4354,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Medium Adulto 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 126000.0,
-        "margin_percent": 20.0,
         "sale_price": 151200.0,
         "list_price": 173880.0,
         "stock_qty": 50,
@@ -4603,8 +4362,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Medium Junior 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 134700.0,
-        "margin_percent": 20.0,
         "sale_price": 161640.0,
         "list_price": 185886.0,
         "stock_qty": 50,
@@ -4614,10 +4371,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Medium Adulto 15 kg",
       "Medium Junior 15 kg"
-    ],
-    "costs": [
-      126000.0,
-      134700.0
     ],
     "prices": [
       151200.0,
@@ -4653,8 +4406,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Maxi Adulto 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 126100.0,
-        "margin_percent": 20.0,
         "sale_price": 151320.0,
         "list_price": 174018.0,
         "stock_qty": 50,
@@ -4663,8 +4414,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Maxi Junior 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 134700.0,
-        "margin_percent": 20.0,
         "sale_price": 161640.0,
         "list_price": 185886.0,
         "stock_qty": 50,
@@ -4674,10 +4423,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Maxi Adulto 15 kg",
       "Maxi Junior 15 kg"
-    ],
-    "costs": [
-      126100.0,
-      134700.0
     ],
     "prices": [
       151320.0,
@@ -4713,8 +4458,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 63200.0,
-        "margin_percent": 20.0,
         "sale_price": 75840.0,
         "list_price": 87216.0,
         "stock_qty": 50,
@@ -4723,9 +4466,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "15 kg"
-    ],
-    "costs": [
-      63200.0
     ],
     "prices": [
       75840.0
@@ -4759,8 +4499,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Raza Pequeña 7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 38700.0,
-        "margin_percent": 22.0,
         "sale_price": 47214.0,
         "list_price": 54296.0,
         "stock_qty": 50,
@@ -4769,8 +4507,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Raza Med/Grande 20 kg",
         "weight_kg": 20.0,
-        "cost_price": 78400.0,
-        "margin_percent": 20.0,
         "sale_price": 94080.0,
         "list_price": 108192.0,
         "stock_qty": 50,
@@ -4780,10 +4516,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Raza Pequeña 7.5 kg",
       "Raza Med/Grande 20 kg"
-    ],
-    "costs": [
-      38700.0,
-      78400.0
     ],
     "prices": [
       47214.0,
@@ -4819,8 +4551,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Complete Adulto 20 kg",
         "weight_kg": 20.0,
-        "cost_price": 48100.0,
-        "margin_percent": 20.0,
         "sale_price": 57720.0,
         "list_price": 66378.0,
         "stock_qty": 50,
@@ -4829,8 +4559,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Complete Cachorro 20 kg",
         "weight_kg": 20.0,
-        "cost_price": 53000.0,
-        "margin_percent": 20.0,
         "sale_price": 63600.0,
         "list_price": 73140.0,
         "stock_qty": 50,
@@ -4840,10 +4568,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Complete Adulto 20 kg",
       "Complete Cachorro 20 kg"
-    ],
-    "costs": [
-      48100.0,
-      53000.0
     ],
     "prices": [
       57720.0,
@@ -4879,8 +4603,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Puppy Small 3 kg",
         "weight_kg": 3.0,
-        "cost_price": 22400.0,
-        "margin_percent": 22.0,
         "sale_price": 27328.0,
         "list_price": 31427.0,
         "stock_qty": 50,
@@ -4889,8 +4611,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Puppy Small 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 85300.0,
-        "margin_percent": 20.0,
         "sale_price": 102360.0,
         "list_price": 117714.0,
         "stock_qty": 50,
@@ -4899,8 +4619,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Puppy Medium 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 80900.0,
-        "margin_percent": 20.0,
         "sale_price": 97080.0,
         "list_price": 111642.0,
         "stock_qty": 50,
@@ -4911,11 +4629,6 @@ var LOCAL_CATALOG = [
       "Puppy Small 3 kg",
       "Puppy Small 15 kg",
       "Puppy Medium 15 kg"
-    ],
-    "costs": [
-      22400.0,
-      85300.0,
-      80900.0
     ],
     "prices": [
       27328.0,
@@ -4953,8 +4666,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Puppy Mini 12 kg",
         "weight_kg": 12.0,
-        "cost_price": 68000.0,
-        "margin_percent": 20.0,
         "sale_price": 81600.0,
         "list_price": 93840.0,
         "stock_qty": 50,
@@ -4963,8 +4674,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Puppy Med & Large 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 77330.0,
-        "margin_percent": 20.0,
         "sale_price": 92796.0,
         "list_price": 106715.0,
         "stock_qty": 50,
@@ -4974,10 +4683,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Puppy Mini 12 kg",
       "Puppy Med & Large 15 kg"
-    ],
-    "costs": [
-      68000.0,
-      77330.0
     ],
     "prices": [
       81600.0,
@@ -5013,8 +4718,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "20 kg All in One",
         "weight_kg": 20.0,
-        "cost_price": 77700.0,
-        "margin_percent": 20.0,
         "sale_price": 93240.0,
         "list_price": 107226.0,
         "stock_qty": 50,
@@ -5023,9 +4726,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "20 kg All in One"
-    ],
-    "costs": [
-      77700.0
     ],
     "prices": [
       93240.0
@@ -5059,8 +4759,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 57200.0,
-        "margin_percent": 20.0,
         "sale_price": 68640.0,
         "list_price": 78936.0,
         "stock_qty": 50,
@@ -5069,9 +4767,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "15 kg"
-    ],
-    "costs": [
-      57200.0
     ],
     "prices": [
       68640.0
@@ -5105,8 +4800,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "10 kg",
         "weight_kg": 10.0,
-        "cost_price": 40600.0,
-        "margin_percent": 20.0,
         "sale_price": 48720.0,
         "list_price": 56028.0,
         "stock_qty": 50,
@@ -5115,9 +4808,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "10 kg"
-    ],
-    "costs": [
-      40600.0
     ],
     "prices": [
       48720.0
@@ -5151,8 +4841,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "22 kg",
         "weight_kg": 22.0,
-        "cost_price": 36700.0,
-        "margin_percent": 20.0,
         "sale_price": 44040.0,
         "list_price": 50646.0,
         "stock_qty": 50,
@@ -5161,9 +4849,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "22 kg"
-    ],
-    "costs": [
-      36700.0
     ],
     "prices": [
       44040.0
@@ -5197,8 +4882,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Snack Estrella 120g",
         "weight_kg": 0.12,
-        "cost_price": 1500.0,
-        "margin_percent": 35.0,
         "sale_price": 2025.0,
         "list_price": 2329.0,
         "stock_qty": 50,
@@ -5207,8 +4890,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Raza Pequeña 3+1",
         "weight_kg": 0.15,
-        "cost_price": 1150.0,
-        "margin_percent": 35.0,
         "sale_price": 1552.0,
         "list_price": 1785.0,
         "stock_qty": 50,
@@ -5217,8 +4898,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Raza Mediana/Grande 3+1",
         "weight_kg": 0.25,
-        "cost_price": 1350.0,
-        "margin_percent": 35.0,
         "sale_price": 1823.0,
         "list_price": 2096.0,
         "stock_qty": 50,
@@ -5229,11 +4908,6 @@ var LOCAL_CATALOG = [
       "Snack Estrella 120g",
       "Raza Pequeña 3+1",
       "Raza Mediana/Grande 3+1"
-    ],
-    "costs": [
-      1500.0,
-      1150.0,
-      1350.0
     ],
     "prices": [
       2025.0,
@@ -5271,8 +4945,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 18200.0,
-        "margin_percent": 20.0,
         "sale_price": 21840.0,
         "list_price": 25116.0,
         "stock_qty": 50,
@@ -5281,8 +4953,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "22 kg Gigante",
         "weight_kg": 22.0,
-        "cost_price": 25100.0,
-        "margin_percent": 20.0,
         "sale_price": 30120.0,
         "list_price": 34638.0,
         "stock_qty": 50,
@@ -5292,10 +4962,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "15 kg",
       "22 kg Gigante"
-    ],
-    "costs": [
-      18200.0,
-      25100.0
     ],
     "prices": [
       21840.0,
@@ -5331,8 +4997,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "10 kg",
         "weight_kg": 10.0,
-        "cost_price": 12700.0,
-        "margin_percent": 22.0,
         "sale_price": 15494.0,
         "list_price": 17818.0,
         "stock_qty": 50,
@@ -5341,8 +5005,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 18600.0,
-        "margin_percent": 20.0,
         "sale_price": 22320.0,
         "list_price": 25668.0,
         "stock_qty": 50,
@@ -5351,8 +5013,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "20 kg",
         "weight_kg": 20.0,
-        "cost_price": 24000.0,
-        "margin_percent": 20.0,
         "sale_price": 28800.0,
         "list_price": 33120.0,
         "stock_qty": 50,
@@ -5363,11 +5023,6 @@ var LOCAL_CATALOG = [
       "10 kg",
       "15 kg",
       "20 kg"
-    ],
-    "costs": [
-      12700.0,
-      18600.0,
-      24000.0
     ],
     "prices": [
       15494.0,
@@ -5405,8 +5060,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 16400.0,
-        "margin_percent": 20.0,
         "sale_price": 19680.0,
         "list_price": 22632.0,
         "stock_qty": 50,
@@ -5415,8 +5068,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "22 kg",
         "weight_kg": 22.0,
-        "cost_price": 23400.0,
-        "margin_percent": 20.0,
         "sale_price": 28080.0,
         "list_price": 32292.0,
         "stock_qty": 50,
@@ -5426,10 +5077,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "15 kg",
       "22 kg"
-    ],
-    "costs": [
-      16400.0,
-      23400.0
     ],
     "prices": [
       19680.0,
@@ -5465,8 +5112,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "15 kg",
         "weight_kg": 15.0,
-        "cost_price": 23100.0,
-        "margin_percent": 20.0,
         "sale_price": 27720.0,
         "list_price": 31878.0,
         "stock_qty": 50,
@@ -5475,8 +5120,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "20 kg",
         "weight_kg": 20.0,
-        "cost_price": 29750.0,
-        "margin_percent": 20.0,
         "sale_price": 35700.0,
         "list_price": 41055.0,
         "stock_qty": 50,
@@ -5486,10 +5129,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "15 kg",
       "20 kg"
-    ],
-    "costs": [
-      23100.0,
-      29750.0
     ],
     "prices": [
       27720.0,
@@ -5525,8 +5164,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Pack Grande",
         "weight_kg": 0.4,
-        "cost_price": 6800.0,
-        "margin_percent": 35.0,
         "sale_price": 9180.0,
         "list_price": 10557.0,
         "stock_qty": 50,
@@ -5535,9 +5172,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Pack Grande"
-    ],
-    "costs": [
-      6800.0
     ],
     "prices": [
       9180.0
@@ -5571,8 +5205,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bulto 10.8 kg (6x1.8kg)",
         "weight_kg": 10.8,
-        "cost_price": 6450.0,
-        "margin_percent": 30.0,
         "sale_price": 8385.0,
         "list_price": 9643.0,
         "stock_qty": 50,
@@ -5581,9 +5213,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bulto 10.8 kg (6x1.8kg)"
-    ],
-    "costs": [
-      6450.0
     ],
     "prices": [
       8385.0
@@ -5617,8 +5246,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 9500.0,
-        "margin_percent": 25.0,
         "sale_price": 11875.0,
         "list_price": 13656.0,
         "stock_qty": 50,
@@ -5627,8 +5254,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bulto 25 kg (5x5kg)",
         "weight_kg": 25.0,
-        "cost_price": 14000.0,
-        "margin_percent": 20.0,
         "sale_price": 16800.0,
         "list_price": 19320.0,
         "stock_qty": 50,
@@ -5638,10 +5263,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Bolsa 15 kg",
       "Bulto 25 kg (5x5kg)"
-    ],
-    "costs": [
-      9500.0,
-      14000.0
     ],
     "prices": [
       11875.0,
@@ -5677,8 +5298,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Botella 250 ml",
         "weight_kg": 0.3,
-        "cost_price": 7400.0,
-        "margin_percent": 35.0,
         "sale_price": 9990.0,
         "list_price": 11488.0,
         "stock_qty": 50,
@@ -5687,9 +5306,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Botella 250 ml"
-    ],
-    "costs": [
-      7400.0
     ],
     "prices": [
       9990.0
@@ -5723,8 +5339,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Botella 250 ml",
         "weight_kg": 0.3,
-        "cost_price": 6900.0,
-        "margin_percent": 35.0,
         "sale_price": 9315.0,
         "list_price": 10712.0,
         "stock_qty": 50,
@@ -5733,9 +5347,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Botella 250 ml"
-    ],
-    "costs": [
-      6900.0
     ],
     "prices": [
       9315.0
@@ -5769,8 +5380,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Talquera 250 grs",
         "weight_kg": 0.25,
-        "cost_price": 3550.0,
-        "margin_percent": 30.0,
         "sale_price": 4615.0,
         "list_price": 4615.0,
         "stock_qty": 50,
@@ -5779,9 +5388,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Talquera 250 grs"
-    ],
-    "costs": [
-      3550.0
     ],
     "prices": [
       4615.0
@@ -5815,8 +5421,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Pote 250 grs",
         "weight_kg": 0.25,
-        "cost_price": 2900.0,
-        "margin_percent": 30.0,
         "sale_price": 3770.0,
         "list_price": 3770.0,
         "stock_qty": 50,
@@ -5825,9 +5429,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Pote 250 grs"
-    ],
-    "costs": [
-      2900.0
     ],
     "prices": [
       3770.0
@@ -5861,8 +5462,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Botella 500 cc",
         "weight_kg": 0.5,
-        "cost_price": 3900.0,
-        "margin_percent": 30.0,
         "sale_price": 5070.0,
         "list_price": 5070.0,
         "stock_qty": 50,
@@ -5871,8 +5470,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Botella 1000 cc (1 Litro)",
         "weight_kg": 1.0,
-        "cost_price": 7100.0,
-        "margin_percent": 25.0,
         "sale_price": 8875.0,
         "list_price": 8875.0,
         "stock_qty": 50,
@@ -5882,10 +5479,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Botella 500 cc",
       "Botella 1000 cc (1 Litro)"
-    ],
-    "costs": [
-      3900.0,
-      7100.0
     ],
     "prices": [
       5070.0,
@@ -5921,8 +5514,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Caja x 6 Cebos",
         "weight_kg": 0.1,
-        "cost_price": 3100.0,
-        "margin_percent": 30.0,
         "sale_price": 4030.0,
         "list_price": 4030.0,
         "stock_qty": 50,
@@ -5931,9 +5522,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Caja x 6 Cebos"
-    ],
-    "costs": [
-      3100.0
     ],
     "prices": [
       4030.0
@@ -5967,8 +5555,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Jeringa 6 grs",
         "weight_kg": 0.006,
-        "cost_price": 3900.0,
-        "margin_percent": 30.0,
         "sale_price": 5070.0,
         "list_price": 5070.0,
         "stock_qty": 50,
@@ -5977,8 +5563,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Jeringa 12 grs",
         "weight_kg": 0.012,
-        "cost_price": 5950.0,
-        "margin_percent": 25.0,
         "sale_price": 7438.0,
         "list_price": 7438.0,
         "stock_qty": 50,
@@ -5988,10 +5572,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Jeringa 6 grs",
       "Jeringa 12 grs"
-    ],
-    "costs": [
-      3900.0,
-      5950.0
     ],
     "prices": [
       5070.0,
@@ -6027,8 +5607,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Estuche 100 grs",
         "weight_kg": 0.1,
-        "cost_price": 4400.0,
-        "margin_percent": 30.0,
         "sale_price": 5720.0,
         "list_price": 5720.0,
         "stock_qty": 50,
@@ -6037,9 +5615,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Estuche 100 grs"
-    ],
-    "costs": [
-      4400.0
     ],
     "prices": [
       5720.0
@@ -6073,8 +5648,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Sobre 50 grs",
         "weight_kg": 0.05,
-        "cost_price": 2200.0,
-        "margin_percent": 35.0,
         "sale_price": 2970.0,
         "list_price": 2970.0,
         "stock_qty": 50,
@@ -6083,8 +5656,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Dispenser 30 Sobres x 50 grs",
         "weight_kg": 1.5,
-        "cost_price": 58500.0,
-        "margin_percent": 20.0,
         "sale_price": 70200.0,
         "list_price": 70200.0,
         "stock_qty": 50,
@@ -6094,10 +5665,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Sobre 50 grs",
       "Dispenser 30 Sobres x 50 grs"
-    ],
-    "costs": [
-      2200.0,
-      58500.0
     ],
     "prices": [
       2970.0,
@@ -6133,8 +5700,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 25 kg",
         "weight_kg": 25.0,
-        "cost_price": 17400.0,
-        "margin_percent": 20.0,
         "sale_price": 20880.0,
         "list_price": 20880.0,
         "stock_qty": 50,
@@ -6143,9 +5708,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 25 kg"
-    ],
-    "costs": [
-      17400.0
     ],
     "prices": [
       20880.0
@@ -6179,8 +5741,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 25 kg",
         "weight_kg": 25.0,
-        "cost_price": 17200.0,
-        "margin_percent": 20.0,
         "sale_price": 20640.0,
         "list_price": 20640.0,
         "stock_qty": 50,
@@ -6189,9 +5749,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 25 kg"
-    ],
-    "costs": [
-      17200.0
     ],
     "prices": [
       20640.0
@@ -6225,8 +5782,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 25 kg",
         "weight_kg": 25.0,
-        "cost_price": 17600.0,
-        "margin_percent": 20.0,
         "sale_price": 21120.0,
         "list_price": 21120.0,
         "stock_qty": 50,
@@ -6235,9 +5790,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 25 kg"
-    ],
-    "costs": [
-      17600.0
     ],
     "prices": [
       21120.0
@@ -6271,8 +5823,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 25 kg",
         "weight_kg": 25.0,
-        "cost_price": 33000.0,
-        "margin_percent": 20.0,
         "sale_price": 39600.0,
         "list_price": 39600.0,
         "stock_qty": 50,
@@ -6281,9 +5831,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 25 kg"
-    ],
-    "costs": [
-      33000.0
     ],
     "prices": [
       39600.0
@@ -6317,8 +5864,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Maíz Partido Grueso 24 kg",
         "weight_kg": 24.0,
-        "cost_price": 9900.0,
-        "margin_percent": 22.0,
         "sale_price": 12078.0,
         "list_price": 12078.0,
         "stock_qty": 50,
@@ -6327,8 +5872,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Maíz Entero 38 kg",
         "weight_kg": 38.0,
-        "cost_price": 14990.0,
-        "margin_percent": 20.0,
         "sale_price": 17988.0,
         "list_price": 17988.0,
         "stock_qty": 50,
@@ -6338,10 +5881,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Maíz Partido Grueso 24 kg",
       "Maíz Entero 38 kg"
-    ],
-    "costs": [
-      9900.0,
-      14990.0
     ],
     "prices": [
       12078.0,
@@ -6377,8 +5916,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Mezcla Gallina STM 24 kg",
         "weight_kg": 24.0,
-        "cost_price": 11900.0,
-        "margin_percent": 22.0,
         "sale_price": 14518.0,
         "list_price": 14518.0,
         "stock_qty": 50,
@@ -6387,8 +5924,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Mezcla Gallina Especial 24 kg",
         "weight_kg": 24.0,
-        "cost_price": 12000.0,
-        "margin_percent": 22.0,
         "sale_price": 14640.0,
         "list_price": 14640.0,
         "stock_qty": 50,
@@ -6397,8 +5932,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Mezcla Gallina Lumpy 24 kg",
         "weight_kg": 24.0,
-        "cost_price": 14500.0,
-        "margin_percent": 22.0,
         "sale_price": 17690.0,
         "list_price": 17690.0,
         "stock_qty": 50,
@@ -6409,11 +5942,6 @@ var LOCAL_CATALOG = [
       "Mezcla Gallina STM 24 kg",
       "Mezcla Gallina Especial 24 kg",
       "Mezcla Gallina Lumpy 24 kg"
-    ],
-    "costs": [
-      11900.0,
-      12000.0,
-      14500.0
     ],
     "prices": [
       14518.0,
@@ -6451,8 +5979,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 30 kg",
         "weight_kg": 30.0,
-        "cost_price": 12500.0,
-        "margin_percent": 20.0,
         "sale_price": 15000.0,
         "list_price": 15000.0,
         "stock_qty": 50,
@@ -6461,9 +5987,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 30 kg"
-    ],
-    "costs": [
-      12500.0
     ],
     "prices": [
       15000.0
@@ -6497,8 +6020,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 10 kg",
         "weight_kg": 10.0,
-        "cost_price": 18000.0,
-        "margin_percent": 25.0,
         "sale_price": 22500.0,
         "list_price": 22500.0,
         "stock_qty": 50,
@@ -6507,8 +6028,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 30 kg",
         "weight_kg": 30.0,
-        "cost_price": 40000.0,
-        "margin_percent": 20.0,
         "sale_price": 48000.0,
         "list_price": 48000.0,
         "stock_qty": 50,
@@ -6518,10 +6037,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Bolsa 10 kg",
       "Bolsa 30 kg"
-    ],
-    "costs": [
-      18000.0,
-      40000.0
     ],
     "prices": [
       22500.0,
@@ -6557,8 +6072,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 10 kg",
         "weight_kg": 10.0,
-        "cost_price": 9500.0,
-        "margin_percent": 25.0,
         "sale_price": 11875.0,
         "list_price": 11875.0,
         "stock_qty": 50,
@@ -6567,8 +6080,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 30 kg",
         "weight_kg": 30.0,
-        "cost_price": 24000.0,
-        "margin_percent": 20.0,
         "sale_price": 28800.0,
         "list_price": 28800.0,
         "stock_qty": 50,
@@ -6578,10 +6089,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Bolsa 10 kg",
       "Bolsa 30 kg"
-    ],
-    "costs": [
-      9500.0,
-      24000.0
     ],
     "prices": [
       11875.0,
@@ -6617,8 +6124,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 10 kg",
         "weight_kg": 10.0,
-        "cost_price": 17900.0,
-        "margin_percent": 25.0,
         "sale_price": 22375.0,
         "list_price": 22375.0,
         "stock_qty": 50,
@@ -6627,8 +6132,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 30 kg",
         "weight_kg": 30.0,
-        "cost_price": 49500.0,
-        "margin_percent": 20.0,
         "sale_price": 59400.0,
         "list_price": 59400.0,
         "stock_qty": 50,
@@ -6638,10 +6141,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Bolsa 10 kg",
       "Bolsa 30 kg"
-    ],
-    "costs": [
-      17900.0,
-      49500.0
     ],
     "prices": [
       22375.0,
@@ -6677,8 +6176,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 10 kg",
         "weight_kg": 10.0,
-        "cost_price": 9500.0,
-        "margin_percent": 25.0,
         "sale_price": 11875.0,
         "list_price": 11875.0,
         "stock_qty": 50,
@@ -6687,8 +6184,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 30 kg",
         "weight_kg": 30.0,
-        "cost_price": 26500.0,
-        "margin_percent": 20.0,
         "sale_price": 31800.0,
         "list_price": 31800.0,
         "stock_qty": 50,
@@ -6698,10 +6193,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Bolsa 10 kg",
       "Bolsa 30 kg"
-    ],
-    "costs": [
-      9500.0,
-      26500.0
     ],
     "prices": [
       11875.0,
@@ -6737,8 +6228,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 25 kg",
         "weight_kg": 25.0,
-        "cost_price": 18300.0,
-        "margin_percent": 20.0,
         "sale_price": 21960.0,
         "list_price": 21960.0,
         "stock_qty": 50,
@@ -6747,9 +6236,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 25 kg"
-    ],
-    "costs": [
-      18300.0
     ],
     "prices": [
       21960.0
@@ -6783,8 +6269,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Tradicional 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 12500.0,
-        "margin_percent": 25.0,
         "sale_price": 15625.0,
         "list_price": 15625.0,
         "stock_qty": 50,
@@ -6793,8 +6277,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Premium 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 13400.0,
-        "margin_percent": 25.0,
         "sale_price": 16750.0,
         "list_price": 16750.0,
         "stock_qty": 50,
@@ -6804,10 +6286,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Tradicional 15 kg",
       "Premium 15 kg"
-    ],
-    "costs": [
-      12500.0,
-      13400.0
     ],
     "prices": [
       15625.0,
@@ -6843,8 +6321,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 30 kg",
         "weight_kg": 30.0,
-        "cost_price": 23500.0,
-        "margin_percent": 20.0,
         "sale_price": 28200.0,
         "list_price": 28200.0,
         "stock_qty": 50,
@@ -6853,9 +6329,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 30 kg"
-    ],
-    "costs": [
-      23500.0
     ],
     "prices": [
       28200.0
@@ -6889,8 +6362,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 10 kg",
         "weight_kg": 10.0,
-        "cost_price": 7500.0,
-        "margin_percent": 25.0,
         "sale_price": 9375.0,
         "list_price": 9375.0,
         "stock_qty": 50,
@@ -6899,9 +6370,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 10 kg"
-    ],
-    "costs": [
-      7500.0
     ],
     "prices": [
       9375.0
@@ -6935,8 +6403,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 29100.0,
-        "margin_percent": 25.0,
         "sale_price": 36375.0,
         "list_price": 36375.0,
         "stock_qty": 50,
@@ -6945,9 +6411,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 15 kg"
-    ],
-    "costs": [
-      29100.0
     ],
     "prices": [
       36375.0
@@ -6981,8 +6444,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 10 kg",
         "weight_kg": 10.0,
-        "cost_price": 22600.0,
-        "margin_percent": 25.0,
         "sale_price": 28250.0,
         "list_price": 28250.0,
         "stock_qty": 50,
@@ -6991,9 +6452,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 10 kg"
-    ],
-    "costs": [
-      22600.0
     ],
     "prices": [
       28250.0
@@ -7027,8 +6485,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 10 kg",
         "weight_kg": 10.0,
-        "cost_price": 33100.0,
-        "margin_percent": 25.0,
         "sale_price": 41375.0,
         "list_price": 41375.0,
         "stock_qty": 50,
@@ -7037,9 +6493,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 10 kg"
-    ],
-    "costs": [
-      33100.0
     ],
     "prices": [
       41375.0
@@ -7073,8 +6526,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 10 kg",
         "weight_kg": 10.0,
-        "cost_price": 17300.0,
-        "margin_percent": 25.0,
         "sale_price": 21625.0,
         "list_price": 21625.0,
         "stock_qty": 50,
@@ -7083,9 +6534,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 10 kg"
-    ],
-    "costs": [
-      17300.0
     ],
     "prices": [
       21625.0
@@ -7119,8 +6567,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 10 kg",
         "weight_kg": 10.0,
-        "cost_price": 23300.0,
-        "margin_percent": 25.0,
         "sale_price": 29125.0,
         "list_price": 29125.0,
         "stock_qty": 50,
@@ -7129,9 +6575,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 10 kg"
-    ],
-    "costs": [
-      23300.0
     ],
     "prices": [
       29125.0
@@ -7165,8 +6608,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Carne 20 kg",
         "weight_kg": 20.0,
-        "cost_price": 27600.0,
-        "margin_percent": 22.0,
         "sale_price": 33672.0,
         "list_price": 33672.0,
         "stock_qty": 50,
@@ -7175,8 +6616,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Pollo 20 kg",
         "weight_kg": 20.0,
-        "cost_price": 27600.0,
-        "margin_percent": 22.0,
         "sale_price": 33672.0,
         "list_price": 33672.0,
         "stock_qty": 50,
@@ -7186,10 +6625,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Carne 20 kg",
       "Pollo 20 kg"
-    ],
-    "costs": [
-      27600.0,
-      27600.0
     ],
     "prices": [
       33672.0,
@@ -7225,8 +6660,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 26400.0,
-        "margin_percent": 25.0,
         "sale_price": 33000.0,
         "list_price": 33000.0,
         "stock_qty": 50,
@@ -7235,9 +6668,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 15 kg"
-    ],
-    "costs": [
-      26400.0
     ],
     "prices": [
       33000.0
@@ -7271,8 +6701,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 10 kg",
         "weight_kg": 10.0,
-        "cost_price": 21100.0,
-        "margin_percent": 25.0,
         "sale_price": 26375.0,
         "list_price": 26375.0,
         "stock_qty": 50,
@@ -7281,9 +6709,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 10 kg"
-    ],
-    "costs": [
-      21100.0
     ],
     "prices": [
       26375.0
@@ -7317,8 +6742,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 83200.0,
-        "margin_percent": 20.0,
         "sale_price": 99840.0,
         "list_price": 99840.0,
         "stock_qty": 50,
@@ -7327,9 +6750,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 15 kg"
-    ],
-    "costs": [
-      83200.0
     ],
     "prices": [
       99840.0
@@ -7363,8 +6783,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 77000.0,
-        "margin_percent": 20.0,
         "sale_price": 92400.0,
         "list_price": 92400.0,
         "stock_qty": 50,
@@ -7373,9 +6791,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 15 kg"
-    ],
-    "costs": [
-      77000.0
     ],
     "prices": [
       92400.0
@@ -7409,8 +6824,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 66000.0,
-        "margin_percent": 22.0,
         "sale_price": 80520.0,
         "list_price": 80520.0,
         "stock_qty": 50,
@@ -7419,9 +6832,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 7.5 kg"
-    ],
-    "costs": [
-      66000.0
     ],
     "prices": [
       80520.0
@@ -7455,8 +6865,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 70300.0,
-        "margin_percent": 22.0,
         "sale_price": 85766.0,
         "list_price": 85766.0,
         "stock_qty": 50,
@@ -7465,9 +6873,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 7.5 kg"
-    ],
-    "costs": [
-      70300.0
     ],
     "prices": [
       85766.0
@@ -7501,8 +6906,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Fardo 10 x 1.8 kg [18 kg]",
         "weight_kg": 18.0,
-        "cost_price": 13400.0,
-        "margin_percent": 25.0,
         "sale_price": 16750.0,
         "list_price": 16750.0,
         "stock_qty": 50,
@@ -7511,9 +6914,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Fardo 10 x 1.8 kg [18 kg]"
-    ],
-    "costs": [
-      13400.0
     ],
     "prices": [
       16750.0
@@ -7547,8 +6947,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Fardo 10 x 1.8 kg [18 kg]",
         "weight_kg": 18.0,
-        "cost_price": 15300.0,
-        "margin_percent": 25.0,
         "sale_price": 19125.0,
         "list_price": 19125.0,
         "stock_qty": 50,
@@ -7557,8 +6955,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Fardo 6 x 3.6 kg [21.6 kg]",
         "weight_kg": 21.6,
-        "cost_price": 17100.0,
-        "margin_percent": 25.0,
         "sale_price": 21375.0,
         "list_price": 21375.0,
         "stock_qty": 50,
@@ -7568,10 +6964,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Fardo 10 x 1.8 kg [18 kg]",
       "Fardo 6 x 3.6 kg [21.6 kg]"
-    ],
-    "costs": [
-      15300.0,
-      17100.0
     ],
     "prices": [
       19125.0,
@@ -7607,8 +6999,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Pack 10 x 2 kg [20 kg]",
         "weight_kg": 20.0,
-        "cost_price": 12300.0,
-        "margin_percent": 25.0,
         "sale_price": 15375.0,
         "list_price": 15375.0,
         "stock_qty": 50,
@@ -7617,9 +7007,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Pack 10 x 2 kg [20 kg]"
-    ],
-    "costs": [
-      12300.0
     ],
     "prices": [
       15375.0
@@ -7653,8 +7040,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 8 kg",
         "weight_kg": 8.0,
-        "cost_price": 15200.0,
-        "margin_percent": 25.0,
         "sale_price": 19000.0,
         "list_price": 19000.0,
         "stock_qty": 50,
@@ -7663,8 +7048,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 27100.0,
-        "margin_percent": 22.0,
         "sale_price": 33062.0,
         "list_price": 33062.0,
         "stock_qty": 50,
@@ -7674,10 +7057,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Bolsa 8 kg",
       "Bolsa 15 kg"
-    ],
-    "costs": [
-      15200.0,
-      27100.0
     ],
     "prices": [
       19000.0,
@@ -7713,8 +7092,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 15 kg",
         "weight_kg": 15.0,
-        "cost_price": 14300.0,
-        "margin_percent": 25.0,
         "sale_price": 17875.0,
         "list_price": 17875.0,
         "stock_qty": 50,
@@ -7723,9 +7100,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 15 kg"
-    ],
-    "costs": [
-      14300.0
     ],
     "prices": [
       17875.0
@@ -7759,8 +7133,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 2 kg",
         "weight_kg": 2.0,
-        "cost_price": 33600.0,
-        "margin_percent": 25.0,
         "sale_price": 42000.0,
         "list_price": 42000.0,
         "stock_qty": 50,
@@ -7769,8 +7141,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 10 kg",
         "weight_kg": 10.0,
-        "cost_price": 127650.0,
-        "margin_percent": 20.0,
         "sale_price": 153180.0,
         "list_price": 153180.0,
         "stock_qty": 50,
@@ -7780,10 +7150,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Bolsa 2 kg",
       "Bolsa 10 kg"
-    ],
-    "costs": [
-      33600.0,
-      127650.0
     ],
     "prices": [
       42000.0,
@@ -7819,8 +7185,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 2 kg",
         "weight_kg": 2.0,
-        "cost_price": 27500.0,
-        "margin_percent": 25.0,
         "sale_price": 34375.0,
         "list_price": 34375.0,
         "stock_qty": 50,
@@ -7829,8 +7193,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 10 kg",
         "weight_kg": 10.0,
-        "cost_price": 107100.0,
-        "margin_percent": 20.0,
         "sale_price": 128520.0,
         "list_price": 128520.0,
         "stock_qty": 50,
@@ -7840,10 +7202,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Bolsa 2 kg",
       "Bolsa 10 kg"
-    ],
-    "costs": [
-      27500.0,
-      107100.0
     ],
     "prices": [
       34375.0,
@@ -7879,8 +7237,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 1.5 kg",
         "weight_kg": 1.5,
-        "cost_price": 20500.0,
-        "margin_percent": 25.0,
         "sale_price": 25625.0,
         "list_price": 25625.0,
         "stock_qty": 50,
@@ -7889,8 +7245,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 10 kg",
         "weight_kg": 10.0,
-        "cost_price": 110000.0,
-        "margin_percent": 20.0,
         "sale_price": 132000.0,
         "list_price": 132000.0,
         "stock_qty": 50,
@@ -7900,10 +7254,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Bolsa 1.5 kg",
       "Bolsa 10 kg"
-    ],
-    "costs": [
-      20500.0,
-      110000.0
     ],
     "prices": [
       25625.0,
@@ -7939,8 +7289,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 1.5 kg",
         "weight_kg": 1.5,
-        "cost_price": 21700.0,
-        "margin_percent": 25.0,
         "sale_price": 27125.0,
         "list_price": 27125.0,
         "stock_qty": 50,
@@ -7949,8 +7297,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 10 kg",
         "weight_kg": 10.0,
-        "cost_price": 119000.0,
-        "margin_percent": 20.0,
         "sale_price": 142800.0,
         "list_price": 142800.0,
         "stock_qty": 50,
@@ -7960,10 +7306,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Bolsa 1.5 kg",
       "Bolsa 10 kg"
-    ],
-    "costs": [
-      21700.0,
-      119000.0
     ],
     "prices": [
       27125.0,
@@ -7999,8 +7341,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 1.5 kg",
         "weight_kg": 1.5,
-        "cost_price": 31570.0,
-        "margin_percent": 25.0,
         "sale_price": 39462.0,
         "list_price": 39462.0,
         "stock_qty": 50,
@@ -8009,8 +7349,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 7.5 kg",
         "weight_kg": 7.5,
-        "cost_price": 116520.0,
-        "margin_percent": 20.0,
         "sale_price": 139824.0,
         "list_price": 139824.0,
         "stock_qty": 50,
@@ -8020,10 +7358,6 @@ var LOCAL_CATALOG = [
     "presentations": [
       "Bolsa 1.5 kg",
       "Bolsa 7.5 kg"
-    ],
-    "costs": [
-      31570.0,
-      116520.0
     ],
     "prices": [
       39462.0,
@@ -8059,8 +7393,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 2 kg",
         "weight_kg": 2.0,
-        "cost_price": 39270.0,
-        "margin_percent": 25.0,
         "sale_price": 49088.0,
         "list_price": 49088.0,
         "stock_qty": 50,
@@ -8069,9 +7401,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 2 kg"
-    ],
-    "costs": [
-      39270.0
     ],
     "prices": [
       49088.0
@@ -8105,8 +7434,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Bolsa 2 kg",
         "weight_kg": 2.0,
-        "cost_price": 35950.0,
-        "margin_percent": 25.0,
         "sale_price": 44938.0,
         "list_price": 44938.0,
         "stock_qty": 50,
@@ -8115,9 +7442,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Bolsa 2 kg"
-    ],
-    "costs": [
-      35950.0
     ],
     "prices": [
       44938.0
@@ -8151,8 +7475,6 @@ var LOCAL_CATALOG = [
       {
         "presentation_name": "Lata 195 gr",
         "weight_kg": 0.195,
-        "cost_price": 7300.0,
-        "margin_percent": 28.0,
         "sale_price": 9344.0,
         "list_price": 9344.0,
         "stock_qty": 50,
@@ -8161,9 +7483,6 @@ var LOCAL_CATALOG = [
     ],
     "presentations": [
       "Lata 195 gr"
-    ],
-    "costs": [
-      7300.0
     ],
     "prices": [
       9344.0
@@ -8176,7 +7495,1324 @@ var LOCAL_CATALOG = [
     "desc": "Alimento húmedo completo y de textura mousse muy suave para perros y gatos en períodos de convalecencia, postoperatorios o desnutrición.",
     "featured": false,
     "promo": false
+  },
+  {
+    "id": 147,
+    "name": "Royal Canin Giant Adulto",
+    "slug": "royal-canin-giant-adulto",
+    "description": "Para perros adultos de razas gigantes (> 45 kg) a partir de los 18/24 meses. Soporte articular y cardíaco de alta demanda.",
+    "pet_type": "perro",
+    "subcat": "adulto",
+    "breed_size": "grande",
+    "badge": "Raza Gigante",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_806509-MLA46675043685_072021-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Perros",
+    "category_slug": "perros",
+    "brand_name": "Royal Canin",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 15 kg",
+        "weight_kg": 15.0,
+        "sale_price": 141836.0,
+        "list_price": 141836.0,
+        "stock_qty": 100,
+        "sku": "RC-GIANT-AD-15"
+      }
+    ],
+    "presentations": [
+      "Bolsa 15 kg"
+    ],
+    "prices": [
+      141836.0
+    ],
+    "list_prices": [
+      141836.0
+    ],
+    "brand": "Royal Canin",
+    "category": "perros",
+    "desc": "Para perros adultos de razas gigantes (> 45 kg) a partir de los 18/24 meses. Soporte articular y cardíaco de alta demanda.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 148,
+    "name": "Royal Canin Giant Junior / Puppy",
+    "slug": "royal-canin-giant-junior-puppy",
+    "description": "Fase de consolidación muscular y desarrollo esquelético en cachorros de razas gigantes hasta los 18/24 meses de edad.",
+    "pet_type": "perro",
+    "subcat": "cachorro",
+    "breed_size": "grande",
+    "badge": "Raza Gigante",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_603837-MLA46675043694_072021-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Perros",
+    "category_slug": "perros",
+    "brand_name": "Royal Canin",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 15 kg",
+        "weight_kg": 15.0,
+        "sale_price": 158946.0,
+        "list_price": 158946.0,
+        "stock_qty": 100,
+        "sku": "RC-GIANT-JR-15"
+      }
+    ],
+    "presentations": [
+      "Bolsa 15 kg"
+    ],
+    "prices": [
+      158946.0
+    ],
+    "list_prices": [
+      158946.0
+    ],
+    "brand": "Royal Canin",
+    "category": "perros",
+    "desc": "Fase de consolidación muscular y desarrollo esquelético en cachorros de razas gigantes hasta los 18/24 meses de edad.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 149,
+    "name": "Royal Canin Veterinary Canine Satiety (Obesity)",
+    "slug": "royal-canin-vet-canine-satiety",
+    "description": "Alimento dietético para perros formulado para reducir el sobrepeso con efecto saciante probado y alto contenido de fibra.",
+    "pet_type": "perro",
+    "subcat": "veterinario",
+    "breed_size": "todas",
+    "badge": "Veterinario",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_637254-MLA48098314164_112021-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Farmacia & Cuidado",
+    "category_slug": "farmacia",
+    "brand_name": "Royal Canin",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 1,5 kg",
+        "weight_kg": 1.5,
+        "sale_price": 26125.0,
+        "list_price": 26125.0,
+        "stock_qty": 100,
+        "sku": "RC-VET-SAT-1.5"
+      }
+    ],
+    "presentations": [
+      "Bolsa 1,5 kg"
+    ],
+    "prices": [
+      26125.0
+    ],
+    "list_prices": [
+      26125.0
+    ],
+    "brand": "Royal Canin",
+    "category": "farmacia",
+    "desc": "Alimento dietético para perros formulado para reducir el sobrepeso con efecto saciante probado y alto contenido de fibra.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 150,
+    "name": "Royal Canin Veterinary Canine Hepatic",
+    "slug": "royal-canin-vet-canine-hepatic",
+    "description": "Soporte de la función hepática en caso de insuficiencia hepática crónica en perros. Con nivel adaptado de cobre y proteínas vegetales.",
+    "pet_type": "perro",
+    "subcat": "veterinario",
+    "breed_size": "todas",
+    "badge": "Veterinario",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_900609-MLA48098314168_112021-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Farmacia & Cuidado",
+    "category_slug": "farmacia",
+    "brand_name": "Royal Canin",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 1,5 kg",
+        "weight_kg": 1.5,
+        "sale_price": 27812.0,
+        "list_price": 27812.0,
+        "stock_qty": 100,
+        "sku": "RC-VET-HEP-1.5"
+      },
+      {
+        "presentation_name": "Bolsa 10 kg",
+        "weight_kg": 10.0,
+        "sale_price": 141600.0,
+        "list_price": 141600.0,
+        "stock_qty": 100,
+        "sku": "RC-VET-HEP-10"
+      }
+    ],
+    "presentations": [
+      "Bolsa 1,5 kg",
+      "Bolsa 10 kg"
+    ],
+    "prices": [
+      27812.0,
+      141600.0
+    ],
+    "list_prices": [
+      27812.0,
+      141600.0
+    ],
+    "brand": "Royal Canin",
+    "category": "farmacia",
+    "desc": "Soporte de la función hepática en caso de insuficiencia hepática crónica en perros. Con nivel adaptado de cobre y proteínas vegetales.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 151,
+    "name": "Royal Canin Veterinary Canine Diabetic",
+    "slug": "royal-canin-vet-canine-diabetic",
+    "description": "Manejo nutricional de la diabetes mellitus en perros adultos con aporte controlado de carbohidratos de absorción lenta.",
+    "pet_type": "perro",
+    "subcat": "veterinario",
+    "breed_size": "todas",
+    "badge": "Veterinario",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_981519-MLA48098314170_112021-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Farmacia & Cuidado",
+    "category_slug": "farmacia",
+    "brand_name": "Royal Canin",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 10 kg",
+        "weight_kg": 10.0,
+        "sale_price": 147736.0,
+        "list_price": 147736.0,
+        "stock_qty": 100,
+        "sku": "RC-VET-DIAB-10"
+      }
+    ],
+    "presentations": [
+      "Bolsa 10 kg"
+    ],
+    "prices": [
+      147736.0
+    ],
+    "list_prices": [
+      147736.0
+    ],
+    "brand": "Royal Canin",
+    "category": "farmacia",
+    "desc": "Manejo nutricional de la diabetes mellitus en perros adultos con aporte controlado de carbohidratos de absorción lenta.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 153,
+    "name": "Pro Plan Cat Reduce Calorie",
+    "slug": "pro-plan-cat-reduce-calorie",
+    "description": "Fórmula baja en calorías con alto contenido proteico para ayudar a gatos con sobrepeso a alcanzar un peso corporal saludable.",
+    "pet_type": "gato",
+    "subcat": "light",
+    "breed_size": "todas",
+    "badge": "Control Peso",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_913729-MLA99843470895_112025-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Gatos",
+    "category_slug": "gatos",
+    "brand_name": "Pro Plan",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 1 kg",
+        "weight_kg": 1.0,
+        "sale_price": 23750.0,
+        "list_price": 23750.0,
+        "stock_qty": 100,
+        "sku": "PP-CAT-LIGHT-1"
+      }
+    ],
+    "presentations": [
+      "Bolsa 1 kg"
+    ],
+    "prices": [
+      23750.0
+    ],
+    "list_prices": [
+      23750.0
+    ],
+    "brand": "Pro Plan",
+    "category": "gatos",
+    "desc": "Fórmula baja en calorías con alto contenido proteico para ayudar a gatos con sobrepeso a alcanzar un peso corporal saludable.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 155,
+    "name": "Excellent Perro Fórmula Mantenimiento Adulto",
+    "slug": "excellent-perro-mantenimiento-adulto",
+    "description": "Fórmula equilibrada para el mantenimiento diario de perros adultos activos con nutrientes clave e ingredientes nobles.",
+    "pet_type": "perro",
+    "subcat": "adulto",
+    "breed_size": "todas",
+    "badge": "Económico",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_816176-MLA99341181006_112025-F.jpg",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Perros",
+    "category_slug": "perros",
+    "brand_name": "Excellent",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 20 kg",
+        "weight_kg": 20.0,
+        "sale_price": 69720.0,
+        "list_price": 69720.0,
+        "stock_qty": 100,
+        "sku": "EXC-MANT-AD-20"
+      }
+    ],
+    "presentations": [
+      "Bolsa 20 kg"
+    ],
+    "prices": [
+      69720.0
+    ],
+    "list_prices": [
+      69720.0
+    ],
+    "brand": "Excellent",
+    "category": "perros",
+    "desc": "Fórmula equilibrada para el mantenimiento diario de perros adultos activos con nutrientes clave e ingredientes nobles.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 156,
+    "name": "Excellent Perro Fórmula Mantenimiento Puppy",
+    "slug": "excellent-perro-mantenimiento-puppy",
+    "description": "Nutrición confiable y accesible para cachorros en etapa de crecimiento con energía concentrada y excelente palatabilidad.",
+    "pet_type": "perro",
+    "subcat": "cachorro",
+    "breed_size": "todas",
+    "badge": "Económico",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_816176-MLA99341181006_112025-F.jpg",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Perros",
+    "category_slug": "perros",
+    "brand_name": "Excellent",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 20 kg",
+        "weight_kg": 20.0,
+        "sale_price": 75660.0,
+        "list_price": 75660.0,
+        "stock_qty": 100,
+        "sku": "EXC-MANT-PUP-20"
+      }
+    ],
+    "presentations": [
+      "Bolsa 20 kg"
+    ],
+    "prices": [
+      75660.0
+    ],
+    "list_prices": [
+      75660.0
+    ],
+    "brand": "Excellent",
+    "category": "perros",
+    "desc": "Nutrición confiable y accesible para cachorros en etapa de crecimiento con energía concentrada y excelente palatabilidad.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 158,
+    "name": "Excellent Cat Mantenimiento",
+    "slug": "excellent-cat-mantenimiento",
+    "description": "Nueva fórmula balanceada con proteínas seleccionadas para el mantenimiento integral y vitalidad de gatos adultos.",
+    "pet_type": "gato",
+    "subcat": "adulto",
+    "breed_size": "todas",
+    "badge": "Nuevo",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_854583-MLA46675043692_072021-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Gatos",
+    "category_slug": "gatos",
+    "brand_name": "Excellent",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 15 kg",
+        "weight_kg": 15.0,
+        "sale_price": 97020.0,
+        "list_price": 97020.0,
+        "stock_qty": 100,
+        "sku": "EXC-CAT-MANT-15"
+      }
+    ],
+    "presentations": [
+      "Bolsa 15 kg"
+    ],
+    "prices": [
+      97020.0
+    ],
+    "list_prices": [
+      97020.0
+    ],
+    "brand": "Excellent",
+    "category": "gatos",
+    "desc": "Nueva fórmula balanceada con proteínas seleccionadas para el mantenimiento integral y vitalidad de gatos adultos.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 160,
+    "name": "Excellent Cat Kitten (Gatitos)",
+    "slug": "excellent-cat-kitten",
+    "description": "Nutrición completa para gatitos en sus primeros 12 meses. Promueve el desarrollo muscular y la absorción de nutrientes esenciales.",
+    "pet_type": "gato",
+    "subcat": "cachorro",
+    "breed_size": "todas",
+    "badge": "Cachorro",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_907577-MLA46675043690_072021-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Gatos",
+    "category_slug": "gatos",
+    "brand_name": "Excellent",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 1 kg",
+        "weight_kg": 1.0,
+        "sale_price": 14250.0,
+        "list_price": 14250.0,
+        "stock_qty": 100,
+        "sku": "EXC-CAT-KIT-1"
+      },
+      {
+        "presentation_name": "Bolsa 7,5 kg",
+        "weight_kg": 7.5,
+        "sale_price": 78348.0,
+        "list_price": 78348.0,
+        "stock_qty": 100,
+        "sku": "EXC-CAT-KIT-7.5"
+      }
+    ],
+    "presentations": [
+      "Bolsa 1 kg",
+      "Bolsa 7,5 kg"
+    ],
+    "prices": [
+      14250.0,
+      78348.0
+    ],
+    "list_prices": [
+      14250.0,
+      78348.0
+    ],
+    "brand": "Excellent",
+    "category": "gatos",
+    "desc": "Nutrición completa para gatitos en sus primeros 12 meses. Promueve el desarrollo muscular y la absorción de nutrientes esenciales.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 161,
+    "name": "Eukanuba Dog Light (Control de Peso)",
+    "slug": "eukanuba-dog-light",
+    "description": "Nutrición Super Premium con L-carnitina y menos grasa para ayudar a perros con tendencia al sobrepeso a recuperar su masa magra.",
+    "pet_type": "perro",
+    "subcat": "light",
+    "breed_size": "todas",
+    "badge": "Control Peso",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_832243-MLA99340263690_112025-F.jpg",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Perros",
+    "category_slug": "perros",
+    "brand_name": "Eukanuba",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 3 kg",
+        "weight_kg": 3.0,
+        "sale_price": 28875.0,
+        "list_price": 28875.0,
+        "stock_qty": 100,
+        "sku": "EUK-LIGHT-3"
+      },
+      {
+        "presentation_name": "Bolsa 15 kg",
+        "weight_kg": 15.0,
+        "sale_price": 106790.0,
+        "list_price": 106790.0,
+        "stock_qty": 100,
+        "sku": "EUK-LIGHT-15"
+      }
+    ],
+    "presentations": [
+      "Bolsa 3 kg",
+      "Bolsa 15 kg"
+    ],
+    "prices": [
+      28875.0,
+      106790.0
+    ],
+    "list_prices": [
+      28875.0,
+      106790.0
+    ],
+    "brand": "Eukanuba",
+    "category": "perros",
+    "desc": "Nutrición Super Premium con L-carnitina y menos grasa para ayudar a perros con tendencia al sobrepeso a recuperar su masa magra.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 162,
+    "name": "Eukanuba Dog Senior",
+    "slug": "eukanuba-dog-senior",
+    "description": "Nutrición adaptada para perros mayores (7+ años) con condroitina, glucosamina y antioxidantes para un envejecimiento activo y saludable.",
+    "pet_type": "perro",
+    "subcat": "senior",
+    "breed_size": "todas",
+    "badge": "Senior",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_832243-MLA99340263690_112025-F.jpg",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Perros",
+    "category_slug": "perros",
+    "brand_name": "Eukanuba",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 15 kg",
+        "weight_kg": 15.0,
+        "sale_price": 99592.0,
+        "list_price": 99592.0,
+        "stock_qty": 100,
+        "sku": "EUK-SENIOR-15"
+      }
+    ],
+    "presentations": [
+      "Bolsa 15 kg"
+    ],
+    "prices": [
+      99592.0
+    ],
+    "list_prices": [
+      99592.0
+    ],
+    "brand": "Eukanuba",
+    "category": "perros",
+    "desc": "Nutrición adaptada para perros mayores (7+ años) con condroitina, glucosamina y antioxidantes para un envejecimiento activo y saludable.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 164,
+    "name": "Eukanuba Gato Kitten",
+    "slug": "eukanuba-gato-kitten",
+    "description": "Nutrición de alta densidad para gatitos en crecimiento con omega-3 (DHA) para potenciar el desarrollo cognitivo y defensas fuertes.",
+    "pet_type": "gato",
+    "subcat": "cachorro",
+    "breed_size": "todas",
+    "badge": "Nuevo",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_667232-MLA51368945413_092022-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Gatos",
+    "category_slug": "gatos",
+    "brand_name": "Eukanuba",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 7,5 kg",
+        "weight_kg": 7.5,
+        "sale_price": 82960.0,
+        "list_price": 82960.0,
+        "stock_qty": 100,
+        "sku": "EUK-CAT-KIT-7.5"
+      }
+    ],
+    "presentations": [
+      "Bolsa 7,5 kg"
+    ],
+    "prices": [
+      82960.0
+    ],
+    "list_prices": [
+      82960.0
+    ],
+    "brand": "Eukanuba",
+    "category": "gatos",
+    "desc": "Nutrición de alta densidad para gatitos en crecimiento con omega-3 (DHA) para potenciar el desarrollo cognitivo y defensas fuertes.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 165,
+    "name": "Vital Can Balanced Perro Exclusive Cerdo / Natural Cordero",
+    "slug": "vital-can-balanced-cerdo-cordero",
+    "description": "Fórmula monoproteica especial con carne de cerdo o cordero seleccionada. Ideal para perros con sensibilidades alimentarias digestivas.",
+    "pet_type": "perro",
+    "subcat": "adulto",
+    "breed_size": "todas",
+    "badge": "Monoproteico",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_678554-MLA99451664162_112025-F.jpg",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Perros",
+    "category_slug": "perros",
+    "brand_name": "Vital Can",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 15 kg",
+        "weight_kg": 15.0,
+        "sale_price": 74880.0,
+        "list_price": 74880.0,
+        "stock_qty": 100,
+        "sku": "VC-BAL-CERD-15"
+      }
+    ],
+    "presentations": [
+      "Bolsa 15 kg"
+    ],
+    "prices": [
+      74880.0
+    ],
+    "list_prices": [
+      74880.0
+    ],
+    "brand": "Vital Can",
+    "category": "perros",
+    "desc": "Fórmula monoproteica especial con carne de cerdo o cordero seleccionada. Ideal para perros con sensibilidades alimentarias digestivas.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 166,
+    "name": "Vital Can Balanced Perro Control de Peso",
+    "slug": "vital-can-balanced-control-peso",
+    "description": "Bajo en calorías y rico en fibras naturales saciantes para el descenso y mantenimiento del peso saludable en caninos.",
+    "pet_type": "perro",
+    "subcat": "light",
+    "breed_size": "todas",
+    "badge": "Control Peso",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_678554-MLA99451664162_112025-F.jpg",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Perros",
+    "category_slug": "perros",
+    "brand_name": "Vital Can",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 20 kg",
+        "weight_kg": 20.0,
+        "sale_price": 94164.0,
+        "list_price": 94164.0,
+        "stock_qty": 100,
+        "sku": "VC-BAL-PESO-20"
+      }
+    ],
+    "presentations": [
+      "Bolsa 20 kg"
+    ],
+    "prices": [
+      94164.0
+    ],
+    "list_prices": [
+      94164.0
+    ],
+    "brand": "Vital Can",
+    "category": "perros",
+    "desc": "Bajo en calorías y rico en fibras naturales saciantes para el descenso y mantenimiento del peso saludable en caninos.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 167,
+    "name": "Vital Cat Balanced Gato Adulto",
+    "slug": "vital-cat-balanced-gato-adulto",
+    "description": "Nutrición integral para felinos adultos con taurina, control de bolas de pelo y pH urinario balanceado.",
+    "pet_type": "gato",
+    "subcat": "adulto",
+    "breed_size": "todas",
+    "badge": "Premium",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_698202-MLA46675043689_072021-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Gatos",
+    "category_slug": "gatos",
+    "brand_name": "Vital Can",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 7,5 kg",
+        "weight_kg": 7.5,
+        "sale_price": 60878.0,
+        "list_price": 60878.0,
+        "stock_qty": 100,
+        "sku": "VC-BAL-GAT-7.5"
+      }
+    ],
+    "presentations": [
+      "Bolsa 7,5 kg"
+    ],
+    "prices": [
+      60878.0
+    ],
+    "list_prices": [
+      60878.0
+    ],
+    "brand": "Vital Can",
+    "category": "gatos",
+    "desc": "Nutrición integral para felinos adultos con taurina, control de bolas de pelo y pH urinario balanceado.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 168,
+    "name": "Vital Can Complete Gato Adulto",
+    "slug": "vital-can-complete-gato-adulto",
+    "description": "Línea clásica y confiable de Vital Can con proteínas seleccionadas para el bienestar general del gato de hogar.",
+    "pet_type": "gato",
+    "subcat": "adulto",
+    "breed_size": "todas",
+    "badge": "Económico",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_698202-MLA46675043689_072021-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Gatos",
+    "category_slug": "gatos",
+    "brand_name": "Vital Can",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 15 kg",
+        "weight_kg": 15.0,
+        "sale_price": 73080.0,
+        "list_price": 73080.0,
+        "stock_qty": 100,
+        "sku": "VC-COMP-GAT-15"
+      }
+    ],
+    "presentations": [
+      "Bolsa 15 kg"
+    ],
+    "prices": [
+      73080.0
+    ],
+    "list_prices": [
+      73080.0
+    ],
+    "brand": "Vital Can",
+    "category": "gatos",
+    "desc": "Línea clásica y confiable de Vital Can con proteínas seleccionadas para el bienestar general del gato de hogar.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 169,
+    "name": "Vital Can Complete Gato Castrado",
+    "slug": "vital-can-complete-gato-castrado",
+    "description": "Diseñado para prevenir el sobrepeso y cálculos urinarios tras la esterilización en gatos adultos.",
+    "pet_type": "gato",
+    "subcat": "castrado",
+    "breed_size": "todas",
+    "badge": "Castrado",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_698202-MLA46675043689_072021-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Gatos",
+    "category_slug": "gatos",
+    "brand_name": "Vital Can",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 7,5 kg",
+        "weight_kg": 7.5,
+        "sale_price": 46360.0,
+        "list_price": 46360.0,
+        "stock_qty": 100,
+        "sku": "VC-COMP-CAST-7.5"
+      }
+    ],
+    "presentations": [
+      "Bolsa 7,5 kg"
+    ],
+    "prices": [
+      46360.0
+    ],
+    "list_prices": [
+      46360.0
+    ],
+    "brand": "Vital Can",
+    "category": "gatos",
+    "desc": "Diseñado para prevenir el sobrepeso y cálculos urinarios tras la esterilización en gatos adultos.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 170,
+    "name": "Vital Can Complete Gato Kitten",
+    "slug": "vital-can-complete-gato-kitten",
+    "description": "Croquetas de tamaño pequeño con nutrientes para apoyar la primera etapa de vida y lactancia de gatitos.",
+    "pet_type": "gato",
+    "subcat": "cachorro",
+    "breed_size": "todas",
+    "badge": "Cachorro",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_698202-MLA46675043689_072021-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Gatos",
+    "category_slug": "gatos",
+    "brand_name": "Vital Can",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 7,5 kg",
+        "weight_kg": 7.5,
+        "sale_price": 45262.0,
+        "list_price": 45262.0,
+        "stock_qty": 100,
+        "sku": "VC-COMP-KIT-7.5"
+      }
+    ],
+    "presentations": [
+      "Bolsa 7,5 kg"
+    ],
+    "prices": [
+      45262.0
+    ],
+    "list_prices": [
+      45262.0
+    ],
+    "brand": "Vital Can",
+    "category": "gatos",
+    "desc": "Croquetas de tamaño pequeño con nutrientes para apoyar la primera etapa de vida y lactancia de gatitos.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 171,
+    "name": "Raza Perro Cachorros",
+    "slug": "raza-perro-cachorros",
+    "description": "Alimento balanceado con leche, calcio y fósforo que promueve el desarrollo sano de cachorros de todas las razas.",
+    "pet_type": "perro",
+    "subcat": "cachorro",
+    "breed_size": "todas",
+    "badge": "Económico",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_817905-MLA99842229311_112025-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Perros",
+    "category_slug": "perros",
+    "brand_name": "Raza",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 15 kg",
+        "weight_kg": 15.0,
+        "sale_price": 32640.0,
+        "list_price": 32640.0,
+        "stock_qty": 100,
+        "sku": "RAZA-PUP-15"
+      }
+    ],
+    "presentations": [
+      "Bolsa 15 kg"
+    ],
+    "prices": [
+      32640.0
+    ],
+    "list_prices": [
+      32640.0
+    ],
+    "brand": "Raza",
+    "category": "perros",
+    "desc": "Alimento balanceado con leche, calcio y fósforo que promueve el desarrollo sano de cachorros de todas las razas.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 172,
+    "name": "Raza Gato Adulto (Pescado / Pollo y Leche)",
+    "slug": "raza-gato-adulto",
+    "description": "Croquetas crujientes en deliciosos sabores de pescado, pollo y leche con taurina para la salud ocular y cardíaca felina.",
+    "pet_type": "gato",
+    "subcat": "adulto",
+    "breed_size": "todas",
+    "badge": "Económico",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_817905-MLA99842229311_112025-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Gatos",
+    "category_slug": "gatos",
+    "brand_name": "Raza",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 10 kg (Pescado/Pollo y Leche)",
+        "weight_kg": 10.0,
+        "sale_price": 30256.0,
+        "list_price": 30256.0,
+        "stock_qty": 100,
+        "sku": "RAZA-GAT-10"
+      },
+      {
+        "presentation_name": "Bolsa 15 kg (Pescado)",
+        "weight_kg": 15.0,
+        "sale_price": 42480.0,
+        "list_price": 42480.0,
+        "stock_qty": 100,
+        "sku": "RAZA-GAT-15"
+      }
+    ],
+    "presentations": [
+      "Bolsa 10 kg (Pescado/Pollo y Leche)",
+      "Bolsa 15 kg (Pescado)"
+    ],
+    "prices": [
+      30256.0,
+      42480.0
+    ],
+    "list_prices": [
+      30256.0,
+      42480.0
+    ],
+    "brand": "Raza",
+    "category": "gatos",
+    "desc": "Croquetas crujientes en deliciosos sabores de pescado, pollo y leche con taurina para la salud ocular y cardíaca felina.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 173,
+    "name": "Raza Gatitos",
+    "slug": "raza-gatitos",
+    "description": "Alimento nutritivo de fácil masticación con proteínas seleccionadas para gatitos en su primer año de crecimiento.",
+    "pet_type": "gato",
+    "subcat": "cachorro",
+    "breed_size": "todas",
+    "badge": "Cachorro",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_817905-MLA99842229311_112025-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Gatos",
+    "category_slug": "gatos",
+    "brand_name": "Raza",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 8 kg",
+        "weight_kg": 8.0,
+        "sale_price": 28426.0,
+        "list_price": 28426.0,
+        "stock_qty": 100,
+        "sku": "RAZA-KIT-8"
+      }
+    ],
+    "presentations": [
+      "Bolsa 8 kg"
+    ],
+    "prices": [
+      28426.0
+    ],
+    "list_prices": [
+      28426.0
+    ],
+    "brand": "Raza",
+    "category": "gatos",
+    "desc": "Alimento nutritivo de fácil masticación con proteínas seleccionadas para gatitos en su primer año de crecimiento.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 174,
+    "name": "Raza Gato Castrado",
+    "slug": "raza-gato-castrado",
+    "description": "Fórmula balanceada con fibras y energía moderada para el cuidado de gatos castrados de todas las edades.",
+    "pet_type": "gato",
+    "subcat": "castrado",
+    "breed_size": "todas",
+    "badge": "Castrado",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_817905-MLA99842229311_112025-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Gatos",
+    "category_slug": "gatos",
+    "brand_name": "Raza",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 10 kg",
+        "weight_kg": 10.0,
+        "sale_price": 36295.0,
+        "list_price": 36295.0,
+        "stock_qty": 100,
+        "sku": "RAZA-GAT-CAST-10"
+      }
+    ],
+    "presentations": [
+      "Bolsa 10 kg"
+    ],
+    "prices": [
+      36295.0
+    ],
+    "list_prices": [
+      36295.0
+    ],
+    "brand": "Raza",
+    "category": "gatos",
+    "desc": "Fórmula balanceada con fibras y energía moderada para el cuidado de gatos castrados de todas las edades.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 175,
+    "name": "Tiernitos Gatos Adulto",
+    "slug": "tiernitos-gatos-adulto",
+    "description": "Alimento sabroso con alta palatabilidad e ingredientes balanceados para la nutrición diaria de gatos adultos.",
+    "pet_type": "gato",
+    "subcat": "adulto",
+    "breed_size": "todas",
+    "badge": "Económico",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_795475-MLA99878002573_112025-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Gatos",
+    "category_slug": "gatos",
+    "brand_name": "Tiernitos",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 10 kg",
+        "weight_kg": 10.0,
+        "sale_price": 33916.0,
+        "list_price": 33916.0,
+        "stock_qty": 100,
+        "sku": "TIER-GAT-10"
+      }
+    ],
+    "presentations": [
+      "Bolsa 10 kg"
+    ],
+    "prices": [
+      33916.0
+    ],
+    "list_prices": [
+      33916.0
+    ],
+    "brand": "Tiernitos",
+    "category": "gatos",
+    "desc": "Alimento sabroso con alta palatabilidad e ingredientes balanceados para la nutrición diaria de gatos adultos.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 177,
+    "name": "Rosco Perro Cachorro",
+    "slug": "rosco-perro-cachorro",
+    "description": "Nutrición económica completa para cachorros. Gran aporte de energía y vitalidad para el desarrollo inicial.",
+    "pet_type": "perro",
+    "subcat": "cachorro",
+    "breed_size": "todas",
+    "badge": "Económico",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_817905-MLA99842229311_112025-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Perros",
+    "category_slug": "perros",
+    "brand_name": "Rosco",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 15 kg",
+        "weight_kg": 15.0,
+        "sale_price": 30000.0,
+        "list_price": 30000.0,
+        "stock_qty": 100,
+        "sku": "ROSCO-CACH-15"
+      }
+    ],
+    "presentations": [
+      "Bolsa 15 kg"
+    ],
+    "prices": [
+      30000.0
+    ],
+    "list_prices": [
+      30000.0
+    ],
+    "brand": "Rosco",
+    "category": "perros",
+    "desc": "Nutrición económica completa para cachorros. Gran aporte de energía y vitalidad para el desarrollo inicial.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 178,
+    "name": "Rosco Gato Adulto",
+    "slug": "rosco-gato-adulto",
+    "description": "Alimento completo para gatos con mix de proteínas de pescado y cocktail cárnico. Excelente relación precio-calidad.",
+    "pet_type": "gato",
+    "subcat": "adulto",
+    "breed_size": "todas",
+    "badge": "Económico",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_817905-MLA99842229311_112025-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Gatos",
+    "category_slug": "gatos",
+    "brand_name": "Rosco",
+    "variants": [
+      {
+        "presentation_name": "Bolsa 10 kg (Pescado)",
+        "weight_kg": 10.0,
+        "sale_price": 24644.0,
+        "list_price": 24644.0,
+        "stock_qty": 100,
+        "sku": "ROSCO-GAT-PESC-10"
+      },
+      {
+        "presentation_name": "Bolsa 10 kg (Cocktail)",
+        "weight_kg": 10.0,
+        "sale_price": 25376.0,
+        "list_price": 25376.0,
+        "stock_qty": 100,
+        "sku": "ROSCO-GAT-COCK-10"
+      }
+    ],
+    "presentations": [
+      "Bolsa 10 kg (Pescado)",
+      "Bolsa 10 kg (Cocktail)"
+    ],
+    "prices": [
+      24644.0,
+      25376.0
+    ],
+    "list_prices": [
+      24644.0,
+      25376.0
+    ],
+    "brand": "Rosco",
+    "category": "gatos",
+    "desc": "Alimento completo para gatos con mix de proteínas de pescado y cocktail cárnico. Excelente relación precio-calidad.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 179,
+    "name": "Pacha Perro Cachorro Cocktail",
+    "slug": "pacha-perro-cachorro-cocktail",
+    "description": "Alimento balanceado clásico para cachorros. Rico sabor cárnico en bolsa cerrada y presentación fraccionada.",
+    "pet_type": "perro",
+    "subcat": "cachorro",
+    "breed_size": "todas",
+    "badge": "Económico",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_817905-MLA99842229311_112025-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Perros",
+    "category_slug": "perros",
+    "brand_name": "Pacha",
+    "variants": [
+      {
+        "presentation_name": "Fraccionado 3 kg",
+        "weight_kg": 3.0,
+        "sale_price": 7500.0,
+        "list_price": 7500.0,
+        "stock_qty": 100,
+        "sku": "PACHA-CACH-3"
+      },
+      {
+        "presentation_name": "Bolsa 10 kg",
+        "weight_kg": 10.0,
+        "sale_price": 18666.0,
+        "list_price": 18666.0,
+        "stock_qty": 100,
+        "sku": "PACHA-CACH-10"
+      }
+    ],
+    "presentations": [
+      "Fraccionado 3 kg",
+      "Bolsa 10 kg"
+    ],
+    "prices": [
+      7500.0,
+      18666.0
+    ],
+    "list_prices": [
+      7500.0,
+      18666.0
+    ],
+    "brand": "Pacha",
+    "category": "perros",
+    "desc": "Alimento balanceado clásico para cachorros. Rico sabor cárnico en bolsa cerrada y presentación fraccionada.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 180,
+    "name": "Pacha Gato Adulto",
+    "slug": "pacha-gato-adulto",
+    "description": "Alimento económico para gatos adultos con variedad de opciones: Pescado, Cocktail y bolsas fraccionadas de 1 kg.",
+    "pet_type": "gato",
+    "subcat": "adulto",
+    "breed_size": "todas",
+    "badge": "Económico",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_817905-MLA99842229311_112025-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Gatos",
+    "category_slug": "gatos",
+    "brand_name": "Pacha",
+    "variants": [
+      {
+        "presentation_name": "Fraccionado 1 kg (Pescado)",
+        "weight_kg": 1.0,
+        "sale_price": 4000.0,
+        "list_price": 4000.0,
+        "stock_qty": 100,
+        "sku": "PACHA-GAT-FRAC-1"
+      },
+      {
+        "presentation_name": "Bolsa 10 kg (Pescado)",
+        "weight_kg": 10.0,
+        "sale_price": 24888.0,
+        "list_price": 24888.0,
+        "stock_qty": 100,
+        "sku": "PACHA-GAT-PESC-10"
+      },
+      {
+        "presentation_name": "Bolsa 10 kg (Cocktail)",
+        "weight_kg": 10.0,
+        "sale_price": 27572.0,
+        "list_price": 27572.0,
+        "stock_qty": 100,
+        "sku": "PACHA-GAT-COCK-10"
+      }
+    ],
+    "presentations": [
+      "Fraccionado 1 kg (Pescado)",
+      "Bolsa 10 kg (Pescado)",
+      "Bolsa 10 kg (Cocktail)"
+    ],
+    "prices": [
+      4000.0,
+      24888.0,
+      27572.0
+    ],
+    "list_prices": [
+      4000.0,
+      24888.0,
+      27572.0
+    ],
+    "brand": "Pacha",
+    "category": "gatos",
+    "desc": "Alimento económico para gatos adultos con variedad de opciones: Pescado, Cocktail y bolsas fraccionadas de 1 kg.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 181,
+    "name": "Shampoo Osspret Medicado",
+    "slug": "shampoo-osspret-medicado",
+    "description": "Shampoo dermatológico antiséptico para el tratamiento de afecciones de la piel en caninos y felinos.",
+    "pet_type": "perro",
+    "subcat": "higiene",
+    "breed_size": "todas",
+    "badge": "Dermatológico",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_706344-MLA111706358457_052026-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Farmacia & Cuidado",
+    "category_slug": "farmacia",
+    "brand_name": "Osspret / Ecthol",
+    "variants": [
+      {
+        "presentation_name": "Botella 250 ml",
+        "weight_kg": 0.3,
+        "sale_price": 9500.0,
+        "list_price": 9500.0,
+        "stock_qty": 100,
+        "sku": "OSSP-MED-250"
+      }
+    ],
+    "presentations": [
+      "Botella 250 ml"
+    ],
+    "prices": [
+      9500.0
+    ],
+    "list_prices": [
+      9500.0
+    ],
+    "brand": "Osspret / Ecthol",
+    "category": "farmacia",
+    "desc": "Shampoo dermatológico antiséptico para el tratamiento de afecciones de la piel en caninos y felinos.",
+    "featured": false,
+    "promo": false
+  },
+  {
+    "id": 182,
+    "name": "Shampoo Osspret Mix Frutal",
+    "slug": "shampoo-osspret-mix-frutal",
+    "description": "Shampoo cosmético de uso frecuente con extractos frutales acondicionadores. Brillo, desenredo y fragancia duradera.",
+    "pet_type": "perro",
+    "subcat": "higiene",
+    "breed_size": "todas",
+    "badge": "Belleza",
+    "image_url": "https://http2.mlstatic.com/D_NQ_NP_777998-MLA100083527255_122025-O.webp",
+    "is_featured": 0,
+    "is_promo": 0,
+    "promo_tag": "",
+    "category_name": "Farmacia & Cuidado",
+    "category_slug": "farmacia",
+    "brand_name": "Osspret / Ecthol",
+    "variants": [
+      {
+        "presentation_name": "Botella 250 ml",
+        "weight_kg": 0.3,
+        "sale_price": 9500.0,
+        "list_price": 9500.0,
+        "stock_qty": 100,
+        "sku": "OSSP-FRUT-250"
+      }
+    ],
+    "presentations": [
+      "Botella 250 ml"
+    ],
+    "prices": [
+      9500.0
+    ],
+    "list_prices": [
+      9500.0
+    ],
+    "brand": "Osspret / Ecthol",
+    "category": "farmacia",
+    "desc": "Shampoo cosmético de uso frecuente con extractos frutales acondicionadores. Brillo, desenredo y fragancia duradera.",
+    "featured": false,
+    "promo": false
   }
 ];
-
-if (typeof window !== 'undefined') { window.LOCAL_CATALOG = LOCAL_CATALOG; }
+if (typeof window !== "undefined") window.LOCAL_CATALOG = LOCAL_CATALOG;
