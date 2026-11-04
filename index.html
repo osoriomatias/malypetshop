@@ -26,7 +26,7 @@
   <link rel="icon" type="image/svg+xml" href="images/maly_mascot_avatar.svg">
   <link rel="alternate icon" href="images/maly_mascot_avatar.png">
 
-  <link rel="stylesheet" href="css/styles.css?v=8.1_carousel_adjust">
+  <link rel="stylesheet" href="css/styles.css?v=8.3_security_auth">
 </head>
 <body>
 
@@ -242,7 +242,7 @@
       <!-- CATÁLOGO COMPLETO -->
       <div class="nav-item">
         <div class="nav-link" onclick="filterCategory('todos'); resetFilters();">
-          <span>📦</span> Catálogo (144)
+          <span>📦</span> Catálogo (<span class="catalog-total-count">182</span>)
         </div>
       </div>
     </div>
@@ -413,7 +413,7 @@
     <div class="section-header">
       <div>
         <h2 class="section-title"><span class="section-emoji">📦</span> Catálogo Completo</h2>
-        <span style="font-size: 0.85rem; color: #64748b;" id="catalogCountBadge">144 artículos disponibles</span>
+        <span style="font-size: 0.85rem; color: #64748b;" id="catalogCountBadge"><span id="catalogCountBadge">182 artículos disponibles</span></span>
       </div>
       <button onclick="resetFilters()" style="background: none; border: 1px solid #cbd5e1; padding: 6px 14px; border-radius: 9999px; font-size: 0.82rem; font-weight: 600; color: #475569; cursor: pointer;">
         Limpiar Filtros ↺
@@ -422,7 +422,7 @@
 
     <!-- BARRA DE ACCESO RÁPIDO A CATEGORÍAS (CON NOVEDADES) -->
     <div class="catalog-category-chips" id="catalogCategoryChips">
-      <button type="button" class="cat-chip active" onclick="filterCategory('todos')">📦 Todo el Catálogo (144)</button>
+      <button type="button" class="cat-chip active" onclick="filterCategory('todos')">📦 Todo el Catálogo (<span class="catalog-total-count">182</span>)</button>
       <button type="button" class="cat-chip" onclick="filterCategory('perros')">🐶 Perros</button>
       <button type="button" class="cat-chip" onclick="filterCategory('gatos')">🐱 Gatos</button>
       <button type="button" class="cat-chip" onclick="filterCategory('granja')">🌾 Aves, Semillas & Granja (Prenut)</button>
@@ -466,23 +466,44 @@
     </div>
   </aside>
 
-  <!-- MODAL DE PIN DE SEGURIDAD PARA ADMINISTRACIÓN -->
+  <!-- MODAL DE ACCESO SEGURO PARA ADMINISTRACIÓN (SUPABASE AUTH) -->
   <div class="modal-overlay" id="adminPinModal" style="display: none; z-index: 3500;" onclick="closeAdminPinModalOnBackdrop(event)">
     <div class="modal-box" style="max-width: 440px; text-align: center; border-radius: 16px;">
-      <div style="font-size: 2.5rem; margin-bottom: 6px;">🔒</div>
-      <h3 style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; color: #1e293b; margin-bottom: 6px;">
+      <div style="font-size: 2.3rem; margin-bottom: 6px;">🔐</div>
+      <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; color: #1e293b; margin-bottom: 6px;">
         Acceso de Administrador
       </h3>
-      <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 20px; line-height: 1.5;">
-        Ingresá el PIN de seguridad para acceder al panel de control de <strong id="pinModalStoreName" style="color: var(--primary);"></strong>.
+      <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 16px; line-height: 1.45;">
+        Iniciá sesión para gestionar precios, fotos y pedidos de <strong id="pinModalStoreName" style="color: var(--primary);">Maly Petshop</strong>.
       </p>
-      <form onsubmit="event.preventDefault(); verifyAdminPin();">
-        <input type="password" id="inputSecurityPin" placeholder="••••" maxlength="10" autocomplete="off"
-               style="text-align: center; font-size: 1.6rem; letter-spacing: 6px; padding: 10px 14px; width: 190px; margin: 0 auto 12px auto; display: block; border: 2px solid #cbd5e1; border-radius: 10px; outline: none;">
-        <div id="pinErrorMsg" style="color: #dc2626; font-size: 0.82rem; font-weight: 700; margin-bottom: 14px; min-height: 20px;"></div>
-        <div style="display: flex; justify-content: center; gap: 12px;">
-          <button type="button" onclick="closeAdminPinModal()" style="padding: 10px 20px; border-radius: 8px; border: 1px solid #cbd5e1; background: white; cursor: pointer; font-weight: 600;">Cancelar</button>
-          <button type="submit" style="padding: 10px 24px; border-radius: 8px; border: none; background: #0284c7; color: white; cursor: pointer; font-weight: 700;">Ingresar</button>
+
+      <form id="formAdminLogin" onsubmit="event.preventDefault(); handleAdminLogin();">
+        <div style="text-align: left; margin-bottom: 10px;">
+          <label style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 3px;">Email de Administrador:</label>
+          <input type="email" id="inputAdminEmail" placeholder="admin@malypetshop.com" autocomplete="username"
+                 style="width: 100%; padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; outline: none; font-size: 0.88rem;">
+        </div>
+        <div style="text-align: left; margin-bottom: 12px;">
+          <label style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 3px;">Contraseña:</label>
+          <input type="password" id="inputAdminPassword" placeholder="••••••••" autocomplete="current-password"
+                 style="width: 100%; padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; outline: none; font-size: 0.88rem;">
+        </div>
+
+        <div id="pinErrorMsg" style="color: #dc2626; font-size: 0.82rem; font-weight: 700; margin-bottom: 12px; min-height: 18px;"></div>
+
+        <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 12px;">
+          <button type="button" onclick="closeAdminPinModal()" style="padding: 9px 18px; border-radius: 8px; border: 1px solid #cbd5e1; background: white; cursor: pointer; font-weight: 600; font-size: 0.85rem;">Cancelar</button>
+          <button type="submit" id="btnAdminLoginSubmit" style="padding: 9px 24px; border-radius: 8px; border: none; background: #0284c7; color: white; cursor: pointer; font-weight: 700; font-size: 0.88rem;">Iniciar Sesión</button>
+        </div>
+
+        <!-- Opción de respaldo con PIN para modo offline local -->
+        <div style="border-top: 1px dashed #e2e8f0; padding-top: 10px; margin-top: 10px;">
+          <a href="#" onclick="togglePinFallback(event)" style="font-size: 0.76rem; color: #64748b; text-decoration: none;">¿Usar PIN de respaldo offline?</a>
+          <div id="pinFallbackBox" style="display: none; margin-top: 8px;">
+            <input type="password" id="inputSecurityPin" placeholder="PIN de respaldo" maxlength="10" autocomplete="off"
+                   style="text-align: center; font-size: 1.1rem; letter-spacing: 4px; padding: 7px 10px; width: 160px; margin: 0 auto 8px auto; display: block; border: 1.5px solid #cbd5e1; border-radius: 8px; outline: none;">
+            <button type="button" onclick="verifyAdminPin()" style="padding: 6px 14px; font-size: 0.78rem; border-radius: 6px; border: 1px solid #0284c7; background: #e0f2fe; color: #0284c7; font-weight: 700; cursor: pointer;">Entrar con PIN</button>
+          </div>
         </div>
       </form>
     </div>
@@ -658,7 +679,7 @@
           Cargá un nuevo artículo al catálogo con sus presentaciones y costos. El precio de venta al público se ajustará de forma automática según el margen comercial activo.
         </p>
 
-        <form id="formCreateProduct" class="admin-create-form" onsubmit="event.preventDefault(); handleCreateProductSubmit();">
+        <form id="formCreateProduct" novalidate class="admin-create-form" onsubmit="event.preventDefault(); handleCreateProductSubmit();">
           <div class="form-grid-2">
             <div class="form-group">
               <label>Nombre del Producto *:</label>
@@ -898,7 +919,7 @@
         Actualizá los datos del producto. Los cambios impactan al instante en toda la tienda.
       </p>
 
-      <form id="formEditProduct" class="admin-create-form" onsubmit="event.preventDefault(); handleEditProductSubmit();">
+      <form id="formEditProduct" novalidate class="admin-create-form" onsubmit="event.preventDefault(); handleEditProductSubmit();">
         <input type="hidden" id="editProdId">
 
         <div class="form-grid-2">
