@@ -633,9 +633,71 @@ async function loadCatalogAndRender() {
   }
 }
 
+
+function filterByBrand(brandName) {
+  catalogFilters = {
+    category: 'todos',
+    subcat: 'todas',
+    breed_size: 'todas',
+    promoOnly: false,
+    search: brandName
+  };
+  const searchInput = document.getElementById('searchInput');
+  if (searchInput) searchInput.value = brandName;
+  const catalogSection = document.getElementById('catalogSection');
+  if (catalogSection) {
+    catalogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  loadCatalogAndRender();
+}
+
+function showToast(message) {
+  let toast = document.getElementById('malyToast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'malyToast';
+    toast.className = 'maly-toast';
+    document.body.appendChild(toast);
+  }
+  toast.innerHTML = `<span>🐾</span> ${message}`;
+  toast.classList.add('show');
+
+  if (window.toastTimer) clearTimeout(window.toastTimer);
+  window.toastTimer = setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2500);
+}
+
+function generateSkeletonCardsHTML(count = 8) {
+  let html = '<div class="skeleton-grid">';
+  for (let i = 0; i < count; i++) {
+    html += `
+      <div class="skeleton-card">
+        <div class="skeleton-img-box shimmer"></div>
+        <div class="skeleton-line short shimmer"></div>
+        <div class="skeleton-line title shimmer"></div>
+        <div class="skeleton-pills-row">
+          <div class="skeleton-pill shimmer"></div>
+          <div class="skeleton-pill shimmer"></div>
+        </div>
+        <div class="skeleton-line price shimmer" style="margin-top: 6px;"></div>
+        <div class="skeleton-btn-box shimmer"></div>
+      </div>
+    `;
+  }
+  html += '</div>';
+  return html;
+}
+
 function showLoading(show) {
-  const loaders = document.querySelectorAll('.grid-loader');
-  loaders.forEach(l => l.style.display = show ? 'block' : 'none');
+  const grids = ['featuredGrid', 'promosGrid', 'snacksGrid', 'catalogGrid'];
+  grids.forEach(gridId => {
+    const el = document.getElementById(gridId);
+    if (!el) return;
+    if (show) {
+      el.innerHTML = generateSkeletonCardsHTML(gridId === 'catalogGrid' ? 8 : 4);
+    }
+  });
 }
 
 function renderHomepageGrids() {
@@ -698,6 +760,9 @@ function createProductCardHTML(p) {
   const brandName = p.brand_name || p.brand || "Premium";
   const badgeText = p.badge || (p.is_promo ? (p.promo_tag || "Oferta Especial") : "");
 
+  // Calcular porcentaje de descuento si el precio de lista es mayor
+  const discountPct = (currentList > currentPrice && currentPrice > 0) ? Math.round(((currentList - currentPrice) / currentList) * 100) : 0;
+
   const pillsHTML = presList.map((pres, idx) => `
     <button type="button" class="pres-pill ${idx === currentIdx ? 'active' : ''}" 
             onclick="selectPresentation(${p.id}, ${idx})">
@@ -705,22 +770,21 @@ function createProductCardHTML(p) {
     </button>
   `).join('');
 
-  // Precio especial fantasma: solo para los productos más vendidos seleccionados
   let priceBlockHTML = '';
-  if (p.is_promo || p.promo) {
+  if (discountPct >= 5 || p.is_promo || p.promo) {
     priceBlockHTML = `
-      <div class="price-row" style="align-items: center; margin-bottom: 12px;">
-        <div>
-          <span class="price-list">$${currentList.toLocaleString('es-AR')}</span>
+      <div class="price-row" style="align-items: flex-end; margin-bottom: 10px;">
+        <div class="price-stack">
+          ${currentList > currentPrice ? `<span class="price-list">$${currentList.toLocaleString('es-AR')}</span>` : ''}
           <span class="price-main">$${currentPrice.toLocaleString('es-AR')}</span>
         </div>
-        <span class="discount-chip">PRECIO ESPECIAL</span>
+        ${discountPct >= 5 ? `<span class="savings-tag">Ahorrás $${(currentList - currentPrice).toLocaleString('es-AR')}</span>` : ''}
       </div>
     `;
   } else {
     priceBlockHTML = `
-      <div class="price-row" style="align-items: center; margin-bottom: 12px;">
-        <div>
+      <div class="price-row" style="align-items: center; margin-bottom: 10px;">
+        <div class="price-stack">
           <span class="price-main">$${currentPrice.toLocaleString('es-AR')}</span>
         </div>
       </div>
@@ -731,7 +795,7 @@ function createProductCardHTML(p) {
     <article class="product-card" data-product-id="${p.id}" onclick="handleProductCardClick(event, ${p.id})">
       <div class="card-top">
         ${badgeText ? `<span class="card-badge-top">${badgeText}</span>` : ''}
-        ${p.is_promo ? `<span class="card-badge-promo">OFERTA</span>` : ''}
+        ${discountPct >= 8 ? `<span class="card-badge-discount">-${discountPct}% OFF</span>` : (p.is_promo ? `<span class="card-badge-promo">OFERTA</span>` : '')}
         
         <img class="card-img" referrerpolicy="no-referrer" src="${p.image_url}" alt="${p.name}" loading="lazy"
              onerror="this.src='https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600&auto=format&fit=crop&q=80'">
@@ -752,10 +816,10 @@ function createProductCardHTML(p) {
           ${priceBlockHTML}
 
           <div class="card-actions">
-            <button class="btn-add-cart" onclick="addToCart(${p.id})">
-              <span>🛒</span> Agregar a la Bolsa
+            <button type="button" class="btn-add-cart" onclick="addToCart(${p.id})">
+              <span>🛒</span> Agregar
             </button>
-            <button class="btn-wa-card" title="Consultar por WhatsApp" onclick="askProductWhatsApp(${p.id})">
+            <button type="button" class="btn-wa-card" title="Consultar por WhatsApp" onclick="askProductWhatsApp(${p.id})">
               💬
             </button>
           </div>
@@ -907,7 +971,16 @@ function addToCart(productId) {
   saveCart();
   updateCartBadge();
   renderCartDrawer();
-  openCartDrawer();
+  
+  // Micro-interacción: animar la bolsa de la cabecera
+  const cartBtn = document.querySelector('.btn-cart-header');
+  if (cartBtn) {
+    cartBtn.classList.remove('bounce-cart');
+    void cartBtn.offsetWidth;
+    cartBtn.classList.add('bounce-cart');
+  }
+
+  showToast(`¡Agregado a tu bolsa! <strong>${p.name}</strong> (${presentationName})`);
 }
 
 function saveCart() {
@@ -1004,10 +1077,15 @@ async function checkoutWhatsApp() {
 
   const total = cart.reduce((acc, i) => acc + (i.price * i.quantity), 0);
 
+  const nameInput = document.getElementById('checkoutCustomerName');
+  const addressInput = document.getElementById('checkoutCustomerAddress');
+  const customerName = nameInput ? nameInput.value.trim() : '';
+  const customerAddress = addressInput ? addressInput.value.trim() : '';
+
   const orderPayload = {
-    customer_name: "Cliente Web WhatsApp",
+    customer_name: customerName || "Cliente Web WhatsApp",
     customer_phone: CONFIG.waNumber,
-    customer_address: "A coordinar por WhatsApp",
+    customer_address: customerAddress || "A coordinar por WhatsApp",
     payment_method: "A convenir",
     subtotal: total,
     total: total,
@@ -1027,6 +1105,13 @@ async function checkoutWhatsApp() {
   let msg = `🐶 *¡HOLA ${CONFIG.storeName.toUpperCase()}! QUIERO REALIZAR UN PEDIDO* 🐱\n`;
   msg += `📋 *Código de Pedido:* ${orderCode}\n`;
   msg += `─────────────────────────\n`;
+  if (customerName) {
+    msg += `👤 *Cliente:* ${customerName}\n`;
+  }
+  if (customerAddress) {
+    msg += `📍 *Dirección / Barrio:* ${customerAddress}\n`;
+  }
+  msg += `─────────────────────────\n`;
   
   cart.forEach((i) => {
     msg += `• *${i.quantity}x* ${i.name} (${i.presentation})\n`;
@@ -1035,7 +1120,6 @@ async function checkoutWhatsApp() {
 
   msg += `─────────────────────────\n`;
   msg += `✅ *TOTAL ESTIMADO:* $${total.toLocaleString('es-AR')}\n\n`;
-  msg += `📍 *Dirección de Entrega:* \n`;
   msg += `¿Podemos coordinar la entrega y el horario? ¡Muchas gracias!`;
 
   const waUrl = `https://wa.me/${CONFIG.waNumber}?text=${encodeURIComponent(msg)}`;
